@@ -7373,6 +7373,64 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="NEO-6M">
+<packages>
+<package name="NEO-6M">
+<wire x1="0" y1="0" x2="26.289" y2="0" width="0.127" layer="21"/>
+<wire x1="26.289" y1="0" x2="26.289" y2="35.9918" width="0.127" layer="21"/>
+<wire x1="26.289" y1="35.9918" x2="0" y2="35.9918" width="0.127" layer="21"/>
+<wire x1="0" y1="35.9918" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="GND" x="8.89" y="1.27" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<pad name="TX" x="11.43" y="1.27" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<pad name="RX" x="13.97" y="1.27" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<pad name="VCC" x="16.51" y="1.27" drill="0.8" diameter="1.778" shape="long" rot="R90"/>
+<text x="5" y="29" size="5.08" layer="21">GPS</text>
+<text x="6" y="23" size="2.54" layer="21">NEO-6M</text>
+<text x="8.89" y="3.81" size="1.27" layer="21" rot="R90">GND</text>
+<text x="11.43" y="3.81" size="1.27" layer="21" rot="R90">TX</text>
+<text x="13.97" y="3.81" size="1.27" layer="21" rot="R90">RX</text>
+<text x="16.51" y="3.81" size="1.27" layer="21" rot="R90">VCC</text>
+<hole x="2.54" y="2.54" drill="3"/>
+<hole x="22.86" y="2.54" drill="3"/>
+<hole x="2.54" y="33.02" drill="3"/>
+<hole x="22.86" y="33.02" drill="3"/>
+</package>
+</packages>
+<symbols>
+<symbol name="NEO-6M">
+<wire x1="0" y1="0" x2="0" y2="22.86" width="0.254" layer="94"/>
+<wire x1="0" y1="22.86" x2="12.7" y2="22.86" width="0.254" layer="94"/>
+<wire x1="12.7" y1="22.86" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="2.54" y="-5.08" length="middle" rot="R90"/>
+<pin name="TX" x="5.08" y="-5.08" length="middle" rot="R90"/>
+<pin name="RX" x="7.62" y="-5.08" length="middle" rot="R90"/>
+<pin name="VCC" x="10.16" y="-5.08" length="middle" rot="R90"/>
+<text x="2.54" y="12.7" size="2.1844" layer="94">GPS</text>
+<text x="2.54" y="17.78" size="1.4224" layer="94">NEO-6M</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NEO-6M">
+<gates>
+<gate name="G$1" symbol="NEO-6M" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NEO-6M">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="RX" pad="RX"/>
+<connect gate="G$1" pin="TX" pad="TX"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7428,6 +7486,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="470ohm"/>
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1"/>
+<part name="U$4" library="NEO-6M" deviceset="NEO-6M" device="" override_package3d_urn="urn:adsk.eagle:package:40381906/2" override_package_urn="urn:adsk.eagle:footprint:40381907/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -7459,6 +7518,7 @@ If this is not done, garbage values may cause trouble
 
 Similarly, all MISO lines are pulled up as they are only used when slave
 components are in use. They might float otherwise</text>
+<text x="205.74" y="104.14" size="1.778" layer="97">Push button to reset pico</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="358.14" y="132.08" smashed="yes" rot="R270"/>
@@ -7606,6 +7666,7 @@ components are in use. They might float otherwise</text>
 <instance part="S1" gate="G$1" x="187.96" y="104.14" smashed="yes">
 <attribute name="NAME" x="187.96" y="105.664" size="1.778" layer="95" font="vector" align="bottom-center"/>
 </instance>
+<instance part="U$4" gate="G$1" x="71.12" y="215.9" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -7707,6 +7768,11 @@ components are in use. They might float otherwise</text>
 <pinref part="S1" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
 <label x="195.58" y="104.14" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="73.66" y1="210.82" x2="73.66" y2="205.74" width="0.1524" layer="91"/>
+<label x="73.66" y="205.74" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -7883,12 +7949,22 @@ components are in use. They might float otherwise</text>
 <wire x1="83.82" y1="88.9" x2="83.82" y2="86.36" width="0.1524" layer="91"/>
 <label x="83.82" y="86.36" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<wire x1="81.28" y1="210.82" x2="81.28" y2="205.74" width="0.1524" layer="91"/>
+<label x="81.28" y="205.74" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VCC"/>
+</segment>
 </net>
 <net name="TX" class="0">
 <segment>
 <wire x1="142.24" y1="106.68" x2="142.24" y2="111.76" width="0.1524" layer="91"/>
 <label x="142.24" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="GP0"/>
+</segment>
+<segment>
+<wire x1="78.74" y1="210.82" x2="78.74" y2="205.74" width="0.1524" layer="91"/>
+<label x="78.74" y="205.74" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="RX"/>
 </segment>
 </net>
 <net name="RX" class="0">
@@ -7897,6 +7973,11 @@ components are in use. They might float otherwise</text>
 <wire x1="139.7" y1="104.14" x2="139.7" y2="111.76" width="0.1524" layer="91"/>
 <label x="139.7" y="111.76" size="1.27" layer="95" rot="R90" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="GP1"/>
+</segment>
+<segment>
+<wire x1="76.2" y1="210.82" x2="76.2" y2="205.74" width="0.1524" layer="91"/>
+<label x="76.2" y="205.74" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="TX"/>
 </segment>
 </net>
 <net name="N$2" class="0">
