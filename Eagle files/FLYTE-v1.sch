@@ -638,348 +638,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="holes" urn="urn:adsk.eagle:library:237">
-<description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="2,8-PAD" urn="urn:adsk.eagle:footprint:14250/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 2.8 mm, round</description>
-<wire x1="0" y1="2.921" x2="0" y2="2.667" width="0.0508" layer="21"/>
-<wire x1="0" y1="-2.667" x2="0" y2="-2.921" width="0.0508" layer="21"/>
-<wire x1="-1.778" y1="0" x2="0" y2="-1.778" width="2.286" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="1.778" x2="1.778" y2="0" width="2.286" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="0.635" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="2.921" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="3.175" width="0.8128" layer="39"/>
-<circle x="0" y="0" radius="3.175" width="0.8128" layer="40"/>
-<circle x="0" y="0" radius="3.175" width="0.8128" layer="43"/>
-<circle x="0" y="0" radius="1.5" width="0.2032" layer="21"/>
-<pad name="B2,8" x="0" y="0" drill="2.8" diameter="5.334"/>
-</package>
-<package name="3,0-PAD" urn="urn:adsk.eagle:footprint:14251/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.0 mm, round</description>
-<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="39"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="40"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
-<circle x="0" y="0" radius="1.6" width="0.2032" layer="21"/>
-<pad name="B3,0" x="0" y="0" drill="3" diameter="5.842"/>
-<text x="-1.27" y="-3.81" size="1.27" layer="48">3,0</text>
-</package>
-<package name="3,2-PAD" urn="urn:adsk.eagle:footprint:14252/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.2 mm, round</description>
-<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="3.683" width="1.27" layer="39"/>
-<circle x="0" y="0" radius="3.683" width="1.27" layer="40"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
-<circle x="0" y="0" radius="1.7" width="0.1524" layer="21"/>
-<pad name="B3,2" x="0" y="0" drill="3.2" diameter="5.842"/>
-<text x="-1.27" y="-3.81" size="1.27" layer="48">3,2</text>
-</package>
-<package name="3,3-PAD" urn="urn:adsk.eagle:footprint:14253/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.3 mm, round</description>
-<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="3.683" width="1.27" layer="39"/>
-<circle x="0" y="0" radius="3.683" width="1.27" layer="40"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
-<circle x="0" y="0" radius="1.7" width="0.2032" layer="21"/>
-<pad name="B3,3" x="0" y="0" drill="3.3" diameter="5.842"/>
-</package>
-<package name="3,6-PAD" urn="urn:adsk.eagle:footprint:14254/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 3.6 mm, round</description>
-<wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="3.429" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="3.683" width="1.397" layer="39"/>
-<circle x="0" y="0" radius="3.683" width="1.397" layer="40"/>
-<circle x="0" y="0" radius="3.556" width="1.016" layer="43"/>
-<circle x="0" y="0" radius="1.9" width="0.2032" layer="21"/>
-<pad name="B3,6" x="0" y="0" drill="3.6" diameter="5.842"/>
-</package>
-<package name="4,1-PAD" urn="urn:adsk.eagle:footprint:14255/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.1 mm, round</description>
-<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="4.572" width="0.1524" layer="21"/>
-<circle x="0" y="0" radius="5.08" width="2" layer="43"/>
-<circle x="0" y="0" radius="2.15" width="0.2032" layer="21"/>
-<pad name="B4,1" x="0" y="0" drill="4.1" diameter="8"/>
-</package>
-<package name="4,3-PAD" urn="urn:adsk.eagle:footprint:14256/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.3 mm, round</description>
-<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
-<circle x="0" y="0" radius="2.25" width="0.1524" layer="21"/>
-<pad name="B4,3" x="0" y="0" drill="4.3" diameter="9"/>
-</package>
-<package name="4,5-PAD" urn="urn:adsk.eagle:footprint:14257/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 4.5 mm, round</description>
-<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
-<circle x="0" y="0" radius="2.35" width="0.1524" layer="21"/>
-<pad name="B4,5" x="0" y="0" drill="4.5" diameter="9"/>
-</package>
-<package name="5,0-PAD" urn="urn:adsk.eagle:footprint:14258/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 5.0 mm, round</description>
-<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
-<circle x="0" y="0" radius="2.6" width="0.1524" layer="21"/>
-<pad name="B5" x="0" y="0" drill="5" diameter="9"/>
-</package>
-<package name="5,5-PAD" urn="urn:adsk.eagle:footprint:14259/1" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt; 5.5 mm, round</description>
-<wire x1="-2.54" y1="0" x2="0" y2="-2.54" width="3.9116" layer="51" curve="90" cap="flat"/>
-<wire x1="0" y1="2.54" x2="2.54" y2="0" width="3.9116" layer="51" curve="-90" cap="flat"/>
-<circle x="0" y="0" radius="4.4958" width="0.1524" layer="51"/>
-<circle x="0" y="0" radius="0.762" width="0.4572" layer="51"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="43"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="39"/>
-<circle x="0" y="0" radius="5.588" width="2" layer="40"/>
-<circle x="0" y="0" radius="2.85" width="0.1524" layer="21"/>
-<pad name="B5,5" x="0" y="0" drill="5.5" diameter="9"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="2,8-PAD" urn="urn:adsk.eagle:package:14281/1" type="box" library_version="2">
-<description>MOUNTING PAD 2.8 mm, round</description>
-<packageinstances>
-<packageinstance name="2,8-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="3,0-PAD" urn="urn:adsk.eagle:package:14280/1" type="box" library_version="2">
-<description>MOUNTING PAD 3.0 mm, round</description>
-<packageinstances>
-<packageinstance name="3,0-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="3,2-PAD" urn="urn:adsk.eagle:package:14282/1" type="box" library_version="2">
-<description>MOUNTING PAD 3.2 mm, round</description>
-<packageinstances>
-<packageinstance name="3,2-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="3,3-PAD" urn="urn:adsk.eagle:package:14283/1" type="box" library_version="2">
-<description>MOUNTING PAD 3.3 mm, round</description>
-<packageinstances>
-<packageinstance name="3,3-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="3,6-PAD" urn="urn:adsk.eagle:package:14284/1" type="box" library_version="2">
-<description>MOUNTING PAD 3.6 mm, round</description>
-<packageinstances>
-<packageinstance name="3,6-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="4,1-PAD" urn="urn:adsk.eagle:package:14285/1" type="box" library_version="2">
-<description>MOUNTING PAD 4.1 mm, round</description>
-<packageinstances>
-<packageinstance name="4,1-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="4,3-PAD" urn="urn:adsk.eagle:package:14286/1" type="box" library_version="2">
-<description>MOUNTING PAD 4.3 mm, round</description>
-<packageinstances>
-<packageinstance name="4,3-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="4,5-PAD" urn="urn:adsk.eagle:package:14287/1" type="box" library_version="2">
-<description>MOUNTING PAD 4.5 mm, round</description>
-<packageinstances>
-<packageinstance name="4,5-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="5,0-PAD" urn="urn:adsk.eagle:package:14288/1" type="box" library_version="2">
-<description>MOUNTING PAD 5.0 mm, round</description>
-<packageinstances>
-<packageinstance name="5,0-PAD"/>
-</packageinstances>
-</package3d>
-<package3d name="5,5-PAD" urn="urn:adsk.eagle:package:14291/1" type="box" library_version="2">
-<description>MOUNTING PAD 5.5 mm, round</description>
-<packageinstances>
-<packageinstance name="5,5-PAD"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="MOUNT-PAD" urn="urn:adsk.eagle:symbol:14249/1" library_version="2">
-<wire x1="0.254" y1="2.032" x2="2.032" y2="0.254" width="1.016" layer="94" curve="-75.749967" cap="flat"/>
-<wire x1="-2.032" y1="0.254" x2="-0.254" y2="2.032" width="1.016" layer="94" curve="-75.749967" cap="flat"/>
-<wire x1="-2.032" y1="-0.254" x2="-0.254" y2="-2.032" width="1.016" layer="94" curve="75.749967" cap="flat"/>
-<wire x1="0.254" y1="-2.032" x2="2.032" y2="-0.254" width="1.016" layer="94" curve="75.749967" cap="flat"/>
-<circle x="0" y="0" radius="1.524" width="0.0508" layer="94"/>
-<text x="2.794" y="0.5842" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.794" y="-2.4638" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="MOUNT" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="MOUNT-PAD-ROUND" urn="urn:adsk.eagle:component:14303/2" prefix="H" library_version="2">
-<description>&lt;b&gt;MOUNTING PAD&lt;/b&gt;, round</description>
-<gates>
-<gate name="G$1" symbol="MOUNT-PAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="2.8" package="2,8-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B2,8"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14281/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="6" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="3.0" package="3,0-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B3,0"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14280/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="17" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="3.2" package="3,2-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B3,2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14282/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="4" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="3.3" package="3,3-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B3,3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14283/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="1" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="3.6" package="3,6-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B3,6"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14284/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="4.1" package="4,1-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B4,1"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14285/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="4.3" package="4,3-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B4,3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14286/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="4.5" package="4,5-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B4,5"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14287/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="5.0" package="5,0-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B5"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14288/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="5.5" package="5,5-PAD">
-<connects>
-<connect gate="G$1" pin="MOUNT" pad="B5,5"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:14291/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Electromechanical">
 <description>&lt;h3&gt;SparkFun Electromechanical Parts&lt;/h3&gt;
 This library contains electromechanical devices, like motors, speakers,servos, and relays.
@@ -7521,6 +7179,64 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="XT30UPB-M">
+<packages>
+<package name="XT30UPB-M">
+<wire x1="-5.1" y1="2.6" x2="-5.1" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="-5.1" y1="-2.6" x2="3.81" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.6" x2="5.1" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-1.27" x2="5.1" y2="1.27" width="0.127" layer="21"/>
+<wire x1="5.1" y1="1.27" x2="3.81" y2="2.6" width="0.127" layer="21"/>
+<wire x1="3.81" y1="2.6" x2="-5.1" y2="2.6" width="0.127" layer="21"/>
+<wire x1="-4.445" y1="0.35" x2="-4.445" y2="-0.35" width="0.127" layer="21"/>
+<wire x1="-4.8" y1="0" x2="-4.1" y2="0" width="0.127" layer="21"/>
+<wire x1="4.064" y1="0" x2="4.699" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="-2.5" y="0" drill="1.8"/>
+<pad name="P$2" x="2.5" y="0" drill="1.8"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CONN_02">
+<description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
+<wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
+<text x="-2.54" y="-4.826" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="5.588" size="1.778" layer="95">&gt;NAME</text>
+<pin name="-" x="7.62" y="0" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="+" x="7.62" y="2.54" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="XT30UPB-M">
+<description> &lt;a href="https://pricing.snapeda.com/parts/XT30UPB-M/amass/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="CONN_02" x="2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="XT30UPB-M">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1"/>
+<connect gate="G$1" pin="-" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Not in stock"/>
+<attribute name="DESCRIPTION" value="  Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; yellow; 15A; 500V "/>
+<attribute name="MF" value="amass"/>
+<attribute name="MP" value="XT30UPB-M"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7533,36 +7249,27 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <parts>
 <part name="U$1" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
 <part name="U$2" library="GY-9250" deviceset="GY-9250" device="" override_package3d_urn="urn:adsk.eagle:package:38477971/2" override_package_urn="urn:adsk.eagle:footprint:38477972/1"/>
-<part name="U$3" library="SDREADER" deviceset="SDREADER" device=""/>
+<part name="U$3" library="SDREADER" deviceset="SDREADER" device="" override_package3d_urn="urn:adsk.eagle:package:40384096/2" override_package_urn="urn:adsk.eagle:footprint:40384097/1"/>
 <part name="Q2" library="IRF540NPBF" deviceset="IRF540NPBF" device="" override_package3d_urn="urn:adsk.eagle:package:40331976/2" override_package_urn="urn:adsk.eagle:footprint:40331987/1"/>
 <part name="U2" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="470ohm"/>
-<part name="DROGUE-VCC" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:40267905/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
-<part name="DROGUE-GND" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:40267906/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="LS1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH" override_package3d_urn="urn:adsk.eagle:package:40381801/2" override_package_urn="urn:adsk.eagle:footprint:40381802/1"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
 <part name="U3" library="CORE1262-868M" deviceset="CORE1262-868M" device="" override_package3d_urn="urn:adsk.eagle:package:40381656/2" override_package_urn="urn:adsk.eagle:footprint:40381657/1"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
 <part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device="" override_package3d_urn="urn:adsk.eagle:package:40381806/2" override_package_urn="urn:adsk.eagle:footprint:40381807/1"/>
-<part name="BATT_IN" library="XT60" deviceset="XT60" device="" override_package3d_urn="urn:adsk.eagle:package:40331842/3" override_package_urn="urn:adsk.eagle:footprint:40331843/1">
+<part name="BATT_IN" library="XT60" deviceset="XT60" device="" override_package3d_urn="urn:adsk.eagle:package:40331842/4" override_package_urn="urn:adsk.eagle:footprint:40331843/1">
 <attribute name="SPICEPREFIX" value="B"/>
 </part>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
-<part name="BATT_SCREW_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
-<part name="BATT_SCREW_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
-<part name="DR_ARM_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
-<part name="DR_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
+<part name="DR_ARM_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
 <part name="Q1" library="IRF540NPBF" deviceset="IRF540NPBF" device="" override_package3d_urn="urn:adsk.eagle:package:40331976/2" override_package_urn="urn:adsk.eagle:footprint:40331987/1"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="470ohm"/>
-<part name="MAIN-VCC" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:40267905/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
-<part name="MAIN-GND" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:40267906/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
-<part name="MA_ARM_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
-<part name="MA_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="J2" library="CONSMA002" deviceset="CONSMA002" device="" override_package3d_urn="urn:adsk.eagle:package:40381662/2" override_package_urn="urn:adsk.eagle:footprint:40381663/1"/>
 <part name="U6" library="W25Q32JVSSIQ" deviceset="W25Q32JVSSIQ" device="" override_package3d_urn="urn:adsk.eagle:package:40381730/2" override_package_urn="urn:adsk.eagle:footprint:40381731/1"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
@@ -7575,14 +7282,21 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <part name="SW1" library="1825159-1" deviceset="1825159-1" device="" override_package3d_urn="urn:adsk.eagle:package:40381769/2" override_package_urn="urn:adsk.eagle:footprint:40381770/1"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1"/>
-<part name="U$4" library="NEO-6M" deviceset="NEO-6M" device=""/>
-<part name="JP1" library="adafruit" deviceset="PINHD-1X3" device=""/>
-<part name="JP2" library="adafruit" deviceset="PINHD-1X3" device=""/>
-<part name="JP3" library="adafruit" deviceset="PINHD-1X3" device=""/>
-<part name="JP4" library="adafruit" deviceset="PINHD-1X3" device=""/>
+<part name="U$4" library="NEO-6M" deviceset="NEO-6M" device="" override_package3d_urn="urn:adsk.eagle:package:40384009/2" override_package_urn="urn:adsk.eagle:footprint:40384010/1"/>
+<part name="JP1" library="adafruit" deviceset="PINHD-1X3" device="" override_package3d_urn="urn:adsk.eagle:package:40384015/2" override_package_urn="urn:adsk.eagle:footprint:40384016/1"/>
 <part name="U4" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
+<part name="JP2" library="adafruit" deviceset="PINHD-1X3" device="" override_package3d_urn="urn:adsk.eagle:package:40384015/2" override_package_urn="urn:adsk.eagle:footprint:40384016/1"/>
+<part name="JP3" library="adafruit" deviceset="PINHD-1X3" device="" override_package3d_urn="urn:adsk.eagle:package:40384015/2" override_package_urn="urn:adsk.eagle:footprint:40384016/1"/>
+<part name="JP4" library="adafruit" deviceset="PINHD-1X3" device="" override_package3d_urn="urn:adsk.eagle:package:40384015/2" override_package_urn="urn:adsk.eagle:footprint:40384016/1"/>
+<part name="DROGUE_IN" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:40384065/3" override_package_urn="urn:adsk.eagle:footprint:40384066/1"/>
+<part name="MAIN_IN" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:40384065/4" override_package_urn="urn:adsk.eagle:footprint:40384066/1"/>
+<part name="DR_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
+<part name="MA_ARM_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
+<part name="MA_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
+<part name="BATT_SCREW_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
+<part name="BATT_SCREW_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -7635,12 +7349,6 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="300.99" y="191.9986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="300.99" y="187.198" size="1.778" layer="96"/>
 </instance>
-<instance part="DROGUE-VCC" gate="G$1" x="281.94" y="200.66" smashed="yes" rot="R90">
-<attribute name="NAME" x="279.146" y="205.1558" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="DROGUE-GND" gate="G$1" x="281.94" y="208.28" smashed="yes" rot="R180">
-<attribute name="NAME" x="279.146" y="212.7758" size="1.778" layer="95" rot="R180"/>
-</instance>
 <instance part="LS1" gate="G$1" x="71.12" y="132.08" smashed="yes">
 <attribute name="NAME" x="68.58" y="136.906" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="76.454" y="132.08" size="1.778" layer="96" font="vector"/>
@@ -7674,17 +7382,8 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="283.464" y="221.361" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="273.304" y="221.361" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="BATT_SCREW_OUT" gate="1" x="350.52" y="243.84" smashed="yes">
-<attribute name="NAME" x="331.47" y="246.761" size="1.778" layer="95"/>
-</instance>
-<instance part="BATT_SCREW_IN" gate="1" x="360.68" y="243.84" smashed="yes">
-<attribute name="NAME" x="356.87" y="246.761" size="1.778" layer="95"/>
-</instance>
 <instance part="DR_ARM_OUT" gate="1" x="271.78" y="195.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="257.81" y="198.501" size="1.778" layer="95"/>
-</instance>
-<instance part="DR_ARM_IN" gate="1" x="271.78" y="190.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="257.81" y="185.801" size="1.778" layer="95"/>
 </instance>
 <instance part="Q1" gate="G$1" x="373.38" y="198.12" smashed="yes">
 <attribute name="NAME" x="381" y="196.85" size="1.778" layer="95" rot="R90"/>
@@ -7693,12 +7392,6 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="364.49" y="191.9986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="364.49" y="187.198" size="1.778" layer="96"/>
 </instance>
-<instance part="MAIN-VCC" gate="G$1" x="345.44" y="200.66" smashed="yes" rot="R90">
-<attribute name="NAME" x="342.646" y="205.1558" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="MAIN-GND" gate="G$1" x="345.44" y="208.28" smashed="yes" rot="R180">
-<attribute name="NAME" x="342.646" y="212.7758" size="1.778" layer="95" rot="R180"/>
-</instance>
 <instance part="R11" gate="G$1" x="360.68" y="210.82" smashed="yes">
 <attribute name="NAME" x="354.33" y="212.3186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="361.95" y="212.598" size="1.778" layer="96"/>
@@ -7706,12 +7399,6 @@ components are in use. They might float otherwise</text>
 <instance part="R12" gate="G$1" x="360.68" y="205.74" smashed="yes">
 <attribute name="NAME" x="354.33" y="204.6986" size="1.778" layer="95" align="top-left"/>
 <attribute name="VALUE" x="364.49" y="204.978" size="1.778" layer="96" align="top-left"/>
-</instance>
-<instance part="MA_ARM_OUT" gate="1" x="335.28" y="195.58" smashed="yes" rot="R90">
-<attribute name="NAME" x="321.31" y="198.501" size="1.778" layer="95"/>
-</instance>
-<instance part="MA_ARM_IN" gate="1" x="335.28" y="190.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="321.31" y="185.801" size="1.778" layer="95"/>
 </instance>
 <instance part="J2" gate="G$1" x="241.3" y="228.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="245.11" y="227.076" size="1.778" layer="95" rot="R180"/>
@@ -7763,6 +7450,18 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="36.83" y="64.135" size="1.778" layer="95"/>
 <attribute name="VALUE" x="36.83" y="50.8" size="1.778" layer="96"/>
 </instance>
+<instance part="U4" gate="G$1" x="281.94" y="160.02" smashed="yes">
+<attribute name="NAME" x="271.7634" y="165.617140625" size="2.54415" layer="95"/>
+<attribute name="VALUE" x="271.7708" y="151.884640625" size="2.5423" layer="96"/>
+</instance>
+<instance part="C3" gate="G$1" x="307.34" y="165.1" smashed="yes" rot="R180">
+<attribute name="NAME" x="305.816" y="162.179" size="1.778" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="305.816" y="167.259" size="1.778" layer="96" font="vector" rot="R180"/>
+</instance>
+<instance part="C4" gate="G$1" x="281.94" y="144.78" smashed="yes" rot="R270">
+<attribute name="NAME" x="286.004" y="142.621" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="275.844" y="142.621" size="1.778" layer="96" font="vector"/>
+</instance>
 <instance part="JP2" gate="A" x="68.58" y="58.42" smashed="yes">
 <attribute name="NAME" x="62.23" y="64.135" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="50.8" size="1.778" layer="96"/>
@@ -7775,17 +7474,26 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="62.23" y="43.815" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="30.48" size="1.778" layer="96"/>
 </instance>
-<instance part="U4" gate="G$1" x="281.94" y="160.02" smashed="yes">
-<attribute name="NAME" x="271.7634" y="165.617140625" size="2.54415" layer="95"/>
-<attribute name="VALUE" x="271.7708" y="151.884640625" size="2.5423" layer="96"/>
+<instance part="DROGUE_IN" gate="G$1" x="276.86" y="205.74" smashed="yes">
+<attribute name="NAME" x="271.272" y="203.2" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="C3" gate="G$1" x="307.34" y="165.1" smashed="yes" rot="R180">
-<attribute name="NAME" x="305.816" y="162.179" size="1.778" layer="95" font="vector" rot="R180"/>
-<attribute name="VALUE" x="305.816" y="167.259" size="1.778" layer="96" font="vector" rot="R180"/>
+<instance part="MAIN_IN" gate="G$1" x="340.36" y="205.74" smashed="yes">
+<attribute name="NAME" x="334.772" y="203.2" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="C4" gate="G$1" x="281.94" y="144.78" smashed="yes" rot="R270">
-<attribute name="NAME" x="286.004" y="142.621" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="275.844" y="142.621" size="1.778" layer="96" font="vector"/>
+<instance part="DR_ARM_IN" gate="1" x="271.78" y="190.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="257.81" y="185.801" size="1.778" layer="95"/>
+</instance>
+<instance part="MA_ARM_OUT" gate="1" x="335.28" y="195.58" smashed="yes" rot="R90">
+<attribute name="NAME" x="321.31" y="198.501" size="1.778" layer="95"/>
+</instance>
+<instance part="MA_ARM_IN" gate="1" x="335.28" y="190.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="321.31" y="185.801" size="1.778" layer="95"/>
+</instance>
+<instance part="BATT_SCREW_OUT" gate="1" x="350.52" y="243.84" smashed="yes">
+<attribute name="NAME" x="331.47" y="246.761" size="1.778" layer="95"/>
+</instance>
+<instance part="BATT_SCREW_IN" gate="1" x="360.68" y="243.84" smashed="yes">
+<attribute name="NAME" x="359.41" y="246.761" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -7900,19 +7608,19 @@ components are in use. They might float otherwise</text>
 <label x="33.02" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="3"/>
 <wire x1="66.04" y1="55.88" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
 <label x="58.42" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP2" gate="A" pin="3"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="3"/>
 <wire x1="40.64" y1="35.56" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
 <label x="33.02" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP3" gate="A" pin="3"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="A" pin="3"/>
 <wire x1="66.04" y1="35.56" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
 <label x="58.42" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP4" gate="A" pin="3"/>
 </segment>
 <segment>
 <label x="302.26" y="152.4" size="1.27" layer="95" xref="yes"/>
@@ -7949,16 +7657,16 @@ components are in use. They might float otherwise</text>
 <pinref part="BATT_SCREW_IN" gate="1" pin="MP"/>
 </segment>
 <segment>
-<pinref part="DR_ARM_IN" gate="1" pin="MP"/>
 <wire x1="274.32" y1="190.5" x2="281.94" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="190.5" x2="281.94" y2="185.42" width="0.1524" layer="91"/>
 <label x="281.94" y="185.42" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="DR_ARM_IN" gate="1" pin="MP"/>
 </segment>
 <segment>
-<pinref part="MA_ARM_IN" gate="1" pin="MP"/>
 <wire x1="337.82" y1="190.5" x2="345.44" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="345.44" y1="190.5" x2="345.44" y2="185.42" width="0.1524" layer="91"/>
 <label x="345.44" y="185.42" size="1.27" layer="95" rot="R270" xref="yes"/>
+<pinref part="MA_ARM_IN" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="VIN"/>
@@ -8247,7 +7955,6 @@ components are in use. They might float otherwise</text>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="DROGUE-GND" gate="G$1" pin="MOUNT"/>
 <wire x1="284.48" y1="208.28" x2="289.56" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="208.28" x2="289.56" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="1"/>
@@ -8256,6 +7963,7 @@ components are in use. They might float otherwise</text>
 <junction x="289.56" y="208.28"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="289.56" y1="205.74" x2="292.1" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="DROGUE_IN" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -8270,14 +7978,6 @@ components are in use. They might float otherwise</text>
 <wire x1="312.42" y1="208.28" x2="312.42" y2="203.2" width="0.1524" layer="91"/>
 <wire x1="304.8" y1="208.28" x2="312.42" y2="208.28" width="0.1524" layer="91"/>
 <junction x="304.8" y="208.28"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="DROGUE-VCC" gate="G$1" pin="MOUNT"/>
-<wire x1="281.94" y1="198.12" x2="281.94" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="DR_ARM_OUT" gate="1" pin="MP"/>
-<wire x1="281.94" y1="195.58" x2="274.32" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DROGUE" class="0">
@@ -8299,7 +7999,6 @@ components are in use. They might float otherwise</text>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="MAIN-GND" gate="G$1" pin="MOUNT"/>
 <wire x1="347.98" y1="208.28" x2="353.06" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="353.06" y1="208.28" x2="353.06" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
@@ -8308,6 +8007,7 @@ components are in use. They might float otherwise</text>
 <junction x="353.06" y="208.28"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="353.06" y1="205.74" x2="355.6" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="MAIN_IN" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -8326,10 +8026,11 @@ components are in use. They might float otherwise</text>
 </net>
 <net name="N$14" class="0">
 <segment>
-<pinref part="MAIN-VCC" gate="G$1" pin="MOUNT"/>
-<wire x1="345.44" y1="198.12" x2="345.44" y2="195.58" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="195.58" x2="337.82" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="MAIN_IN" gate="G$1" pin="-"/>
+<wire x1="347.98" y1="205.74" x2="350.52" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="350.52" y1="205.74" x2="350.52" y2="195.58" width="0.1524" layer="91"/>
 <pinref part="MA_ARM_OUT" gate="1" pin="MP"/>
-<wire x1="345.44" y1="195.58" x2="337.82" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MAIN" class="0">
@@ -8514,9 +8215,9 @@ components are in use. They might float otherwise</text>
 <label x="139.7" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="1"/>
 <wire x1="66.04" y1="60.96" x2="58.42" y2="60.96" width="0.1524" layer="91"/>
 <label x="58.42" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP2" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="SERVO3" class="0">
@@ -8527,9 +8228,9 @@ components are in use. They might float otherwise</text>
 <label x="139.7" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="1"/>
 <wire x1="40.64" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
 <label x="33.02" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP3" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="SERVO4" class="0">
@@ -8539,9 +8240,9 @@ components are in use. They might float otherwise</text>
 <label x="134.62" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="A" pin="1"/>
 <wire x1="66.04" y1="40.64" x2="58.42" y2="40.64" width="0.1524" layer="91"/>
 <label x="58.42" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP4" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -8551,19 +8252,19 @@ components are in use. They might float otherwise</text>
 <label x="33.02" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="2"/>
 <wire x1="66.04" y1="58.42" x2="58.42" y2="58.42" width="0.1524" layer="91"/>
 <label x="58.42" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP2" gate="A" pin="2"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="2"/>
 <wire x1="40.64" y1="38.1" x2="33.02" y2="38.1" width="0.1524" layer="91"/>
 <label x="33.02" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP3" gate="A" pin="2"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="A" pin="2"/>
 <wire x1="66.04" y1="38.1" x2="58.42" y2="38.1" width="0.1524" layer="91"/>
 <label x="58.42" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP4" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="VOUT"/>
@@ -8573,6 +8274,15 @@ components are in use. They might float otherwise</text>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="307.34" y1="170.18" x2="307.34" y2="167.64" width="0.1524" layer="91"/>
 <label x="302.26" y="170.18" size="1.27" layer="95" rot="R90" xref="yes"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="DROGUE_IN" gate="G$1" pin="-"/>
+<wire x1="284.48" y1="205.74" x2="287.02" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="205.74" x2="287.02" y2="195.58" width="0.1524" layer="91"/>
+<pinref part="DR_ARM_OUT" gate="1" pin="MP"/>
+<wire x1="287.02" y1="195.58" x2="274.32" y2="195.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
