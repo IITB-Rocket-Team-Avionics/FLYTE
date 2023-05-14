@@ -7295,8 +7295,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <part name="DR_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
 <part name="MA_ARM_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
 <part name="MA_ARM_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
-<part name="BATT_SCREW_OUT" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
-<part name="BATT_SCREW_IN" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1" override_package3d_urn="urn:adsk.eagle:package:40384127/2" override_package_urn="urn:adsk.eagle:footprint:26494/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -7489,12 +7487,6 @@ components are in use. They might float otherwise</text>
 <instance part="MA_ARM_IN" gate="1" x="335.28" y="190.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="321.31" y="185.801" size="1.778" layer="95"/>
 </instance>
-<instance part="BATT_SCREW_OUT" gate="1" x="350.52" y="243.84" smashed="yes">
-<attribute name="NAME" x="331.47" y="246.761" size="1.778" layer="95"/>
-</instance>
-<instance part="BATT_SCREW_IN" gate="1" x="360.68" y="243.84" smashed="yes">
-<attribute name="NAME" x="359.41" y="246.761" size="1.778" layer="95"/>
-</instance>
 </instances>
 <busses>
 </busses>
@@ -7651,10 +7643,9 @@ components are in use. They might float otherwise</text>
 <label x="190.5" y="116.84" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<wire x1="360.68" y1="236.22" x2="363.22" y2="236.22" width="0.1524" layer="91"/>
 <label x="363.22" y="236.22" size="1.27" layer="95" xref="yes"/>
-<wire x1="360.68" y1="241.3" x2="360.68" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="BATT_SCREW_IN" gate="1" pin="MP"/>
+<pinref part="BATT_IN" gate="G$1" pin="VCC"/>
+<wire x1="363.22" y1="236.22" x2="340.36" y2="236.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="274.32" y1="190.5" x2="281.94" y2="190.5" width="0.1524" layer="91"/>
@@ -7943,14 +7934,6 @@ components are in use. They might float otherwise</text>
 <pinref part="U1" gate="G$1" pin="GP26"/>
 <wire x1="177.8" y1="83.82" x2="185.42" y2="83.82" width="0.1524" layer="91"/>
 <label x="185.42" y="83.82" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="340.36" y1="236.22" x2="350.52" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="BATT_IN" gate="G$1" pin="VCC"/>
-<wire x1="350.52" y1="241.3" x2="350.52" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="BATT_SCREW_OUT" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$7" class="0">
