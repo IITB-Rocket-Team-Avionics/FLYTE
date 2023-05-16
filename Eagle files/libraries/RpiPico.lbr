@@ -1155,16 +1155,6 @@
 <smd name="P$38" x="11.27" y="20.32" dx="3.5" dy="1.7" layer="1" rot="R180"/>
 <smd name="P$39" x="11.27" y="22.86" dx="3.5" dy="1.7" layer="1" rot="R180"/>
 <smd name="P$40" x="11.27" y="25.4" dx="3.5" dy="1.7" layer="1" rot="R180"/>
-<hole x="-1.455" y="25.27" drill="1.8"/>
-<hole x="3.995" y="25.27" drill="1.8"/>
-<hole x="-1.155" y="22.24" drill="1.5"/>
-<hole x="3.695" y="22.24" drill="1.5"/>
-<polygon width="0.127" layer="41">
-<vertex x="-2.43" y="26.17"/>
-<vertex x="4.97" y="26.17"/>
-<vertex x="4.97" y="21.47"/>
-<vertex x="-2.43" y="21.47"/>
-</polygon>
 <circle x="-11.43" y="26.67" radius="0.635" width="0" layer="21"/>
 <wire x1="-2.73" y1="28.07" x2="5.27" y2="28.07" width="0.127" layer="21"/>
 <wire x1="5.27" y1="28.07" x2="5.27" y2="21.27" width="0.127" layer="21"/>
