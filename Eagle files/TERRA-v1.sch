@@ -624,28 +624,6 @@
 <pad name="40" x="8.89" y="24.13" drill="1"/>
 <text x="-10.414" y="-28.067" size="1.778" layer="25">&gt;NAME</text>
 <text x="1.016" y="-20.955" size="1.778" layer="27" rot="R90">&gt;VALUE</text>
-<hole x="-2.725" y="24" drill="1.8"/>
-<hole x="2.725" y="24" drill="1.8"/>
-<hole x="-2.425" y="20.97" drill="1.5"/>
-<hole x="2.425" y="20.97" drill="1.5"/>
-<polygon width="0.127" layer="41">
-<vertex x="-3.5" y="16"/>
-<vertex x="-1.5" y="16"/>
-<vertex x="-1.5" y="14"/>
-<vertex x="-3.5" y="14"/>
-</polygon>
-<polygon width="0.127" layer="41">
-<vertex x="-3.5" y="13.5"/>
-<vertex x="-1.5" y="13.5"/>
-<vertex x="-1.5" y="11.5"/>
-<vertex x="-3.5" y="11.5"/>
-</polygon>
-<polygon width="0.127" layer="41">
-<vertex x="-3.7" y="24.9"/>
-<vertex x="3.7" y="24.9"/>
-<vertex x="3.7" y="20.2"/>
-<vertex x="-3.7" y="20.2"/>
-</polygon>
 <pad name="41" x="-2.54" y="-23.9" drill="1"/>
 <pad name="42" x="0" y="-23.9" drill="1"/>
 <pad name="43" x="2.54" y="-23.9" drill="1"/>
@@ -1632,8 +1610,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="3.81" y1="34.29" x2="39.37" y2="34.29" width="0.127" layer="51"/>
 <wire x1="39.37" y1="34.29" x2="39.37" y2="12.7" width="0.127" layer="51"/>
 <wire x1="39.37" y1="12.7" x2="3.81" y2="12.7" width="0.127" layer="51"/>
-<text x="6.35" y="35.56" size="1.778" layer="21">NAME</text>
-<text x="6.35" y="8.89" size="1.778" layer="21">VALUE</text>
 <text x="16.51" y="22.86" size="2.54" layer="21">HX711</text>
 </package>
 </packages>
@@ -8742,6 +8718,333 @@ Alternate pin configuration
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Electromechanical">
+<description>&lt;h3&gt;SparkFun Electromechanical Parts&lt;/h3&gt;
+This library contains electromechanical devices, like motors, speakers,servos, and relays.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="BUZZER-12MM">
+<description>&lt;h3&gt;12mm Buzzer - PTH&lt;/h3&gt;
+&lt;p&gt;This is a small 12mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<circle x="0" y="0" radius="5.9" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="1.27" width="0.2032" layer="51"/>
+<pad name="-" x="-3.25" y="0" drill="0.9" diameter="1.778"/>
+<pad name="+" x="3.25" y="0" drill="0.9" diameter="1.778"/>
+<text x="0" y="6.096" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="5.588" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER-CCV">
+<description>&lt;h3&gt;9mm Buzzer - SMD&lt;/h3&gt;
+&lt;p&gt;This is a small 9mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.challengeelectronics.com/downloads/sound_transducers/electromagnetic_smd/CEET105A025-16-2545-27MLR.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="2.6" y1="-6" x2="-2.6" y2="-6" width="0.127" layer="51"/>
+<wire x1="2.6" y1="-6" x2="2.6" y2="-3.7" width="0.127" layer="51"/>
+<wire x1="-2.6" y1="-6" x2="-2.6" y2="-3.7" width="0.127" layer="51"/>
+<wire x1="-4.2" y1="1.6" x2="1.27" y2="4.318" width="0.2032" layer="21" curve="-86.141052"/>
+<wire x1="3.048" y1="3.302" x2="4.191" y2="1.651" width="0.2032" layer="21" curve="-25.69541"/>
+<wire x1="4.2" y1="-1.6" x2="2.6" y2="-3.7" width="0.2032" layer="21" curve="-31.605028"/>
+<wire x1="-3.302" y1="-3.048" x2="-2.6" y2="-3.6" width="0.2032" layer="21" curve="12.917633"/>
+<wire x1="-2.6" y1="-6" x2="2.6" y2="-6" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="-6" x2="2.6" y2="-3.7" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="-6" x2="-2.6" y2="-3.6" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="4.5" width="0.127" layer="51"/>
+<smd name="-" x="-4" y="0" dx="3.2" dy="2.5" layer="1"/>
+<smd name="+" x="4" y="0" dx="3.2" dy="2.5" layer="1"/>
+<hole x="-3.9" y="-2.25" drill="0.8"/>
+<hole x="2.25" y="3.9" drill="0.8"/>
+<text x="0" y="-6.223" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-5.715" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER-12MM-NS">
+<description>&lt;h3&gt;12mm Buzzer - PTH (No silkscreent variant)&lt;/h3&gt;
+&lt;p&gt;This is a small 12mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<circle x="0" y="0" radius="5.9" width="0.2032" layer="51"/>
+<circle x="0" y="0" radius="1.27" width="0.2032" layer="51"/>
+<pad name="-" x="-3.25" y="0" drill="0.9"/>
+<pad name="+" x="3.25" y="0" drill="0.9"/>
+<text x="2.667" y="1.143" size="1.778" layer="51">+</text>
+<text x="0" y="6.096" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="5.588" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER-12MM-NS-KIT">
+<description>&lt;h3&gt;12mm Buzzer - PTH (KIT, No-Silkscreen VARIANT)&lt;/h3&gt;
+&lt;p&gt;This is a small 12mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of this package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<circle x="0" y="0" radius="5.9" width="0.2032" layer="51"/>
+<circle x="0" y="0" radius="1.27" width="0.2032" layer="51"/>
+<pad name="-" x="-3.25" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<pad name="+" x="3.25" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<text x="2.667" y="1.143" size="1.778" layer="51">+</text>
+<polygon width="0.127" layer="30">
+<vertex x="3.2537" y="-0.9525" curve="-90"/>
+<vertex x="2.2988" y="-0.0228" curve="-90.011749"/>
+<vertex x="3.2512" y="0.9526" curve="-90"/>
+<vertex x="4.2012" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="3.2512" y="-0.4445" curve="-90.012891"/>
+<vertex x="2.8067" y="-0.0203" curve="-90"/>
+<vertex x="3.2512" y="0.447" curve="-90"/>
+<vertex x="3.6931" y="-0.0101" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-3.2487" y="-0.9525" curve="-90"/>
+<vertex x="-4.2036" y="-0.0228" curve="-90.011749"/>
+<vertex x="-3.2512" y="0.9526" curve="-90"/>
+<vertex x="-2.3012" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-3.2512" y="-0.4445" curve="-90.012891"/>
+<vertex x="-3.6957" y="-0.0203" curve="-90"/>
+<vertex x="-3.2512" y="0.447" curve="-90"/>
+<vertex x="-2.8093" y="-0.0101" curve="-90.012967"/>
+</polygon>
+<text x="0" y="6.096" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="5.588" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER-CCV-KIT">
+<description>&lt;h3&gt;9mm Buzzer - SMD (KIT variant)&lt;/h3&gt;
+&lt;p&gt;This is a small 9mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of this package. This package has longer pads to aid in hand soldering.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.challengeelectronics.com/downloads/sound_transducers/electromagnetic_smd/CEET105A025-16-2545-27MLR.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<wire x1="2.6" y1="-6" x2="-2.6" y2="-6" width="0.127" layer="51"/>
+<wire x1="2.6" y1="-6" x2="2.6" y2="-3.7" width="0.127" layer="51"/>
+<wire x1="-2.6" y1="-6" x2="-2.6" y2="-3.7" width="0.127" layer="51"/>
+<wire x1="-4.2" y1="1.6" x2="1.27" y2="4.318" width="0.2032" layer="21" curve="-86.141052"/>
+<wire x1="3.048" y1="3.302" x2="4.191" y2="1.651" width="0.2032" layer="21" curve="-25.69541"/>
+<wire x1="4.2" y1="-1.6" x2="2.6" y2="-3.7" width="0.2032" layer="21" curve="-31.605028"/>
+<wire x1="-3.302" y1="-3.048" x2="-2.6" y2="-3.6" width="0.2032" layer="21" curve="12.917633"/>
+<wire x1="-2.6" y1="-6" x2="2.6" y2="-6" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="-6" x2="2.6" y2="-3.7" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="-6" x2="-2.6" y2="-3.6" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="4.5" width="0.127" layer="51"/>
+<smd name="-" x="-4.15" y="0" dx="3.5" dy="2" layer="1"/>
+<smd name="+" x="4.15" y="0" dx="3.5" dy="2" layer="1"/>
+<rectangle x1="-5.2" y1="-0.75" x2="-2.9" y2="0.75" layer="51"/>
+<rectangle x1="2.9" y1="-0.75" x2="5.2" y2="0.75" layer="51" rot="R180"/>
+<hole x="-3.9" y="-2.25" drill="0.8"/>
+<hole x="2.25" y="3.9" drill="0.8"/>
+<text x="0" y="-6.223" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-5.715" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER-12MM-KIT">
+<description>&lt;h3&gt;12mm Buzzer - PTH (KIT VARIANT)&lt;/h3&gt;
+&lt;p&gt;This is a small 12mm round speaker that operates around the audible 2kHz range. You can use these speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of this package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://cdn.sparkfun.com/datasheets/Components/General/cem-1203-42-.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Devices Using&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;BUZZER&lt;/li&gt;&lt;/ul&gt;</description>
+<circle x="0" y="0" radius="5.9" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="1.27" width="0.2032" layer="51"/>
+<pad name="-" x="-3.25" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<pad name="+" x="3.25" y="0" drill="0.9" diameter="1.8796" stop="no"/>
+<text x="2.667" y="1.143" size="1.778" layer="51">+</text>
+<polygon width="0.127" layer="30">
+<vertex x="3.2537" y="-0.9525" curve="-90"/>
+<vertex x="2.2988" y="-0.0228" curve="-90.011749"/>
+<vertex x="3.2512" y="0.9526" curve="-90"/>
+<vertex x="4.2012" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="3.2512" y="-0.4445" curve="-90.012891"/>
+<vertex x="2.8067" y="-0.0203" curve="-90"/>
+<vertex x="3.2512" y="0.447" curve="-90"/>
+<vertex x="3.6931" y="-0.0101" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="-3.2487" y="-0.9525" curve="-90"/>
+<vertex x="-4.2036" y="-0.0228" curve="-90.011749"/>
+<vertex x="-3.2512" y="0.9526" curve="-90"/>
+<vertex x="-2.3012" y="-0.0254" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-3.2512" y="-0.4445" curve="-90.012891"/>
+<vertex x="-3.6957" y="-0.0203" curve="-90"/>
+<vertex x="-3.2512" y="0.447" curve="-90"/>
+<vertex x="-2.8093" y="-0.0101" curve="-90.012967"/>
+</polygon>
+<text x="0" y="6.096" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="5.588" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+</package>
+<package name="BUZZER_SMD">
+<smd name="+" x="0" y="5" dx="1.5" dy="1.7" layer="1" rot="R90"/>
+<smd name="-" x="0" y="-4.9" dx="1.5" dy="1.7" layer="1" rot="R90"/>
+<wire x1="-4.85" y1="-2.65" x2="-4.85" y2="4.85" width="0.1524" layer="51"/>
+<wire x1="-4.85" y1="4.85" x2="4.85" y2="4.85" width="0.1524" layer="51"/>
+<wire x1="4.85" y1="4.85" x2="4.85" y2="-4.85" width="0.1524" layer="51"/>
+<wire x1="4.85" y1="-4.85" x2="-2.65" y2="-4.85" width="0.1524" layer="51"/>
+<wire x1="-4.85" y1="-2.65" x2="-2.65" y2="-4.85" width="0.1524" layer="51"/>
+<wire x1="-4.85" y1="4.85" x2="-1.25" y2="4.85" width="0.1524" layer="21"/>
+<wire x1="-4.85" y1="4.85" x2="-4.85" y2="-2.65" width="0.1524" layer="21"/>
+<wire x1="-4.85" y1="-2.65" x2="-2.65" y2="-4.85" width="0.1524" layer="21"/>
+<wire x1="-2.65" y1="-4.85" x2="-1.25" y2="-4.85" width="0.1524" layer="21"/>
+<wire x1="4.85" y1="4.85" x2="1.25" y2="4.85" width="0.1524" layer="21"/>
+<wire x1="4.85" y1="4.85" x2="4.85" y2="-4.85" width="0.1524" layer="21"/>
+<wire x1="4.85" y1="-4.85" x2="1.2" y2="-4.85" width="0.1524" layer="21"/>
+<text x="-5.08" y="6.35" size="1.778" layer="25">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="27">&gt;VALUE</text>
+<wire x1="-1.25" y1="4.85" x2="-1.25" y2="3.85" width="0.1524" layer="21"/>
+<wire x1="-1.25" y1="3.85" x2="1.25" y2="3.85" width="0.1524" layer="21"/>
+<wire x1="1.25" y1="3.85" x2="1.25" y2="4.85" width="0.1524" layer="21"/>
+<wire x1="-1.25" y1="-4.85" x2="-1.25" y2="-3.75" width="0.1524" layer="21"/>
+<wire x1="-1.25" y1="-3.75" x2="1.2" y2="-3.75" width="0.1524" layer="21"/>
+<wire x1="1.2" y1="-3.75" x2="1.2" y2="-4.85" width="0.1524" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BUZZER">
+<description>&lt;h3&gt;Buzzer&lt;/h3&gt;</description>
+<wire x1="-1.27" y1="1.905" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.905" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.905" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0.635" y1="3.175" x2="0.635" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0.635" y1="0.635" x2="1.905" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0.635" x2="1.905" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="3.175" x2="0.635" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.905" x2="3.81" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.905" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="3.81" width="0.254" layer="94"/>
+<wire x1="5.08" y1="3.81" x2="5.715" y2="3.81" width="0.254" layer="94"/>
+<wire x1="5.715" y1="3.81" x2="5.715" y2="4.445" width="0.254" layer="94"/>
+<wire x1="5.715" y1="4.445" x2="-3.175" y2="4.445" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="4.445" x2="-3.175" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="3.81" x2="-2.54" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="3.81" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="3.81" x2="5.08" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="4.826" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="5.334" y="0" size="1.778" layer="96" font="vector">&gt;VALUE</text>
+<pin name="2" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BUZZER" prefix="LS">
+<description>&lt;h3&gt;Buzzer&lt;/h3&gt;
+&lt;p&gt;Small round buzzers that operate around the audible 2kHz range. You can use these as speakers to create simple music or user interfaces.&lt;/p&gt;
+&lt;p&gt;Variant Overview:
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;PTH - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7950"&gt;Mini Speaker - PC Mount 12mm 2.048kHz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;PTH_KIT - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7950"&gt;Mini Speaker - PC Mount 12mm 2.048kHz&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt; KIT simplifies soldering by adding stop mask to one side of the pads.&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;b&gt;PTH_NO_SILK - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7950"&gt;Mini Speaker - PC Mount 12mm 2.048kHz&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt; No silkscreen indicator of buzzer outline.&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;b&gt;PTH_KIT_NO_SILK - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7950"&gt;Mini Speaker - PC Mount 12mm 2.048kHz&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt; KIT package w/o silkscreen&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;b&gt;SMD - &lt;/b&gt; Buzzer Audio Magnetic (CCV-084B16)&lt;/li&gt; &lt;ul&gt;&lt;li&gt;SMD buzzer used on, e.g. the &lt;a href="https://www.sparkfun.com/products/8463"&gt;LilyPad Buzzer&lt;/a&gt; and &lt;a href="https://www.sparkfun.com/products/9963"&gt;RFID USB Reader&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;SMD_KIT - &lt;/b&gt; Buzzer Audio Magnetic (CCV-084B16)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;SMD Buzzer with elongated pins to make soldering easier. Used on the &lt;a href="https://www.sparkfun.com/products/10935"&gt;SparkFun Simon Says - Surface Mount Soldering Kit&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;&lt;b&gt;SMD-SQUARE - &lt;/b&gt; Buzzer Audio Magnetic (COMP-15701)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;SMT square buzzer with one chamfered corner.&lt;/li&gt;&lt;/ul&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="BUZZER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-PTH" package="BUZZER-12MM">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08253"/>
+<attribute name="SF_SKU" value="COM-07950"/>
+</technology>
+</technologies>
+</device>
+<device name="-SMD" package="BUZZER-CCV">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08568"/>
+</technology>
+</technologies>
+</device>
+<device name="-PTH_NO_SILK" package="BUZZER-12MM-NS">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08253"/>
+<attribute name="SF_SKU" value="COM-07950"/>
+</technology>
+</technologies>
+</device>
+<device name="-PTH_KIT_NO_SILK" package="BUZZER-12MM-NS-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08253"/>
+<attribute name="SF_SKU" value="COM-07950"/>
+</technology>
+</technologies>
+</device>
+<device name="-SMD_KIT" package="BUZZER-CCV-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08568"/>
+</technology>
+</technologies>
+</device>
+<device name="-PTH_KIT" package="BUZZER-12MM-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-08253"/>
+<attribute name="SF_SKU" value="COM-07950"/>
+</technology>
+</technologies>
+</device>
+<device name="-SMD-SQUARE" package="BUZZER_SMD">
+<connects>
+<connect gate="G$1" pin="1" pad="+"/>
+<connect gate="G$1" pin="2" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="COMP-15701" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8753,22 +9056,22 @@ Alternate pin configuration
 </classes>
 <parts>
 <part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="TH"/>
-<part name="U2" library="CORE1262-868M" deviceset="CORE1262-868M" device=""/>
-<part name="S1" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
+<part name="SX1262" library="CORE1262-868M" deviceset="CORE1262-868M" device=""/>
+<part name="MAIN" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="XT60-M" deviceset="XT60-M" device=""/>
 <part name="U3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="X1" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-G" device="" package3d_urn="urn:adsk.eagle:package:6205/1"/>
+<part name="LORA_ANT" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-G" device="" package3d_urn="urn:adsk.eagle:package:6205/1"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="S2" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
+<part name="DROGUE" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$2" library="HX711" deviceset="HX711" device="A"/>
+<part name="HX711" library="HX711" deviceset="HX711" device="A" value="HX711"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J2" library="SparkFun-Boards" deviceset="NANO_FOOTPRINT" device=""/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8780,7 +9083,13 @@ Alternate pin configuration
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_04" device="PTH"/>
-<part name="SW1" library="1825159-1" deviceset="1825159-1" device=""/>
+<part name="NANO_PWR" library="1825159-1" deviceset="1825159-1" device=""/>
+<part name="PICO_PWR" library="1825159-1" deviceset="1825159-1" device=""/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
+<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="LS1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH"/>
 </parts>
 <sheets>
 <sheet>
@@ -8791,11 +9100,11 @@ Alternate pin configuration
 <attribute name="NAME" x="2.5245" y="120.6946" size="2.54388125" layer="95"/>
 <attribute name="VALUE" x="2.5331" y="39.3486" size="2.54171875" layer="96"/>
 </instance>
-<instance part="U2" gate="G$1" x="-58.42" y="106.68" smashed="yes" rot="R180">
+<instance part="SX1262" gate="G$1" x="-58.42" y="106.68" smashed="yes" rot="R180">
 <attribute name="NAME" x="-45.72" y="88.138" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-45.72" y="127" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="S1" gate="1" x="-48.26" y="7.62" smashed="yes" rot="R270">
+<instance part="MAIN" gate="1" x="-48.26" y="7.62" smashed="yes" rot="R270">
 <attribute name="NAME" x="-50.165" y="13.97" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-45.72" y="11.43" size="1.778" layer="96"/>
 </instance>
@@ -8819,14 +9128,14 @@ Alternate pin configuration
 <instance part="GND4" gate="1" x="-104.14" y="73.66" smashed="yes">
 <attribute name="VALUE" x="-106.68" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="X1" gate="G1" x="-96.52" y="96.52" smashed="yes">
+<instance part="LORA_ANT" gate="G1" x="-96.52" y="96.52" smashed="yes">
 <attribute name="VALUE" x="-99.06" y="91.44" size="1.778" layer="96"/>
 <attribute name="NAME" x="-99.06" y="99.822" size="1.778" layer="95"/>
 </instance>
 <instance part="GND5" gate="1" x="-35.56" y="63.5" smashed="yes">
 <attribute name="VALUE" x="-38.1" y="60.96" size="1.778" layer="96"/>
 </instance>
-<instance part="S2" gate="1" x="-93.98" y="7.62" smashed="yes" rot="R270">
+<instance part="DROGUE" gate="1" x="-93.98" y="7.62" smashed="yes" rot="R270">
 <attribute name="NAME" x="-95.885" y="13.97" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-91.44" y="11.43" size="1.778" layer="96"/>
 </instance>
@@ -8844,7 +9153,7 @@ Alternate pin configuration
 <instance part="GND7" gate="1" x="-93.98" y="88.9" smashed="yes">
 <attribute name="VALUE" x="-96.52" y="86.36" size="1.778" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="91.44" y="12.7" smashed="yes" rot="R180"/>
+<instance part="HX711" gate="G$1" x="91.44" y="12.7" smashed="yes" rot="R180"/>
 <instance part="GND9" gate="1" x="50.8" y="-5.08" smashed="yes">
 <attribute name="VALUE" x="48.26" y="-7.62" size="1.778" layer="96"/>
 </instance>
@@ -8881,9 +9190,31 @@ Alternate pin configuration
 <attribute name="VALUE" x="-17.78" y="124.714" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="-17.78" y="140.208" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SW1" gate="G$1" x="-25.4" y="35.56" smashed="yes">
+<instance part="NANO_PWR" gate="G$1" x="-25.4" y="35.56" smashed="yes">
 <attribute name="NAME" x="-22.85771875" y="38.10228125" size="1.42368125" layer="95"/>
 <attribute name="VALUE" x="-22.855290625" y="33.015290625" size="1.425040625" layer="96"/>
+</instance>
+<instance part="PICO_PWR" gate="G$1" x="40.64" y="132.08" smashed="yes">
+<attribute name="NAME" x="43.18228125" y="134.62228125" size="1.42368125" layer="95"/>
+<attribute name="VALUE" x="43.184709375" y="129.535290625" size="1.425040625" layer="96"/>
+</instance>
+<instance part="R3" gate="G$1" x="-12.7" y="73.66" smashed="yes" rot="R180">
+<attribute name="NAME" x="-8.89" y="72.1614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-8.89" y="76.962" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND13" gate="1" x="-22.86" y="68.58" smashed="yes">
+<attribute name="VALUE" x="-25.4" y="66.04" size="1.778" layer="96"/>
+</instance>
+<instance part="R4" gate="G$1" x="60.96" y="63.5" smashed="yes">
+<attribute name="NAME" x="57.15" y="64.9986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.15" y="60.198" size="1.778" layer="96"/>
+</instance>
+<instance part="GND14" gate="1" x="68.58" y="68.58" smashed="yes" rot="R180">
+<attribute name="VALUE" x="71.12" y="71.12" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="LS1" gate="G$1" x="40.64" y="30.48" smashed="yes">
+<attribute name="NAME" x="38.1" y="35.306" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="45.974" y="30.48" size="1.778" layer="96" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -8891,7 +9222,7 @@ Alternate pin configuration
 <nets>
 <net name="CLK" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="CLK"/>
+<pinref part="SX1262" gate="G$1" pin="CLK"/>
 <wire x1="-40.64" y1="114.3" x2="-35.56" y2="114.3" width="0.1524" layer="91"/>
 <label x="-35.56" y="114.3" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -8903,31 +9234,36 @@ Alternate pin configuration
 </net>
 <net name="MISO" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="MISO"/>
+<pinref part="SX1262" gate="G$1" pin="MISO"/>
 <wire x1="-40.64" y1="116.84" x2="-30.226" y2="116.84" width="0.1524" layer="91"/>
 <label x="-35.306" y="116.84" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U$1" pin="GP12"/>
 <wire x1="-10.16" y1="68.58" x2="-2.54" y2="68.58" width="0.1524" layer="91"/>
-<label x="-7.62" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="-10.16" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CS" class="0">
 <segment>
 <pinref part="U1" gate="U$1" pin="GP9"/>
-<wire x1="-7.62" y1="78.74" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="78.74" x2="-5.08" y2="78.74" width="0.1524" layer="91"/>
 <label x="-7.62" y="78.74" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-5.08" y1="78.74" x2="-2.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="78.74" x2="-5.08" y2="73.66" width="0.1524" layer="91"/>
+<junction x="-5.08" y="78.74"/>
+<wire x1="-5.08" y1="73.66" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="CS"/>
+<pinref part="SX1262" gate="G$1" pin="CS"/>
 <wire x1="-40.64" y1="111.76" x2="-35.56" y2="111.76" width="0.1524" layer="91"/>
 <label x="-35.56" y="111.76" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RESET" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="RESET"/>
+<pinref part="SX1262" gate="G$1" pin="RESET"/>
 <wire x1="-40.64" y1="96.52" x2="-38.1" y2="96.52" width="0.1524" layer="91"/>
 <label x="-38.1" y="96.52" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -8939,7 +9275,7 @@ Alternate pin configuration
 </net>
 <net name="BUSY" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="BUSY"/>
+<pinref part="SX1262" gate="G$1" pin="BUSY"/>
 <wire x1="-40.64" y1="99.06" x2="-38.1" y2="99.06" width="0.1524" layer="91"/>
 <label x="-38.1" y="99.06" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -8951,7 +9287,7 @@ Alternate pin configuration
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="GND"/>
+<pinref part="SX1262" gate="G$1" pin="GND"/>
 <wire x1="-76.2" y1="121.92" x2="-96.52" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-96.52" y1="116.84" x2="-96.52" y2="121.92" width="0.1524" layer="91"/>
@@ -8962,7 +9298,7 @@ Alternate pin configuration
 <wire x1="33.02" y1="45.72" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="S"/>
+<pinref part="MAIN" gate="1" pin="S"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="-43.18" y1="2.54" x2="-38.1" y2="2.54" width="0.1524" layer="91"/>
 </segment>
@@ -8985,17 +9321,17 @@ Alternate pin configuration
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="S2" gate="1" pin="S"/>
+<pinref part="DROGUE" gate="1" pin="S"/>
 <wire x1="-88.9" y1="2.54" x2="-83.82" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G1" pin="2"/>
+<pinref part="LORA_ANT" gate="G1" pin="2"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="-93.98" y1="93.98" x2="-93.98" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="HX711" gate="G$1" pin="GND"/>
 <wire x1="55.88" y1="-2.54" x2="50.8" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
@@ -9029,14 +9365,31 @@ Alternate pin configuration
 <label x="-2.54" y="134.62" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SW1" gate="G$1" pin="1"/>
+<pinref part="NANO_PWR" gate="G$1" pin="1"/>
 <wire x1="-33.02" y1="38.1" x2="-35.56" y2="38.1" width="0.1524" layer="91"/>
 <label x="-35.56" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="PICO_PWR" gate="G$1" pin="1"/>
+<wire x1="33.02" y1="134.62" x2="30.48" y2="134.62" width="0.1524" layer="91"/>
+<label x="30.48" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="-17.78" y1="73.66" x2="-22.86" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="73.66" x2="-22.86" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="66.04" y1="63.5" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="63.5" x2="68.58" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="DIO1" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="DIO1"/>
+<pinref part="SX1262" gate="G$1" pin="DIO1"/>
 <wire x1="-76.2" y1="104.14" x2="-83.82" y2="104.14" width="0.1524" layer="91"/>
 <label x="-83.82" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9048,7 +9401,7 @@ Alternate pin configuration
 </net>
 <net name="MOSI" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="MOSI"/>
+<pinref part="SX1262" gate="G$1" pin="MOSI"/>
 <wire x1="-40.64" y1="119.38" x2="-35.56" y2="119.38" width="0.1524" layer="91"/>
 <label x="-35.56" y="119.38" size="1.778" layer="95" xref="yes"/>
 </segment>
@@ -9086,27 +9439,22 @@ Alternate pin configuration
 <wire x1="-33.02" y1="76.2" x2="-30.48" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="3V3"/>
+<pinref part="SX1262" gate="G$1" pin="3V3"/>
 <wire x1="-76.2" y1="91.44" x2="-78.74" y2="91.44" width="0.1524" layer="91"/>
 <label x="-78.74" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="S1" gate="1" pin="O"/>
+<pinref part="MAIN" gate="1" pin="O"/>
 <wire x1="-40.64" y1="7.62" x2="-43.18" y2="7.62" width="0.1524" layer="91"/>
 <label x="-40.64" y="7.62" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="U$1" pin="VSYS"/>
-<wire x1="33.02" y1="114.3" x2="40.64" y2="114.3" width="0.1524" layer="91"/>
-<label x="40.64" y="114.3" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="S2" gate="1" pin="O"/>
+<pinref part="DROGUE" gate="1" pin="O"/>
 <wire x1="-88.9" y1="7.62" x2="-83.82" y2="7.62" width="0.1524" layer="91"/>
 <label x="-83.82" y="7.62" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
+<pinref part="HX711" gate="G$1" pin="VCC"/>
 <wire x1="55.88" y1="5.08" x2="50.8" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="5.08" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
 <label x="50.8" y="12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
@@ -9122,26 +9470,31 @@ Alternate pin configuration
 <label x="-2.54" y="137.16" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SW1" gate="G$1" pin="3"/>
+<pinref part="NANO_PWR" gate="G$1" pin="3"/>
 <wire x1="-33.02" y1="33.02" x2="-35.56" y2="33.02" width="0.1524" layer="91"/>
 <label x="-35.56" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="PICO_PWR" gate="G$1" pin="3"/>
+<wire x1="33.02" y1="129.54" x2="30.48" y2="129.54" width="0.1524" layer="91"/>
+<label x="30.48" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="LS1" gate="G$1" pin="1"/>
+<wire x1="40.64" y1="27.94" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
+<label x="40.64" y="25.4" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="X1" gate="G1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="ANT"/>
+<pinref part="LORA_ANT" gate="G1" pin="1"/>
+<pinref part="SX1262" gate="G$1" pin="ANT"/>
 <wire x1="-93.98" y1="96.52" x2="-76.2" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MAIN" class="0">
 <segment>
-<pinref part="U1" gate="U$1" pin="GP16"/>
-<wire x1="33.02" y1="58.42" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
-<label x="40.64" y="58.42" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="S1" gate="1" pin="P"/>
+<pinref part="MAIN" gate="1" pin="P"/>
 <wire x1="-53.34" y1="5.08" x2="-58.42" y2="5.08" width="0.1524" layer="91"/>
 <label x="-60.96" y="5.08" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -9149,10 +9502,15 @@ Alternate pin configuration
 <wire x1="-58.42" y1="7.62" x2="-58.42" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-58.42" y="5.08"/>
 </segment>
+<segment>
+<pinref part="U1" gate="U$1" pin="GP11"/>
+<wire x1="-2.54" y1="71.12" x2="-10.16" y2="71.12" width="0.1524" layer="91"/>
+<label x="-10.16" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="DROG" class="0">
 <segment>
-<pinref part="S2" gate="1" pin="P"/>
+<pinref part="DROGUE" gate="1" pin="P"/>
 <wire x1="-99.06" y1="5.08" x2="-104.14" y2="5.08" width="0.1524" layer="91"/>
 <label x="-106.68" y="5.08" size="1.778" layer="95" rot="R180" xref="yes"/>
 <wire x1="-104.14" y1="5.08" x2="-106.68" y2="5.08" width="0.1524" layer="91"/>
@@ -9161,14 +9519,14 @@ Alternate pin configuration
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="U$1" pin="GP22"/>
-<wire x1="33.02" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
-<label x="40.64" y="78.74" size="1.778" layer="95" xref="yes"/>
+<pinref part="U1" gate="U$1" pin="GP13"/>
+<wire x1="-2.54" y1="66.04" x2="-10.16" y2="66.04" width="0.1524" layer="91"/>
+<label x="-10.16" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CLK-ARD" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="SCK"/>
+<pinref part="HX711" gate="G$1" pin="SCK"/>
 <wire x1="55.88" y1="2.54" x2="50.8" y2="2.54" width="0.1524" layer="91"/>
 <label x="50.8" y="2.54" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9180,7 +9538,7 @@ Alternate pin configuration
 </net>
 <net name="DATA" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="DT"/>
+<pinref part="HX711" gate="G$1" pin="DT"/>
 <wire x1="55.88" y1="0" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="-2.54" x2="45.72" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="-5.08" x2="43.18" y2="-5.08" width="0.1524" layer="91"/>
@@ -9194,7 +9552,7 @@ Alternate pin configuration
 </net>
 <net name="DIO2" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="DIO2"/>
+<pinref part="SX1262" gate="G$1" pin="DIO2"/>
 <wire x1="-76.2" y1="106.68" x2="-83.82" y2="106.68" width="0.1524" layer="91"/>
 <label x="-83.82" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9206,42 +9564,42 @@ Alternate pin configuration
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="B+"/>
+<pinref part="HX711" gate="G$1" pin="B+"/>
 <pinref part="SV1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="10.16" x2="99.06" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="B-"/>
+<pinref part="HX711" gate="G$1" pin="B-"/>
 <pinref part="SV1" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="7.62" x2="99.06" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="A+"/>
+<pinref part="HX711" gate="G$1" pin="A+"/>
 <pinref part="SV1" gate="G$1" pin="3"/>
 <wire x1="93.98" y1="5.08" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="A-"/>
+<pinref part="HX711" gate="G$1" pin="A-"/>
 <pinref part="SV1" gate="G$1" pin="4"/>
 <wire x1="93.98" y1="2.54" x2="99.06" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="E-"/>
+<pinref part="HX711" gate="G$1" pin="E-"/>
 <pinref part="SV1" gate="G$1" pin="5"/>
 <wire x1="93.98" y1="0" x2="99.06" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="E+"/>
+<pinref part="HX711" gate="G$1" pin="E+"/>
 <pinref part="SV1" gate="G$1" pin="6"/>
 <wire x1="93.98" y1="-2.54" x2="99.06" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
@@ -9254,8 +9612,18 @@ Alternate pin configuration
 </segment>
 <segment>
 <pinref part="U1" gate="U$1" pin="GP17"/>
-<wire x1="33.02" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
 <label x="40.64" y="60.96" size="1.778" layer="95" xref="yes"/>
+<wire x1="38.1" y1="60.96" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="60.96" x2="38.1" y2="63.5" width="0.1524" layer="91"/>
+<junction x="38.1" y="60.96"/>
+<wire x1="38.1" y1="63.5" x2="55.88" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="D10"/>
+<wire x1="10.16" y1="0" x2="15.24" y2="0" width="0.1524" layer="91"/>
+<label x="15.24" y="0" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SD_MOSI" class="0">
@@ -9269,6 +9637,11 @@ Alternate pin configuration
 <wire x1="-2.54" y1="96.52" x2="-7.62" y2="96.52" width="0.1524" layer="91"/>
 <label x="-7.62" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="D11"/>
+<wire x1="10.16" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
+<label x="15.24" y="-2.54" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SD_CLK" class="0">
 <segment>
@@ -9281,6 +9654,11 @@ Alternate pin configuration
 <wire x1="33.02" y1="66.04" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <label x="40.64" y="66.04" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="D13"/>
+<wire x1="10.16" y1="-7.62" x2="15.24" y2="-7.62" width="0.1524" layer="91"/>
+<label x="15.24" y="-7.62" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SD_MISO" class="0">
 <segment>
@@ -9292,6 +9670,11 @@ Alternate pin configuration
 <pinref part="U1" gate="U$1" pin="GP4"/>
 <wire x1="-2.54" y1="93.98" x2="-7.62" y2="93.98" width="0.1524" layer="91"/>
 <label x="-7.62" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="D12"/>
+<wire x1="10.16" y1="-5.08" x2="15.24" y2="-5.08" width="0.1524" layer="91"/>
+<label x="15.24" y="-5.08" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -9320,7 +9703,7 @@ Alternate pin configuration
 </net>
 <net name="NANO_PWR" class="0">
 <segment>
-<pinref part="SW1" gate="G$1" pin="2"/>
+<pinref part="NANO_PWR" gate="G$1" pin="2"/>
 <wire x1="-33.02" y1="35.56" x2="-35.56" y2="35.56" width="0.1524" layer="91"/>
 <label x="-35.56" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -9329,6 +9712,30 @@ Alternate pin configuration
 <wire x1="-15.24" y1="22.86" x2="-20.32" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="22.86" x2="-20.32" y2="25.4" width="0.1524" layer="91"/>
 <label x="-20.32" y="25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PICO_PWR" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="VSYS"/>
+<wire x1="33.02" y1="114.3" x2="40.64" y2="114.3" width="0.1524" layer="91"/>
+<label x="40.64" y="114.3" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="PICO_PWR" gate="G$1" pin="2"/>
+<wire x1="33.02" y1="132.08" x2="30.48" y2="132.08" width="0.1524" layer="91"/>
+<label x="30.48" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="BUZZER" class="0">
+<segment>
+<pinref part="LS1" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="27.94" x2="43.18" y2="25.4" width="0.1524" layer="91"/>
+<label x="43.18" y="25.4" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="D4"/>
+<wire x1="10.16" y1="15.24" x2="17.78" y2="15.24" width="0.1524" layer="91"/>
+<label x="17.78" y="15.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

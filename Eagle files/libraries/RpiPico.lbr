@@ -329,28 +329,6 @@
 <pad name="40" x="8.89" y="24.13" drill="1"/>
 <text x="-10.414" y="-28.067" size="1.778" layer="25">&gt;NAME</text>
 <text x="1.016" y="-20.955" size="1.778" layer="27" rot="R90">&gt;VALUE</text>
-<hole x="-2.725" y="24" drill="1.8"/>
-<hole x="2.725" y="24" drill="1.8"/>
-<hole x="-2.425" y="20.97" drill="1.5"/>
-<hole x="2.425" y="20.97" drill="1.5"/>
-<polygon width="0.127" layer="41">
-<vertex x="-3.5" y="16"/>
-<vertex x="-1.5" y="16"/>
-<vertex x="-1.5" y="14"/>
-<vertex x="-3.5" y="14"/>
-</polygon>
-<polygon width="0.127" layer="41">
-<vertex x="-3.5" y="13.5"/>
-<vertex x="-1.5" y="13.5"/>
-<vertex x="-1.5" y="11.5"/>
-<vertex x="-3.5" y="11.5"/>
-</polygon>
-<polygon width="0.127" layer="41">
-<vertex x="-3.7" y="24.9"/>
-<vertex x="3.7" y="24.9"/>
-<vertex x="3.7" y="20.2"/>
-<vertex x="-3.7" y="20.2"/>
-</polygon>
 <pad name="41" x="-2.54" y="-23.9" drill="1"/>
 <pad name="42" x="0" y="-23.9" drill="1"/>
 <pad name="43" x="2.54" y="-23.9" drill="1"/>
