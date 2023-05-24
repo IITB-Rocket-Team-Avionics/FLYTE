@@ -9055,41 +9055,41 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </class>
 </classes>
 <parts>
-<part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="TH"/>
-<part name="SX1262" library="CORE1262-868M" deviceset="CORE1262-868M" device=""/>
-<part name="MAIN" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
+<part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="TH" override_package3d_urn="urn:adsk.eagle:package:40481157/2" override_package_urn="urn:adsk.eagle:footprint:40481158/1"/>
+<part name="SX1262" library="CORE1262-868M" deviceset="CORE1262-868M" device="" override_package3d_urn="urn:adsk.eagle:package:40481108/2" override_package_urn="urn:adsk.eagle:footprint:40481109/1"/>
+<part name="MAIN" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1" override_package3d_urn="urn:adsk.eagle:package:40482961/2" override_package_urn="urn:adsk.eagle:footprint:27535/1"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="XT60-M" deviceset="XT60-M" device=""/>
-<part name="U3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
+<part name="J1" library="XT60-M" deviceset="XT60-M" device="" override_package3d_urn="urn:adsk.eagle:package:40482899/2" override_package_urn="urn:adsk.eagle:footprint:40482900/1"/>
+<part name="U3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40482892/2" override_package_urn="urn:adsk.eagle:footprint:40482893/1"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LORA_ANT" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-G" device="" package3d_urn="urn:adsk.eagle:package:6205/1"/>
+<part name="LORA_ANT" library="con-coax" library_urn="urn:adsk.eagle:library:133" deviceset="BU-SMA-G" device="" package3d_urn="urn:adsk.eagle:package:6205/1" override_package3d_urn="urn:adsk.eagle:package:40481159/2" override_package_urn="urn:adsk.eagle:footprint:6180/1"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="DROGUE" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1"/>
+<part name="DROGUE" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="M9040P" device="" package3d_urn="urn:adsk.eagle:package:27676/1" override_package3d_urn="urn:adsk.eagle:package:40482957/2" override_package_urn="urn:adsk.eagle:footprint:27535/1"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
-<part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" value="22uF"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40482895/2" override_package_urn="urn:adsk.eagle:footprint:40482896/1" value="22uF"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40482897/2" override_package_urn="urn:adsk.eagle:footprint:40482898/1" value="22uF"/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="HX711" library="HX711" deviceset="HX711" device="A" value="HX711"/>
+<part name="HX711" library="HX711" deviceset="HX711" device="A" override_package3d_urn="urn:adsk.eagle:package:40482990/2" override_package_urn="urn:adsk.eagle:footprint:40482991/1" value="HX711"/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J2" library="SparkFun-Boards" deviceset="NANO_FOOTPRINT" device=""/>
+<part name="J2" library="SparkFun-Boards" deviceset="NANO_FOOTPRINT" device="" override_package3d_urn="urn:adsk.eagle:package:40482988/2" override_package_urn="urn:adsk.eagle:footprint:40482989/1"/>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="SV1" library="SparkFun-Connectors" deviceset="CONN_06" device="SILK_FEMALE_PTH"/>
-<part name="U$1" library="SDREADER" deviceset="SDREADER" device=""/>
+<part name="SV1" library="SparkFun-Connectors" deviceset="CONN_06" device="SILK_FEMALE_PTH" override_package3d_urn="urn:adsk.eagle:package:40482917/2" override_package_urn="urn:adsk.eagle:footprint:14240/1"/>
+<part name="U$1" library="SDREADER" deviceset="SDREADER" device="" override_package3d_urn="urn:adsk.eagle:package:40481152/2" override_package_urn="urn:adsk.eagle:footprint:40481153/1"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J3" library="SparkFun-Connectors" deviceset="CONN_04" device="PTH"/>
-<part name="NANO_PWR" library="1825159-1" deviceset="1825159-1" device=""/>
-<part name="PICO_PWR" library="1825159-1" deviceset="1825159-1" device=""/>
+<part name="J3" library="SparkFun-Connectors" deviceset="CONN_04" device="PTH" override_package3d_urn="urn:adsk.eagle:package:40481154/2" override_package_urn="urn:adsk.eagle:footprint:40481155/1"/>
+<part name="NANO_PWR" library="1825159-1" deviceset="1825159-1" device="" override_package3d_urn="urn:adsk.eagle:package:40482088/2" override_package_urn="urn:adsk.eagle:footprint:40482123/1"/>
+<part name="PICO_PWR" library="1825159-1" deviceset="1825159-1" device="" override_package3d_urn="urn:adsk.eagle:package:40481160/2" override_package_urn="urn:adsk.eagle:footprint:40481161/1"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LS1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH"/>
+<part name="LS1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH" override_package3d_urn="urn:adsk.eagle:package:40482689/2" override_package_urn="urn:adsk.eagle:footprint:40482703/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -9758,6 +9758,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 

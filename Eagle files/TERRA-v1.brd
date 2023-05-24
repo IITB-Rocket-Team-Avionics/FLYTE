@@ -3,10 +3,10 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -194,6 +194,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="no"/>
 </layers>
 <board>
+<fusionsync huburn="a.YnVzaW5lc3M6aWl0YjUzNQ" projecturn="a.YnVzaW5lc3M6aWl0YjUzNSNEMjAyMjA3MjU1NDIwMjEzNzY" f3durn="urn:adsk.wipprod:dm.lineage:_NmV7thPTnS9qqI_63ICqg" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="d66ac717-8968-4f97-bda8-553498ec6614" lastsyncedrevisionid="d66ac717-8968-4f97-bda8-553498ec6614" lastboardhashguid="01ab49ee-c91e-3a9e-a234-ed346ad10580" lastpushedtime="2023-05-24T22:25:06Z" linktopcb3d="true"/>
 <plain>
 <wire x1="0" y1="0" x2="100" y2="0" width="0" layer="20"/>
 <wire x1="100" y1="0" x2="100" y2="70" width="0" layer="20"/>
@@ -2220,17 +2221,17 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="SparkFun-Capacitors" package="0805" value="22uF" x="85.8" y="56.79" smashed="yes" rot="MR90">
+<element name="C1" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40482895/2" override_package_urn="urn:adsk.eagle:footprint:40482896/1" value="22uF" x="85.8" y="56.79" smashed="yes" rot="MR90">
 <attribute name="NAME" x="86.689" y="56.79" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08402" x="-31.04" y="121.56" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="84.911" y="56.79" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" package="0805" value="22uF" x="85.8" y="52.65" smashed="yes" rot="MR90">
+<element name="C2" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40482897/2" override_package_urn="urn:adsk.eagle:footprint:40482898/1" value="22uF" x="85.8" y="52.65" smashed="yes" rot="MR90">
 <attribute name="NAME" x="86.689" y="52.65" size="0.6096" layer="26" font="vector" ratio="20" rot="MR90" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08402" x="-31.04" y="121.23" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="84.911" y="52.65" size="0.6096" layer="28" font="vector" ratio="20" rot="MR90" align="top-center"/>
 </element>
-<element name="J1" library="XT60-M" package="AMASS_XT60-M" value="XT60-M" x="81" y="65.6" smashed="yes" rot="R180">
+<element name="J1" library="XT60-M" package="AMASS_XT60-M" override_package3d_urn="urn:adsk.eagle:package:40482899/2" override_package_urn="urn:adsk.eagle:footprint:40482900/1" value="XT60-M" x="81" y="65.6" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="Not in stock" x="18.77" y="168.47" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DESCRIPTION" value=" Plug; DC supply; XT60; male; PIN: 2; for cable; soldered; 30A; 500V " x="18.77" y="168.47" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="AMASS" x="18.77" y="168.47" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2239,7 +2240,7 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="18.77" y="168.47" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="89" y="70.9" size="1.27" layer="27" rot="R180" align="top-left"/>
 </element>
-<element name="J2" library="SparkFun-Boards" package="NANO" value="NANO_FOOTPRINT" x="65" y="24" smashed="yes"/>
+<element name="J2" library="SparkFun-Boards" package="NANO" override_package3d_urn="urn:adsk.eagle:package:40482988/2" override_package_urn="urn:adsk.eagle:footprint:40482989/1" value="NANO_FOOTPRINT" x="65" y="24" smashed="yes"/>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K" x="54.3" y="62" smashed="yes" rot="R90">
 <attribute name="NAME" x="55.235" y="65.23" size="1.016" layer="25" rot="R180"/>
 <attribute name="POPULARITY" value="85" x="172.41" y="116.61" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2252,26 +2253,26 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="176.11" y="122.96" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="60.54" y="61.365" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="MAIN" library="switch" library_urn="urn:adsk.eagle:library:380" package="M9040P" package3d_urn="urn:adsk.eagle:package:27676/1" value="" x="64" y="62" smashed="yes" rot="R180">
+<element name="MAIN" library="switch" library_urn="urn:adsk.eagle:library:380" package="M9040P" package3d_urn="urn:adsk.eagle:package:27676/1" override_package3d_urn="urn:adsk.eagle:package:40482961/2" override_package_urn="urn:adsk.eagle:footprint:27535/1" value="" x="64" y="62" smashed="yes" rot="R180">
 <attribute name="NAME" x="69.02" y="64.01" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="POPULARITY" value="0" x="24.63" y="164.87" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="67.81" y="71.525" size="1.778" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="DROGUE" library="switch" library_urn="urn:adsk.eagle:library:380" package="M9040P" package3d_urn="urn:adsk.eagle:package:27676/1" value="" x="47.7" y="62" smashed="yes" rot="R180">
+<element name="DROGUE" library="switch" library_urn="urn:adsk.eagle:library:380" package="M9040P" package3d_urn="urn:adsk.eagle:package:27676/1" override_package3d_urn="urn:adsk.eagle:package:40482957/2" override_package_urn="urn:adsk.eagle:footprint:27535/1" value="" x="47.7" y="62" smashed="yes" rot="R180">
 <attribute name="NAME" x="42.91" y="66.98" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="POPULARITY" value="0" x="-0.56" y="164.87" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="51.51" y="71.525" size="1.778" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="SV1" library="SparkFun-Connectors" package="1X06" value="" x="89" y="8.6" smashed="yes" rot="R180">
+<element name="SV1" library="SparkFun-Connectors" package="1X06" override_package3d_urn="urn:adsk.eagle:package:40482917/2" override_package_urn="urn:adsk.eagle:footprint:14240/1" value="" x="89" y="8.6" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="CONN-08437" x="89" y="8.6" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="94.842" y="6.568" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="U$1" library="SDREADER" package="SDREADER" value="SDREADER" x="25.8" y="28.6" smashed="yes" rot="R180"/>
-<element name="HX711" library="HX711" package="HX711" value="HX711" x="110" y="7.6" smashed="yes" rot="R90"/>
-<element name="U1" library="RpiPico" package="PICO-PKG-TH" value="RASPBERRY_PICOTH" x="42" y="28" smashed="yes" rot="R180">
+<element name="U$1" library="SDREADER" package="SDREADER" override_package3d_urn="urn:adsk.eagle:package:40481152/2" override_package_urn="urn:adsk.eagle:footprint:40481153/1" value="SDREADER" x="25.8" y="28.6" smashed="yes" rot="R180"/>
+<element name="HX711" library="HX711" package="HX711" override_package3d_urn="urn:adsk.eagle:package:40482990/2" override_package_urn="urn:adsk.eagle:footprint:40482991/1" value="HX711" x="110" y="7.6" smashed="yes" rot="R90"/>
+<element name="U1" library="RpiPico" package="PICO-PKG-TH" override_package3d_urn="urn:adsk.eagle:package:40481157/2" override_package_urn="urn:adsk.eagle:footprint:40481158/1" value="RASPBERRY_PICOTH" x="42" y="28" smashed="yes" rot="R180">
 <attribute name="VALUE" x="40.984" y="48.955" size="1.778" layer="27" rot="R270"/>
 </element>
-<element name="SX1262" library="CORE1262-868M" package="XCVR_CORE1262-868M" value="CORE1262-868M" x="14" y="48" smashed="yes">
+<element name="SX1262" library="CORE1262-868M" package="XCVR_CORE1262-868M" override_package3d_urn="urn:adsk.eagle:package:40481108/2" override_package_urn="urn:adsk.eagle:footprint:40481109/1" value="CORE1262-868M" x="14" y="48" smashed="yes">
 <attribute name="AVAILABILITY" value="Not in stock" x="78.77" y="-21.85" size="1.778" layer="27" display="off"/>
 <attribute name="DESCRIPTION" value=" Lora core module " x="78.77" y="-21.85" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="Waveshare Electronics" x="78.77" y="-21.85" size="1.778" layer="27" display="off"/>
@@ -2281,7 +2282,7 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="78.77" y="-21.85" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="3.645" y="35.25" size="1.27" layer="27"/>
 </element>
-<element name="U3" library="AMS1117-3.3" package="SOT229P700X180-4N" value="AMS1117-3.3" x="92" y="53.6" smashed="yes" rot="MR90">
+<element name="U3" library="AMS1117-3.3" package="SOT229P700X180-4N" override_package3d_urn="urn:adsk.eagle:package:40482892/2" override_package_urn="urn:adsk.eagle:footprint:40482893/1" value="AMS1117-3.3" x="92" y="53.6" smashed="yes" rot="MR90">
 <attribute name="AVAILABILITY" value="Not in stock" x="-10.87" y="133.61" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="DESCRIPTION" value=" Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator " x="-10.87" y="133.61" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MF" value="Advanced Monolithic Systems" x="-10.87" y="133.61" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -2290,7 +2291,7 @@ design rules under a new name.</description>
 <attribute name="PRICE" value="None" x="-10.87" y="133.61" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="85.82905" y="49.903440625" size="1.272259375" layer="28" rot="MR90"/>
 </element>
-<element name="LORA_ANT" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="BU-SMA-G" package3d_urn="urn:adsk.eagle:package:6205/1" value="BU-SMA-G" x="22" y="65" smashed="yes" rot="R90">
+<element name="LORA_ANT" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="BU-SMA-G" package3d_urn="urn:adsk.eagle:package:6205/1" override_package3d_urn="urn:adsk.eagle:package:40481159/2" override_package_urn="urn:adsk.eagle:footprint:6180/1" value="BU-SMA-G" x="22" y="65" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="143.92" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="143.92" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="17.055" y="60.16" size="1.27" layer="25" rot="R90"/>
@@ -2299,15 +2300,12 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="4" x="143.92" y="94.21" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="27.715" y="61.825" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="J3" library="SparkFun-Connectors" package="1X04" value="" x="25.5" y="3.9" smashed="yes" rot="MR0">
+<element name="J3" library="SparkFun-Connectors" package="1X04" override_package3d_urn="urn:adsk.eagle:package:40481154/2" override_package_urn="urn:adsk.eagle:footprint:40481155/1" value="" x="25.5" y="3.9" smashed="yes" rot="MR0">
 <attribute name="PROD_ID" value="CONN-09696" x="25.5" y="3.9" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="26.77" y="1.868" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0"/>
 </element>
-<element name="U$3" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="5" y="65" smashed="yes"/>
-<element name="U$4" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="5" y="5" smashed="yes"/>
 <element name="U$5" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="95" y="5" smashed="yes"/>
-<element name="U$6" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="95" y="65" smashed="yes"/>
-<element name="NANO_PWR" library="1825159-1" package="SW_1825159-1" value="1825159-1" x="65" y="50" smashed="yes" rot="R180">
+<element name="NANO_PWR" library="1825159-1" package="SW_1825159-1" override_package3d_urn="urn:adsk.eagle:package:40482088/2" override_package_urn="urn:adsk.eagle:footprint:40482123/1" value="1825159-1" x="65" y="50" smashed="yes" rot="R180">
 <attribute name="AVAILABILITY" value="In Stock" x="65" y="50" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="COMMENT" value="1825159-1" x="65" y="50" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="CONFIGURATION_POLE-THROW" value="Single Pole - Double Throw" x="65" y="50" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2323,7 +2321,7 @@ design rules under a new name.</description>
 <attribute name="SWITCH_TYPE" value="Slide" x="65" y="50" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="71.507940625" y="54.805859375" size="1.27155" layer="27" rot="R180"/>
 </element>
-<element name="PICO_PWR" library="1825159-1" package="SW_1825159-1" value="1825159-1" x="33.5" y="59.2" smashed="yes">
+<element name="PICO_PWR" library="1825159-1" package="SW_1825159-1" override_package3d_urn="urn:adsk.eagle:package:40481160/2" override_package_urn="urn:adsk.eagle:footprint:40481161/1" value="1825159-1" x="33.5" y="59.2" smashed="yes">
 <attribute name="AVAILABILITY" value="In Stock" x="33.5" y="59.2" size="1.778" layer="27" display="off"/>
 <attribute name="COMMENT" value="1825159-1" x="33.5" y="59.2" size="1.778" layer="27" display="off"/>
 <attribute name="CONFIGURATION_POLE-THROW" value="Single Pole - Double Throw" x="33.5" y="59.2" size="1.778" layer="27" display="off"/>
@@ -2351,11 +2349,14 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="54.5" y="8" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="57.04" y="7.365" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="LS1" library="SparkFun-Electromechanical" package="BUZZER-12MM" value="BUZZER-PTH" x="83.5" y="54.7" smashed="yes" rot="R90">
+<element name="LS1" library="SparkFun-Electromechanical" package="BUZZER-12MM" override_package3d_urn="urn:adsk.eagle:package:40482689/2" override_package_urn="urn:adsk.eagle:footprint:40482703/1" value="BUZZER-PTH" x="83.5" y="54.7" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="COMP-08253" x="83.5" y="54.7" size="1.27" layer="27" rot="R90" display="off"/>
 <attribute name="SF_SKU" value="COM-07950" x="83.5" y="54.7" size="1.27" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="77.912" y="54.7" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
+<element name="U$2" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="95" y="65" smashed="yes"/>
+<element name="U$6" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="5" y="65" smashed="yes"/>
+<element name="U$3" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0" package3d_urn="urn:adsk.eagle:package:14277/1" value="" x="5" y="5" smashed="yes"/>
 </elements>
 <signals>
 <signal name="3V3(OUT)">
@@ -2452,23 +2453,16 @@ design rules under a new name.</description>
 <contactref element="R2" pad="2"/>
 <contactref element="J3" pad="3"/>
 <polygon width="0.4064" layer="1">
-<vertex x="-17.5" y="57.5"/>
-<vertex x="-17.5" y="9.5"/>
-<vertex x="-1" y="-7"/>
-<vertex x="104" y="-7"/>
-<vertex x="104" y="73"/>
-<vertex x="102.1" y="74.9"/>
-<vertex x="-0.1" y="74.9"/>
+<vertex x="-0.2" y="70.2"/>
+<vertex x="-0.2" y="-0.2"/>
+<vertex x="100.3" y="-0.2"/>
+<vertex x="100.3" y="70.2"/>
 </polygon>
 <polygon width="0.4064" layer="16">
-<vertex x="-15.9" y="63.1"/>
-<vertex x="-15.9" y="4.9"/>
-<vertex x="-1" y="-10"/>
-<vertex x="107" y="-10"/>
-<vertex x="109" y="-8"/>
-<vertex x="109" y="71"/>
-<vertex x="94.2" y="85.8"/>
-<vertex x="6.8" y="85.8"/>
+<vertex x="-0.4" y="70.2"/>
+<vertex x="-0.4" y="-0.2"/>
+<vertex x="100.3" y="-0.2"/>
+<vertex x="100.3" y="70.2"/>
 </polygon>
 <contactref element="NANO_PWR" pad="1"/>
 <contactref element="PICO_PWR" pad="1"/>
@@ -2756,6 +2750,11 @@ of those online libraries will not be understood (or retained)
 with this version.
 </note>
 <note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
+</note>
+<note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
@@ -2764,6 +2763,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
