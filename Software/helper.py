@@ -104,7 +104,7 @@ class Flyte:
         self.flash_CS = Pin(9)
         
         #uart bus
-        self.uart = UART(0, 9600, rx = Pin(1), tx = Pin(0), timeout=5000, timeout_char=5000)
+        self.uart = UART(0, 9600, rx = Pin(1), tx = Pin(0), timeout=1000, timeout_char=1000) # decide on timeouts
         
 
         try:
@@ -179,9 +179,9 @@ class Flyte:
         #State machine definitions-----------------------------------------------------------------------------------------
         
         drogue = Pin(15, Pin.OUT)
-        main = Pin(20, Pin.OUT)
+        #main = Pin(20, Pin.OUT)
         drogue.value(0)
-        main.value(0)
+        #main.value(0)
         
         max_alt = 0
         calib_gap = 60000 # Gap in milliseconds between subsequent calibrations
@@ -305,7 +305,7 @@ class Flyte:
                 if (len(self.data_array) < 512):  
                     self.data_array += self.data_fast + slow
                 else:
-                    data_file.write(data_array)
+                    data_file.write(self.data_array)
                     self.data_array = bytearray()
                     blocks_written += 1
                     self.data_array += self.data_fast + slow
@@ -313,7 +313,7 @@ class Flyte:
                 
             # Calibrate regularly
             if (self.state == 0):
-                if (t - self.calib_time > 60000):
+                if (t - self.calib_time > calib_gap):
                     print('Calibrating...')
                     for i in range(3): # Means subsequent calibration is happening
                         self.buzzer.duty_u16(30000)
@@ -321,7 +321,7 @@ class Flyte:
                         self.buzzer.duty_u16(0)
                         time.sleep(0.1)
                     self.calib_bmp()
-                    alt_buf = [0]*buf_len ####################################### why is this repeated. To ensure after calibration buffer is empty
+                    alt_buf = [0]*buf_len
                     accel_buf = [0]*buf_len
                     self.data_array = bytearray()
                     continue
@@ -356,10 +356,10 @@ class Flyte:
                 self.t_events[3] = t_log
                 print("Chute")
                 for i in range(3):
-                   pyro.value(1)
-                   time.sleep(1)
-                   pyro.value(0)
-                   time.sleep(0.1)
+                    drogue.value(1)
+                    time.sleep(1)
+                    drogue.value(0)
+                    time.sleep(0.1)
 
             elif (self.state==4 and sum(alt_buf) < buf_len*touchdown_alt): #Touchdown, is g vector sum required?
                 self.state = 5
@@ -373,7 +373,7 @@ class Flyte:
                 print("Touchdown idle")
                 
             else:
-                a = 6
+                self.state = 6
             '''
             if (self.state >= 1 and t_log - self.t_events[0] > force_pyro_liftoff): # Force ejection of parachute after 9 seconds from liftoff
                 self.t_events[3] = time.ticks_ms
@@ -405,15 +405,15 @@ class Flyte:
         
         print("Logging finished. Transferring to SD card now")
         for i in range(4): # Means storing to SD card now
-                        self.buzzer.duty_u16(30000)
-                        time.sleep(0.2)
-                        self.buzzer.duty_u16(0)
-                        time.sleep(0.1)
+            self.buzzer.duty_u16(30000)
+            time.sleep(0.2)
+            self.buzzer.duty_u16(0)
+            time.sleep(0.1)
         data_file.close()
-        try:
+        try: ##############################
             sd_file = open('/sd/data_' + new_idx + '.txt', 'w')
         except:
-            uos.mount(sd, "/sd")
+            uos.mount(self.sd, "/sd")
             sd_file = open('/sd/data_' + new_idx + '.txt', 'w')
             
         # Need to fix this, for some reason the sd card is fucking up in writing a file here
@@ -454,11 +454,10 @@ class Flyte:
                 buf = self.data_slow
                 self.sx.send(buf)
             
-            if(self.state == 6 and prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
+            if(self.state == 6 and self.prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
                 break
             
             time.sleep_ms(self.deltaT_trans - (time.ticks_ms() - t))
-        pass
 
 flyte = Flyte()
 flyte.init_board()
