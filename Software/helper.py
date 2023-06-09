@@ -32,9 +32,7 @@ class Flyte:
         self.deltaT = deltaT_log
         self.deltaT_trans = deltaT_trans
         self.init_done = False
-        self.data = [0,0,0,0,0,0,0,0,0,0,0]
-        self.kalman_data = [0,0,0]
-        self.t_events = [0,0,0,0,0] # Liftoff, Burnout, Apogee, Chute, Touchdown
+        self.t_events = [0,0,0,0,0,0] # Liftoff, Burnout, Apogee, Chute, Touchdown
         self.logging_done = False
         self.state = 0
         self.i2c_bus, self.spi_bus1, self.uart = None, None, None
@@ -58,7 +56,6 @@ class Flyte:
         self.manual_pyro = False
         self.pyro_fired = False
         self.msg_recv = []
-        self.t_msg = []
         self.sx_busy = False
         self.calib_time, self.calib_alt, self.calib_temp = 0,0,0
             
@@ -71,7 +68,6 @@ class Flyte:
             print('RX done.')
             msg,err = self.sx.recv()
             self.msg_recv.append(msg)
-            self.t_msg.append(self.data[0])
             if (msg == b'pyro'):
                 self.manual_pyro = True
         self.sx_busy = False
@@ -183,27 +179,7 @@ class Flyte:
             
     def fast_core_test_launch(self): # Has data acquisition, kalman filter, and state machine
     
-        # Kalman filter definitions-----------------------------------------------------------------------------------------
-        self.x = np.array([0,0,0]) # Estimate matrix. Init to zero for testing
-        P = np.array([[1.2526,0.7362,0], [0.7362,0.8872,0.0001], [0,0.0001,1.0012]]) # Covariance matrix. No idea how to init
 
-        # Control inputs. Currently just thrust from thrust curve
-        #control_input = False
-        #B = np.array([[0.5*deltaT*deltaT], [deltaT], [1]])
-
-        # The measurement matrix to change the state space from model to sensor frame
-        H = np.array([[1, 0, 0], [0, 0, 1]])
-
-        # Process noise matrix, which remains constant
-        Q = np.array([[0.1, 0.1, 0.1], [0.1, 0.1, 0.1], [0.1, 0.1, 0.1]])
-
-        # Sensor noise matrix (From BMP and MPU)
-        bmp_variance = 0.004096 # from datasheet
-        mpu_variance = 0.000676 # fro mzero test
-        R = np.array([[bmp_variance, 0], [0, mpu_variance]])
-        
-        #--------------------------------------------------------------------------------------------------------------------
-        
         #State machine definitions-----------------------------------------------------------------------------------------
         
         drogue = Pin(15, Pin.OUT)
@@ -224,10 +200,13 @@ class Flyte:
         touchdown_alt = 15 # in m, If altitude is less than this in descent, declare touchdown
         touchdown_to_idle = 10000 # In milliseconds, declare idle after this amount of time from detected touchdown
         
-        buf_len = 20
+        buf_len = 20 # assuming the loop runs at 40Hz
         alt_buf = [0]*buf_len
         accel_buf = [0]*buf_len
         index = 0
+        inc_num = 0 # stores how many readings are greater than the previous reading chronologically, resets to 0 data isn't increasing
+        zero_crossing = False # stores whether a zero crossing has occured
+
         
         temp_mult = 10
         accel_mult = 10000
@@ -246,27 +225,38 @@ class Flyte:
         
         self.calib_bmp()
         
-        #runtime = 300000 # in millisecs, changed to 300s so that transmission occurs for a long time
+        runtime = 300000 # in millisecs, changed to 300s so that transmission occurs for a long time
         self.init_done = True # Start lora and sd card thread
-        t_prev = 0
-        
+
         while True:
             t = time.ticks_ms()
             t_log = t - self.calib_time
-            t_delta = t_log - t_prev
-            
+
             # Get sensor readings
             accel = self.mpu.accel
             gyro = self.mpu.gyro
             temp = self.bmp.temperature
-            pres = self.bmp.pressure
             alt = self.bmp.getAlti()
             
             alt_buf[index] = alt
             accel_buf[index] = accel.y
-            index = (index+1)%(buf_len)
-            #self.data = [t_log, self.state, accel[0], accel[1], accel[2], gyro[0], gyro[1], gyro[2], temp, pres, alt]
-            
+
+            if alt > max_alt:
+                max_alt = alt
+
+            if self.state == 0: # to check whether altitude is MI
+                if(alt_buf[index] > alt_buf[(index+buf_len-1)%buf_len]):
+                    inc_num += 1
+                else:
+                    inc_num = 0
+            elif self.state == 1:
+                zero_crossing = (accel_buf[index]*accel_buf[(index+buf_len-1)%buf_len]) < 0
+
+
+            index = (index+1)%buf_len
+
+
+
             self.data_fast = ustruct.pack(packing_str,
                                           self.state,
                                           t_log,
@@ -277,14 +267,14 @@ class Flyte:
                                           (int)(gyro.x*gyro_mult),
                                           (int)(gyro.y*gyro_mult),
                                           (int)(gyro.z*gyro_mult),
-                                          (int)(alt*alt_mult),
+                                          (int)((alt - self.calib_alt)*alt_mult),
                                           45) # how do we get speed here?
             # Update data array
             if (len(self.data_array) < 512):  
                 self.data_array += self.data_fast
             else:
                 # self.data_array = bytes()
-                while not(len(self.data_array) < 512):
+                while not(len(self.data_array) < 512):  ################################################ what's this? inf loop
                     continue
                 self.data_array += self.data_fast
                 
@@ -298,100 +288,83 @@ class Flyte:
                         self.buzzer.duty_u16(0)
                         time.sleep(0.1)
                     self.calib_bmp()
-                    alt_buf = [0]*buf_len
+                    alt_buf = [0]*buf_len ####################################### why is this repeated
                     accel_buf = [0]*buf_len
                     self.data_array = []
                 continue
-            
-            # Predict, updates x and P
-            A = np.array([[1, t_delta, 0.5*t_delta*t_delta], [0, 1, t_delta], [0, 0, 1]]) # Primary transform matrix
-            self.x = np.dot(A,self.x)    # np.dot(A,x) + np.dot(B,u) for the control matrix, when we have the thrust curve
-            P = np.dot(np.dot(A,P), A.T)
-            accel_m = (-1*accel.y - 9.8) #acceleration at rest is now 0 instead of g. Acceleration x
-            alt_m = alt
-            mu = np.array([alt_m, accel_m])
-                    
-            # Writing the Kalman Gain, step by step
-            K1 = np.dot(np.dot(H, P), H.T)
-            K2 = np.linalg.inv(K1+R)
-            Kal = np.dot(P, np.dot(H.T, K2)) # The final Kalman Gain
-                    
-            # Merging the Prediction Model with the Sensor Data
-            self.x = self.x + np.dot(Kal, (mu - np.dot(H,self.x)))
-            P = P - np.dot(Kal, np.dot(H, P))
-            
-#             if(self.state==0 or self.state==1):
-#                 detection_array[counter] = self.x[2] # Ay
-#             elif(self.state==2 or self.state==4):
-#                 detection_array[counter] = self.x[1] # Vy
-#             
-#             counter = (counter+1)%n
-            
-            # Idle is state 0
-            
-#             if (self.state==0 and sum(detection_array) > n*1.5*9.8): #Liftoff is state 1
-#                 self.state = 1
-#                 self.t_events[0] = t_log
-#                 print("Liftoff")
-#                 
-#             elif (self.state==1 and sum(detection_array) < n*1.0): #Burnout is state 2
-#                 self.state = 2
-#                 self.t_events[1] = t_log
-#                 print("Burnout")
-#                                                 # This | condition might cause an issue since its the same for burnout detection
-#             elif (self.state==2 and sum(detection_array) < n*1.0 and x[0] > min_apogee): #Apogee is state 3
-#                 self.state = 3
-#                 self.t_events[2] = t_log
-#                 print("Apogee")
-#             
-#             elif (self.state==3 and t_log - self.t_events[2] > chute_delay): #Chute is state 4
-#                 self.state = 4
-#                 self.t_events[3] = t_log
-#                 print("Chute")
-#                 #for i in range(3):
-#                 #    pyro.value(1)
-#                 #    time.sleep(1)
-#                 #    pyro.value(0)
-#                 #    time.sleep(0.1)
-#             
-#             elif (self.state==4 and (sum(detection_array) < n*0.5 or t_log - self.t_events[3] > chute_time)): #Touchdown is state 5
-#                 self.state = 5 
-#                 self.t_events[4] = t_log
-#                 self.logging_done = True
-#                 print("Touchdown")
-#             
-# #             if (self.state >= 1 and t_log - self.t_events[0] > force_pyro_liftoff): # Force ejection of parachute after 9 seconds from liftoff
-# #                 self.t_events[3] = time.ticks_ms
-# #                 self.state = 4
-# #                 for i in range(3):
-# #                     pyro.value(1)
-# #                     time.sleep(1)
-# #                     pyro.value(0)
-# #                     time.sleep(0.1)
-# #                 self.pyro_fired = True
-# 
-#             if ((t_log > force_pyro_power or self.manual_pyro) and not self.pyro_fired):
-#                 self.state = 4
-#                 self.t_events[3] = t_log
-#                 self.buzzer.duty_u16(0)
-#                 for i in range(3):
-#                     pyro.value(1)
-#                     self.buzzer.duty_u16(30000)
-#                     print("MANUAL EJECTION SUCCESSFUL")
-#                     time.sleep(1)
-#                     pyro.value(0)
-#                     self.buzzer.duty_u16(0)
-#                     time.sleep(0.3)
-#                 self.pyro_fired = True
-#                 
-#             if (t_log > runtime or self.logging_done == True): # Stop data logging after run_time or if touchdown is detected
-#                 self.logging_done == True
-#                 self.data_array = []
-#                 break
-#             
-#             # force each iteration to take deltaT time
-#             time.sleep(self.deltaT - (time.ticks_ms() - t)/1000)
-#             t_prev = t_log
+           #------------------------------------------------------------------------
+
+           #State: 0,1,2,3,4,5,6
+           #Idle, Powered Ascent, Coasting, Descent, Drogue Out, Touchdown, TD Idle
+
+            if (self.state==0 and abs(sum(accel_buf))>abs(buf_len*liftoff_accel) and alt_buf[index]>liftoff_alt and inc_num>=buf_len): #Liftoff
+                self.state = 1
+                self.t_events[0] = t_log
+                print("Liftoff")
+
+            elif (self.state==1 and (zero_crossing or t_log - self.t_events[0] > liftoff_to_cutoff)): #Burnout
+                self.state = 2
+                self.t_events[1] = t_log
+                print("Burnout")
+
+            elif (self.state==2 and max_alt-alt>apogee_alt_diff): #Apogee
+                self.state = 3
+                self.t_events[2] = t_log
+                print("Apogee")
+
+            elif ((self.state==3 and t_log-self.t_events[2]>apogee_to_drogue and t_log-self.t_events[0]>drogue_lockout)
+                  or (self.state==2 and t_log-self.t_events[0]>liftoff_to_drogue)): #Chute, need to add condition for signals sent by ground station
+                self.state = 4
+                self.t_events[3] = t_log
+                print("Chute")
+                for i in range(3):
+                   pyro.value(1)
+                   time.sleep(1)
+                   pyro.value(0)
+                   time.sleep(0.1)
+
+            elif (self.state==4 and sum(alt_buf) < buf_len*touchdown_alt): #Touchdown, is g vector sum required?
+                self.state = 5
+                self.t_events[4] = t_log
+                print("Touchdown")
+
+            elif (self.state==5 and t_log-self.t_events[4]>touchdown_to_idle): #Touchdown idle
+                self.state = 6
+                self.t_events[5] = t_log
+                self.logging_done = True
+                print("Touchdown idle")
+            '''
+            if (self.state >= 1 and t_log - self.t_events[0] > force_pyro_liftoff): # Force ejection of parachute after 9 seconds from liftoff
+                self.t_events[3] = time.ticks_ms
+                self.state = 4
+                for i in range(3):
+                    pyro.value(1)
+                    time.sleep(1)
+                    pyro.value(0)
+                    time.sleep(0.1)
+                self.pyro_fired = True
+
+            if ((t_log > force_pyro_power or self.manual_pyro) and not self.pyro_fired):
+                self.state = 4
+                self.t_events[3] = t_log
+                self.buzzer.duty_u16(0)
+                for i in range(3):
+                    pyro.value(1)
+                    self.buzzer.duty_u16(30000)
+                    print("MANUAL EJECTION SUCCESSFUL")
+                    time.sleep(1)
+                    pyro.value(0)
+                    self.buzzer.duty_u16(0)
+                    time.sleep(0.3)
+                self.pyro_fired = True
+            '''
+            if (t_log > runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
+                self.logging_done = True
+                self.data_array = []
+                break
+
+            # force each iteration to take deltaT time
+            time.sleep(self.deltaT - (time.ticks_ms() - t)/1000)
 
         return
 
