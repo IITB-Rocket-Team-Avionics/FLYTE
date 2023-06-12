@@ -28,10 +28,10 @@ gc.collect()
 
 class Flyte:
 
-    def __init__(self, deltaT_log = 25, deltaT_trans = 500):
+    def __init__(self, deltaT_log = 25, deltaT_trans = 200):
         self.deltaT = deltaT_log
         self.deltaT_trans = deltaT_trans
-        self.init_done = False
+        self.sensor_init, self.comm_init = False, False
         self.t_events = [0,0,0,0,0,0] # Liftoff, Burnout, Apogee, Chute, Touchdown
         self.logging_done = False
         self.state = 0
@@ -51,12 +51,16 @@ class Flyte:
         self.prog = Pin(14, Pin.IN, Pin.PULL_DOWN)
         self.except_occr = False
         self.data_array = bytearray()
-        self.data_fast = bytes()
-        self.data_slow = bytes()
+        self.data_fast = bytes(32)
+        self.data_slow = bytes(32)
+        self.speed = 0
+        self.latitude = (0,0,0,'N')
+        self.longitude = (0,0,0,'S')
         self.manual_pyro = False
         self.pyro_fired = False
         self.msg_recv = []
         self.calib_time, self.calib_alt, self.calib_temp = 0,0,0
+        self.shutdown = False
             
     def cb(self, events):
         if events & SX1262.TX_DONE:
@@ -65,12 +69,16 @@ class Flyte:
         if events & SX1262.RX_DONE:
             print('RX done.')
             msg,err = self.sx.recv()
-            self.msg_recv.append(msg)
-            if (msg == b'pyro'):
-                self.manual_pyro = True
+#             self.msg_recv.append(msg)
+#             if (msg == b'pyro'):
+#                 self.manual_pyro = True
                 
     def callback_gps(gps, *_):  # Runs for each valid fix
-        print(gps.latitude(), gps.longitude(), gps.altitude)
+        print("gps callback")
+        #print(gps.latitude(), gps.longitude(), gps.altitude)
+        self.latitude = gps.latitude(coord_format=as_GPS.DMS)
+        self.longitude = gps.longitude(coord_format=as_GPS.DMS)
+        self.speed = gps.speed(unit=as_GPS.KPH)
         
     def calib_bmp(self, n = 100):
         self.calib_time = time.ticks_ms()
@@ -80,7 +88,7 @@ class Flyte:
             avg_alt += self.bmp.getAlti()
         self.calib_alt = avg_alt/n
     
-    def init_board(self): #Initiate BMP, MPU, SX1262, SD card, GPS, and flash
+    def init_board(self): #Initiate BMP, MPU, SD card, and flash
         print("starting init")
         
         # i2c bus
@@ -90,11 +98,6 @@ class Flyte:
                 freq = 400000)
 
         # spi buses
-#         self.spi_bus0 = SPI(0,
-#                     sck= Pin(18),
-#                     mosi=Pin(19),
-#                     miso=Pin(16))
-        
         self.spi_bus1 = SPI(1,
                     sck= Pin(10),
                     mosi=Pin(11),
@@ -105,7 +108,6 @@ class Flyte:
         
         #uart bus
         self.uart = UART(0, 9600, rx = Pin(1), tx = Pin(0), timeout=1000, timeout_char=1000) # decide on timeouts
-        
 
         try:
             self.bmp = BMP280(i2c_bus = self.i2c_bus)
@@ -117,6 +119,7 @@ class Flyte:
 
         try:
             self.mpu = MPU6050(self.i2c_bus)
+            #self.mpu.accel_range(3) # Set to 16g
         except Exception as e:
             print('Failed to initialize MPU6500')
             print(e)
@@ -138,18 +141,10 @@ class Flyte:
             print('Failed to initialize Flash')
             print(e)
             self.except_occr = True
-            
-        try:
-            sreader = asyncio.StreamReader(self.uart)  # Create a StreamReader
-            self.gps = as_GPS.AS_GPS(sreader)  # Instantiate GPS
-        except Exception as e:
-            print('Failed to initialize GPS')
-            print(e)
-            self.except_occr = True
-            
+        
         try:
             self.sx = SX1262(spi_bus=0, clk=18, mosi=19, miso=16, cs=17, irq=22, rst=26, gpio=27)
-            self.sx.begin(freq=909.4, bw=500.0, sf=8, cr=5, syncWord=0x12,
+            self.sx.begin(freq=909.4, bw=500.0, sf=8, cr=8, syncWord=0x12,
                      power=22, currentLimit=140.0, preambleLength=8,
                      implicit=False, implicitLen=0xFF,
                      crcOn=True, txIq=False, rxIq=False,
@@ -160,6 +155,14 @@ class Flyte:
             print(e)
             self.except_occr = True
         
+        try:
+            sreader = asyncio.StreamReader(self.uart)  # Create a StreamReader
+            self.gps = as_GPS.AS_GPS(sreader, fix_cb = self.callback_gps, fix_cb_args = (self))  # Instantiate GPS
+        except Exception as e:
+            print('Failed to initialize GPS')
+            print(e)
+            self.except_occr = True
+            
         if (self.except_occr):
             for i in range(10): # Initialization failed
                 self.buzzer.duty_u16(30000)
@@ -186,7 +189,7 @@ class Flyte:
         max_alt = 0
         calib_gap = 60000 # Gap in milliseconds between subsequent calibrations
         
-        liftoff_accel = -30 # in m/s^2, minimum sustained acceleration for liftoff
+        liftoff_accel = -3 # in g, minimum sustained acceleration for liftoff
         liftoff_alt = 15 # in m, minimum altitude to be cleared for liftoff
         liftoff_to_cutoff = 2500 # In milliseconds, force cutoff after this amount of time from detected liftoff
         apogee_alt_diff = 5 # in m, the minimum difference between highest recorded altitude and current altitude for apogee detection
@@ -205,18 +208,11 @@ class Flyte:
 
         
         temp_mult = 10
-        accel_mult = 10000
+        accel_mult = 100000
         gyro_mult = 10
-        alt_mult = 10000
+        alt_mult = 100000
         packing_str = '!bibiiihhhii'
-        packing_str_slow = '!biibiihiii'
-        
-        
-        ### Eh too lazy to open SD card
-        index_file = open('/sd/index.txt', 'w')
-        index_file.write("0")
-        index_file.close()
-        #########################
+        packing_str_slow = '!iiibiiibih'
         
         # Initialise data file
         index_file = open('/sd/index.txt', 'r')
@@ -228,7 +224,8 @@ class Flyte:
         index_file.write(new_idx)
         index_file.close()
         
-        blocks_written = 0 # How many blocks(512 bytes) are written to flash. Will be helpful in later retrieving the data to SD card
+        #unmount SD card as it will probably lose contact
+        uos.umount("/sd")
         
         #--------------------------------------------------------------------------------------------------------------------
         
@@ -244,21 +241,21 @@ class Flyte:
          #data_file = open('/sd/data_' + new_idx +'.txt', 'w')
         data_file = open('/win/data_' + new_idx + '.bin', 'wb')
         
-        runtime = 10000 # in millisecs, changed to 300s so that transmission occurs for a long time
-        self.init_done = True # Start lora and sd card thread
-
+        runtime = 30000 # in millisecs, changed to 300s so that transmission occurs for a long time
+        self.sensor_init = True # Start lora and sd card thread
+        self.state = 3 #####################################BRUH
+        buzz_counter = 0
+        
         while True:
-            t = time.ticks_ms()
-            t_log = t - self.calib_time
-            print(t_log)
+            t_log = time.ticks_ms()
 
             # Get sensor readings
             accel = self.mpu.accel
             gyro = self.mpu.gyro
             temp = self.bmp.temperature
-            alt = self.bmp.getAlti()
+            alt = self.bmp.getAlti() - self.calib_alt
             
-            alt_buf[index] = alt
+            alt_buf[index] = alt # alt_buf stores calibrated values
             accel_buf[index] = accel.y
 
             if alt > max_alt:
@@ -287,19 +284,23 @@ class Flyte:
                                           (int)(gyro.x*gyro_mult),
                                           (int)(gyro.y*gyro_mult),
                                           (int)(gyro.z*gyro_mult),
-                                          (int)((alt - self.calib_alt)*alt_mult),
+                                          (int)((alt)*alt_mult),
                                           45) # how do we get speed here?
             
-            if (self.state <3): # store ascent data without GPS
+            if (self.state == 0): # If in IDLE state, do not log, just keep appending the data array
+                if (len(self.data_array) < 512):  
+                    self.data_array += self.data_fast
+                else:
+                    self.data_array = self.data_array[32:] + self.data_fast
+            elif (self.state <3): # store ascent data without GPS
                 # Update data array
                 if (len(self.data_array) < 512):  
                     self.data_array += self.data_fast
                 else:
                     data_file.write(self.data_array)
                     self.data_array = bytearray()
-                    blocks_written += 1
                     self.data_array += self.data_fast
-            else:
+            else: # Store descent data with GPS
                 slow = self.data_slow # So that the information from the other thread is not accessed multiple times
                 # Update data array
                 if (len(self.data_array) < 512):  
@@ -307,31 +308,38 @@ class Flyte:
                 else:
                     data_file.write(self.data_array)
                     self.data_array = bytearray()
-                    blocks_written += 1
                     self.data_array += self.data_fast + slow
+            # We do not need to account for TOUCHDOWN IDLE as the state machine will force the logging loop to close in that state
                 
-                
-            # Calibrate regularly
+            # Calibrate and beep regularly
             if (self.state == 0):
-                if (t - self.calib_time > calib_gap):
+                if (t_log - self.calib_time > calib_gap):
+                    self.buzzer.duty_u16(0)
                     print('Calibrating...')
                     for i in range(3): # Means subsequent calibration is happening
                         self.buzzer.duty_u16(30000)
-                        time.sleep(0.2)
+                        time.sleep_ms(200)
                         self.buzzer.duty_u16(0)
-                        time.sleep(0.1)
+                        time.sleep_ms(100)
                     self.calib_bmp()
                     alt_buf = [0]*buf_len
                     accel_buf = [0]*buf_len
                     self.data_array = bytearray()
                     continue
+                else:
+                    if(buzz_counter == 7):
+                        self.buzzer.duty_u16(0)
+                    elif(buzz_counter == 79):
+                        self.buzzer.duty_u16(30000)
+                    else:
+                        pass
+                    buzz_counter = (buzz_counter + 1)%80
            #------------------------------------------------------------------------
 
            #State: 0,1,2,3,4,5,6
            #Idle, Powered Ascent, Coasting, Descent, Drogue Out, Touchdown, TD Idle
-            print("state machine")
             
-            if (t_log > runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
+            if (t_log - self.calib_time > runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
                 self.data_array = bytearray()
                 break
 
@@ -373,7 +381,7 @@ class Flyte:
                 print("Touchdown idle")
                 
             else:
-                self.state = 6
+                pass
             '''
             if (self.state >= 1 and t_log - self.t_events[0] > force_pyro_liftoff): # Force ejection of parachute after 9 seconds from liftoff
                 self.t_events[3] = time.ticks_ms
@@ -401,64 +409,135 @@ class Flyte:
             '''
             
             # force each iteration to take deltaT time
-            time.sleep_ms(self.deltaT - (time.ticks_ms() - t))
+            time.sleep_ms(self.deltaT - (time.ticks_ms() - t_log) - 1)
         
         print("Logging finished. Transferring to SD card now")
-        for i in range(4): # Means storing to SD card now
-            self.buzzer.duty_u16(30000)
-            time.sleep(0.2)
-            self.buzzer.duty_u16(0)
-            time.sleep(0.1)
         data_file.close()
-        try: ##############################
+        
+        transfer_to_SD = True
+        try: # try to re-mount the SD card as it has probably lost contact with the reader upon launch
+            self.sd = sdcard.SDCard(self.spi_bus1, self.SD_CS)
+            uos.mount(self.sd,"/sd")
             sd_file = open('/sd/data_' + new_idx + '.txt', 'w')
         except:
-            uos.mount(self.sd, "/sd")
-            sd_file = open('/sd/data_' + new_idx + '.txt', 'w')
+            transfer_to_SD = False
+            print("Failed to mount sd card. Saving config in flash memory")
+            config_file = open('/win/config_' + new_idx + '.txt','w')
+            config_file.write("(state, time, temperature, accelX, accelY, accelZ, gyroX, gyroY, gyroZ, altitude, 45 lmao)\n")
+            config_file.write(f"Calibration details- Time: {self.calib_time} Alt: {self.calib_alt} Temp: {self.calib_temp}\n")
+            config_file.write("Events tracked: Liftoff, Burnout, Apogee, Chute release, Touchdown, Data shutdown\n")
+            config_file.write(f"Event timestamps: {self.t_events}\n")
+            config_file.write(f"Maximum altitude reached: {max_alt}\n")
+            config_file.close()
             
-        # Need to fix this, for some reason the sd card is fucking up in writing a file here
             
-#         read_file = open('/win/data_' + new_idx + '.bin', 'rb')
-#         for i in range(blocks_written*16):
-#             flash_data = ustruct.unpack(packing_str, read_file.read(32))
-#             sd_file.write(f"{flash_data}\n")
-#             if (flash_data[0] >= 3):
-#                 i += 1
-#                 flash_data = ustruct.unpack(packing_str_slow, read_file.read(32))
-#                 sd_file.write(f"{flash_data}\n")
-        sd_file.write(f"Calibration details- Time: {self.calib_time} Alt: {self.calib_alt} Temp: {self.calib_temp}\n")
-        sd_file.write("Events tracked: Liftoff, Burnout, Apogee, Chute release, Touchdown, Data shutdown\n")
-        sd_file.write(f"Event timestamps: {self.t_events}\n")
-        sd_file.close()
+        if(transfer_to_SD == True):
+            
+            for i in range(4): # Means storing to SD card now
+                self.buzzer.duty_u16(30000)
+                time.sleep(0.2)
+                self.buzzer.duty_u16(0)
+                time.sleep(0.1)
+            
+            sd_file.write("(state, time, temperature, accelX, accelY, accelZ, gyroX, gyroY, gyroZ, altitude, 45 lmao)\n")
+            read_file = open('/win/data_' + new_idx + '.bin', 'rb')
+            read_file.seek(0,2) # Move to end of file
+            file_size = read_file.tell() # Get number of bytes
+            read_file.seek(0,0) # Move to start of file
+            while(file_size - read_file.tell()>0):
+                
+                flash_data = ustruct.unpack(packing_str, read_file.read(32))
+                
+                sd_file.write("{},{},{},{},{},{},{},{},{},{},{}\n".format(flash_data[0],
+                                                                       flash_data[1],
+                                                                       (flash_data[2]/temp_mult) + self.calib_temp,
+                                                                       flash_data[3]/accel_mult,
+                                                                       flash_data[4]/accel_mult,
+                                                                       flash_data[5]/accel_mult,
+                                                                       flash_data[6]/gyro_mult,
+                                                                       flash_data[7]/gyro_mult,
+                                                                       flash_data[8]/gyro_mult,
+                                                                       (flash_data[9]/alt_mult),
+                                                                       flash_data[10]))
+                
+                if (flash_data[0] >= 3):
+                    flash_data = ustruct.unpack(packing_str_slow, read_file.read(32))
+                    sd_file.write("Lat: {},{},{},{} Long: {},{},{},{} Speed: {} Check: {}\n".format(flash_data[0],
+                                                                                                    flash_data[1],
+                                                                                                    flash_data[2],
+                                                                                                    chr(flash_data[3]),
+                                                                                                    flash_data[4],
+                                                                                                    flash_data[5],
+                                                                                                    flash_data[6],
+                                                                                                    chr(flash_data[7]),
+                                                                                                    flash_data[8],
+                                                                                                    flash_data[9]))
+                    
+            sd_file.write(f"Calibration details- Time: {self.calib_time} Alt: {self.calib_alt} Temp: {self.calib_temp}\n")
+            sd_file.write("Events tracked: Liftoff, Burnout, Apogee, Chute release, Touchdown, Data shutdown\n")
+            sd_file.write(f"Event timestamps: {self.t_events}\n")
+            sd_file.write(f"Maximum altitude reached: {max_alt}\n")
+            sd_file.close()
+            
         print("End fast core")
-        return
+        
+        # Indicates end of logging
+        while(not(self.shutdown)):
+            self.buzzer.duty_u16(30000)
+            time.sleep_ms(1000)
+            self.buzzer.duty_u16(0)
+            time.sleep_ms(1000)
+        pass
     
     def slow_core_test_launch(self):
         
         self.sx.setBlockingCallback(False, self.cb)
         
-        while(not(self.init_done)): # Wait for sensor initialisation to complete
+        while(not(self.sensor_init)): # Wait for sensor initialisation to complete
             continue
         
-        while(True):
+        print('start slow core')
+        packing_str_slow = '!iiibiiibih'
+
+        while(not(self.shutdown)):
             t  = time.ticks_ms()
-            if(self.state <3): # Ascent data is without GPS
-                buf = self.data_fast
-                self.sx.send(buf)
-            elif(not(self.state == 6)):
-                #get gps data
-                buf = self.data_fast + self.data_slow
-                self.sx.send(buf)
-            else:
-                #get GPS data
-                buf = self.data_slow
-                self.sx.send(buf)
             
             if(self.state == 6 and self.prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
-                break
+                self.shutdown = True
             
+            if(self.state >= 3):
+                while not self.lock.acquire(0):
+                    continue
+                self.data_slow = ustruct.pack(packing_str_slow, 
+                                            self.latitude[0],
+                                            self.latitude[1],
+                                            self.latitude[2],
+                                            ord(self.latitude[3]),
+                                            self.longitude[0],
+                                            self.longitude[1],
+                                            self.longitude[2],
+                                            ord(self.longitude[3]),
+                                            self.speed,
+                                            69)
+                self.lock.release()
+                
+            buf = bytes()
+            
+            #print('hi from slow core')
+            if(self.state <3): # Ascent data is without GPS
+                #self.lock.acquire()
+                buf = self.data_fast
+                #self.lock.release()
+            elif(not(self.state == 6)):
+                #self.lock.acquire()
+                buf = self.data_fast + self.data_slow
+                #self.lock.release()
+            else:
+                buf = self.data_slow
+                
+            #print("Time taken: {}".format(self.sx.getTimeOnAir(len(buf))))
+            time.sleep_ms(50)
+            self.sx.send(buf)
             time.sleep_ms(self.deltaT_trans - (time.ticks_ms() - t))
-
-flyte = Flyte()
-flyte.init_board()
-flyte.fast_core_test_launch()
+            
+        pass

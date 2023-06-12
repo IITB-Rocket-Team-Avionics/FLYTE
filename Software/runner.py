@@ -1,11 +1,10 @@
 from helper import Flyte
 import _thread
 from machine import Pin
-from time import sleep
-import micropython
+#import micropython
 #micropython.alloc_emergency_exception_buf(100) # for debugging ISR
 
-flyte = Flyte(deltaT_log = 0.025, deltaT_trans = 0.08)
+flyte = Flyte()
     
 def interrupt_handler_main(prog):
     global flyte
@@ -16,7 +15,7 @@ def interrupt_handler_main(prog):
         flyte.run_state = 1
         flyte.logging_done = False
     elif (not(v) and flyte.run_state == 2 and not flyte.except_occr):
-        flyte.logging_done = True
+        flyte.shutdown = True
         flyte.run_state = 0
 
 flyte.init_board()
@@ -26,13 +25,9 @@ while True:
     if (flyte.run_state == 1):
         flyte.run_state = 2
         print("Attempted start log")
-        _thread.start_new_thread(flyte.dataAndState_Launch1,())
-        flyte.sd_LoRa()
-        for i in range(3): #Means logging has ended
-                    flyte.buzzer.duty_u16(30000)
-                    sleep(0.5)
-                    flyte.buzzer.duty_u16(0)
-                    sleep(0.2)
+        _thread.start_new_thread(flyte.fast_core_test_launch,())
+        flyte.slow_core_test_launch()
         print("End log")
         flyte.run_state = 0
+        break
     

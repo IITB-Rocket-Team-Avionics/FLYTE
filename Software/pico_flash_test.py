@@ -33,7 +33,7 @@ gyro_y = 0.002317485
 gyro_z = 0.02536964
 alt = 299.4403
 
-data_file = open('/win/test.txt', 'wb')
+data_file = open('/win/test.bin', 'wb')
 data_array = bytearray()
 data_fast = bytes(32)
 
@@ -41,7 +41,7 @@ t_prev = 0
 counter = 0
 block = 0x01
 print("start logging")
-for i in range(16*1):
+for i in range(16*10):
     counter += 1
     t_log = time.ticks_ms()
     data_fast = ustruct.pack(packing_str,
@@ -56,19 +56,25 @@ for i in range(16*1):
                               (int)(gyro_z*gyro_mult),
                               (int)(alt*alt_mult),
                               45) # how do we get speed here?
-    print(type(data_fast))
+    #print(type(data_fast))
     data_array+=data_fast
     if(counter==16):
-        print(data_array)
+        #print(data_array)
         data_file.write(data_array)
-        data_array = bytes()
+        data_array = bytearray()
         block += 1
         counter = 0
-    time.sleep_ms(25 - (t_log - t_prev))
     t_prev = t_log
+    time.sleep_ms(25 - (t_log - t_prev))
     
-read_file = open('/win/test.txt', 'rb')
-print(read_file.readlines())
+data_file.close()
+
+read_array = bytes(32)    
+read_file = open('/win/test.bin', 'rb')
+for i in range(16*10):
+    read_array = read_file.read(32)
+    print(ustruct.unpack(packing_str, read_array))
+read_file.close()
     
 
 
