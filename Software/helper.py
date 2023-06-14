@@ -2,6 +2,9 @@
 import gc
 # micropython.alloc_emergency_exception_buf(100)
 
+#### WE HAVE TO CHANGE CODE ACCORDING TO MAIN FLIGHT
+#### ADD EXTRA STATE: MAIN OUT
+
 from ulab import numpy as np
 import uasyncio as asyncio
 import as_GPS
@@ -32,7 +35,7 @@ class Flyte:
         self.deltaT = deltaT_log
         self.deltaT_trans = deltaT_trans
         self.sensor_init, self.comm_init = False, False
-        self.t_events = [0,0,0,0,0,0] # Liftoff, Burnout, Apogee, Chute, Touchdown
+        self.t_events = [0,0,0,0,0,0,0] # Liftoff, Burnout, Apogee, Drogue, Main, Touchdown, Data shutdown
         self.logging_done = False
         self.state = 0
         self.i2c_bus, self.spi_bus1, self.uart = None, None, None
@@ -61,10 +64,13 @@ class Flyte:
         self.msg_recv = []
         self.calib_time, self.calib_alt, self.calib_temp = 0,0,0
         self.shutdown = False
+        self.send_calib = False
+        self.calib_data = bytes(20)
             
     def cb(self, events):
         if events & SX1262.TX_DONE:
             print('TX done.')
+            pass
         
         if events & SX1262.RX_DONE:
             print('RX done.')
@@ -182,12 +188,14 @@ class Flyte:
         #State machine definitions-----------------------------------------------------------------------------------------
         
         drogue = Pin(15, Pin.OUT)
-        #main = Pin(20, Pin.OUT)
+        main = Pin(20, Pin.OUT)
         drogue.value(0)
-        #main.value(0)
+        main.value(0)
         
         max_alt = 0
-        calib_gap = 60000 # Gap in milliseconds between subsequent calibrations
+        calib_gap = 300000 # Gap in milliseconds between subsequent calibrations
+        calib_count = 0 # number of calibrations performed till now
+        calib_max = 5 # max number of calibrations
         
         liftoff_accel = -3 # in g, minimum sustained acceleration for liftoff
         liftoff_alt = 15 # in m, minimum altitude to be cleared for liftoff
@@ -237,17 +245,26 @@ class Flyte:
             time.sleep(0.1)
         
         self.calib_bmp()
+        self.calib_data = ustruct.pack('iiiif',
+                                              alt_mult,
+                                              accel_mult,
+                                              gyro_mult,
+                                              temp_mult,
+                                              self.calib_temp)
+        self.send_calib = True
         
          #data_file = open('/sd/data_' + new_idx +'.txt', 'w')
         data_file = open('/win/data_' + new_idx + '.bin', 'wb')
         
-        runtime = 30000 # in millisecs, changed to 300s so that transmission occurs for a long time
-        self.sensor_init = True # Start lora and sd card thread
-        self.state = 3 #####################################BRUH
+        runtime = 80000 # in millisecs, changed to 300s so that transmission occurs for a long time
+        #self.state = 3 #####################################BRUH
         buzz_counter = 0
+        self.deltaT_trans = 2000 # Start logging very slow
+        self.sensor_init = True # Start lora and sd card thread
         
         while True:
-            t_log = time.ticks_ms()
+            t = time.ticks_ms()
+            t_log = t - self.calib_time
 
             # Get sensor readings
             accel = self.mpu.accel
@@ -272,8 +289,6 @@ class Flyte:
 
             index = (index+1)%buf_len
 
-
-
             self.data_fast = ustruct.pack(packing_str,
                                           self.state,
                                           t_log,
@@ -285,7 +300,7 @@ class Flyte:
                                           (int)(gyro.y*gyro_mult),
                                           (int)(gyro.z*gyro_mult),
                                           (int)((alt)*alt_mult),
-                                          45) # how do we get speed here?
+                                          self.speed) # how do we get speed here?
             
             if (self.state == 0): # If in IDLE state, do not log, just keep appending the data array
                 if (len(self.data_array) < 512):  
@@ -313,7 +328,7 @@ class Flyte:
                 
             # Calibrate and beep regularly
             if (self.state == 0):
-                if (t_log - self.calib_time > calib_gap):
+                if (t_log > calib_gap and calib_count < calib_max):
                     self.buzzer.duty_u16(0)
                     print('Calibrating...')
                     for i in range(3): # Means subsequent calibration is happening
@@ -324,7 +339,15 @@ class Flyte:
                     self.calib_bmp()
                     alt_buf = [0]*buf_len
                     accel_buf = [0]*buf_len
+                    self.calib_data = ustruct.pack('iiiif',
+                                              alt_mult,
+                                              accel_mult,
+                                              gyro_mult,
+                                              temp_mult,
+                                              self.calib_temp)
+                    self.send_calib = True
                     self.data_array = bytearray()
+                    calib_count += 1
                     continue
                 else:
                     if(buzz_counter == 7):
@@ -336,16 +359,19 @@ class Flyte:
                     buzz_counter = (buzz_counter + 1)%80
            #------------------------------------------------------------------------
 
-           #State: 0,1,2,3,4,5,6
-           #Idle, Powered Ascent, Coasting, Descent, Drogue Out, Touchdown, TD Idle
+           #State: 0,1,2,3,4,5,6,7
+           #Idle, Powered Ascent, Coasting, Descent, Drogue Out, Main out, Touchdown, TD Idle
             
-            if (t_log - self.calib_time > runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
+            if (self.state != 0):
+                self.deltaT_trans = 250
+            
+            if (t_log> runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
                 self.data_array = bytearray()
                 break
 
             if (self.state==0 and abs(sum(accel_buf))>abs(buf_len*liftoff_accel) and alt_buf[index]>liftoff_alt and inc_num>=buf_len): #Liftoff
                 self.state = 1
-                self.t_events[0] = t_log
+                self.t_events[0] = t_lo
                 print("Liftoff")
 
             elif (self.state==1 and (zero_crossing or t_log - self.t_events[0] > liftoff_to_cutoff)): #Burnout
@@ -362,54 +388,57 @@ class Flyte:
                   or (self.state==2 and t_log-self.t_events[0]>liftoff_to_drogue)): #Chute, need to add condition for signals sent by ground station
                 self.state = 4
                 self.t_events[3] = t_log
-                print("Chute")
+                print("drogue")
                 for i in range(3):
                     drogue.value(1)
-                    time.sleep(1)
+                    time.sleep_ms(200)
                     drogue.value(0)
-                    time.sleep(0.1)
-
-            elif (self.state==4 and sum(alt_buf) < buf_len*touchdown_alt): #Touchdown, is g vector sum required?
+                    time.sleep_ms(100)
+                    
+            elif (self.state == 4 and alt < 420):
                 self.state = 5
                 self.t_events[4] = t_log
-                print("Touchdown")
-
-            elif (self.state==5 and t_log-self.t_events[4]>touchdown_to_idle): #Touchdown idle
+                print("main")
+                for i in range(3):
+                    main.value(1)
+                    time.sleep_ms(200)
+                    main.value(0)
+                    time.sleep_ms(100)
+                    
+            elif (self.state==5 and sum(alt_buf) < buf_len*touchdown_alt): #Touchdown, is g vector sum required?
                 self.state = 6
                 self.t_events[5] = t_log
+                print("Touchdown")
+
+            elif (self.state==6 and t_log-self.t_events[4]>touchdown_to_idle): #Touchdown idle
+                self.state = 7
+                self.t_events[6] = t_log
                 self.logging_done = True
+                self.deltaT_trans = 2000
                 print("Touchdown idle")
+                break
                 
             else:
                 pass
-            '''
-            if (self.state >= 1 and t_log - self.t_events[0] > force_pyro_liftoff): # Force ejection of parachute after 9 seconds from liftoff
-                self.t_events[3] = time.ticks_ms
-                self.state = 4
-                for i in range(3):
-                    pyro.value(1)
-                    time.sleep(1)
-                    pyro.value(0)
-                    time.sleep(0.1)
-                self.pyro_fired = True
-
-            if ((t_log > force_pyro_power or self.manual_pyro) and not self.pyro_fired):
-                self.state = 4
-                self.t_events[3] = t_log
-                self.buzzer.duty_u16(0)
-                for i in range(3):
-                    pyro.value(1)
-                    self.buzzer.duty_u16(30000)
-                    print("MANUAL EJECTION SUCCESSFUL")
-                    time.sleep(1)
-                    pyro.value(0)
-                    self.buzzer.duty_u16(0)
-                    time.sleep(0.3)
-                self.pyro_fired = True
-            '''
+            
+            ## FOR TESTING. CYCLES THROUGH ALL STATES
+#             if (self.state == 0):
+#                 print(f"{t_log}")
+            
+            if (self.state == 0 and t_log> 25000):
+                self.state == 1
+                self.t_events[0] = t_log
+                print('force change')
+            elif (t_log - self.t_events[self.state - 1] > 8000 and self.state != 6):
+                self.t_events[self.state - 1] = t_log
+                self.state += 1
+                print('force change')
+            else:
+                pass
+                
             
             # force each iteration to take deltaT time
-            time.sleep_ms(self.deltaT - (time.ticks_ms() - t_log) - 1)
+            time.sleep_ms(self.deltaT - (time.ticks_ms() - t) - 1)
         
         print("Logging finished. Transferring to SD card now")
         data_file.close()
@@ -502,7 +531,7 @@ class Flyte:
         while(not(self.shutdown)):
             t  = time.ticks_ms()
             
-            if(self.state == 6 and self.prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
+            if(self.state == 7 and self.prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
                 self.shutdown = True
             
             if(self.state >= 3):
@@ -524,20 +553,25 @@ class Flyte:
             buf = bytes()
             
             #print('hi from slow core')
-            if(self.state <3): # Ascent data is without GPS
-                #self.lock.acquire()
+            if (self.send_calib == True): # Calibration
+                while not self.lock.acquire(0):
+                    continue
+                buf = self.calib_data
+                self.send_calib = False
+                self.lock.release()
+            elif(self.state <3): # Ascent 
+                while not self.lock.acquire(0):
+                    continue
                 buf = self.data_fast
-                #self.lock.release()
-            elif(not(self.state == 6)):
-                #self.lock.acquire()
-                buf = self.data_fast + self.data_slow
-                #self.lock.release()
-            else:
-                buf = self.data_slow
+                self.lock.release()
+            elif(not(self.state ==7)): # Descent
+                while not self.lock.acquire(0):
+                    continue
+                buf = ustruct.pack('b',self.state) + self.data_slow + self.data_fast[1:]
+                self.lock.release()
+            else: # Touchdown IDLE
+                buf = ustruct.pack('b',self.state) + self.data_slow + ustruct.pack('i',time.ticks_ms() - self.calib_time)
                 
-            #print("Time taken: {}".format(self.sx.getTimeOnAir(len(buf))))
-            time.sleep_ms(50)
             self.sx.send(buf)
             time.sleep_ms(self.deltaT_trans - (time.ticks_ms() - t))
-            
         pass

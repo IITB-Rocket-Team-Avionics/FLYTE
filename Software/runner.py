@@ -1,6 +1,7 @@
 from helper import Flyte
 import _thread
 from machine import Pin
+import time
 #import micropython
 #micropython.alloc_emergency_exception_buf(100) # for debugging ISR
 
@@ -25,9 +26,12 @@ while True:
     if (flyte.run_state == 1):
         flyte.run_state = 2
         print("Attempted start log")
+        _thread.stack_size(8*1024) # To allow large calls for second tread
         _thread.start_new_thread(flyte.fast_core_test_launch,())
         flyte.slow_core_test_launch()
         print("End log")
         flyte.run_state = 0
         break
+    
+# At this point press reset to fix everything
     
