@@ -1,4 +1,4 @@
-from helper import Flyte
+from helper_sac import Flyte
 import _thread
 from machine import Pin
 import time
@@ -18,6 +18,37 @@ def interrupt_handler_main(prog):
     elif (not(v) and flyte.run_state == 2 and not flyte.except_occr):
         flyte.shutdown = True
         flyte.run_state = 0
+
+# flyte.buzzer.duty_u16(30000)
+# 
+# flyte.buzzer.freq(1319)
+# time.sleep(0.166)
+# flyte.buzzer.freq(1175)
+# time.sleep(0.166)
+# flyte.buzzer.freq(740)
+# time.sleep(0.334)
+# flyte.buzzer.freq(831)
+# time.sleep(0.334)
+# flyte.buzzer.freq(1109)
+# time.sleep(0.166)
+# flyte.buzzer.freq(998)
+# time.sleep(0.166)
+# flyte.buzzer.freq(587)
+# time.sleep(0.334)
+# flyte.buzzer.freq(659)
+# time.sleep(0.334)
+# flyte.buzzer.freq(988)
+# time.sleep(0.166)
+# flyte.buzzer.freq(880)
+# time.sleep(0.166)
+# flyte.buzzer.freq(554)
+# time.sleep(0.334)
+# flyte.buzzer.freq(659)
+# time.sleep(0.334)
+# flyte.buzzer.freq(880)
+# time.sleep(0.666)
+# 
+# flyte.buzzer.duty_u16(0)
 
 flyte.init_board()
 flyte.prog.irq(trigger = Pin.IRQ_RISING|Pin.IRQ_FALLING, handler = interrupt_handler_main, hard = True)

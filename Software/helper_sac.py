@@ -5,7 +5,7 @@ import gc
 #### WE HAVE TO CHANGE CODE ACCORDING TO MAIN FLIGHT
 #### ADD EXTRA STATE: MAIN OUT
 
-from ulab import numpy as np
+#from ulab import numpy as np
 import uasyncio as asyncio
 import as_GPS
 from machine import I2C, SPI, Pin, PWM, UART, Timer
@@ -31,7 +31,7 @@ gc.collect()
 
 class Flyte:
 
-    def __init__(self, deltaT_log = 25, deltaT_trans = 200):
+    def __init__(self, deltaT_log = 25, deltaT_trans = 2000):
         self.deltaT = deltaT_log
         self.deltaT_trans = deltaT_trans
         self.sensor_init, self.comm_init = False, False
@@ -116,7 +116,6 @@ class Flyte:
                 scl = Pin(3),
                 sda = Pin(2),
                 freq = 400000)
-
         # spi buses
         self.spi_bus1 = SPI(1,
                     sck= Pin(10),
@@ -128,9 +127,10 @@ class Flyte:
         
         #uart bus
         self.uart = UART(0, 9600, rx = Pin(1), tx = Pin(0), timeout=1000, timeout_char=1000) # decide on timeouts
-
+        
         try:
             self.bmp = BMP280(i2c_bus = self.i2c_bus)
+            print('bmp done')
         except Exception as e:
             print('Failed to initialize BMP280')
             print(e)
@@ -139,6 +139,7 @@ class Flyte:
 
         try:
             self.mpu = MPU6050(self.i2c_bus)
+            print('imu done')
             #self.mpu.accel_range(3) # Set to 16g
         except Exception as e:
             print('Failed to initialize MPU6500')
@@ -149,6 +150,7 @@ class Flyte:
         try:
             self.sd = sdcard.SDCard(self.spi_bus1, self.SD_CS)
             uos.mount(self.sd, "/sd")
+            print('sd done')
         except Exception as e: #OSError
             print('Failed to initialize SD Card Reader')
             print(e)
@@ -157,6 +159,7 @@ class Flyte:
         try:
             self.flash = winbond.W25QFlash(self.spi_bus1, self.flash_CS)
             uos.mount(self.flash, '/win')
+            print('flash done')
         except Exception as e: #OSError
             print('Failed to initialize Flash')
             print(e)
@@ -170,6 +173,7 @@ class Flyte:
                      crcOn=True, txIq=False, rxIq=False,
                      tcxoVoltage=1.7, useRegulatorLDO=False, blocking=True)
             #self.sx.setBlockingCallback(False, self.cb)
+            print('sx done')
         except Exception as e:
             print('Failed to initialize transmitter')
             print(e)
@@ -179,6 +183,7 @@ class Flyte:
             sreader = asyncio.StreamReader(self.uart)  # Create a StreamReader
             #self.gps = as_GPS.AS_GPS(sreader, fix_cb = self.callback_gps, fix_cb_args = (self))  # Instantiate GPS
             self.gps = as_GPS.AS_GPS(sreader)
+            print('gps done')
 #             print(self.gps.latitude(coord_format=as_GPS.DMS))
 #             print(self.gps.longitude(coord_format=as_GPS.DMS))
 #             print(self.gps.speed(units=as_GPS.KPH))
@@ -212,11 +217,11 @@ class Flyte:
         
         liftoff_accel = -3 # in g, minimum sustained acceleration for liftoff
         liftoff_alt = 15 # in m, minimum altitude to be cleared for liftoff
-        liftoff_to_cutoff = 2500 # In milliseconds, force cutoff after this amount of time from detected liftoff
+        liftoff_to_cutoff = 4500 # In milliseconds, force cutoff after this amount of time from detected liftoff
         apogee_alt_diff = 5 # in m, the minimum difference between highest recorded altitude and current altitude for apogee detection
-        liftoff_to_drogue = 10000 # In milliseconds, force drogue deployment after this amount of time from detected liftoff
+        liftoff_to_drogue = 28000 # In milliseconds, force drogue deployment after this amount of time from detected liftoff
         apogee_to_drogue = 100 # In milliseconds, drogue deployment after this amount of time from detected apogee
-        drogue_lockout = 8000 # In milliseconds, lockout for drogue deployment from detected liftoff
+        drogue_lockout = 18000 # In milliseconds, lockout for drogue deployment from detected liftoff
         touchdown_alt = 15 # in m, If altitude is less than this in descent, declare touchdown
         touchdown_to_idle = 10000 # In milliseconds, declare idle after this amount of time from detected touchdown
         
@@ -384,7 +389,7 @@ class Flyte:
 
             if (self.state==0 and abs(sum(accel_buf))>abs(buf_len*liftoff_accel) and alt_buf[index]>liftoff_alt and inc_num>=buf_len): #Liftoff
                 self.state = 1
-                self.t_events[0] = t_lo
+                self.t_events[0] = t_log
                 print("Liftoff")
 
             elif (self.state==1 and (zero_crossing or t_log - self.t_events[0] > liftoff_to_cutoff)): #Burnout
@@ -392,15 +397,13 @@ class Flyte:
                 self.t_events[1] = t_log
                 print("Burnout")
 
-            elif (self.state==2 and max_alt-alt>apogee_alt_diff): #Apogee
+            elif (self.state==2 and max_alt-alt_buf[index]>apogee_alt_diff and max_alt-alt_buf[((index-1)%buf_len)]>apogee_alt_diff): #Apogee
                 self.state = 3
                 self.t_events[2] = t_log
                 print("Apogee")
 
             elif ((self.state==3 and t_log-self.t_events[2]>apogee_to_drogue and t_log-self.t_events[0]>drogue_lockout)
                   or (self.state==2 and t_log-self.t_events[0]>liftoff_to_drogue)): #Chute, need to add condition for signals sent by ground station
-#                 self.drogue.value(1)
-#                 self.tim.init(mode = Timer.ONE_SHOT, period = 300, callback = self.drogue_callback)
                 self.state = 4
                 self.t_events[3] = t_log
                 print("drogue")
@@ -410,9 +413,7 @@ class Flyte:
                     self.drogue.value(0)
                     time.sleep_ms(50)
                     
-            elif (self.state == 4 and alt < 420 and t_log - self.t_events[3] > 5000):
-#                 self.main.value(1)
-#                 self.tim.init(mode = Timer.ONE_SHOT, period = 300, callback = self.main_callback)
+            elif (self.state == 4 and alt < 420):
                 self.state = 5
                 self.t_events[4] = t_log
                 print("main")
@@ -427,32 +428,24 @@ class Flyte:
                 self.t_events[5] = t_log
                 print("Touchdown")
 
-            elif (self.state==6 and t_log-self.t_events[4]>touchdown_to_idle): #Touchdown idle
+            elif (self.state==6 and t_log-self.t_events[5]>touchdown_to_idle): #Touchdown idle
                 self.state = 7
                 self.t_events[6] = t_log
                 self.logging_done = True
                 self.deltaT_trans = 2000
                 print("Touchdown idle")
-                break
                 
             else:
                 pass
             
-            ## FOR TESTING. CYCLES THROUGH ALL STATES
-#             if (self.state == 0):
-#                 print(f"{t_log}")
+            ## FOR TESTING. FORCES LIFTOFF AT A CERTAIN TIME. COMMENT OUT BEFORE FLIGHT
             
             if (self.state == 0 and t_log> 25000):
-                self.state == 1
+                self.state = 1
                 self.t_events[0] = t_log
                 print('force change')
-            elif (t_log - self.t_events[self.state - 1] > 8000 and self.state != 6):
-                self.t_events[self.state - 1] = t_log
-                self.state += 1
-                print('force change')
-            else:
-                pass
                 
+            ############################################################################
             
             # force each iteration to take deltaT time
             time.sleep_ms(self.deltaT - (time.ticks_ms() - t) - 1)
