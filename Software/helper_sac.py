@@ -2,9 +2,6 @@ import micropython
 import gc
 # micropython.alloc_emergency_exception_buf(100)
 
-#### WE HAVE TO CHANGE CODE ACCORDING TO MAIN FLIGHT
-#### ADD EXTRA STATE: MAIN OUT
-
 #from ulab import numpy as np
 import uasyncio as asyncio
 import as_GPS
@@ -211,7 +208,7 @@ class Flyte:
         #State machine definitions-----------------------------------------------------------------------------------------
         
         max_alt = 0
-        calib_gap = 300000 # Gap in milliseconds between subsequent calibrations
+        calib_gap = 120000 # Gap in milliseconds between subsequent calibrations
         calib_count = 0 # number of calibrations performed till now
         calib_max = 5 # max number of calibrations
         
@@ -274,8 +271,7 @@ class Flyte:
          #data_file = open('/sd/data_' + new_idx +'.txt', 'w')
         data_file = open('/win/data_' + new_idx + '.bin', 'wb')
         
-        runtime = 80000 # in millisecs, changed to 300s so that transmission occurs for a long time
-        #self.state = 3 #####################################BRUH
+        runtime = 18000000 # in millisecs, changed to 300s so that transmission occurs for a long time
         buzz_counter = 0
         self.deltaT_trans = 2000 # Start logging very slow
         self.sensor_init = True # Start lora and sd card thread
@@ -440,7 +436,7 @@ class Flyte:
             
             ## FOR TESTING. FORCES LIFTOFF AT A CERTAIN TIME. COMMENT OUT BEFORE FLIGHT
             
-            if (self.state == 0 and t_log> 25000):
+            if (self.state == 0 and t_log> 150000):
                 self.state = 1
                 self.t_events[0] = t_log
                 print('force change')
