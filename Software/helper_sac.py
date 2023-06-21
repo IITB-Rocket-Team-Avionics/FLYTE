@@ -24,6 +24,7 @@ gc.collect()
 # INIT FAILED   | 10
 # INIT CALIB    | 2
 # MORE CALIB    | 3
+# STOP LOG      | 4
 # Note that the buzzer is only controlled by the log data thread. We kinda won't know if the state machine fucked up
 
 class Flyte:
@@ -72,13 +73,6 @@ class Flyte:
         if events & SX1262.TX_DONE:
             print('TX done.')
             pass
-        
-        if events & SX1262.RX_DONE:
-            print('RX done.')
-            msg,err = self.sx.recv()
-#             self.msg_recv.append(msg)
-#             if (msg == b'pyro'):
-#                 self.manual_pyro = True
                 
     def callback_gps(self,gps, *_):  # Runs for each valid fix
         print("gps callback")
@@ -93,17 +87,8 @@ class Flyte:
         avg_alt = 0
         for i in range(n):
             avg_alt += self.bmp.getAlti()
+            time.sleep_ms(10)
         self.calib_alt = avg_alt/n
-        
-#     def drogue_callback(self,t):
-#         self.drogue.value(0)
-#         print('drogue done')
-#         self.tim.deinit()
-#     
-#     def main_callback(self,t):
-#         self.main.value(0)
-#         print('main done')
-#         self.tim.deinit()
     
     def init_board(self): #Initiate BMP, MPU, SD card, and flash
         print("starting init")
@@ -169,7 +154,6 @@ class Flyte:
                      implicit=False, implicitLen=0xFF,
                      crcOn=True, txIq=False, rxIq=False,
                      tcxoVoltage=1.7, useRegulatorLDO=False, blocking=True)
-            #self.sx.setBlockingCallback(False, self.cb)
             print('sx done')
         except Exception as e:
             print('Failed to initialize transmitter')
@@ -181,9 +165,6 @@ class Flyte:
             #self.gps = as_GPS.AS_GPS(sreader, fix_cb = self.callback_gps, fix_cb_args = (self))  # Instantiate GPS
             self.gps = as_GPS.AS_GPS(sreader)
             print('gps done')
-#             print(self.gps.latitude(coord_format=as_GPS.DMS))
-#             print(self.gps.longitude(coord_format=as_GPS.DMS))
-#             print(self.gps.speed(units=as_GPS.KPH))
         except Exception as e:
             print('Failed to initialize GPS')
             print(e)
@@ -210,15 +191,15 @@ class Flyte:
         max_alt = 0
         calib_gap = 120000 # Gap in milliseconds between subsequent calibrations
         calib_count = 0 # number of calibrations performed till now
-        calib_max = 5 # max number of calibrations
+        calib_max = 3 # max number of calibrations
         
-        liftoff_accel = -3 # in g, minimum sustained acceleration for liftoff
+        liftoff_accel = 3 # in g, minimum sustained acceleration for liftoff
         liftoff_alt = 15 # in m, minimum altitude to be cleared for liftoff
         liftoff_to_cutoff = 4500 # In milliseconds, force cutoff after this amount of time from detected liftoff
         apogee_alt_diff = 5 # in m, the minimum difference between highest recorded altitude and current altitude for apogee detection
-        liftoff_to_drogue = 28000 # In milliseconds, force drogue deployment after this amount of time from detected liftoff
+        liftoff_to_drogue = 27000 # In milliseconds, force drogue deployment after this amount of time from detected liftoff
         apogee_to_drogue = 100 # In milliseconds, drogue deployment after this amount of time from detected apogee
-        drogue_lockout = 18000 # In milliseconds, lockout for drogue deployment from detected liftoff
+        drogue_lockout = 20000 # In milliseconds, lockout for drogue deployment from detected liftoff
         touchdown_alt = 15 # in m, If altitude is less than this in descent, declare touchdown
         touchdown_to_idle = 10000 # In milliseconds, declare idle after this amount of time from detected touchdown
         
@@ -271,7 +252,7 @@ class Flyte:
          #data_file = open('/sd/data_' + new_idx +'.txt', 'w')
         data_file = open('/win/data_' + new_idx + '.bin', 'wb')
         
-        runtime = 18000000 # in millisecs, changed to 300s so that transmission occurs for a long time
+        runtime = 18000000 # in millisecs, changed to 5h so that transmission occurs for a long time
         buzz_counter = 0
         self.deltaT_trans = 2000 # Start logging very slow
         self.sensor_init = True # Start lora and sd card thread
@@ -330,7 +311,10 @@ class Flyte:
                     self.data_array = bytearray()
                     self.data_array += self.data_fast
             else: # Store descent data with GPS
+                while not self.lock.acquire(0):
+                    continue
                 slow = self.data_slow # So that the information from the other thread is not accessed multiple times
+                self.lock.release()
                 # Update data array
                 if (len(self.data_array) < 512):  
                     self.data_array += self.data_fast + slow
@@ -364,7 +348,7 @@ class Flyte:
                     calib_count += 1
                     continue
                 else:
-                    if(buzz_counter == 7):
+                    if(buzz_counter == 4):
                         self.buzzer.duty_u16(0)
                     elif(buzz_counter == 79):
                         self.buzzer.duty_u16(30000)
@@ -379,7 +363,7 @@ class Flyte:
             if (self.state != 0 and self.state != 7):
                 self.deltaT_trans = 250
             
-            if (t_log> runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
+            if (t_log > runtime or self.logging_done): # Stop data logging after run_time or if touchdown is detected
                 self.data_array = bytearray()
                 break
 
@@ -536,9 +520,6 @@ class Flyte:
 
         while(not(self.shutdown)):
             t  = time.ticks_ms()
-            
-            if(self.state == 7 and self.prog.value(0)): # switch off everything after finding the rocket. Should we use prog switch?
-                self.shutdown = True
             
             self.latitude = self.gps.latitude(coord_format=as_GPS.DMS)
             self.longitude = self.gps.longitude(coord_format=as_GPS.DMS)
