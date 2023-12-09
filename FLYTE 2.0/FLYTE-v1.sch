@@ -6592,83 +6592,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="BNO055">
-<packages>
-<package name="BNO055">
-<wire x1="0" y1="0" x2="25.5" y2="0" width="0.127" layer="21"/>
-<wire x1="25.5" y1="0" x2="25.5" y2="20.25" width="0.127" layer="21"/>
-<wire x1="25.5" y1="20.25" x2="0" y2="20.25" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="20.25" width="0.127" layer="21"/>
-<dimension x1="1.1089" y1="4.79" x2="3.6108" y2="4.79" x3="2.35985" y3="-0.4678" textsize="1.778" layer="47" dtype="vertical" unit="inch"/>
-<pad name="VIN" x="6.5" y="2.5" drill="0.962"/>
-<pad name="3V" x="9" y="2.5" drill="0.962"/>
-<pad name="GND" x="11.5" y="2.5" drill="0.962"/>
-<pad name="SCL" x="14" y="2.5" drill="0.962"/>
-<pad name="SDA" x="16.5" y="2.5" drill="0.962"/>
-<pad name="RST" x="19" y="2.5" drill="0.962"/>
-<pad name="INT" x="9" y="17.5" drill="0.962"/>
-<pad name="ADR" x="11.5" y="17.5" drill="0.962"/>
-<pad name="PS0" x="14" y="17.5" drill="0.962"/>
-<pad name="PS1" x="16.5" y="17.5" drill="0.962"/>
-<text x="7" y="3.75" size="1.27" layer="21" rot="R90">VIN</text>
-<text x="9.5" y="3.75" size="1.27" layer="21" rot="R90">3V</text>
-<text x="12" y="3.75" size="1.27" layer="21" rot="R90">GND</text>
-<text x="14.5" y="3.75" size="1.27" layer="21" rot="R90">SCL</text>
-<text x="17" y="3.75" size="1.27" layer="21" rot="R90">SDA</text>
-<text x="19.5" y="3.75" size="1.27" layer="21" rot="R90">RST</text>
-<text x="8.5" y="16.25" size="1.27" layer="21" rot="R270">INT</text>
-<text x="11" y="16.25" size="1.27" layer="21" rot="R270">ADR</text>
-<text x="13.5" y="16.25" size="1.27" layer="21" rot="R270">PS0</text>
-<text x="16" y="16.25" size="1.27" layer="21" rot="R270">PS1</text>
-<text x="9.25" y="9.75" size="1.27" layer="21">BNO055</text>
-</package>
-</packages>
-<symbols>
-<symbol name="BNO055">
-<wire x1="-12.7" y1="0" x2="12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="12.7" y1="0" x2="12.7" y2="17.78" width="0.254" layer="94"/>
-<wire x1="12.7" y1="17.78" x2="-12.7" y2="17.78" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="17.78" x2="-12.7" y2="0" width="0.254" layer="94"/>
-<pin name="INT" x="-7.62" y="-5.08" length="middle" rot="R90"/>
-<pin name="ADR" x="-2.54" y="-5.08" length="middle" rot="R90"/>
-<pin name="PS0" x="2.54" y="-5.08" length="middle" rot="R90"/>
-<pin name="PS1" x="7.62" y="-5.08" length="middle" rot="R90"/>
-<pin name="SCL" x="2.54" y="22.86" length="middle" rot="R270"/>
-<pin name="SDA" x="5.08" y="22.86" length="middle" rot="R270"/>
-<pin name="RST" x="7.62" y="22.86" length="middle" rot="R270"/>
-<pin name="GND" x="-2.54" y="22.86" length="middle" rot="R270"/>
-<pin name="3V" x="-5.08" y="22.86" length="middle" rot="R270"/>
-<pin name="VIN" x="-7.62" y="22.86" length="middle" rot="R270"/>
-<text x="-5.08" y="7.62" size="1.778" layer="94">BNO055</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BNO055">
-<gates>
-<gate name="G$1" symbol="BNO055" x="-48.26" y="0"/>
-</gates>
-<devices>
-<device name="" package="BNO055">
-<connects>
-<connect gate="G$1" pin="3V" pad="3V"/>
-<connect gate="G$1" pin="ADR" pad="ADR"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="INT" pad="INT"/>
-<connect gate="G$1" pin="PS0" pad="PS0"/>
-<connect gate="G$1" pin="PS1" pad="PS1"/>
-<connect gate="G$1" pin="RST" pad="RST"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VIN" pad="VIN"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="XBP9B-XCST-021">
 <packages>
 <package name="DIP2200W51P200L3294H279Q20P">
@@ -7108,7 +7031,6 @@ Grid 5.00 mm&lt;p&gt;
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1"/>
 <part name="BATTERY" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:40384065/5" override_package_urn="urn:adsk.eagle:footprint:40384066/1" override_locally_modified="yes"/>
 <part name="U$2" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
-<part name="U$4" library="BNO055" deviceset="BNO055" device=""/>
 <part name="U2" library="XBP9B-XCST-021" deviceset="XBP9B-XCST-021" device=""/>
 <part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="MA_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
@@ -7235,7 +7157,6 @@ components are in use. They might float otherwise</text>
 <attribute name="NAME" x="327.152" y="228.6" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="U$2" gate="G$1" x="358.14" y="88.9" smashed="yes" rot="R270"/>
-<instance part="U$4" gate="G$1" x="368.3" y="55.88" smashed="yes" rot="R90"/>
 <instance part="U2" gate="G$1" x="213.36" y="218.44" smashed="yes">
 <attribute name="NAME" x="190.4351" y="243.9121" size="1.2736" layer="95"/>
 <attribute name="VALUE" x="190.4361" y="192.9691" size="1.27355" layer="96"/>
@@ -7384,13 +7305,11 @@ components are in use. They might float otherwise</text>
 <wire x1="342.9" y1="101.6" x2="335.28" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="GND"/>
 <wire x1="345.44" y1="53.34" x2="337.82" y2="53.34" width="0.1524" layer="91"/>
 <label x="337.82" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="337.82" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$4" gate="G$1" pin="RST"/>
 <wire x1="337.82" y1="63.5" x2="345.44" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -7421,7 +7340,6 @@ components are in use. They might float otherwise</text>
 <pinref part="C4" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="ADR"/>
 <wire x1="373.38" y1="53.34" x2="378.46" y2="53.34" width="0.1524" layer="91"/>
 <label x="378.46" y="53.34" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -7495,7 +7413,6 @@ components are in use. They might float otherwise</text>
 <label x="335.28" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="SCL"/>
 <wire x1="345.44" y1="58.42" x2="337.82" y2="58.42" width="0.1524" layer="91"/>
 <label x="337.82" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -7529,7 +7446,6 @@ components are in use. They might float otherwise</text>
 <label x="335.28" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="SDA"/>
 <wire x1="345.44" y1="60.96" x2="337.82" y2="60.96" width="0.1524" layer="91"/>
 <label x="337.82" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -7625,7 +7541,6 @@ components are in use. They might float otherwise</text>
 <label x="335.28" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VIN"/>
 <wire x1="345.44" y1="48.26" x2="337.82" y2="48.26" width="0.1524" layer="91"/>
 <label x="337.82" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -8053,7 +7968,6 @@ components are in use. They might float otherwise</text>
 </net>
 <net name="BNO_INT" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="INT"/>
 <wire x1="373.38" y1="48.26" x2="375.92" y2="48.26" width="0.1524" layer="91"/>
 <label x="375.92" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
