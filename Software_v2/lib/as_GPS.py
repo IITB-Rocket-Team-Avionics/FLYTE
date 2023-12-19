@@ -547,7 +547,7 @@ class AS_GPS(object):
             return [decimal_degrees, self._longitude[2]]
         elif coord_format == DMS:
             mins = int(self._longitude[1])
-            seconds = round((self._longitude[1] - mins) * 60)
+            seconds = (self._longitude[1] - mins) * 60
             return [self._longitude[0], mins, seconds, self._longitude[2]]
         elif coord_format == DM:
             return self._longitude
