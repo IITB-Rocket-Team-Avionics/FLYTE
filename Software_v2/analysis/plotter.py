@@ -26,7 +26,7 @@ Z = np.full((6,1),0.)
 U = np.full((6,1),0.)
 
 R = 1*np.eye(len(R))
-Q = 0.0005*np.eye(len(Q))
+Q = 0.05*np.eye(len(Q))
 
 n = 1
 
@@ -60,9 +60,14 @@ speed = last_speed = 0
 course = last_course = 0
 fix_time = last_fix_time = 0
 sentence_type = b'NUL'
+hdop = vdop = 0
 
+
+g = 9.9379
 r = 6371000
 new_gps_data = False
+
+gps_counter = 0
 
 def distance(lat_1,lon_1,lat_2,lon_2):
         return sqrt(pow((r*(lat_2 - lat_1)*pi/180),2) + pow(r*(lon_2 - lon_1)*pi/180*cos(lat_1*pi/180),2))    
@@ -77,19 +82,20 @@ with open('data_2.txt','r') as file:
     with open('earth.csv','w') as kml:       
         spamreader = csv.reader(file, delimiter=',')
         for data in spamreader:
-            if start <= counter <= stop:
-                
-                if counter == 0:
+            
+            if counter == 0:
                     calib_time = float(data[0])
                     calib_alt = float(data[1])
                     calib_temp = float(data[2])
                     ram_offset = float(data[3])
-                
-                if counter == start:
-                    t_init = float(data[1])/1000
-                
-                if counter == stop:
-                    t_final = float(data[1])/1000
+            
+            if counter == start:
+                t_init = float(data[1])/1000
+            
+            if counter == stop:
+                t_final = float(data[1])/1000
+                    
+            if start <= counter <= stop:
                 
                 if counter > 0:
                     
@@ -102,8 +108,6 @@ with open('data_2.txt','r') as file:
                             latitude = float(data[1]) + float(data[2])/60 + float(data[3])/3600
                             longitude = float(data[5]) + float(data[6])/60 + float(data[7])/3600
                             fix_time = float(data[15])
-                            speed = 1000 * distance(latitude,longitude,last_latitude,last_longitude)/(fix_time - last_fix_time)
-                            course = track(latitude,longitude,last_latitude,last_longitude)*180/pi
                             gps_alt = float(data[14]) + calib_alt
                         if sentence_type == "b'RMC'":
                             latitude = float(data[1]) + float(data[2])/60 + float(data[3])/3600
@@ -117,7 +121,6 @@ with open('data_2.txt','r') as file:
                             longitude = float(data[5]) + float(data[6])/60 + float(data[7])/3600
                             fix_time = float(data[15])
                             speed = float(data[9])
-                            course = track(latitude,longitude,last_latitude,last_longitude)*180/pi
                             gps_alt = float(data[14]) + calib_alt
                         if sentence_type == "b'VTG'":
                             speed = float(data[9])
@@ -134,6 +137,10 @@ with open('data_2.txt','r') as file:
                         last_speed = speed
                         last_course = course
                         
+                        hdop = float(data[11])
+                        vdop = float(data[12])
+                        
+                        gps_counter += 1
                         new_gps_data = True
                          
                     elif data[0] == str(0):
@@ -143,8 +150,8 @@ with open('data_2.txt','r') as file:
                         
                         a = sqrt(ax*ax + ay*ay + az*az)
 
-                        if counter == 1:
-                            g = a
+#                         if counter == 1:
+#                             g = a
 
                         gx = float(data[12])*pi/180
                         gy = float(data[13])*pi/180
@@ -162,13 +169,15 @@ with open('data_2.txt','r') as file:
                         roll = float(data[19])*pi/180
                         pitch = float(data[20])*pi/180
                         
-                        if counter > 1:
+                        if counter > start + 1:
                             dt = (float(data[1]) - float(last_data[1]))/1000
                         else:
                             dt = 0.05
     #                 
     #         # ---------------------------------------------------------------------------------------------------
-    #                 
+    #
+    #                     MADGWICK FILTER
+    #
     #                     wx = gx
     #                     wy = gy
     #                     wz = gz
@@ -252,7 +261,7 @@ with open('data_2.txt','r') as file:
                         
                         e = abs(a-g)/g
                         
-                        cutoff = 0.1
+                        cutoff = 0.05
                         
                         if e < cutoff and (abs(gx) < 50*pi/180 and abs(gy) < 50*pi/180 and abs(gz) < 50*pi/180):
                             Z_A[0][0] = atan2(ay,az)    
@@ -279,9 +288,7 @@ with open('data_2.txt','r') as file:
                             Z_A[2][0] = atan2(b[0][0],b[1][0])
                         else:
                             Z_A[2][0] = 2*pi + atan2(b[0][0],b[1][0])
-                        
-                        r += gx*dt
-                        
+
                         if Z_A[2][0] - last_heading > 2*pi - 0.5:
                             U_A[2][0] = gz*dt + 2*pi
                         if Z_A[2][0] - last_heading < -2*pi + 0.5:
@@ -304,11 +311,7 @@ with open('data_2.txt','r') as file:
                         
                         if abs(X_A[1][0] + n*gy*dt) >= pi/2:
                             n *= -1
-                       
-        #             inc_raw = atan(sqrt(tan(Z_A[0][0])*tan(Z_A[0][0]) + tan(Z_A[1][0])*tan(Z_A[1][0])))
-        #             inc_kalman = atan(sqrt(tan(X_A[0][0])*tan(X_A[0][0]) + tan(X_A[1][0])*tan(X_A[1][0])))
-        #             inc_bno = atan(sqrt(tan(roll)*tan(roll) + tan(pitch)*tan(pitch)))
-         
+
                         C1[0][0] = cos(X_A[1][0])
                         C1[0][1] = 0
                         C1[0][2] = sin(X_A[1][0])
@@ -320,6 +323,7 @@ with open('data_2.txt','r') as file:
                         C1[2][0] = -sin(X_A[1][0])*cos(X_A[0][0])
                         C1[2][1] = sin(X_A[0][0])
                         C1[2][2] = cos(X_A[0][0])*cos(X_A[1][0])
+
     #      
     #          # ----------------------------------------------------------------------------------------------------------------------
     # 
@@ -354,24 +358,26 @@ with open('data_2.txt','r') as file:
                         
                         F = np.eye(len(F))
                         
-                        F[0][4] = cos(X[5][0])*dt/r
-                        F[1][4] = sin(X[5][0])*dt/(r*cos(X[0][0]))
+                        F[0][4] = cos(Z[5][0])*dt/r
+                        F[1][4] = sin(Z[5][0])*dt/(r*cos(Z[0][0]))
                         F[2][3] = dt
                         
                         U[3][0] = a_r[2][0]*dt
-                        U[4][0] = sqrt(X[4][0]*X[4][0] + dv*dv + 2*X[4][0]*dv*cos(X[5][0] - alpha)) - X[4][0]
-                        U[5][0] = atan((X[4][0]*sin(X[5][0]) + dv*sin(alpha))/((X[4][0]*cos(X[5][0]) + dv*cos(alpha)))) - X[5][0]
+                        U[4][0] = sqrt(Z[4][0]*Z[4][0] + dv*dv + 2*Z[4][0]*dv*cos(Z[5][0] - alpha)) - Z[4][0]
+                        U[5][0] = atan2((Z[4][0]*sin(Z[5][0]) + dv*sin(alpha)),(Z[4][0]*cos(Z[5][0]) + dv*cos(alpha))) - Z[5][0]
+                        
+                        Q = 0.0001/(hdop + 0.00001)*np.eye(len(Q))
                         
                         Xp = np.dot(F,X) + U + W
                         
                         Pp = np.dot(np.dot(F,P),F.T) + Q
 
-                        if new_gps_data:
+                        if new_gps_data and gps_counter%1 == 0:
                             if 'GGA' in sentence_type or 'GLL' in sentence_type:
                                 Z[0][0] = latitude*pi/180
                                 Z[1][0] = longitude*pi/180
-                                Z[4][0] = speed
-                                Z[5][0] = course*pi/180
+                                Z[4][0] = sqrt(Z[4][0]*Z[4][0] + dv*dv + 2*Z[4][0]*dv*cos(Z[5][0] - alpha))
+                                Z[5][0] = atan2((Z[4][0]*sin(Z[5][0]) + dv*sin(alpha)),(Z[4][0]*cos(Z[5][0]) + dv*cos(alpha)))
                                 
                             elif 'VTG' in sentence_type:
                                 Z[4][0] = speed
@@ -381,7 +387,7 @@ with open('data_2.txt','r') as file:
                             
                             elif 'VNC' in sentence_type:
                                 Z[4][0] = speed
-                                Z[5][0] = atan((X[4][0]*sin(X[5][0]) + dv*sin(alpha))/((X[4][0]*cos(X[5][0]) + dv*cos(alpha))))
+                                Z[5][0] = atan2((Z[4][0]*sin(Z[5][0]) + dv*sin(alpha)),(Z[4][0]*cos(Z[5][0]) + dv*cos(alpha)))
                                 Z[1][0] += Z[4][0]*dt*sin(Z[5][0])/(r*cos(Z[0][0]))
                                 Z[0][0] += Z[4][0]*dt*cos(Z[5][0])/r
                                 
@@ -395,47 +401,37 @@ with open('data_2.txt','r') as file:
                                 Z[0][0] = latitude*pi/180
                                 Z[1][0] = longitude*pi/180
                                 Z[4][0] = speed
-                                Z[5][0] = course*pi/180
+                                Z[5][0] = atan2((Z[4][0]*sin(Z[5][0]) + dv*sin(alpha)),(Z[4][0]*cos(Z[5][0]) + dv*cos(alpha)))
+
                                 
                         else:
                             
-                            Z[4][0] = sqrt(X[4][0]*X[4][0] + dv*dv + 2*X[4][0]*dv*cos(X[5][0] - alpha))
-                            Z[5][0] = atan((X[4][0]*sin(X[5][0]) + dv*sin(alpha))/((X[4][0]*cos(X[5][0]) + dv*cos(alpha))))
+                            Z[4][0] = sqrt(Z[4][0]*Z[4][0] + dv*dv + 2*Z[4][0]*dv*cos(Z[5][0] - alpha))
+                            Z[5][0] = atan2((Z[4][0]*sin(Z[5][0]) + dv*sin(alpha)),(Z[4][0]*cos(Z[5][0]) + dv*cos(alpha)))
                             
                             Z[1][0] += Z[4][0]*dt*sin(Z[5][0])/(r*cos(Z[0][0]))
                             Z[0][0] += Z[4][0]*dt*cos(Z[5][0])/r
                             
                         Z[2][0] = alt
-                        Z[3][0] = (Z[2][0] - last_alt)/dt 
-
+                        Z[3][0] = (Z[2][0] - last_alt)/dt
+                        
                         K = np.dot(Pp,np.linalg.inv(Pp + R))
                         
                         X = Xp + np.dot(K,Z - Xp)
                         
                         P = np.dot(np.eye(len(K)) - K,Pp)
-            
-#                         if new_gps_data:
-#                             print(sentence_type,float(data[1])/1000,Z[4][0])
-                        
+                              
                         new_gps_data = False
             
                         if X[1][0]*180/pi > 73.70 and X[0][0]*180/pi > 18.66:
                             kml.write(str(X[1][0]*180/pi) + ','  + str(X[0][0]*180/pi) + '\n')
                         
                         last_data = data
-                
-    #             raw = np.append(raw,asin(sin(r))*180/pi + 3.5)
-    #             kalman = np.append(kalman,asin(sin(-e1))*180/pi + 3.5)
-    #             bno = np.append(bno,asin(sin(pitch))*180/pi)
 
-    #                     raw = np.append(raw,Z[4][0])
-                        
-                fast_counter += 1
-
-                counter += 1
+            counter += 1
                 
-                if counter%1000 == 0:
-                    print(str(int(counter/(stop-start)*100)) + '%')
+            if counter%1000 == 0 and counter > start:
+                print(str(int((counter-start)/(stop-start)*100)) + '%')
             
             pass
     
