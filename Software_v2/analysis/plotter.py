@@ -13,8 +13,7 @@ Z_A = np.full((3,1),0.)
 C = C1 = np.full((3,3),0.)
 U_A = np.full((3,1),0.)
 
-R_A = 0.007*np.eye(len(R_A))
-Q_A = 0.0005*np.eye(len(Q_A))
+R_A = 1*np.eye(len(R_A))
 
 X = np.full((6,1),0.)
 W = np.full((6,1),0.)  
@@ -26,9 +25,8 @@ Z = np.full((6,1),0.)
 U = np.full((6,1),0.)
 
 R = 1*np.eye(len(R))
-Q = 0.05*np.eye(len(Q))
 
-n = 1
+nx = ny = 1
 
 init = False
 g = 0
@@ -44,7 +42,7 @@ raw = kalman = bno = np.array([])
 start = 0
 stop = 37000
 
-fast_counter = 0
+a0_bias = a1_bias = 0
 
 q = q_w = np.array([[1.,0.,0.,0.]])
 w = np.full((4,4),0.)
@@ -62,38 +60,38 @@ fix_time = last_fix_time = 0
 sentence_type = b'NUL'
 hdop = vdop = 0
 
+last_vtg_fix_time = last_vtg_speed = last_vtg_course = 0
 
-g = 9.9379
+g = 9.81
 r = 6371000
 new_gps_data = False
 
+time_array = track_array = a0_array = a1_array = np.array([])
+
 gps_counter = 0
 
-def distance(lat_1,lon_1,lat_2,lon_2):
-        return sqrt(pow((r*(lat_2 - lat_1)*pi/180),2) + pow(r*(lon_2 - lon_1)*pi/180*cos(lat_1*pi/180),2))    
+# def distance(lat_1,lon_1,lat_2,lon_2):
+#         return sqrt(pow((r*(lat_2 - lat_1)*pi/180),2) + pow(r*(lon_2 - lon_1)*pi/180*cos(lat_1*pi/180),2))    
+# 
+# def track(lat_1,lon_1,lat_2,lon_2):
+#     if lat_1 != lat_2:
+#         return atan(cos(lat_1*pi/180)*(lon_2 - lon_1)/(lat_2 - lat_1))
+#     else:
+#         return pi/2*(course/abs(course))
 
-def track(lat_1,lon_1,lat_2,lon_2):
-    if lat_1 != lat_2:
-        return atan(cos(lat_1*pi/180)*(lon_2 - lon_1)/(lat_2 - lat_1))
-    else:
-        return pi/2*(course/abs(course))
-
-with open('data_2.txt','r') as file:
+with open('data_4.txt','r') as file:
     with open('earth.csv','w') as kml:       
         spamreader = csv.reader(file, delimiter=',')
         for data in spamreader:
             
+            # IGNORE THIS
             if counter == 0:
-                    calib_time = float(data[0])
-                    calib_alt = float(data[1])
-                    calib_temp = float(data[2])
-                    ram_offset = float(data[3])
-            
-            if counter == start:
-                t_init = float(data[1])/1000
-            
-            if counter == stop:
-                t_final = float(data[1])/1000
+                    calib_time = 0
+                    calib_alt = 0
+                    calib_temp = 0
+                    
+            if counter == 3:
+                g = sqrt(pow(float(data[6]),2) + pow(float(data[7]),2) + pow(float(data[8]),2))
                     
             if start <= counter <= stop:
                 
@@ -122,7 +120,7 @@ with open('data_2.txt','r') as file:
                             fix_time = float(data[15])
                             speed = float(data[9])
                             gps_alt = float(data[14]) + calib_alt
-                        if sentence_type == "b'VTG'":
+                        if sentence_type == "b'VTG'":     
                             speed = float(data[9])
                             course = float(data[10])
                             fix_time = float(data[15])
@@ -173,117 +171,39 @@ with open('data_2.txt','r') as file:
                             dt = (float(data[1]) - float(last_data[1]))/1000
                         else:
                             dt = 0.05
-    #                 
-    #         # ---------------------------------------------------------------------------------------------------
-    #
-    #                     MADGWICK FILTER
-    #
-    #                     wx = gx
-    #                     wy = gy
-    #                     wz = gz
-    #                     
-    #                     w[0][1] = -wx
-    #                     w[0][2] = -wy
-    #                     w[0][3] = -wz
-    #                     
-    #                     w[1][0] = wx
-    #                     w[1][2] = wz
-    #                     w[1][3] = -wy
-    #                     
-    #                     w[2][0] = wy
-    #                     w[2][1] = -wz
-    #                     w[2][3] = wx
-    #                     
-    #                     w[3][0] = wz
-    #                     w[3][1] = wy
-    #                     w[3][2] = -wx
-    #                     
-    #                     q_w_dot = 0.5*np.dot(q,w) 
-    #                     
-    #                     Bh = 38.285
-    #                     Bv = 20.9
-    # 
-    #                     f[0][0] = 2*(q[0][1]*q[0][3] - q[0][0]*q[0][2]) - ax/a
-    #                     f[1][0] = 2*(q[0][0]*q[0][1] + q[0][2]*q[0][3]) - ay/a
-    #                     f[2][0] = 2*(0.5 - q[0][1]*q[0][1] - q[0][2]*q[0][2]) - az/a
-    #                     f[3][0] = 2*Bh*(0.5 - q[0][2]*q[0][2] - q[0][3]*q[0][3]) + 2*Bv*(q[0][1]*q[0][3] - q[0][0]*q[0][2]) - mx/m
-    #                     f[4][0] = 2*Bh*(q[0][1]*q[0][2] - q[0][0]*q[0][3]) + 2*Bv*(q[0][0]*q[0][1] + q[0][2]*q[0][3]) - my/m
-    #                     f[5][0] = 2*Bh*(q[0][0]*q[0][2] + q[0][1]*q[0][3]) + 2*Bv*(0.5 - q[0][1]*q[0][1] - q[0][2]*q[0][2]) - mz/m
-    #                     
-    #                     J[0][0] = -2*q[0][2]
-    #                     J[1][0] = 2*q[0][3]
-    #                     J[2][0] = -2*q[0][0]
-    #                     J[3][0] = 2*q[0][1]
-    #                     
-    #                     J[0][1] = 2*q[0][1]
-    #                     J[1][1] = 2*q[0][0]
-    #                     J[2][1] = 2*q[0][3]
-    #                     J[3][1] = 2*q[0][2]
-    #                     
-    #                     J[0][2] = 0
-    #                     J[1][2] = -4*q[0][1]
-    #                     J[2][2] = -4*q[0][2]
-    #                     J[3][2] = 0
-    #                     
-    #                     J[0][3] = -2*Bv*q[0][2]
-    #                     J[1][3] = 2*Bv*q[0][3]
-    #                     J[2][3] = -4*Bh*q[0][2] - 2*Bv*q[0][0]
-    #                     J[3][3] = -4*Bh*q[0][1] + 2*Bv*q[0][1]
-    #                     
-    #                     J[0][4] = -2*Bh*q[0][3] + 2*Bv*q[0][1]
-    #                     J[1][4] = 2*Bh*q[0][2] + 2*Bv*q[0][0]
-    #                     J[2][4] = 2*Bh*q[0][1] + 2*Bv*q[0][3]
-    #                     J[3][4] = -2*Bh*q[0][0] + 2*Bv*q[0][2]
-    #                     
-    #                     J[0][5] = 2*Bh*q[0][2]
-    #                     J[1][5] = 2*Bh*q[0][3] - 4*Bv*q[0][1]
-    #                     J[2][5] = 2*Bh*q[0][0] - 4*Bv*q[0][2]
-    #                     J[3][5] = 2*Bh*q[0][1]
-    #                     
-    #                     x = np.dot(J,f).T
-    #                     
-    #                     x /= sqrt(x[0][0]*x[0][0] + x[0][1]*x[0][1] + x[0][2]*x[0][2] + x[0][3]*x[0][3])
-    #                     
-    #                     q += (q_w_dot - beta*x)*dt
-    #                     
-    #                     q /= sqrt(q[0][0]*q[0][0] + q[0][1]*q[0][1] + q[0][2]*q[0][2] + q[0][3]*q[0][3])
-    # 
-    #                     e1 = atan2(2*(q[0][0]*q[0][1] + q[0][2]*q[0][3]), 1 - 2*(q[0][1]*q[0][1] + q[0][2]*q[0][2]))
-    #                     e2 = asin(2*(q[0][0]*q[0][2] - q[0][1]*q[0][3]))
-    #                     e3 = atan2(2*(q[0][0]*q[0][3] + q[0][1]*q[0][2]), 1 - 2*(q[0][2]*q[0][2] + q[0][3]*q[0][3]))
-    #                 
+          
     #         # ATTITUDE KF ---------------------------------------------------------------------------------------------------------         
                     
                         F_A = np.eye(len(F_A))
 
-                        U_A[0][0] = gx*dt    
-                        U_A[1][0] = n*gy*dt
-                        
+                        U_A[0][0] = nx*gx*dt    
+                        U_A[1][0] = ny*gy*dt
+
                         e = abs(a-g)/g
-                        
+
                         cutoff = 0.05
-                        
-                        if e < cutoff and (abs(gx) < 50*pi/180 and abs(gy) < 50*pi/180 and abs(gz) < 50*pi/180):
+
+                        if e < cutoff:
                             Z_A[0][0] = atan2(ay,az)    
                             Z_A[1][0] = atan2(-ax,sqrt(ay*ay + az*az))
-                            Q_A = 0.000001*np.eye(len(Q_A))
+                            Q_A = 0.0001*np.eye(len(Q_A))
                         else:
-                            Q_A = 0.00001*np.eye(len(Q_A))
+                            Q_A = 0.001*np.eye(len(Q_A))
 
                         C[0][0] = cos(Z_A[1][0])
                         C[0][1] = 0
                         C[0][2] = sin(Z_A[1][0])
-                        
+
                         C[1][0] = sin(Z_A[0][0])*sin(Z_A[1][0])
                         C[1][1] = cos(Z_A[0][0])
                         C[1][2] = -sin(Z_A[0][0])*cos(Z_A[1][0])
-                        
+
                         C[2][0] = -sin(Z_A[1][0])*cos(Z_A[0][0])
                         C[2][1] = sin(Z_A[0][0])
                         C[2][2] = cos(Z_A[0][0])*cos(Z_A[1][0])
-                        
+
                         b = np.dot(C,np.array([[mx],[my],[mz]]))
-                        
+
                         if atan2(b[0][0],b[1][0]) >= 0:
                             Z_A[2][0] = atan2(b[0][0],b[1][0])
                         else:
@@ -293,24 +213,26 @@ with open('data_2.txt','r') as file:
                             U_A[2][0] = gz*dt + 2*pi
                         if Z_A[2][0] - last_heading < -2*pi + 0.5:
                             U_A[2][0] = gz*dt - 2*pi
-                        if abs(Z_A[2][0] - last_heading) < 2*pi - 0.5:
+                        if abs(Z_A[2][0] - last_heading) <= 2*pi - 0.5:
                             U_A[2][0] = gz*dt
-                        
+
                         Xp_A = np.dot(F_A,X_A) + U_A + W_A
-                        
+
                         Pp_A = np.dot(np.dot(F_A,P_A),F_A.T) + Q_A
-                        
+
                         K_A = np.dot(Pp_A,np.linalg.inv(Pp_A + R_A))
-                        
+
                         if e >= cutoff:
                             K_A[0][0] = K_A[1][1] = 0
-                        
+
                         X_A = Xp_A + np.dot(K_A,Z_A - Xp_A)
-                        
+
                         P_A = np.dot(np.eye(len(K_A)) - K_A,Pp_A)
-                        
-                        if abs(X_A[1][0] + n*gy*dt) >= pi/2:
-                            n *= -1
+
+                        if abs(X_A[0][0] + nx*gx*dt) >= pi/2:
+                            nx *= -1
+                        if abs(X_A[1][0] + ny*gy*dt) >= pi/2:
+                            ny *= -1
 
                         C1[0][0] = cos(X_A[1][0])
                         C1[0][1] = 0
@@ -338,19 +260,46 @@ with open('data_2.txt','r') as file:
                         lin_acc_x = - ax + gravity[0][0]
                         lin_acc_y = - ay + gravity[1][0]
                         lin_acc_z = az + gravity[2][0]
-                        
-                        vx += lin_acc_x*dt
-                        vy += lin_acc_y*dt
-                        vz += lin_acc_z*dt
-                        
-                        v = sqrt(vx*vx + vy*vy + vz*vz)
-          
-                        v_r = np.dot(np.linalg.inv(C1),np.array([[vx],[vy],[vz]]))
+
                         a_r = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x],[lin_acc_y],[lin_acc_z]]))
+                                  
+                        dv = sqrt(pow(a_r[0][0] - a0_bias,2) + pow(a_r[1][0] - a1_bias,2))*dt
+                        alpha = atan2(-(a_r[0][0] - a0_bias),(a_r[1][0] - a1_bias)) + X_A[2][0] + declination
+   
+                        if new_gps_data and sentence_type == "b'VTG'" and len(a0_array) != 0:
+                            delta_vx = speed*sin(course*pi/180) - last_vtg_speed*sin(last_vtg_course*pi/180)
+                            delta_vy = speed*cos(course*pi/180) - last_vtg_speed*cos(last_vtg_course*pi/180)
+                            
+                            IC = IS = 0
+                            
+                            avg_a0 = a0_array[0]/len(a0_array)
+                            avg_a1 = a1_array[0]/len(a1_array)
+                            
+                            for count in range(1,len(track_array)):
+                                IC += cos(track_array[count])*(time_array[count] - time_array[count - 1])
+                                IS += sin(track_array[count])*(time_array[count] - time_array[count - 1])
+                                avg_a0 += a0_array[count]/len(a0_array)
+                                avg_a1 += a1_array[count]/len(a1_array)
+                                
+                            k = delta_vx/delta_vy
+                            
+                            theta = atan((k*IC - IS)/(IC + k*IS))
+                            
+                            a1_bias = avg_a1 - delta_vx/(cos(theta)*(IS + tan(theta)*IC))*sqrt(pow(IC + k*IS,2)/(1 + k*k))
+                            a0_bias = avg_a0 - (avg_a1 - a1_bias)*(IS - k*IC)/(IC + k*IS)
+                                                       
+                            time_array = track_array = a0_array = a1_array = np.array([])
+                            
+                            last_vtg_fix_time = fix_time
+                            last_vtg_speed = speed
+                            last_vtg_course = course
                         
-                        dv = sqrt(a_r[0][0]*a_r[0][0] + a_r[1][0]*a_r[1][0])*dt
-                        alpha = atan2(-a_r[0][0],a_r[1][0]) + X_A[2][0] + declination
                         
+                        time_array = np.append(time_array,float(data[1])/1000)
+                        track_array = np.append(track_array,X_A[2][0] + declination)
+                        a0_array = np.append(a0_array,a_r[0][0])
+                        a1_array = np.append(a1_array,a_r[1][0])
+                    
                         if latitude != 0 and longitude != 0 and init == False:
                             X[0][0] = latitude*pi/180
                             X[1][0] = longitude*pi/180
@@ -423,8 +372,11 @@ with open('data_2.txt','r') as file:
                               
                         new_gps_data = False
             
-                        if X[1][0]*180/pi > 73.70 and X[0][0]*180/pi > 18.66:
+                        if X[1][0]*180/pi > 73.70 and X[0][0]*180/pi > 18.60:
                             kml.write(str(X[1][0]*180/pi) + ','  + str(X[0][0]*180/pi) + '\n')
+                        
+#                         if counter > 23500:
+#                             print(counter/10000,Z[5][0]*180/pi,Z[4][0])
                         
                         last_data = data
 
@@ -436,11 +388,3 @@ with open('data_2.txt','r') as file:
             pass
     
 kml.close()
-#     
-# t = np.linspace(0, t_final - t_init,fast_counter)
-# 
-# plt.plot(t,raw,marker = 'o',markersize=0)
-# plt.plot(t,bno,marker = 'o',markersize=0)
-# plt.plot(t,kalman,marker = 'o',markersize=0)
-# 
-# plt.show()
