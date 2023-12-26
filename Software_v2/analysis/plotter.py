@@ -42,7 +42,8 @@ raw = kalman = bno = np.array([])
 start = 0
 stop = 37000
 
-a0_bias = a1_bias = 0
+a0_true = a1_true = a2_true = 0
+ax_bias = ay_bias = az_bias = 0
 
 q = q_w = np.array([[1.,0.,0.,0.]])
 w = np.full((4,4),0.)
@@ -60,13 +61,13 @@ fix_time = last_fix_time = 0
 sentence_type = b'NUL'
 hdop = vdop = 0
 
-last_vtg_fix_time = last_vtg_speed = last_vtg_course = 0
+last_vtg_fix_time = last_vtg_speed = last_vtg_course = last_bias_alt = last_bias_time = 0
 
 g = 9.81
 r = 6371000
 new_gps_data = False
 
-time_array = track_array = a0_array = a1_array = np.array([])
+time_array = track_array = a0_array = a1_array = a2_array = ax_array = ay_array = az_array = np.array([])
 
 gps_counter = 0
 
@@ -79,7 +80,7 @@ gps_counter = 0
 #     else:
 #         return pi/2*(course/abs(course))
 
-with open('data_4.txt','r') as file:
+with open('data_2.txt','r') as file:
     with open('earth.csv','w') as kml:       
         spamreader = csv.reader(file, delimiter=',')
         for data in spamreader:
@@ -146,7 +147,11 @@ with open('data_4.txt','r') as file:
                         ay = -float(data[7])
                         az = -float(data[8])
                         
-                        a = sqrt(ax*ax + ay*ay + az*az)
+                        ax_true = ax - ax_bias
+                        ay_true = ay - ay_bias
+                        az_true = az - az_bias
+                        
+                        a = sqrt(pow(ax,2) + pow(ay,2) + pow(az,2))
 
 #                         if counter == 1:
 #                             g = a
@@ -185,7 +190,7 @@ with open('data_4.txt','r') as file:
 
                         if e < cutoff:
                             Z_A[0][0] = atan2(ay,az)    
-                            Z_A[1][0] = atan2(-ax,sqrt(ay*ay + az*az))
+                            Z_A[1][0] = atan2(-ax,sqrt(pow(ay,2) + pow(az,2)))
                             Q_A = 0.0001*np.eye(len(Q_A))
                         else:
                             Q_A = 0.001*np.eye(len(Q_A))
@@ -262,9 +267,7 @@ with open('data_4.txt','r') as file:
                         lin_acc_z = az + gravity[2][0]
 
                         a_r = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x],[lin_acc_y],[lin_acc_z]]))
-                                  
-                        dv = sqrt(pow(a_r[0][0] - a0_bias,2) + pow(a_r[1][0] - a1_bias,2))*dt
-                        alpha = atan2(-(a_r[0][0] - a0_bias),(a_r[1][0] - a1_bias)) + X_A[2][0] + declination
+                        a_r_true = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x + 0*ax_bias],[lin_acc_y + 0*ay_bias],[lin_acc_z - 0*az_bias]]))
    
                         if new_gps_data and sentence_type == "b'VTG'" and len(a0_array) != 0:
                             delta_vx = speed*sin(course*pi/180) - last_vtg_speed*sin(last_vtg_course*pi/180)
@@ -274,31 +277,58 @@ with open('data_4.txt','r') as file:
                             
                             avg_a0 = a0_array[0]/len(a0_array)
                             avg_a1 = a1_array[0]/len(a1_array)
-                            
+                            avg_a2 = a2_array[0]/len(a2_array)
+                            avg_ax = ax_array[0]/len(ax_array)
+                            avg_ay = ay_array[0]/len(ay_array)
+                            avg_az = az_array[0]/len(az_array)
+
                             for count in range(1,len(track_array)):
                                 IC += cos(track_array[count])*(time_array[count] - time_array[count - 1])
                                 IS += sin(track_array[count])*(time_array[count] - time_array[count - 1])
                                 avg_a0 += a0_array[count]/len(a0_array)
                                 avg_a1 += a1_array[count]/len(a1_array)
+                                avg_a2 += a2_array[count]/len(a2_array)
+                                avg_ax += ax_array[count]/len(ax_array)
+                                avg_ay += ay_array[count]/len(ay_array)
+                                avg_az += az_array[count]/len(az_array)
                                 
                             k = delta_vx/delta_vy
                             
                             theta = atan((k*IC - IS)/(IC + k*IS))
                             
-                            a1_bias = avg_a1 - delta_vx/(cos(theta)*(IS + tan(theta)*IC))*sqrt(pow(IC + k*IS,2)/(1 + k*k))
-                            a0_bias = avg_a0 - (avg_a1 - a1_bias)*(IS - k*IC)/(IC + k*IS)
-                                                       
-                            time_array = track_array = a0_array = a1_array = np.array([])
+                            a1_true = delta_vx/(cos(theta)*(IS + tan(theta)*IC))*sqrt(pow(IC + k*IS,2)/(1 + k*k))
+                            a0_true = a1_true*(IS - k*IC)/(IC + k*IS)
+                            a2_true = 2 * 0 * (float(data[4]) - last_bias_alt)/pow((float(data[1]) - last_bias_time)/1000,2)
+                            
+                            B = np.dot(C1,np.array([[a0_true],[a1_true],[a2_true + g]]))
+                            
+                            ax_bias = avg_ax + B[0][0]
+                            ay_bias = avg_ay + B[1][0]
+                            az_bias = avg_az - B[2][0]
+
+
+                            print(ax_bias,ay_bias,az_bias)
+
+                            time_array = track_array = a0_array = a1_array = a2_array = ax_array = ay_array = az_array = np.array([])
                             
                             last_vtg_fix_time = fix_time
                             last_vtg_speed = speed
                             last_vtg_course = course
+                            last_bias_alt = float(data[4])
+                            last_bias_time = float(data[1])
                         
                         
                         time_array = np.append(time_array,float(data[1])/1000)
                         track_array = np.append(track_array,X_A[2][0] + declination)
                         a0_array = np.append(a0_array,a_r[0][0])
                         a1_array = np.append(a1_array,a_r[1][0])
+                        a2_array = np.append(a2_array,a_r[2][0])
+                        ax_array = np.append(ax_array,ax)
+                        ay_array = np.append(ay_array,ay)
+                        az_array = np.append(az_array,az)
+
+                        dv = sqrt(pow(a_r_true[0][0],2) + pow(a_r_true[1][0],2))*dt
+                        alpha = atan2(-a_r_true[0][0],a_r_true[1][0]) + X_A[2][0] + declination
                     
                         if latitude != 0 and longitude != 0 and init == False:
                             X[0][0] = latitude*pi/180
@@ -321,7 +351,7 @@ with open('data_4.txt','r') as file:
                         
                         Pp = np.dot(np.dot(F,P),F.T) + Q
 
-                        if new_gps_data and gps_counter%1 == 0:
+                        if new_gps_data and gps_counter%10 == 0:
                             if 'GGA' in sentence_type or 'GLL' in sentence_type:
                                 Z[0][0] = latitude*pi/180
                                 Z[1][0] = longitude*pi/180
@@ -377,13 +407,13 @@ with open('data_4.txt','r') as file:
                         
 #                         if counter > 23500:
 #                             print(counter/10000,Z[5][0]*180/pi,Z[4][0])
-                        
+
                         last_data = data
 
             counter += 1
                 
-            if counter%1000 == 0 and counter > start:
-                print(str(int((counter-start)/(stop-start)*100)) + '%')
+#             if counter%1000 == 0 and counter > start:
+#                 print(str(int((counter-start)/(stop-start)*100)) + '%')
             
             pass
     
