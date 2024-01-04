@@ -45,14 +45,6 @@ stop = 37000
 a0_true = a1_true = a2_true = 0
 ax_bias = ay_bias = az_bias = 0
 
-q = q_w = np.array([[1.,0.,0.,0.]])
-w = np.full((4,4),0.)
-J = np.full((4,6),0.)
-f = np.full((6,1),0.)
-
-beta = 0
-r = 0
-
 latitude = last_latitude = 0
 longitude = last_longitude = 0
 speed = last_speed = 0
@@ -146,10 +138,6 @@ with open('data_2.txt','r') as file:
                         ax = -float(data[6])
                         ay = -float(data[7])
                         az = -float(data[8])
-                        
-                        ax_true = ax - ax_bias
-                        ay_true = ay - ay_bias
-                        az_true = az - az_bias
                         
                         a = sqrt(pow(ax,2) + pow(ay,2) + pow(az,2))
 
@@ -267,7 +255,7 @@ with open('data_2.txt','r') as file:
                         lin_acc_z = az + gravity[2][0]
 
                         a_r = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x],[lin_acc_y],[lin_acc_z]]))
-                        a_r_true = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x + 0*ax_bias],[lin_acc_y + 0*ay_bias],[lin_acc_z - 0*az_bias]]))
+                        a_r_true = np.dot(np.linalg.inv(C1),np.array([[lin_acc_x + ax_bias],[lin_acc_y + ay_bias],[lin_acc_z - az_bias]]))
    
                         if new_gps_data and sentence_type == "b'VTG'" and len(a0_array) != 0:
                             delta_vx = speed*sin(course*pi/180) - last_vtg_speed*sin(last_vtg_course*pi/180)
@@ -307,7 +295,7 @@ with open('data_2.txt','r') as file:
                             az_bias = avg_az - B[2][0]
 
 
-                            print(ax_bias,ay_bias,az_bias)
+#                             print(ax_bias,ay_bias,az_bias)
 
                             time_array = track_array = a0_array = a1_array = a2_array = ax_array = ay_array = az_array = np.array([])
                             
@@ -351,7 +339,7 @@ with open('data_2.txt','r') as file:
                         
                         Pp = np.dot(np.dot(F,P),F.T) + Q
 
-                        if new_gps_data and gps_counter%10 == 0:
+                        if new_gps_data and gps_counter%1 == 0:
                             if 'GGA' in sentence_type or 'GLL' in sentence_type:
                                 Z[0][0] = latitude*pi/180
                                 Z[1][0] = longitude*pi/180

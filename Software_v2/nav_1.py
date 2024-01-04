@@ -415,7 +415,7 @@ class async_test:
         # INITIALISE DATA FILE IN FLASH
         data_file = open('/win/data_' + new_idx + '.bin', 'wb')
         
-        runtime = 0.1 * 60 * 1000 # in millisecs, changed to 5h so that transmission occurs for a long time
+        runtime = 10 * 60 * 1000 # in millisecs, changed to 5h so that transmission occurs for a long time
         buzz_counter = 0
 #         self.deltaT_trans = 2000 # Start logging very slow
 #         self.sensor_init = True # Start lora and sd card thread
@@ -424,6 +424,9 @@ class async_test:
         while True:            
             t = time.ticks_ms()
             t_log = t - self.calib_time
+    
+            if int(t_log/1000)%30 == 0:
+                print(int(t_log/1000))
     
             # Get sensor readings
             self.bno_accel = self.bno.accel()
@@ -667,7 +670,7 @@ class async_test:
 #                 self.buzzer.duty_u16(0)
 #                 time.sleep(0.1)
             
-            sd_file.write("(data_type, time, state, temperature, alt, ram_diff, bno_x, bno_y, bno_z, high_x, high_y, high_z, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z, heading, roll, pitch)\n")
+            sd_file.write("(data_type, time, state, temperature, alt, ram_diff, bno_x, bno_y, bno_z, high_x, high_y, high_z, gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z, heading, roll, pitch) \n(data_type, lat degrees, lat minutes, lat seconds, N/S, lon degrees, lon minutes, lon seconds, E/W, speed, course, hdop, vdop, senstence_tpe, gps alt, fix time since init, time since last fix) \n \n")
             read_file = open('/win/data_' + new_idx + '.bin', 'rb')
             read_file.seek(0,2) # Move to end of file
             file_size = read_file.tell() # Get number of bytes
