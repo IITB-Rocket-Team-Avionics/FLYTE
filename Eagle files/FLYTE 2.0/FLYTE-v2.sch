@@ -8820,11 +8820,6 @@ speed sensor)</text>
 <label x="215.9" y="40.64" size="1.27" layer="95" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="GP19"/>
 </segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="DIO4/SPI_MOSI"/>
-<wire x1="40.64" y1="195.58" x2="33.02" y2="195.58" width="0.1524" layer="91"/>
-<label x="33.02" y="195.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
 </net>
 <net name="SCK0" class="0">
 <segment>
@@ -8848,11 +8843,6 @@ speed sensor)</text>
 <junction x="213.36" y="30.48"/>
 <wire x1="213.36" y1="27.94" x2="226.06" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R16" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="DIO12/SPI_MISO"/>
-<wire x1="40.64" y1="205.74" x2="33.02" y2="205.74" width="0.1524" layer="91"/>
-<label x="33.02" y="205.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CS_FLASH" class="0">
@@ -8948,6 +8938,11 @@ speed sensor)</text>
 <wire x1="93.98" y1="71.12" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 <label x="99.06" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="DOUT/DIO13"/>
+<wire x1="40.64" y1="210.82" x2="33.02" y2="210.82" width="0.1524" layer="91"/>
+<label x="33.02" y="210.82" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="SER_RX" class="0">
 <segment>
@@ -8972,18 +8967,6 @@ speed sensor)</text>
 <pinref part="U1" gate="G$1" pin="GP14"/>
 <wire x1="172.72" y1="33.02" x2="165.1" y2="33.02" width="0.1524" layer="91"/>
 <label x="165.1" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="ATTN" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="AD1/DIO1/SPI_NATTN"/>
-<wire x1="40.64" y1="182.88" x2="33.02" y2="182.88" width="0.1524" layer="91"/>
-<label x="33.02" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GP21"/>
-<wire x1="208.28" y1="45.72" x2="215.9" y2="45.72" width="0.1524" layer="91"/>
-<label x="215.9" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SENSE_DROG" class="0">
@@ -9136,6 +9119,25 @@ speed sensor)</text>
 <pinref part="JP2" gate="A" pin="2"/>
 <wire x1="342.9" y1="248.92" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
 <label x="350.52" y="248.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SEX_RX" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="DIN/NCONFIG/DIO14"/>
+<wire x1="40.64" y1="208.28" x2="33.02" y2="208.28" width="0.1524" layer="91"/>
+<label x="33.02" y="208.28" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="CTS" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="NCTS/DIO7"/>
+<wire x1="40.64" y1="193.04" x2="33.02" y2="193.04" width="0.1524" layer="91"/>
+<label x="33.02" y="193.04" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GP21"/>
+<wire x1="208.28" y1="45.72" x2="215.9" y2="45.72" width="0.1524" layer="91"/>
+<label x="215.9" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
