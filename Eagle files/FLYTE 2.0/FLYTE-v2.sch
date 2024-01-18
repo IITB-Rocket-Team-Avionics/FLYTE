@@ -7841,7 +7841,6 @@ Source: &lt;a href="https://www.mouser.dk/datasheet/2/737/4389_C13924-001_CCP-W2
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="U6" library="W25Q32JVSSIQ" deviceset="W25Q32JVSSIQ" device="" override_package3d_urn="urn:adsk.eagle:package:40381730/2" override_package_urn="urn:adsk.eagle:footprint:40381731/1"/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
@@ -7850,7 +7849,6 @@ Source: &lt;a href="https://www.mouser.dk/datasheet/2/737/4389_C13924-001_CCP-W2
 <part name="R17" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1"/>
 <part name="U2" library="XBP9B-XCST-021" deviceset="XBP9B-XCST-021" device=""/>
-<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="DR_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
 <part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
@@ -7962,10 +7960,6 @@ speed sensor)</text>
 <instance part="U6" gate="G$1" x="370.84" y="68.58" smashed="yes">
 <attribute name="NAME" x="358.3677" y="79.525" size="1.27268125" layer="95"/>
 </instance>
-<instance part="R13" gate="G$1" x="231.14" y="35.56" smashed="yes">
-<attribute name="NAME" x="227.33" y="37.0586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="227.33" y="32.258" size="1.778" layer="96"/>
-</instance>
 <instance part="R14" gate="G$1" x="149.86" y="35.56" smashed="yes">
 <attribute name="NAME" x="146.05" y="37.0586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="143.51" y="32.258" size="1.778" layer="96"/>
@@ -7996,10 +7990,6 @@ speed sensor)</text>
 <instance part="U2" gate="G$1" x="68.58" y="200.66" smashed="yes">
 <attribute name="NAME" x="45.6551" y="226.1321" size="1.2736" layer="95"/>
 <attribute name="VALUE" x="45.6561" y="175.1891" size="1.27355" layer="96"/>
-</instance>
-<instance part="R22" gate="G$1" x="33.02" y="226.06" smashed="yes">
-<attribute name="NAME" x="29.21" y="227.5586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="29.21" y="222.758" size="1.778" layer="96"/>
 </instance>
 <instance part="DR_ARM" gate="-1" x="172.72" y="182.88" smashed="yes" rot="R180">
 <attribute name="NAME" x="172.72" y="181.991" size="1.778" layer="95"/>
@@ -8487,11 +8477,6 @@ speed sensor)</text>
 <label x="350.52" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R13" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="35.56" x2="241.3" y2="35.56" width="0.1524" layer="91"/>
-<label x="241.3" y="35.56" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
 <label x="142.24" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -8520,11 +8505,6 @@ speed sensor)</text>
 <wire x1="314.96" y1="177.8" x2="309.88" y2="177.8" width="0.1524" layer="91"/>
 <label x="309.88" y="177.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U$4" gate="G$1" pin="VIN"/>
-</segment>
-<segment>
-<pinref part="R22" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="226.06" x2="25.4" y2="226.06" width="0.1524" layer="91"/>
-<label x="25.4" y="226.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="USB_REGULATOR3V3" gate="G$1" pin="VOUT"/>
@@ -8643,23 +8623,6 @@ speed sensor)</text>
 <pinref part="U1" gate="G$1" pin="VSYS"/>
 </segment>
 </net>
-<net name="CS_SX" class="0">
-<segment>
-<wire x1="208.28" y1="33.02" x2="213.36" y2="33.02" width="0.1524" layer="91"/>
-<label x="215.9" y="33.02" size="1.27" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="GP17"/>
-<wire x1="213.36" y1="33.02" x2="215.9" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="33.02" x2="213.36" y2="35.56" width="0.1524" layer="91"/>
-<junction x="213.36" y="33.02"/>
-<wire x1="213.36" y1="35.56" x2="226.06" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="R13" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="AD3/DIO3/SPI_NSSEL"/>
-<wire x1="40.64" y1="187.96" x2="33.02" y2="187.96" width="0.1524" layer="91"/>
-<label x="33.02" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="CS_SD" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="CS"/>
@@ -8675,22 +8638,6 @@ speed sensor)</text>
 <junction x="167.64" y="38.1"/>
 <wire x1="167.64" y1="35.56" x2="154.94" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="R14" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="SX_RESET" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="GP26"/>
-<wire x1="208.28" y1="55.88" x2="215.9" y2="55.88" width="0.1524" layer="91"/>
-<label x="215.9" y="55.88" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="!RESET"/>
-<wire x1="40.64" y1="218.44" x2="38.1" y2="218.44" width="0.1524" layer="91"/>
-<label x="33.02" y="218.44" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="38.1" y1="218.44" x2="33.02" y2="218.44" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="218.44" x2="38.1" y2="226.06" width="0.1524" layer="91"/>
-<junction x="38.1" y="218.44"/>
-<pinref part="R22" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -8819,18 +8766,6 @@ speed sensor)</text>
 <wire x1="208.28" y1="40.64" x2="215.9" y2="40.64" width="0.1524" layer="91"/>
 <label x="215.9" y="40.64" size="1.27" layer="95" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="GP19"/>
-</segment>
-</net>
-<net name="SCK0" class="0">
-<segment>
-<wire x1="208.28" y1="38.1" x2="215.9" y2="38.1" width="0.1524" layer="91"/>
-<label x="215.9" y="38.1" size="1.27" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="GP18"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="AD2/DIO2/SPI_CLK"/>
-<wire x1="40.64" y1="185.42" x2="33.02" y2="185.42" width="0.1524" layer="91"/>
-<label x="33.02" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MISO0" class="0">
@@ -9133,11 +9068,6 @@ speed sensor)</text>
 <pinref part="U2" gate="G$1" pin="NCTS/DIO7"/>
 <wire x1="40.64" y1="193.04" x2="33.02" y2="193.04" width="0.1524" layer="91"/>
 <label x="33.02" y="193.04" size="1.016" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GP21"/>
-<wire x1="208.28" y1="45.72" x2="215.9" y2="45.72" width="0.1524" layer="91"/>
-<label x="215.9" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
