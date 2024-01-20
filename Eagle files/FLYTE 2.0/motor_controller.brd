@@ -3861,23 +3861,16 @@ design rules under a new name.</description>
 <contactref element="C2" pad="1"/>
 <contactref element="R1" pad="1"/>
 <polygon width="0.254" layer="1">
-<vertex x="-7.62" y="68.58"/>
-<vertex x="-7.62" y="2.54"/>
-<vertex x="1.27" y="-6.35"/>
-<vertex x="67.31" y="-6.35"/>
-<vertex x="76.9874" y="3.3274"/>
-<vertex x="76.9874" y="58.9026"/>
-<vertex x="67.31" y="68.58"/>
+<vertex x="0.0762" y="61.9125"/>
+<vertex x="0.0762" y="-0.0635"/>
+<vertex x="66.1289" y="-0.0635"/>
+<vertex x="66.1289" y="61.9125"/>
 </polygon>
 <polygon width="0.254" layer="16">
-<vertex x="-7.9502" y="68.2498"/>
-<vertex x="-7.9502" y="1.6002"/>
-<vertex x="2.54" y="-8.89"/>
-<vertex x="77.47" y="-8.89"/>
-<vertex x="81.28" y="-5.08"/>
-<vertex x="81.28" y="64.77"/>
-<vertex x="74.93" y="71.12"/>
-<vertex x="-5.08" y="71.12"/>
+<vertex x="0.0889" y="61.8617"/>
+<vertex x="0.0889" y="-0.0508"/>
+<vertex x="66.0781" y="-0.0508"/>
+<vertex x="66.0781" y="61.8617"/>
 </polygon>
 <via x="5.8674" y="56.9976" extent="1-16" drill="0.35"/>
 <via x="5.3594" y="40.7162" extent="1-16" drill="0.35"/>
