@@ -2187,6 +2187,51 @@ Source: http://www.osram.convergy.de/ ... LG_LY N971.pdf</description>
 </package3d>
 </packages3d>
 </library>
+<library name="adafruit" urn="urn:adsk.eagle:library:420">
+<packages>
+<package name="1X03" urn="urn:adsk.eagle:footprint:6240064/1" library_version="2">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" rot="R90"/>
+<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="1X03" urn="urn:adsk.eagle:package:6240710/1" type="box" library_version="2">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="1X03"/>
+</packageinstances>
+</package3d>
+</packages3d>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2766,6 +2811,10 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="85" x="56.7182" y="10.1854" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="56.7182" y="10.1854" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="56.0832" y="7.6454" size="1.27" layer="27"/>
+</element>
+<element name="JP3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03" package3d_urn="urn:adsk.eagle:package:6240710/1" value="" x="3.175" y="-8.89" smashed="yes">
+<attribute name="NAME" x="-0.7112" y="-7.0612" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="-0.635" y="-12.065" size="1.27" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -3643,6 +3692,21 @@ design rules under a new name.</description>
 <contactref element="LED2" pad="C"/>
 <wire x1="57.6682" y1="10.1854" x2="60.5054" y2="10.1854" width="0.254" layer="1"/>
 <wire x1="60.5054" y1="10.1854" x2="60.5308" y2="10.16" width="0.254" layer="1"/>
+</signal>
+<signal name="22">
+<contactref element="U1" pad="P$29"/>
+<contactref element="JP3" pad="3"/>
+<wire x1="5.715" y1="-8.89" x2="50.96" y2="22.86" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="21">
+<contactref element="U1" pad="P$27"/>
+<contactref element="JP3" pad="2"/>
+<wire x1="3.175" y1="-8.89" x2="50.96" y2="17.78" width="0" layer="19" extent="16-16"/>
+</signal>
+<signal name="20">
+<contactref element="U1" pad="P$20"/>
+<contactref element="JP3" pad="1"/>
+<wire x1="0.635" y1="-8.89" x2="70.96" y2="2.54" width="0" layer="19" extent="16-16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
