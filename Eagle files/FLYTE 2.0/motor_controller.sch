@@ -8309,21 +8309,21 @@ DIN A4, landscape with location and doc. field</description>
 </class>
 </classes>
 <parts>
-<part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device=""/>
-<part name="D1" library="adafruit" deviceset="1N4004" device=""/>
-<part name="C1" library="4392" deviceset="4392" device=""/>
-<part name="J1" library="XT60PW-F" deviceset="XT60PW-F" device=""/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="JP4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM"/>
-<part name="S2" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM"/>
-<part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
-<part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
-<part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
-<part name="H4" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
-<part name="C2" library="4392" deviceset="4392" device=""/>
+<part name="PICO" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device="" override_package3d_urn="urn:adsk.eagle:package:43007819/2" override_package_urn="urn:adsk.eagle:footprint:43007820/1"/>
+<part name="D1" library="adafruit" deviceset="1N4004" device="" override_package3d_urn="urn:adsk.eagle:package:43007855/2" override_package_urn="urn:adsk.eagle:footprint:43007856/1"/>
+<part name="C1" library="4392" deviceset="4392" device="" override_package3d_urn="urn:adsk.eagle:package:43007825/2" override_package_urn="urn:adsk.eagle:footprint:43007826/1"/>
+<part name="J1" library="XT60PW-F" deviceset="XT60PW-F" device="" override_package3d_urn="urn:adsk.eagle:package:43007847/2" override_package_urn="urn:adsk.eagle:footprint:43007848/1"/>
+<part name="SERVO1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="SERVO2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="SERVO3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="SERVO4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
+<part name="S1" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:43007823/2" override_package_urn="urn:adsk.eagle:footprint:43007824/1"/>
+<part name="S2" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-PTH-6.0MM" override_package3d_urn="urn:adsk.eagle:package:43007821/2" override_package_urn="urn:adsk.eagle:footprint:43007822/1"/>
+<part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007850/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
+<part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007851/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
+<part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007852/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
+<part name="H4" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007854/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
+<part name="C2" library="4392" deviceset="4392" device="" override_package3d_urn="urn:adsk.eagle:package:43007840/2" override_package_urn="urn:adsk.eagle:footprint:43007841/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100k"/>
 <part name="D2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
@@ -8342,7 +8342,7 @@ DIN A4, landscape with location and doc. field</description>
 (7.4V -&gt; 5V)</text>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="154.94" y="91.44" smashed="yes">
+<instance part="PICO" gate="G$1" x="154.94" y="91.44" smashed="yes">
 <attribute name="NAME" x="142.2245" y="130.8546" size="2.54388125" layer="95"/>
 <attribute name="VALUE" x="142.2331" y="49.5086" size="2.54171875" layer="96"/>
 </instance>
@@ -8358,17 +8358,17 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="73.66" y="85.09" size="2.54" layer="95"/>
 <attribute name="VALUE" x="73.66" y="69.85" size="2.54" layer="96" align="top-left"/>
 </instance>
-<instance part="JP1" gate="A" x="243.84" y="119.38" smashed="yes">
+<instance part="SERVO1" gate="A" x="243.84" y="119.38" smashed="yes">
 <attribute name="NAME" x="237.49" y="125.095" size="1.778" layer="95"/>
 <attribute name="VALUE" x="237.49" y="111.76" size="1.778" layer="96"/>
 </instance>
-<instance part="JP2" gate="A" x="243.84" y="101.6" smashed="yes">
+<instance part="SERVO2" gate="A" x="243.84" y="101.6" smashed="yes">
 <attribute name="VALUE" x="237.49" y="93.98" size="1.778" layer="96"/>
 </instance>
-<instance part="JP3" gate="A" x="243.84" y="83.82" smashed="yes">
+<instance part="SERVO3" gate="A" x="243.84" y="83.82" smashed="yes">
 <attribute name="VALUE" x="237.49" y="76.2" size="1.778" layer="96"/>
 </instance>
-<instance part="JP4" gate="A" x="243.84" y="66.04" smashed="yes">
+<instance part="SERVO4" gate="A" x="243.84" y="66.04" smashed="yes">
 <attribute name="VALUE" x="237.49" y="58.42" size="1.778" layer="96"/>
 </instance>
 <instance part="S1" gate="G$1" x="185.42" y="114.3" smashed="yes">
@@ -8405,21 +8405,21 @@ DIN A4, landscape with location and doc. field</description>
 <attribute name="NAME" x="214.8586" y="113.03" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="210.058" y="113.03" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="D2" gate="G$1" x="185.42" y="76.2" smashed="yes">
-<attribute name="NAME" x="181.991" y="71.628" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="187.325" y="71.628" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D2" gate="G$1" x="185.42" y="86.36" smashed="yes">
+<attribute name="NAME" x="181.991" y="81.788" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="187.325" y="81.788" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="D3" gate="G$1" x="193.04" y="76.2" smashed="yes">
-<attribute name="NAME" x="189.611" y="71.628" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="194.945" y="71.628" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D3" gate="G$1" x="193.04" y="86.36" smashed="yes">
+<attribute name="NAME" x="189.611" y="81.788" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="194.945" y="81.788" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="R3" gate="G$1" x="185.42" y="86.36" smashed="yes" rot="R90">
-<attribute name="NAME" x="183.9214" y="82.55" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="188.722" y="82.55" size="1.778" layer="96" rot="R90"/>
+<instance part="R3" gate="G$1" x="185.42" y="73.66" smashed="yes" rot="R90">
+<attribute name="NAME" x="183.9214" y="69.85" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="188.722" y="69.85" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="193.04" y="86.36" smashed="yes" rot="R90">
-<attribute name="NAME" x="191.5414" y="82.55" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="196.342" y="82.55" size="1.778" layer="96" rot="R90"/>
+<instance part="R4" gate="G$1" x="193.04" y="73.66" smashed="yes" rot="R90">
+<attribute name="NAME" x="191.5414" y="69.85" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="196.342" y="69.85" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
 <attribute name="DRAWING_NAME" x="217.17" y="15.24" size="2.54" layer="94"/>
@@ -8432,7 +8432,7 @@ DIN A4, landscape with location and doc. field</description>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="VSYS"/>
+<pinref part="PICO" gate="G$1" pin="VSYS"/>
 <pinref part="D1" gate="1" pin="C"/>
 <wire x1="172.72" y1="124.46" x2="185.42" y2="124.46" width="0.1524" layer="91"/>
 </segment>
@@ -8449,24 +8449,24 @@ DIN A4, landscape with location and doc. field</description>
 <label x="63.5" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
+<pinref part="SERVO1" gate="A" pin="2"/>
 <wire x1="241.3" y1="119.38" x2="233.68" y2="119.38" width="0.1524" layer="91"/>
 <label x="233.68" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="101.6" x2="233.68" y2="101.6" width="0.1524" layer="91"/>
 <label x="233.68" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP2" gate="A" pin="2"/>
+<pinref part="SERVO2" gate="A" pin="2"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="83.82" x2="233.68" y2="83.82" width="0.1524" layer="91"/>
 <label x="233.68" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP3" gate="A" pin="2"/>
+<pinref part="SERVO3" gate="A" pin="2"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="66.04" x2="233.68" y2="66.04" width="0.1524" layer="91"/>
 <label x="233.68" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP4" gate="A" pin="2"/>
+<pinref part="SERVO4" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -8475,14 +8475,14 @@ DIN A4, landscape with location and doc. field</description>
 <label x="210.82" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="91.44" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
-<label x="182.88" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="D2" gate="G$1" pin="A"/>
+<wire x1="185.42" y1="88.9" x2="185.42" y2="91.44" width="0.1524" layer="91"/>
+<label x="185.42" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="91.44" x2="195.58" y2="91.44" width="0.1524" layer="91"/>
-<label x="195.58" y="91.44" size="1.27" layer="95" xref="yes"/>
+<pinref part="D3" gate="G$1" pin="A"/>
+<wire x1="193.04" y1="88.9" x2="193.04" y2="91.44" width="0.1524" layer="91"/>
+<label x="193.04" y="91.44" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8504,7 +8504,7 @@ DIN A4, landscape with location and doc. field</description>
 <segment>
 <wire x1="172.72" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
 <label x="177.8" y="55.88" size="1.27" layer="95" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
+<pinref part="PICO" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
@@ -8517,24 +8517,24 @@ DIN A4, landscape with location and doc. field</description>
 <label x="63.5" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="1"/>
+<pinref part="SERVO1" gate="A" pin="1"/>
 <wire x1="241.3" y1="121.92" x2="233.68" y2="121.92" width="0.1524" layer="91"/>
 <label x="233.68" y="121.92" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="104.14" x2="233.68" y2="104.14" width="0.1524" layer="91"/>
 <label x="233.68" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="SERVO2" gate="A" pin="1"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="86.36" x2="233.68" y2="86.36" width="0.1524" layer="91"/>
 <label x="233.68" y="86.36" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP3" gate="A" pin="1"/>
+<pinref part="SERVO3" gate="A" pin="1"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="68.58" x2="233.68" y2="68.58" width="0.1524" layer="91"/>
 <label x="233.68" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP4" gate="A" pin="1"/>
+<pinref part="SERVO4" gate="A" pin="1"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="2"/>
@@ -8592,7 +8592,7 @@ DIN A4, landscape with location and doc. field</description>
 <label x="101.6" y="109.22" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="GP5"/>
+<pinref part="PICO" gate="G$1" pin="GP5"/>
 <wire x1="137.16" y1="101.6" x2="132.08" y2="101.6" width="0.1524" layer="91"/>
 <label x="132.08" y="101.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -8604,62 +8604,62 @@ DIN A4, landscape with location and doc. field</description>
 <label x="101.6" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="GP4"/>
+<pinref part="PICO" gate="G$1" pin="GP4"/>
 <wire x1="137.16" y1="104.14" x2="132.08" y2="104.14" width="0.1524" layer="91"/>
 <label x="132.08" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SERVO1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP6"/>
+<pinref part="PICO" gate="G$1" pin="GP6"/>
 <wire x1="137.16" y1="96.52" x2="121.92" y2="96.52" width="0.1524" layer="91"/>
 <label x="121.92" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="SERVO1" gate="A" pin="3"/>
 <wire x1="241.3" y1="116.84" x2="233.68" y2="116.84" width="0.1524" layer="91"/>
 <label x="233.68" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SERVO2" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP7"/>
+<pinref part="PICO" gate="G$1" pin="GP7"/>
 <wire x1="137.16" y1="93.98" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
 <label x="121.92" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="99.06" x2="233.68" y2="99.06" width="0.1524" layer="91"/>
 <label x="233.68" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP2" gate="A" pin="3"/>
+<pinref part="SERVO2" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="SERVO3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP8"/>
+<pinref part="PICO" gate="G$1" pin="GP8"/>
 <label x="121.92" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="137.16" y1="91.44" x2="121.92" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="81.28" x2="233.68" y2="81.28" width="0.1524" layer="91"/>
 <label x="233.68" y="81.28" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP3" gate="A" pin="3"/>
+<pinref part="SERVO3" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="SERVO4" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP9"/>
+<pinref part="PICO" gate="G$1" pin="GP9"/>
 <label x="121.92" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="137.16" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="63.5" x2="233.68" y2="63.5" width="0.1524" layer="91"/>
 <label x="233.68" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="JP4" gate="A" pin="3"/>
+<pinref part="SERVO4" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="RUN"/>
+<pinref part="PICO" gate="G$1" pin="RUN"/>
 <pinref part="S1" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="114.3" x2="180.34" y2="114.3" width="0.1524" layer="91"/>
 </segment>
@@ -8668,12 +8668,12 @@ DIN A4, landscape with location and doc. field</description>
 <segment>
 <pinref part="S2" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="96.52" x2="180.34" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GP27"/>
+<pinref part="PICO" gate="G$1" pin="GP27"/>
 </segment>
 </net>
 <net name="SER_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP0"/>
+<pinref part="PICO" gate="G$1" pin="GP0"/>
 <wire x1="137.16" y1="116.84" x2="132.08" y2="116.84" width="0.1524" layer="91"/>
 <label x="132.08" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -8685,7 +8685,7 @@ DIN A4, landscape with location and doc. field</description>
 </net>
 <net name="SER_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP1"/>
+<pinref part="PICO" gate="G$1" pin="GP1"/>
 <wire x1="137.16" y1="114.3" x2="132.08" y2="114.3" width="0.1524" layer="91"/>
 <label x="132.08" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -8700,37 +8700,46 @@ DIN A4, landscape with location and doc. field</description>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="213.36" y1="104.14" x2="213.36" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GP28"/>
+<pinref part="PICO" gate="G$1" pin="GP28"/>
 <wire x1="172.72" y1="101.6" x2="213.36" y2="101.6" width="0.1524" layer="91"/>
 <junction x="213.36" y="101.6"/>
+</segment>
+</net>
+<net name="LED1" class="0">
+<segment>
+<pinref part="PICO" gate="G$1" pin="GP2"/>
+<wire x1="137.16" y1="109.22" x2="132.08" y2="109.22" width="0.1524" layer="91"/>
+<label x="132.08" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="185.42" y1="68.58" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<label x="185.42" y="66.04" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="LED2" class="0">
+<segment>
+<pinref part="PICO" gate="G$1" pin="GP3"/>
+<wire x1="137.16" y1="106.68" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
+<label x="132.08" y="106.68" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="193.04" y1="68.58" x2="193.04" y2="66.04" width="0.1524" layer="91"/>
+<label x="193.04" y="66.04" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="D2" gate="G$1" pin="C"/>
-<pinref part="U1" gate="G$1" pin="GP17"/>
-<wire x1="185.42" y1="71.12" x2="172.72" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="185.42" y1="81.28" x2="185.42" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP16"/>
-<wire x1="172.72" y1="68.58" x2="193.04" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="C"/>
-<wire x1="193.04" y1="68.58" x2="193.04" y2="71.12" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="D2" gate="G$1" pin="A"/>
-<wire x1="185.42" y1="81.28" x2="185.42" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="D3" gate="G$1" pin="A"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="81.28" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -8758,6 +8767,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
