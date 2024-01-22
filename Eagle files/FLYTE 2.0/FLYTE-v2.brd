@@ -203,13 +203,13 @@
 <wire x1="0" y1="55" x2="0" y2="0" width="0" layer="20"/>
 <text x="44.6786" y="32.8168" size="1.016" layer="25" rot="R180">VBUS
 CONN</text>
-<text x="29.6926" y="38.354" size="1.27" layer="25">POWER</text>
+<text x="29.5021" y="37.5158" size="1.27" layer="25">POWER</text>
 <text x="2.8448" y="27.7622" size="1.27" layer="25">DROGUE</text>
-<text x="21.4249" y="46.0883" size="1.016" layer="25" rot="R180">- DROGUE ARM +</text>
-<text x="106.934" y="31.0642" size="1.27" layer="25" rot="R180">MAIN</text>
-<text x="106.7943" y="46.0502" size="1.27" layer="25" rot="R180">+ MAIN ARM -</text>
+<text x="21.5773" y="45.2501" size="1.016" layer="25" rot="R180">- DROGUE ARM +</text>
+<text x="106.2101" y="29.6545" size="1.27" layer="25" rot="R180">MAIN</text>
+<text x="104.775" y="45.3644" size="1.016" layer="25" rot="R180">+ MAIN ARM -</text>
 <text x="53.8226" y="45.5803" size="1.27" layer="25" rot="R180">SERIAL</text>
-<text x="67.0814" y="45.6692" size="1.27" layer="25" rot="R180">GPS</text>
+<text x="66.5861" y="45.8597" size="1.27" layer="25" rot="R180">GPS</text>
 <text x="83.2993" y="45.8216" size="1.27" layer="25" rot="R180">I2C</text>
 <text x="76.581" y="0.9652" size="1.27" layer="25">RAM AIR PRESSURE</text>
 <text x="42.3037" y="5.4737" size="1.27" layer="25">RESET</text>
@@ -2009,6 +2009,10 @@ CONN</text>
 <text x="38.481" y="10.8966" size="0.8128" layer="25" font="vector">20</text>
 <text x="40.767" y="18.3261" size="0.8128" layer="25" font="vector">22</text>
 <text x="40.8432" y="15.8115" size="0.8128" layer="25" font="vector">21</text>
+<text x="103.4288" y="42.5704" size="1.27" layer="25" rot="R180">+</text>
+<text x="102.0572" y="32.3723" size="1.27" layer="25" rot="R270">-</text>
+<text x="12.5222" y="41.2115" size="1.27" layer="25">+</text>
+<text x="13.6525" y="31.8008" size="1.27" layer="25" rot="R90">-</text>
 </plain>
 <libraries>
 <library name="AMS1117-3.3">
@@ -4213,12 +4217,12 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="24.7" y="39.839" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
 <element name="C2" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF" x="28.79" y="38.97" smashed="yes" rot="MR0">
-<attribute name="NAME" x="28.79" y="39.859" size="1.016" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="28.4471" y="39.9352" size="1.016" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08402" x="-61.38" y="-75.33" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="28.79" y="38.081" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
 <element name="C3" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF" x="33.82" y="39.23" smashed="yes" rot="MR180">
-<attribute name="NAME" x="33.8075" y="40.145" size="1.016" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<attribute name="NAME" x="33.617" y="40.145" size="1.016" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-08402" x="127.8" y="153.53" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="33.82" y="40.119" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
 </element>
@@ -4250,13 +4254,13 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="82" x="135" y="118" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="45.084" y="43.578" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="DR_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" package="W237-102" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:43006367/2" override_package_urn="urn:adsk.eagle:footprint:10676/1" value="" x="15.5" y="52" smashed="yes">
-<attribute name="MF" value="" x="105.67" y="-29.28" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="237-102" x="105.67" y="-29.28" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="105.67" y="-29.28" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="70K9898" x="105.67" y="-29.28" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="32" x="105.67" y="-29.28" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="10.46" y="44.38" size="1.27" layer="27" ratio="10"/>
+<element name="DR_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" package="W237-102" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:43006367/2" override_package_urn="urn:adsk.eagle:footprint:10676/1" value="" x="15.5" y="51.0602" smashed="yes">
+<attribute name="MF" value="" x="105.67" y="-30.2198" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="237-102" x="105.67" y="-30.2198" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="105.67" y="-30.2198" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="70K9898" x="105.67" y="-30.2198" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="32" x="105.67" y="-30.2198" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="10.46" y="43.4402" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X02" package3d_urn="urn:adsk.eagle:package:22435/2" value="" x="42.45" y="36.08" smashed="yes" rot="R270">
 <attribute name="POPULARITY" value="98" x="-65.5" y="-32.5" size="1.778" layer="27" rot="R270" display="off"/>
@@ -4267,16 +4271,16 @@ design rules under a new name.</description>
 <attribute name="SF_SKU" value="COM-07950" x="169.627" y="72.1792" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="82.759" y="35.3492" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center"/>
 </element>
-<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K" x="20.9868" y="38.104" smashed="yes" rot="MR270">
-<attribute name="NAME" x="19.7168" y="38.739" size="1.27" layer="26" rot="MR270"/>
-<attribute name="POPULARITY" value="85" x="130.2068" y="-19.046" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="130.2068" y="-19.046" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="23.5268" y="38.739" size="1.27" layer="28" rot="MR270"/>
+<element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K" x="21.2535" y="37.2658" smashed="yes" rot="MR270">
+<attribute name="NAME" x="20.4788" y="37.9008" size="1.27" layer="26" rot="MR270"/>
+<attribute name="POPULARITY" value="85" x="130.4735" y="-19.8842" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="130.4735" y="-19.8842" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="VALUE" x="23.7935" y="37.9008" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm" x="15.5" y="39.0428" smashed="yes" rot="R90">
-<attribute name="POPULARITY" value="36" x="129.8" y="88.5728" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="129.8" y="88.5728" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="16.135" y="36.7822" size="1.27" layer="27" ratio="10" rot="R90"/>
+<element name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm" x="16.262" y="38.2046" smashed="yes" rot="R90">
+<attribute name="POPULARITY" value="36" x="130.562" y="87.7346" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="130.562" y="87.7346" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="16.897" y="35.944" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm" x="75.889" y="6.7086" smashed="yes" rot="MR90">
 <attribute name="NAME" x="77.1971" y="5.2735" size="1.27" layer="26" rot="MR90"/>
@@ -4296,17 +4300,17 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="178.7976" y="-8.2866" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="78.4676" y="13.9384" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm" x="16.25" y="42.5" smashed="yes" rot="MR180">
-<attribute name="NAME" x="13.8361" y="44.0496" size="1.27" layer="26" rot="MR270"/>
-<attribute name="POPULARITY" value="85" x="48" y="145.37" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="48" y="145.37" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="15.615" y="45.04" size="1.27" layer="28" rot="MR180"/>
+<element name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm" x="17.012" y="41.6618" smashed="yes" rot="MR180">
+<attribute name="NAME" x="14.7505" y="44.202" size="1.27" layer="26" rot="MR270"/>
+<attribute name="POPULARITY" value="85" x="48.762" y="144.5318" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="48.762" y="144.5318" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="VALUE" x="16.377" y="44.2018" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm" x="21.43" y="42.5" smashed="yes" rot="MR180">
-<attribute name="NAME" x="20.033" y="45.0019" size="1.27" layer="26" rot="MR180"/>
-<attribute name="POPULARITY" value="85" x="73.5" y="145.37" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="73.5" y="145.37" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="20.795" y="45.04" size="1.27" layer="28" rot="MR180"/>
+<element name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm" x="21.6967" y="41.6618" smashed="yes" rot="MR180">
+<attribute name="NAME" x="20.2997" y="44.1637" size="1.27" layer="26" rot="MR180"/>
+<attribute name="POPULARITY" value="85" x="73.7667" y="144.5318" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="73.7667" y="144.5318" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="VALUE" x="21.0617" y="44.2018" size="1.27" layer="28" rot="MR180"/>
 </element>
 <element name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm" x="75" y="45.693" smashed="yes" rot="MR270">
 <attribute name="NAME" x="73.6157" y="46.5947" size="1.27" layer="26" rot="MR270"/>
@@ -4320,10 +4324,10 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="-27.87" y="133.9812" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="72.46" y="40.6362" size="1.27" layer="28" rot="MR90"/>
 </element>
-<element name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm" x="18.5" y="39.0428" smashed="yes" rot="R90">
-<attribute name="POPULARITY" value="36" x="132.8" y="75.8728" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="132.8" y="75.8728" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="19.135" y="36.7822" size="1.27" layer="27" ratio="10" rot="R90"/>
+<element name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm" x="19.262" y="38.2046" smashed="yes" rot="R90">
+<attribute name="POPULARITY" value="36" x="133.562" y="75.0346" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="133.562" y="75.0346" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="19.897" y="35.944" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="S1" library="SparkFun-Switches" package="TACTILE_SWITCH_PTH_6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1" value="MOMENTARY-SWITCH-SPST-PTH-6.0MM" x="45.1752" y="11.6074" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value=" SWCH-08441" x="-48.8048" y="-20.1426" size="1.778" layer="27" rot="R270" display="off"/>
@@ -4383,48 +4387,48 @@ design rules under a new name.</description>
 <attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/W25Q32JVSSIQ/?ref=eda" x="187.7054" y="-29.5278" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="110.7333" y="28.388259375" size="1.27233125" layer="28" rot="MR270"/>
 </element>
-<element name="U5" library="BS170F" package="SOT91P240X120-3N" override_package3d_urn="urn:adsk.eagle:package:43006466/2" override_package_urn="urn:adsk.eagle:footprint:43006467/1" value="BS170F" x="16.71" y="38.65" smashed="yes" rot="MR0">
-<attribute name="AVAILABILITY" value="In Stock" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/BS170F/Diodes+Inc./view-part/?ref=eda" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="DESCRIPTION" value=" N-Channel 60 V 150µA (Ta) 330mW (Ta) Surface Mount SOT-23-3 " x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="MF" value="Diodes Inc." x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="MP" value="BS170F" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="PACKAGE" value="SOT-23 Multicomp" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="PRICE" value="None" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/BS170F/Diodes+Inc./view-part/?ref=snap" x="16.71" y="38.65" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="20.16521875" y="34.20395" size="2.083290625" layer="28" ratio="10" rot="SMR0"/>
+<element name="U5" library="BS170F" package="SOT91P240X120-3N" override_package3d_urn="urn:adsk.eagle:package:43006466/2" override_package_urn="urn:adsk.eagle:footprint:43006467/1" value="BS170F" x="17.472" y="37.8118" smashed="yes" rot="MR0">
+<attribute name="AVAILABILITY" value="In Stock" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/BS170F/Diodes+Inc./view-part/?ref=eda" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="DESCRIPTION" value=" N-Channel 60 V 150µA (Ta) 330mW (Ta) Surface Mount SOT-23-3 " x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MF" value="Diodes Inc." x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MP" value="BS170F" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="PACKAGE" value="SOT-23 Multicomp" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="PRICE" value="None" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/BS170F/Diodes+Inc./view-part/?ref=snap" x="17.472" y="37.8118" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="VALUE" x="20.92721875" y="33.36575" size="2.083290625" layer="28" ratio="10" rot="SMR0"/>
 </element>
 <element name="S2" library="SparkFun-Switches" package="TACTILE_SWITCH_PTH_6.0MM" override_package3d_urn="urn:adsk.eagle:package:40381829/2" override_package_urn="urn:adsk.eagle:footprint:40381830/1" value="MOMENTARY-SWITCH-SPST-PTH-6.0MM" x="45.118" y="24.7792" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value=" SWCH-08441" x="45.118" y="28.5892" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SF_SKU" value="COM-00097" x="45.118" y="28.5892" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="41.943" y="24.7792" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
 </element>
-<element name="SERIAL" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006335/2" override_package_urn="urn:adsk.eagle:footprint:43006337/1" value="4392" x="55" y="53.5" smashed="yes" rot="R180">
-<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="HEIGHT" value="6.85mm" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Adafruit" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="55" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="55" y="51.125" size="1.27" layer="27" rot="R180" align="center"/>
+<element name="SERIAL" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006335/2" override_package_urn="urn:adsk.eagle:footprint:43006337/1" value="4392" x="55" y="53.3476" smashed="yes" rot="R180">
+<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="HEIGHT" value="6.85mm" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Adafruit" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="55" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="55" y="50.9726" size="1.27" layer="27" rot="R180" align="center"/>
 </element>
-<element name="GPS" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006326/2" override_package_urn="urn:adsk.eagle:footprint:43006327/1" value="4392" x="71" y="53.5" smashed="yes" rot="R180">
-<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="HEIGHT" value="6.85mm" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Adafruit" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="71" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="71" y="51.125" size="1.27" layer="27" rot="R180" align="center"/>
+<element name="GPS" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006326/2" override_package_urn="urn:adsk.eagle:footprint:43006327/1" value="4392" x="71" y="53.3476" smashed="yes" rot="R180">
+<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="HEIGHT" value="6.85mm" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Adafruit" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="71" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="71" y="50.9726" size="1.27" layer="27" rot="R180" align="center"/>
 </element>
-<element name="MOTOR" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006322/3" override_package_urn="urn:adsk.eagle:footprint:43006323/1" value="4392" x="87" y="53.5" smashed="yes" rot="R180">
-<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="HEIGHT" value="6.85mm" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Adafruit" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="87" y="53.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="87" y="51.125" size="1.27" layer="27" rot="R180" align="center"/>
+<element name="MOTOR" library="4392" package="4392" override_package3d_urn="urn:adsk.eagle:package:43006322/3" override_package_urn="urn:adsk.eagle:footprint:43006323/1" value="4392" x="87" y="53.3476" smashed="yes" rot="R180">
+<attribute name="DESCRIPTION" value="Adafruit Accessories JST PH 4-pin Horizontal Connector (10-pack) - STEMMA" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="HEIGHT" value="6.85mm" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Adafruit" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="4392" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="485-4392" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Adafruit/4392?qs=xZ%2FP%252Ba9zWqbG2TKb%252Bnxciw%3D%3D" x="87" y="53.3476" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="87" y="50.9726" size="1.27" layer="27" rot="R180" align="center"/>
 </element>
 <element name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm" x="84.9614" y="43.6542" smashed="yes" rot="R90">
 <attribute name="POPULARITY" value="85" x="84.9614" y="43.6542" size="1.778" layer="27" rot="R90" display="off"/>
@@ -4436,27 +4440,27 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="88.9856" y="44.5986" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="89.6206" y="47.1386" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="POWER" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006314/2" override_package_urn="urn:adsk.eagle:footprint:43006315/1" value="XT30PW-M" x="33.05" y="53.07" smashed="yes">
-<attribute name="AVAILABILITY" value="Not in stock" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="AMASS" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="XT30PW-M" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="None" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="PRICE" value="None" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="33.05" y="53.07" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="28.7" y="36.56" size="1.27" layer="27"/>
+<element name="POWER" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006314/2" override_package_urn="urn:adsk.eagle:footprint:43006315/1" value="XT30PW-M" x="33.05" y="51.8254" smashed="yes">
+<attribute name="AVAILABILITY" value="Not in stock" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AMASS" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="XT30PW-M" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="PACKAGE" value="None" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="PRICE" value="None" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="33.05" y="51.8254" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="28.7" y="35.3154" size="1.27" layer="27"/>
 </element>
-<element name="DROGUE_PYRO" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006311/2" override_package_urn="urn:adsk.eagle:footprint:43006312/1" value="XT30PW-M" x="2" y="36.93" smashed="yes" rot="R90">
-<attribute name="AVAILABILITY" value="Not in stock" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="AMASS" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MP" value="XT30PW-M" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PACKAGE" value="None" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="PRICE" value="None" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="-18.32" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="18.51" y="30.58" size="1.27" layer="27" rot="R90"/>
+<element name="DROGUE_PYRO" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006311/2" override_package_urn="urn:adsk.eagle:footprint:43006312/1" value="XT30PW-M" x="3.175" y="36.93" smashed="yes" rot="R90">
+<attribute name="AVAILABILITY" value="Not in stock" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="AMASS" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MP" value="XT30PW-M" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PACKAGE" value="None" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="PRICE" value="None" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="-17.145" y="22.96" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="19.685" y="30.58" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K" x="93.94" y="36.54" smashed="yes" rot="MR180">
 <attribute name="NAME" x="93.305" y="35.27" size="1.27" layer="26" rot="MR180"/>
@@ -4474,13 +4478,13 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="71.26" y="38.59" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="97.295" y="36.3294" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="MAIN_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" package="W237-102" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:42833995/3" override_package_urn="urn:adsk.eagle:footprint:10676/1" value="" x="100.5" y="52" smashed="yes">
-<attribute name="MF" value="" x="89.07" y="68.51" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="237-102" x="89.07" y="68.51" size="1.778" layer="27" display="off"/>
-<attribute name="OC_FARNELL" value="unknown" x="89.07" y="68.51" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="70K9898" x="89.07" y="68.51" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="32" x="89.07" y="68.51" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="95.46" y="44.38" size="1.27" layer="27" ratio="10"/>
+<element name="MAIN_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" package="W237-102" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:42833995/3" override_package_urn="urn:adsk.eagle:footprint:10676/1" value="" x="100.5" y="51.0602" smashed="yes">
+<attribute name="MF" value="" x="89.07" y="67.5702" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="237-102" x="89.07" y="67.5702" size="1.778" layer="27" display="off"/>
+<attribute name="OC_FARNELL" value="unknown" x="89.07" y="67.5702" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="70K9898" x="89.07" y="67.5702" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="32" x="89.07" y="67.5702" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="95.46" y="43.4402" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm" x="99.06" y="40.5" smashed="yes" rot="MR0">
 <attribute name="NAME" x="100.6094" y="41.7319" size="1.27" layer="26" rot="MR0"/>
@@ -4505,16 +4509,16 @@ design rules under a new name.</description>
 <attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/BS170F/Diodes+Inc./view-part/?ref=snap" x="72.89" y="67.58" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="96.10478125" y="41.54605" size="2.083290625" layer="28" ratio="10" rot="SMR180"/>
 </element>
-<element name="MAIN_PYRO" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006316/2" override_package_urn="urn:adsk.eagle:footprint:43006317/1" value="XT30PW-M" x="114" y="37" smashed="yes" rot="R270">
-<attribute name="AVAILABILITY" value="Not in stock" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="AMASS" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MP" value="XT30PW-M" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PACKAGE" value="None" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="PRICE" value="None" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="93.68" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="97.49" y="44.85" size="1.27" layer="27" rot="R270"/>
+<element name="MAIN_PYRO" library="XT30PW-M" package="AMASS_XT30PW-M" override_package3d_urn="urn:adsk.eagle:package:43006316/2" override_package_urn="urn:adsk.eagle:footprint:43006317/1" value="XT30PW-M" x="112.9078" y="37" smashed="yes" rot="R270">
+<attribute name="AVAILABILITY" value="Not in stock" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=eda" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESCRIPTION" value=" Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; Colour: yellow " x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="AMASS" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MP" value="XT30PW-M" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PACKAGE" value="None" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="PRICE" value="None" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT30PW-M/AMASS/view-part/?ref=snap" x="92.5878" y="62.4" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="96.3978" y="44.85" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,0-PAD" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43006546/2" override_package_urn="urn:adsk.eagle:footprint:14251/1" value="MOUNT-PAD-ROUND3.0" x="5" y="5" smashed="yes">
 <attribute name="POPULARITY" value="17" x="5" y="5" size="1.778" layer="27" display="off"/>
@@ -4695,7 +4699,6 @@ design rules under a new name.</description>
 <wire x1="94.059" y1="31.54136875" x2="87.76523125" y2="25.2476" width="0.4064" layer="1"/>
 <wire x1="87.0486" y1="25.2476" x2="87.76523125" y2="25.2476" width="0.4064" layer="1"/>
 <wire x1="94.059" y1="31.54136875" x2="94.059" y2="33.12075" width="0.4064" layer="1"/>
-<wire x1="98" y1="37.06175" x2="98" y2="50.73" width="0.4064" layer="1"/>
 <wire x1="94.059" y1="33.12075" x2="98" y2="37.06175" width="0.4064" layer="1"/>
 <via x="29.0322" y="37.8206" extent="1-16" drill="0.35"/>
 <wire x1="29.0322" y1="37.8206" x2="28.067" y2="38.7858" width="0.4064" layer="16"/>
@@ -4704,15 +4707,17 @@ design rules under a new name.</description>
 <wire x1="82.1944" y1="25.7048" x2="82.2042125" y2="25.6949875" width="0.4064" layer="1"/>
 <wire x1="77.9224" y1="23.129" x2="77.9224" y2="25.7" width="0.254" layer="16"/>
 <wire x1="77.9224" y1="25.7" x2="77.9272" y2="25.7048" width="0.254" layer="16"/>
-<wire x1="27.89" y1="40.1574" x2="30.55" y2="42.8174" width="0.4064" layer="16"/>
-<wire x1="30.55" y1="42.8174" x2="30.55" y2="43.07" width="0.4064" layer="16"/>
-<wire x1="18" y1="50.73" x2="22.89" y2="50.73" width="0.4064" layer="16"/>
-<wire x1="22.89" y1="50.73" x2="30.55" y2="43.07" width="0.4064" layer="16"/>
 <wire x1="75.35764375" y1="25.47204375" x2="75.5904" y2="25.7048" width="0.4064" layer="1"/>
 <wire x1="75.35764375" y1="25.47204375" x2="48.03555625" y2="25.47204375" width="0.4064" layer="1"/>
 <wire x1="75.5904" y1="25.7048" x2="77.9272" y2="25.7048" width="0.4064" layer="1"/>
 <wire x1="29.0322" y1="37.8206" x2="35.687" y2="37.8206" width="0.4064" layer="1"/>
 <wire x1="35.687" y1="37.8206" x2="48.03555625" y2="25.47204375" width="0.4064" layer="1"/>
+<wire x1="98" y1="37.06175" x2="98" y2="49.7902" width="0.4064" layer="1"/>
+<wire x1="18" y1="49.7902" x2="23.8298" y2="49.7902" width="0.4064" layer="16"/>
+<wire x1="27.89" y1="40.1574" x2="29.558" y2="41.8254" width="0.4064" layer="16"/>
+<wire x1="29.558" y1="41.8254" x2="30.55" y2="41.8254" width="0.4064" layer="16"/>
+<wire x1="23.8298" y1="49.7902" x2="30.55" y2="43.07" width="0.4064" layer="16"/>
+<wire x1="30.55" y1="43.07" x2="30.55" y2="41.8254" width="0.4064" layer="16"/>
 </signal>
 <signal name="SCL1">
 <contactref element="U$1" pad="SCL"/>
@@ -4782,12 +4787,8 @@ design rules under a new name.</description>
 <wire x1="84.219" y1="30.6492" x2="87.4082" y2="27.46" width="0.4064" layer="16"/>
 <wire x1="87.4082" y1="27.46" x2="87.535" y2="27.46" width="0.4064" layer="16"/>
 <wire x1="84.219" y1="30.6492" x2="84.219" y2="32.9992" width="0.4064" layer="16"/>
-<wire x1="75" y1="47.949" x2="75" y2="46.643" width="0.4064" layer="16"/>
-<wire x1="75" y1="47.949" x2="75.1078" y2="48.0568" width="0.4064" layer="16"/>
 <via x="75.1078" y="48.0568" extent="1-16" drill="0.35"/>
-<wire x1="58" y1="50" x2="66.15289375" y2="50" width="0.4064" layer="1"/>
-<wire x1="66.15289375" y1="50" x2="66.915546875" y2="50.762653125" width="0.4064" layer="1"/>
-<wire x1="58" y1="50" x2="57.9732" y2="49.9732" width="0.4064" layer="1"/>
+<wire x1="58" y1="49.8476" x2="57.9732" y2="49.9732" width="0.4064" layer="1"/>
 <wire x1="57.9732" y1="49.9732" x2="57.9732" y2="45.90890625" width="0.4064" layer="1"/>
 <wire x1="57.9732" y1="45.90890625" x2="50.17429375" y2="38.11" width="0.4064" layer="1"/>
 <wire x1="50.17429375" y1="38.11" x2="45.71" y2="38.11" width="0.4064" layer="1"/>
@@ -4863,11 +4864,10 @@ design rules under a new name.</description>
 <wire x1="45.71" y1="38.11" x2="45.7962" y2="38.0238" width="0.4064" layer="16"/>
 <wire x1="45.7962" y1="38.0238" x2="45.7962" y2="35.5346" width="0.4064" layer="16"/>
 <wire x1="73.18069375" y1="53.7152" x2="67.84800625" y2="53.7152" width="0.4064" layer="1"/>
-<wire x1="66.915546875" y1="50.762653125" x2="66.915546875" y2="52.782740625" width="0.4064" layer="1"/>
+<wire x1="66.915546875" y1="52.782740625" x2="66.915546875" y2="50.572153125" width="0.4064" layer="1"/>
 <wire x1="66.915546875" y1="52.782740625" x2="67.84800625" y2="53.7152" width="0.4064" layer="1"/>
-<wire x1="74" y1="50" x2="74.6408" y2="50" width="0.4064" layer="1"/>
-<wire x1="74.6408" y1="50" x2="75.1078" y2="49.533" width="0.4064" layer="1"/>
-<wire x1="74" y1="50" x2="74" y2="52.89589375" width="0.4064" layer="1"/>
+<wire x1="75.1078" y1="49.533" x2="74.6408" y2="50" width="0.4064" layer="1"/>
+<wire x1="74" y1="49.8476" x2="74" y2="52.89589375" width="0.4064" layer="1"/>
 <wire x1="74" y1="52.89589375" x2="73.18069375" y2="53.7152" width="0.4064" layer="1"/>
 <wire x1="75.1078" y1="49.533" x2="75.1078" y2="48.0568" width="0.4064" layer="1"/>
 <contactref element="LED1" pad="A"/>
@@ -4883,9 +4883,9 @@ design rules under a new name.</description>
 <wire x1="45.72" y1="30.1498" x2="45.72" y2="38.1" width="0.254" layer="1"/>
 <wire x1="45.72" y1="38.1" x2="45.71" y2="38.11" width="0.254" layer="1"/>
 <wire x1="39.8804" y1="3.4441" x2="45.72" y2="9.2837" width="0.254" layer="16"/>
-<wire x1="75.889" y1="5.7586" x2="76.6074" y2="6.477" width="0.254" layer="16"/>
-<wire x1="85.5786" y1="6.477" x2="87.67" y2="4.3856" width="0.254" layer="16"/>
-<wire x1="76.6074" y1="6.477" x2="85.5786" y2="6.477" width="0.254" layer="16"/>
+<wire x1="75.889" y1="5.7586" x2="76.6074" y2="6.477" width="0.4064" layer="16"/>
+<wire x1="85.5786" y1="6.477" x2="87.67" y2="4.3856" width="0.4064" layer="16"/>
+<wire x1="76.6074" y1="6.477" x2="85.5786" y2="6.477" width="0.4064" layer="16"/>
 <wire x1="75.889" y1="5.7586" x2="73.915" y2="3.7846" width="0.4064" layer="16"/>
 <wire x1="42.926" y1="3.7846" x2="41.9608" y2="2.8194" width="0.4064" layer="16"/>
 <wire x1="35.1476" y1="2.7964" x2="36.4406" y2="2.8194" width="0.4064" layer="16"/>
@@ -4900,21 +4900,27 @@ design rules under a new name.</description>
 <wire x1="77.9466" y1="31.3496" x2="78.85" y2="31.3496" width="0.4064" layer="1"/>
 <wire x1="35.7953" y1="3.4441" x2="35.1476" y2="2.7964" width="0.254" layer="16"/>
 <wire x1="39.8804" y1="3.4441" x2="35.7953" y2="3.4441" width="0.254" layer="16"/>
+<wire x1="74.6408" y1="50" x2="74.1524" y2="50" width="0.4064" layer="1"/>
+<wire x1="74.1524" y1="50" x2="74" y2="49.8476" width="0.4064" layer="1"/>
+<wire x1="75" y1="46.643" x2="75" y2="47.949" width="0.4064" layer="16"/>
+<wire x1="75" y1="47.949" x2="75.1078" y2="48.0568" width="0.4064" layer="16"/>
+<wire x1="66.19099375" y1="49.8476" x2="58" y2="49.8476" width="0.4064" layer="1"/>
+<wire x1="66.915546875" y1="50.572153125" x2="66.19099375" y2="49.8476" width="0.4064" layer="1"/>
 </signal>
 <signal name="TX">
 <contactref element="U1" pad="P$11"/>
 <contactref element="GPS" pad="2"/>
 <wire x1="70.96" y1="25.4" x2="69.5494" y2="26.8106" width="0.254" layer="16"/>
 <wire x1="69.5494" y1="26.8106" x2="69.09426875" y2="26.8106" width="0.254" layer="16"/>
-<wire x1="67.2542" y1="43.04406875" x2="68.6816" y2="44.47146875" width="0.254" layer="16"/>
-<wire x1="68.6816" y1="44.47146875" x2="68.6816" y2="46.7172" width="0.254" layer="16"/>
+<wire x1="67.2542" y1="43.04406875" x2="68.6054" y2="44.39526875" width="0.254" layer="16"/>
+<wire x1="68.6032" y1="46.2241" x2="68.6054" y2="46.2219" width="0.254" layer="16"/>
+<wire x1="68.6054" y1="46.2219" x2="68.6054" y2="44.39526875" width="0.254" layer="16"/>
 <wire x1="69.09426875" y1="26.8106" x2="67.2542" y2="28.65066875" width="0.254" layer="16"/>
 <wire x1="67.2542" y1="28.65066875" x2="67.2542" y2="43.04406875" width="0.254" layer="16"/>
-<wire x1="68.6794" y1="46.7194" x2="68.6816" y2="46.7172" width="0.254" layer="16"/>
-<via x="68.6794" y="46.7194" extent="1-16" drill="0.35"/>
-<wire x1="68.6794" y1="46.7194" x2="70.0278" y2="48.0678" width="0.254" layer="1"/>
-<wire x1="70.0278" y1="49.9722" x2="70" y2="50" width="0.254" layer="1"/>
-<wire x1="70.0278" y1="48.0678" x2="70.0278" y2="49.9722" width="0.254" layer="1"/>
+<via x="68.6032" y="46.2241" extent="1-16" drill="0.35"/>
+<wire x1="68.6032" y1="46.2241" x2="70.0278" y2="47.6487" width="0.254" layer="1"/>
+<wire x1="70.0278" y1="49.9722" x2="70" y2="49.8476" width="0.254" layer="1"/>
+<wire x1="70.0278" y1="47.6487" x2="70.0278" y2="49.9722" width="0.254" layer="1"/>
 </signal>
 <signal name="RX">
 <contactref element="U1" pad="P$12"/>
@@ -4922,12 +4928,12 @@ design rules under a new name.</description>
 <wire x1="70.96" y1="22.86" x2="69.5494" y2="24.2706" width="0.254" layer="16"/>
 <wire x1="69.5494" y1="24.2706" x2="69.09426875" y2="24.2706" width="0.254" layer="16"/>
 <wire x1="69.09426875" y1="24.2706" x2="66.67068125" y2="26.6941875" width="0.254" layer="16"/>
-<wire x1="66.67068125" y1="45.05528125" x2="66.67068125" y2="26.6941875" width="0.254" layer="16"/>
-<wire x1="66.67068125" y1="45.05528125" x2="67.86448125" y2="46.24908125" width="0.254" layer="16"/>
-<via x="67.86448125" y="46.24908125" extent="1-16" drill="0.35"/>
-<wire x1="67.86448125" y1="46.24908125" x2="67.9196" y2="46.3042" width="0.254" layer="1"/>
-<wire x1="67.9196" y1="49.9196" x2="68" y2="50" width="0.254" layer="1"/>
-<wire x1="67.9196" y1="46.3042" x2="67.9196" y2="49.9196" width="0.254" layer="1"/>
+<wire x1="66.67068125" y1="45.24578125" x2="66.67068125" y2="26.6941875" width="0.254" layer="16"/>
+<wire x1="66.67068125" y1="45.24578125" x2="66.98818125" y2="45.56328125" width="0.254" layer="16"/>
+<via x="66.98818125" y="45.56328125" extent="1-16" drill="0.35"/>
+<wire x1="66.98818125" y1="45.56328125" x2="67.9196" y2="46.4947" width="0.254" layer="1"/>
+<wire x1="67.9196" y1="49.9196" x2="68" y2="49.8476" width="0.254" layer="1"/>
+<wire x1="67.9196" y1="46.4947" x2="67.9196" y2="49.9196" width="0.254" layer="1"/>
 </signal>
 <signal name="BUZZER">
 <contactref element="LS1" pad="-"/>
@@ -4962,35 +4968,34 @@ design rules under a new name.</description>
 <contactref element="R9" pad="1"/>
 <contactref element="R10" pad="1"/>
 <contactref element="DROGUE_PYRO" pad="P"/>
-<wire x1="15.49" y1="33.9728" x2="12.4572" y2="33.9728" width="0.4064" layer="16"/>
-<wire x1="12" y1="34.43" x2="12.4572" y2="33.9728" width="0.4064" layer="16"/>
-<wire x1="15.49" y1="33.9728" x2="15.5" y2="33.9628" width="0.4064" layer="16"/>
-<wire x1="18.5" y1="33.9628" x2="15.5" y2="33.9628" width="0.4064" layer="16"/>
+<wire x1="19.262" y1="33.1246" x2="16.262" y2="33.1246" width="0.4064" layer="16"/>
+<wire x1="13.175" y1="34.43" x2="14.4804" y2="33.1246" width="0.4064" layer="16"/>
+<wire x1="14.4804" y1="33.1246" x2="16.262" y2="33.1246" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$12">
 <contactref element="R9" pad="2"/>
 <contactref element="R10" pad="2"/>
 <contactref element="R23" pad="1"/>
 <contactref element="U5" pad="3"/>
-<wire x1="18.5" y1="44.1228" x2="15.5" y2="44.1228" width="0.4064" layer="16"/>
-<wire x1="15.5" y1="44.1228" x2="15.4905" y2="44.1133" width="0.4064" layer="16"/>
-<wire x1="15.4905" y1="44.1133" x2="15.4905" y2="42.6905" width="0.4064" layer="16"/>
-<wire x1="15.4905" y1="42.6905" x2="15.3" y2="42.5" width="0.4064" layer="16"/>
-<wire x1="15.3" y1="42.5" x2="15.694" y2="42.106" width="0.4064" layer="16"/>
-<wire x1="15.694" y1="42.106" x2="15.694" y2="38.65" width="0.4064" layer="16"/>
+<wire x1="19.262" y1="43.2846" x2="16.262" y2="43.2846" width="0.4064" layer="16"/>
+<wire x1="16.262" y1="43.2846" x2="16.2525" y2="43.2751" width="0.4064" layer="16"/>
+<wire x1="16.2525" y1="43.2751" x2="16.2525" y2="41.8523" width="0.4064" layer="16"/>
+<wire x1="16.2525" y1="41.8523" x2="16.062" y2="41.6618" width="0.4064" layer="16"/>
+<wire x1="16.062" y1="41.6618" x2="16.456" y2="41.2678" width="0.4064" layer="16"/>
+<wire x1="16.456" y1="41.2678" x2="16.456" y2="37.8118" width="0.4064" layer="16"/>
 </signal>
 <signal name="DROGUE">
 <contactref element="U5" pad="1"/>
 <contactref element="R1" pad="2"/>
-<wire x1="19.2472" y1="39.0084" x2="18.6912" y2="39.5644" width="0.254" layer="16"/>
-<wire x1="17.726" y1="39.5644" x2="18.6912" y2="39.5644" width="0.254" layer="16"/>
-<wire x1="19.5268" y1="37.154" x2="19.2472" y2="37.4336" width="0.254" layer="16"/>
-<wire x1="19.2472" y1="39.0084" x2="19.2472" y2="37.4336" width="0.254" layer="16"/>
-<wire x1="19.5268" y1="37.154" x2="20.9868" y2="37.154" width="0.254" layer="16"/>
+<wire x1="20.0092" y1="38.1702" x2="19.4532" y2="38.7262" width="0.254" layer="16"/>
+<wire x1="18.488" y1="38.7262" x2="19.4532" y2="38.7262" width="0.254" layer="16"/>
+<wire x1="20.2888" y1="36.3158" x2="20.0092" y2="36.5954" width="0.254" layer="16"/>
+<wire x1="20.0092" y1="38.1702" x2="20.0092" y2="36.5954" width="0.254" layer="16"/>
+<wire x1="20.2888" y1="36.3158" x2="21.2535" y2="36.3158" width="0.254" layer="16"/>
 <contactref element="U1" pad="P$34"/>
-<wire x1="20.9868" y1="37.154" x2="20.9868" y2="34.563" width="0.254" layer="16"/>
-<wire x1="20.9868" y1="34.563" x2="23.6982" y2="31.8516" width="0.254" layer="16"/>
-<wire x1="23.6982" y1="31.8516" x2="44.0944" y2="31.8516" width="0.254" layer="16"/>
+<wire x1="21.2535" y1="36.3158" x2="21.2535" y2="33.7248" width="0.254" layer="16"/>
+<wire x1="21.2535" y1="33.7248" x2="23.1267" y2="31.8516" width="0.254" layer="16"/>
+<wire x1="23.1267" y1="31.8516" x2="44.0944" y2="31.8516" width="0.254" layer="16"/>
 <wire x1="44.0944" y1="31.8516" x2="47.8282" y2="35.5854" width="0.254" layer="16"/>
 <wire x1="47.8282" y1="35.5854" x2="50.9346" y2="35.5854" width="0.254" layer="16"/>
 <wire x1="50.9346" y1="35.5854" x2="50.96" y2="35.56" width="0.254" layer="16"/>
@@ -5077,8 +5082,9 @@ design rules under a new name.</description>
 <wire x1="75.16745" y1="30.11555" x2="75.2419" y2="30.19" width="0.254" layer="16"/>
 <wire x1="70.96" y1="27.94" x2="72.76460625" y2="27.94" width="0.254" layer="16"/>
 <wire x1="72.76460625" y1="27.94" x2="74.08800625" y2="29.2634" width="0.254" layer="16"/>
-<wire x1="104.5204" y1="28.6822" x2="104.2212" y2="28.9814" width="0.254" layer="16"/>
-<wire x1="104.2212" y1="28.9814" x2="88.2142" y2="28.9814" width="0.254" layer="16"/>
+<wire x1="104.5204" y1="28.6822" x2="104.5204" y2="28.8727" width="0.254" layer="16"/>
+<wire x1="104.5204" y1="28.8727" x2="104.4117" y2="28.9814" width="0.254" layer="16"/>
+<wire x1="104.4117" y1="28.9814" x2="88.2142" y2="28.9814" width="0.254" layer="16"/>
 <wire x1="88.2142" y1="28.9814" x2="88.138" y2="29.0576" width="0.254" layer="16"/>
 <wire x1="88.138" y1="29.0576" x2="88.138" y2="29.1084" width="0.254" layer="16"/>
 <via x="88.138" y="29.1084" extent="1-16" drill="0.35"/>
@@ -5123,8 +5129,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="P$6"/>
 <contactref element="MOTOR" pad="2"/>
 <contactref element="R2" pad="2"/>
-<wire x1="86" y1="50" x2="84.9614" y2="48.9614" width="0.254" layer="1"/>
-<wire x1="84.9614" y1="48.9614" x2="84.9614" y2="44.6042" width="0.254" layer="1"/>
+<wire x1="84.9614" y1="44.6042" x2="84.9614" y2="48.9614" width="0.254" layer="1"/>
 <wire x1="84.9614" y1="44.6042" x2="84.3772" y2="44.6042" width="0.254" layer="1"/>
 <via x="73.406" y="39.3446" extent="1-16" drill="0.35"/>
 <wire x1="73.406" y1="39.3446" x2="72.1614" y2="38.1" width="0.254" layer="16"/>
@@ -5132,12 +5137,14 @@ design rules under a new name.</description>
 <wire x1="76.8604" y1="42.799" x2="73.406" y2="39.3446" width="0.254" layer="1"/>
 <wire x1="84.3772" y1="44.6042" x2="82.572" y2="42.799" width="0.254" layer="1"/>
 <wire x1="82.572" y1="42.799" x2="76.8604" y2="42.799" width="0.254" layer="1"/>
+<wire x1="84.9614" y1="48.9614" x2="85.8476" y2="49.8476" width="0.254" layer="1"/>
+<wire x1="85.8476" y1="49.8476" x2="86" y2="49.8476" width="0.254" layer="1"/>
 </signal>
 <signal name="SCL0">
 <contactref element="U1" pad="P$7"/>
 <contactref element="MOTOR" pad="3"/>
 <contactref element="R5" pad="2"/>
-<wire x1="88" y1="50" x2="88" y2="44.6342" width="0.254" layer="1"/>
+<wire x1="88" y1="49.8476" x2="88" y2="44.6342" width="0.254" layer="1"/>
 <wire x1="88" y1="44.6342" x2="88.0356" y2="44.5986" width="0.254" layer="1"/>
 <wire x1="85.82713125" y1="43.6748" x2="84.4672" y2="43.6748" width="0.254" layer="1"/>
 <wire x1="84.4672" y1="43.6748" x2="84.455" y2="43.6626" width="0.254" layer="1"/>
@@ -5158,12 +5165,8 @@ design rules under a new name.</description>
 <wire x1="70.96" y1="50.8" x2="70.8076" y2="50.6476" width="0.254" layer="16"/>
 <wire x1="55.0926" y1="50.6476" x2="70.8076" y2="50.6476" width="0.254" layer="16"/>
 <via x="54.991" y="53.039" extent="1-16" drill="0.35"/>
-<wire x1="54.991" y1="53.039" x2="54.991" y2="51.774284375" width="0.254" layer="1"/>
-<wire x1="54.991" y1="51.774284375" x2="54.915253125" y2="51.5366" width="0.254" layer="1"/>
-<wire x1="54.915253125" y1="51.5366" x2="54" y2="51.5366" width="0.254" layer="1"/>
-<wire x1="54" y1="51.5366" x2="54" y2="50.1904" width="0.254" layer="1"/>
 <contactref element="XBEE" pad="2"/>
-<wire x1="54" y1="50.1904" x2="54" y2="50" width="0.254" layer="1"/>
+<wire x1="54" y1="50.1904" x2="54" y2="49.8476" width="0.254" layer="1"/>
 <via x="53.9496" y="45.8978" extent="1-16" drill="0.35"/>
 <wire x1="53.9496" y1="45.8978" x2="53.9496" y2="50.14" width="0.254" layer="1"/>
 <wire x1="53.9496" y1="50.14" x2="54" y2="50.1904" width="0.254" layer="1"/>
@@ -5177,14 +5180,15 @@ design rules under a new name.</description>
 <wire x1="53.1326" y1="4.7964" x2="56.6976" y2="8.3614" width="0.254" layer="1"/>
 <wire x1="56.6976" y1="17.0386" x2="56.1086" y2="17.6276" width="0.254" layer="1"/>
 <wire x1="56.6976" y1="8.3614" x2="56.6976" y2="17.0386" width="0.254" layer="1"/>
+<wire x1="54.44935" y1="52.49735" x2="54.991" y2="53.039" width="0.254" layer="1"/>
+<wire x1="54" y1="49.8476" x2="54" y2="52.048" width="0.254" layer="1"/>
+<wire x1="54" y1="52.048" x2="54.44935" y2="52.49735" width="0.254" layer="1"/>
 </signal>
 <signal name="SER_RX">
 <contactref element="U1" pad="P$2"/>
 <contactref element="SERIAL" pad="3"/>
 <via x="57.0992" y="46.5328" extent="1-16" drill="0.35"/>
 <contactref element="XBEE" pad="3"/>
-<wire x1="56" y1="50" x2="56" y2="47.632" width="0.254" layer="1"/>
-<wire x1="56" y1="47.632" x2="57.0992" y2="46.5328" width="0.254" layer="1"/>
 <wire x1="70.96" y1="48.26" x2="70.579" y2="47.879" width="0.254" layer="16"/>
 <wire x1="70.579" y1="47.879" x2="58.4454" y2="47.879" width="0.254" layer="16"/>
 <wire x1="58.4454" y1="47.879" x2="57.0992" y2="46.5328" width="0.254" layer="16"/>
@@ -5196,6 +5200,8 @@ design rules under a new name.</description>
 <wire x1="52.1462" y1="12.827" x2="45.1104" y2="12.827" width="0.254" layer="1"/>
 <wire x1="45.1104" y1="12.827" x2="39.0798" y2="6.7964" width="0.254" layer="1"/>
 <wire x1="35.1476" y1="6.7964" x2="39.0798" y2="6.7964" width="0.254" layer="1"/>
+<wire x1="56" y1="49.8476" x2="56" y2="47.632" width="0.254" layer="1"/>
+<wire x1="56" y1="47.632" x2="57.0992" y2="46.5328" width="0.254" layer="1"/>
 </signal>
 <signal name="BNO_INT">
 <contactref element="U$4" pad="INT"/>
@@ -5215,18 +5221,18 @@ design rules under a new name.</description>
 <contactref element="U3" pad="5"/>
 <contactref element="R23" pad="2"/>
 <contactref element="R25" pad="1"/>
-<wire x1="17.2" y1="42.5" x2="20.48" y2="42.5" width="0.254" layer="16"/>
-<wire x1="20.48" y1="42.5" x2="22.0352" y2="40.9448" width="0.254" layer="16"/>
+<wire x1="20.7467" y1="41.6618" x2="22.3019" y2="40.1066" width="0.254" layer="16"/>
 <wire x1="42.4688" y1="26.5176" x2="33.6804" y2="35.306" width="0.254" layer="1"/>
 <via x="75.311" y="19.1008" extent="1-16" drill="0.35"/>
 <wire x1="77.4224" y1="18.829" x2="77.1506" y2="19.1008" width="0.254" layer="16"/>
 <wire x1="77.1506" y1="19.1008" x2="75.311" y2="19.1008" width="0.254" layer="16"/>
-<wire x1="27.674" y1="35.306" x2="22.0352" y2="40.9448" width="0.254" layer="1"/>
-<via x="22.0352" y="40.9448" extent="1-16" drill="0.35"/>
-<wire x1="33.6804" y1="35.306" x2="27.674" y2="35.306" width="0.254" layer="1"/>
+<wire x1="27.1025" y1="35.306" x2="22.3019" y2="40.1066" width="0.254" layer="1"/>
+<via x="22.3019" y="40.1066" extent="1-16" drill="0.35"/>
+<wire x1="33.6804" y1="35.306" x2="27.1025" y2="35.306" width="0.254" layer="1"/>
 <wire x1="42.4688" y1="24.0538" x2="42.4688" y2="26.5176" width="0.254" layer="1"/>
 <wire x1="75.311" y1="19.1008" x2="47.4218" y2="19.1008" width="0.254" layer="1"/>
 <wire x1="47.4218" y1="19.1008" x2="42.4688" y2="24.0538" width="0.254" layer="1"/>
+<wire x1="17.962" y1="41.6618" x2="20.7467" y2="41.6618" width="0.254" layer="16"/>
 </signal>
 <signal name="N$17">
 <contactref element="U1" pad="P$40"/>
@@ -5276,10 +5282,10 @@ design rules under a new name.</description>
 <contactref element="R7" pad="1"/>
 <contactref element="R8" pad="1"/>
 <contactref element="MAIN_PYRO" pad="N"/>
-<wire x1="100.04" y1="33.52" x2="103.02" y2="33.52" width="0.4064" layer="16"/>
-<wire x1="103.02" y1="33.52" x2="104" y2="34.5" width="0.4064" layer="16"/>
 <wire x1="100.04" y1="33.52" x2="96.67" y2="33.52" width="0.4064" layer="16"/>
 <wire x1="96.67" y1="33.52" x2="96.66" y2="33.51" width="0.4064" layer="16"/>
+<wire x1="100.04" y1="33.52" x2="101.9278" y2="33.52" width="0.4064" layer="16"/>
+<wire x1="101.9278" y1="33.52" x2="102.9078" y2="34.5" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$5">
 <contactref element="R7" pad="2"/>
@@ -5297,8 +5303,8 @@ design rules under a new name.</description>
 <signal name="N$6">
 <contactref element="MAIN_PYRO" pad="P"/>
 <contactref element="MAIN_ARM" pad="2"/>
-<wire x1="104" y1="39.5" x2="103" y2="40.5" width="0.4064" layer="16"/>
-<wire x1="103" y1="40.5" x2="103" y2="50.73" width="0.4064" layer="16"/>
+<wire x1="103" y1="49.7902" x2="103" y2="39.5922" width="0.4064" layer="16"/>
+<wire x1="103" y1="39.5922" x2="102.9078" y2="39.5" width="0.4064" layer="16"/>
 </signal>
 <signal name="AIR_DATA">
 <contactref element="JP2" pad="3"/>
@@ -5324,10 +5330,8 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="DR_ARM" pad="1"/>
 <contactref element="DROGUE_PYRO" pad="N"/>
-<wire x1="13.0762" y1="43.8336" x2="12" y2="42.7574" width="0.4064" layer="16"/>
-<wire x1="12" y1="39.43" x2="12" y2="42.7574" width="0.4064" layer="16"/>
-<wire x1="13.0762" y1="50.6538" x2="13" y2="50.73" width="0.4064" layer="16"/>
-<wire x1="13.0762" y1="50.6538" x2="13.0762" y2="43.8336" width="0.4064" layer="16"/>
+<wire x1="13" y1="49.7902" x2="13" y2="39.605" width="0.4064" layer="16"/>
+<wire x1="13" y1="39.605" x2="13.175" y2="39.43" width="0.4064" layer="16"/>
 </signal>
 <signal name="CTS">
 <contactref element="XBEE" pad="12"/>
