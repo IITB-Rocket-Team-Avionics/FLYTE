@@ -6488,7 +6488,7 @@ Grid 5.00 mm&lt;p&gt;
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="MAIN_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:42833995/2" override_package_urn="urn:adsk.eagle:footprint:10676/1"/>
 <part name="U7" library="BS170F" deviceset="BS170F" device=""/>
-<part name="MAIN_PYRO" library="XT30PW-M" deviceset="XT30PW-M" device=""/>
+<part name="PYRO" library="XT30PW-M" deviceset="XT30PW-M" device=""/>
 <part name="BATTERY_REGULATOR3V3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
@@ -6542,7 +6542,7 @@ Grid 5.00 mm&lt;p&gt;
 <attribute name="NAME" x="101.86118125" y="63.69321875" size="2.0856" layer="95" ratio="10" rot="SR180"/>
 <attribute name="VALUE" x="88.095259375" y="44.9599" size="2.086740625" layer="96" ratio="10" rot="SR180"/>
 </instance>
-<instance part="MAIN_PYRO" gate="G$1" x="35.56" y="73.66" smashed="yes">
+<instance part="PYRO" gate="G$1" x="35.56" y="73.66" smashed="yes">
 <attribute name="NAME" x="40.64" y="67.818" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="38.1" y="78.74" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -6798,7 +6798,7 @@ Grid 5.00 mm&lt;p&gt;
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="71.12" x2="48.26" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="68.58" x2="50.8" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="MAIN_PYRO" gate="G$1" pin="N"/>
+<pinref part="PYRO" gate="G$1" pin="N"/>
 <wire x1="40.64" y1="71.12" x2="48.26" y2="71.12" width="0.1524" layer="91"/>
 <junction x="48.26" y="71.12"/>
 </segment>
@@ -6819,7 +6819,7 @@ Grid 5.00 mm&lt;p&gt;
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="MAIN_PYRO" gate="G$1" pin="P"/>
+<pinref part="PYRO" gate="G$1" pin="P"/>
 <wire x1="40.64" y1="73.66" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="73.66" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="MAIN_ARM" gate="-2" pin="KL"/>
