@@ -6482,20 +6482,20 @@ Grid 5.00 mm&lt;p&gt;
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="U$1" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
 <part name="U$2" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
-<part name="POWER" library="XT30PW-M" deviceset="XT30PW-M" device=""/>
+<part name="POWER" library="XT30PW-M" deviceset="XT30PW-M" device="" override_package3d_urn="urn:adsk.eagle:package:43074490/2" override_package_urn="urn:adsk.eagle:footprint:43074491/1"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="MAIN_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:42833995/2" override_package_urn="urn:adsk.eagle:footprint:10676/1"/>
-<part name="U7" library="BS170F" deviceset="BS170F" device=""/>
-<part name="PYRO" library="XT30PW-M" deviceset="XT30PW-M" device=""/>
+<part name="U7" library="BS170F" deviceset="BS170F" device="" override_package3d_urn="urn:adsk.eagle:package:43074495/2" override_package_urn="urn:adsk.eagle:footprint:43074496/1"/>
+<part name="PYRO" library="XT30PW-M" deviceset="XT30PW-M" device="" override_package3d_urn="urn:adsk.eagle:package:43074477/2" override_package_urn="urn:adsk.eagle:footprint:43074478/1"/>
 <part name="BATTERY_REGULATOR3V3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
-<part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="SMD"/>
-<part name="U2" library="gy-521" deviceset="GY-521" device="MPU6050"/>
-<part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
-<part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1"/>
+<part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO" device="SMD" override_package3d_urn="urn:adsk.eagle:package:43074534/2" override_package_urn="urn:adsk.eagle:footprint:43074536/1"/>
+<part name="U2" library="gy-521" deviceset="GY-521" device="MPU6050" override_package3d_urn="urn:adsk.eagle:package:43074521/2" override_package_urn="urn:adsk.eagle:footprint:43074522/1"/>
+<part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43074500/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
+<part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43074506/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 </parts>
 <sheets>
 <sheet>
