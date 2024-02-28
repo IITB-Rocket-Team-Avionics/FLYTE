@@ -17,6 +17,5 @@ while True:
         print(imu.cal_status())
         sleep(0.05)
     else:
-        #print(imu.sensor_offsets())
-        print(imu.accel())
+        print(imu.sensor_offsets())
         sleep(0.05)

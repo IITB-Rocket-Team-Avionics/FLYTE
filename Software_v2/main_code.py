@@ -3,15 +3,14 @@
 
 from machine import I2C,Pin,UART,SPI,freq,PWM
 from math import sqrt,pi,asin,atan,tan,cos,sin,atan2,acos
-import time
-from time import ticks_ms,sleep,sleep_us,sleep_ms
+from time import ticks_ms,sleep,sleep_us,sleep_ms, gmtime
 from ulab import numpy as np
 from bno055 import *
 from bmp280 import *
 import as_GPS
 import uasyncio as asyncio
 import ustruct
-import winbond
+from flash_spi import FLASH
 import uos
 import sdcard
 import gc
@@ -20,7 +19,7 @@ micropython.alloc_emergency_exception_buf(100)
 gc.collect()
 
 
-freq(270000000)
+freq(270000000) #overclock?!!???
 
 class async_test:
     
@@ -35,6 +34,16 @@ class async_test:
     # DENSITY
     def rho(self,y):
         return pow(8.9611 - (y + self.calib_altitude)/4947.19,5.2479)/(78410.439 + 287.06*self.calib_temp - 1.86589*(y + self.calib_altitude))
+    
+    # toggle led asynchronously 
+    async def blink(self, t):
+        while True:
+            self.led_1.value(0)
+            self.led_2.value(0)
+            await asyncio.sleep_ms(t)
+            self.led_1.value(1)
+            self.led_2.value(1)
+            await asyncio.sleep_ms(t)
     
     # LED + BEEPS ON POWER UP
     def board_init(self):
@@ -61,7 +70,7 @@ class async_test:
         
     # LED + BEEPS IF MOTOR CONTROLLER BOARD IS NOT FOUND
     def mc_missing(self):
-        return													# REMOVE LATER
+        return # REMOVE LATER
         if self.state == 0:
             while True:
                 self.led_1.value(0)
@@ -81,7 +90,7 @@ class async_test:
                 self.led_2.value(1)
                 self.beep(1,500)
                 self.led_1.value(1)
-                _2.value(0)
+                self.led_2.value(0)
                 sleep(1)
         else:
             pass
@@ -115,7 +124,7 @@ class async_test:
         self.buzzer.freq(f)
 
         for i in range(n):
-            self.buzzer.duty_u16(0)
+            self.buzzer.duty_u16(30000)
             sleep_ms(t)
             self.buzzer.duty_u16(30000)
             sleep_ms(t)
@@ -170,7 +179,7 @@ class async_test:
         self.shutdown = False
         self.calib_data = bytes(26)
         
-        self.runtime = 60 * 1000
+        self.runtime = 20 * 1000
         
         self.temp_mult = 100
         self.acc_mult = 100
@@ -182,7 +191,7 @@ class async_test:
         self.max_alt = 0
         self.calib_gap = 10000 # Gap in milliseconds between subsequent calibrations
         self.calib_count = 0 # number of calibrations performed till now
-        self.calib_max = 1 # max number of calibrations
+        self.calib_max = 2 # max number of calibrations
         
         self.liftoff_accel = 3 # in g, minimum sustained acceleration for liftoff
         self.min_liftoff_alt = 10 # in m, minimum altitude to be cleared for liftoff
@@ -250,7 +259,7 @@ class async_test:
         avg_alt = 0
         for i in range(n):
             avg_alt += self.altitude()
-            time.sleep_ms(10)
+            sleep_ms(10)
         self.calib_altitude = avg_alt/n
         
     # CALIBRATE RAM BAROMETER OFFSET
@@ -302,11 +311,10 @@ class async_test:
 
         # INITIALISE FLASH
         try:
-            self.flash = winbond.W25QFlash(SPI(1,
-                    sck= Pin(10),
-                    mosi=Pin(11),
-                    miso=Pin(12)), Pin(7))
-            uos.mount(self.flash, '/win')
+            cspins = [Pin(7)] # has to be a list for this library to work
+            spi = SPI(1, sck= Pin(10), mosi=Pin(11), miso=Pin(12))
+            self.flash = FLASH(spi, cspins, cmd5 = False)
+            uos.mount(self.flash, '/flash')
             print('flash done')
         except Exception as e: #OSError
             print('Failed to initialize Flash')
@@ -352,8 +360,8 @@ class async_test:
             bno_offsets = bytearray(b'\xcc\xff\xb7\xff\xe2\xff\xb2\xffJ\xfc\xb7\xef\xff\xff\x00\x00\xff\xff\xe8\x03\x17\x04')
             
             # WRITE ACCELEROMETER OFFSETS TO THEIR REGISTERS (GYRO WILL CALIBRATE WHEN LEFT AT REST)
-            #                                                (MAGNETOMETER IS PROBLEMATIC. NEEDS TO BE WIGGLED AROUND A LITTLE BIT.
-            #                                                (BUT CAN'T DO THAT WHEN BOARD IS IN ROCKET. BUT IT'S NOT ESSENTIAL SO IT'S FINE)
+            #                                                (MAGNETOMETER IS PROBLEMATIC. EVEN TILTING IT A LITTLE BIT IS ENOUGH TO CALIBRATE.)
+            #                                                (SO MIGHT HAVE TO TILT THE ROCKET BACK AND FORTH ON THE RAIL A LITTLE BIT. BUT IT'S NOT ESSENTIAL SO IT'S FINE)
 
             self.bno._write(ACCEL_OFFSET_X_LSB_ADDR, bno_offsets[0])
             self.bno._write(ACCEL_OFFSET_X_MSB_ADDR, bno_offsets[1])
@@ -372,9 +380,9 @@ class async_test:
             print('Place IMU at rest')
             
             self.beep(2)
-            
+            self.led_1.value(0)
             sleep(3)
-            
+            self.led_1.value(1)
             self.g = 0
             
             for i in range(10):
@@ -388,8 +396,9 @@ class async_test:
             # CALIBRATE MAGNETOMETER
             
             self.beep(2)
-            
+            self.led_2.value(0)
             sleep(3)
+            self.led_2.value(1)
             
             print('bno done')
         except Exception as e:
@@ -559,11 +568,12 @@ class async_test:
                 self.max_alt = self.alt
 
             if (self.state != 0 and self.state != 5):
-                self.tel_delay = 100
+                self.tel_delay = 200
             
             # LOG DATA UNTIL RUNTIME ENDS OR TOUCHDOWN OR SPACE RUNS OUT (1kB SAFETY MARGIN)
-            if (self.t_log > self.runtime or self.logging_done or self.free_bytes - self.size < 1000): 
-                self.data_array = bytearray()
+            if (self.t_log > self.runtime or self.logging_done):# or self.free_bytes - self.size < 1000): 
+                self.data_array = bytearray() # why?
+                self.state = 5 # to go into recovery mode
                 self.async_loop.stop() # EXIT ASYNC LOOP
                 
             if (self.state==0 and ((np.all(self.alt_buf > self.min_liftoff_alt) and np.all(self.acc_buf > self.liftoff_accel*self.g)) or np.all(self.alt_buf > self.force_liftoff_alt))): #Liftoff
@@ -578,7 +588,7 @@ class async_test:
                 self.beep(2)
                 print("burnout")
 
-            elif ((self.state==2 and self.t_log - self.t_events[0] > self.lockout_drogue_time) and (np.all(self.alt_buf < self.max_alt) or self.t_log - self.t_events[0] > self.force_drogue_time)):
+            elif ((self.state==2 and self.t_log - self.t_events[0] > self.lockout_drogue_time) and (np.all(self.vel_buf < 0) or self.t_log - self.t_events[0] > self.force_drogue_time)):
                 self.state = 3
                 self.t_events[2] = self.t_log
                 self.beep(3)
@@ -678,16 +688,18 @@ class async_test:
                                    (float)(self._fix_time - self.calib_time),
                                    (float)(self.time_since_fix)
                                    )
-            
-            self.data_file.write(self.data_fast)
-            self.size += len(self.data_fast)
-                    
-            # WRITE SLOW DATA TO FLASH ONLY IF NEW FIX IS ACQUIRED      
-            if self.gps_counter > self.last_gps_counter and (self.latitude[0] != 0 and self.longitude[0] != 0):
-                self.data_file.write(self.data_slow)
-                self.size += len(self.data_slow)
+                
+            if self.state != 1 and self.state != 5: #change before flight
+                self.data_file.write(self.data_fast)
+                self.size += len(self.data_fast)
+                #print("written fast data")
+                        
+                # WRITE SLOW DATA TO FLASH ONLY IF NEW FIX IS ACQUIRED      
+                if self.gps_counter > self.last_gps_counter and (self.latitude[0] != 0 and self.longitude[0] != 0):
+                    self.data_file.write(self.data_slow)
+                    self.size += len(self.data_slow)
 
-            await asyncio.sleep_ms(0)        
+            await asyncio.sleep_ms(50)        
      
              
     # COMMUNICATION BETWEEN ROCKET AND GROUND STATION   
@@ -707,48 +719,12 @@ class async_test:
             if self.gps_counter > self.last_gps_counter:
                 sleep_ms(100)
                 self.xbee.write(self.data_slow)
+            
+            if self.state == 5:
+                self.xbee.write(self.data_slow)
+                print("recovery")
 
             await asyncio.sleep_ms(self.tel_delay)
-        
-        
-    def fast_core_init(self):
-        
-        print('fast core init')
-        
-        index_file = open('/index.txt','r')
-        index = int(index_file.read())
-        index_file.close()
-        
-        index_file = open('/index.txt','w')
-        index_file.write(str(index + 1))
-        index_file.close()
-
-        self.data_file = open('/data_' + str(index) + '.bin','wb')
-        
-        print("starting event loop")
-        
-        self.async_loop = asyncio.get_event_loop()
-        self.async_loop.create_task(self.calibrate())        # GET CALIBRATION DATA
-        self.async_loop.create_task(self.get_data())         # GET SENSOR DATA
-        self.async_loop.create_task(self.log_data())         # LOG THE DATA
-        self.async_loop.create_task(self.nav())              # RUN THE NAVIGATION FILTER
-        self.async_loop.create_task(self.comms())            # TRANSMIT TO GROUND STATION
-        self.async_loop.create_task(self.state_machine())    # RUN THE STATE MACHINE
-        self.async_loop.run_forever()                        # REPEAT
-        
-        self.data_file.close()
-        
-        print("done")
-        
-        with open('/config_' + str(index) + '.bin','wb') as config_file:
-            config_file.write(self.calib_data)
-            config_file.close()
-            
-        print("logging done, now sending only GPS")
-        
-        # BEEP AFTER TOUCHDOWN
-        while True:
-            self.beep()
 
     # NAV FILTER
     async def nav(self):
@@ -832,7 +808,7 @@ class async_test:
              
                     C1[2][0] = -sin(X_A[1][0])*cos(X_A[0][0])
                     C1[2][1] = sin(X_A[0][0])
-                    if not self.t_events[0]:
+                    if np.all(self.vel_buf < 10):
                         C1[2][2] = cos(X_A[0][0])*cos(X_A[1][0])
                     elif X[3][0] > 0:
                         C1[2][2] = X[3][0]/sqrt(pow(X[3][0],2)+pow(X[4][0],2))  # 0 AOA IN FLIGHT
@@ -914,7 +890,7 @@ class async_test:
                             if self.t_events[0]:
                                 # IF NEW RAM BAROMETER DATA
                                 if self.new_ram_data:
-                                    # IF AIRSPEED > VERTICAL VELOCITY USE IT TO CALULATE HORIZONTAL SPEED.ALL ELSE USE IMU.
+                                    # IF AIRSPEED > VERTICAL VELOCITY USE IT TO CALULATE HORIZONTAL SPEED. ALL ELSE USE IMU.
                                     if airspeed > abs(Xp[3][0]):
                                         Z[4][0] = sqrt(pow(airspeed,2) - pow(Xp[3][0],2))
                                     else:
@@ -1091,12 +1067,72 @@ class async_test:
             self.last_gps_counter = self.gps_counter        
          
             await asyncio.sleep(0)
+            
+#     def endgame(self, loop, context):
+#         print("Loop stopped with the following error: ")
+#         print(context)
+#         self.async_loop.stop()
+#         self.async_loop.close()
+#         print("we have ended successfully")
+            
+    async def fast_core(self):
+        
+        print('fast core init')
+        
+        index_file = open('/flash/index.txt','r')
+        index = int(index_file.read())
+        index_file.close()
+        
+        index_file = open('/flash/index.txt','w')
+        index_file.write(str(index + 1))
+        index_file.close()
+        
+        timestamp = "_".join(list(map(str,gmtime()[:6])))
+        
+        self.data_file = open('/flash/data_' + timestamp + "_" + str(index) + '.bin','wb')
+        
+        print("starting event loop")
+        
+        self.async_loop = asyncio.get_event_loop()
+        self.async_loop.create_task(self.calibrate())        # GET CALIBRATION DATA
+        self.async_loop.create_task(self.get_data())         # GET SENSOR DATA
+        self.async_loop.create_task(self.state_machine())    # RUN THE STATE MACHINE
+        self.async_loop.create_task(self.nav())              # RUN THE NAVIGATION FILTER
+        self.async_loop.create_task(self.comms())            # TRANSMIT TO GROUND STATION
+        self.async_loop.create_task(self.log_data())         # LOG THE DATA
+        self.async_loop.create_task(self.blink(500))
+        self.async_loop.run_forever()                        # REPEAT
+        
+        self.data_file.write(b'C' + self.calib_data)
+        self.data_file.close()
+        
+        print("Unmounting flash")
+        uos.umount("/flash")
+        
+        print("logging done, now sending only GPS")
+        
+        self.async_loop = asyncio.new_event_loop()
+        self.async_loop.create_task(self.comms())
+        self.async_loop.create_task(self.blink(1000))
+        #self.async_loop.set_exception_handler(self.endgame)
+        self.async_loop.run_forever()
+        
+        # BEEP AFTER TOUCHDOWN
+#         while True:
+#             self.beep()
 
 if __name__ == "__main__":
     test_instance = async_test()                    # START INSTANCE OF CLASS
     test_instance.init()                            # INITIALISE SOFTWARE
     test_instance.init_board()                      # INITIALISE SENSORS
-    test_instance.fast_core_init()                  # START THE FAST CORE ASYNC LOOP
+    try:
+        asyncio.run(test_instance.fast_core())      # START THE FAST CORE ASYNC LOOP
+    except KeyboardInterrupt as e:
+        print("User has ended loop, closing asyncio")
+        test_instance.async_loop.stop()
+        test_instance.async_loop.close()
+    finally:
+        print("done")
 
 
 
