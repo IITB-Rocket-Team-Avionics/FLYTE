@@ -256,76 +256,6 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="SDREADER">
-<packages>
-<package name="SDREADER">
-<wire x1="0" y1="18" x2="20" y2="18" width="0.127" layer="21"/>
-<wire x1="20" y1="18" x2="20" y2="15" width="0.127" layer="21"/>
-<wire x1="20" y1="15" x2="20" y2="2" width="0.127" layer="21"/>
-<wire x1="20" y1="2" x2="20" y2="0" width="0.127" layer="21"/>
-<wire x1="20" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="18" width="0.127" layer="21"/>
-<wire x1="20" y1="2" x2="9" y2="2" width="0.127" layer="21"/>
-<wire x1="9" y1="2" x2="9" y2="15" width="0.127" layer="21"/>
-<wire x1="9" y1="15" x2="20" y2="15" width="0.127" layer="21"/>
-<pad name="VCC" x="1" y="2" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<pad name="CS" x="1" y="4.54" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<pad name="MOSI" x="1" y="7.08" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<pad name="CLK" x="1" y="9.62" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<pad name="MISO" x="1" y="12.16" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<pad name="GND" x="1" y="14.7" drill="0.8" diameter="1.778" shape="long" rot="R180"/>
-<text x="5.73" y="2" size="0.8128" layer="21" rot="R180">VCC</text>
-<text x="5.73" y="8" size="0.8128" layer="21" rot="R180">MOSI</text>
-<text x="5.73" y="10" size="0.8128" layer="21" rot="R180">CLK</text>
-<text x="5.73" y="13" size="0.8128" layer="21" rot="R180">MISO</text>
-<text x="5.73" y="15" size="0.8128" layer="21" rot="R180">GND</text>
-<text x="5.73" y="5" size="0.8128" layer="21" rot="R180">CS</text>
-<text x="14.7" y="12.97" size="1.27" layer="21" rot="SR270">SDREADER</text>
-</package>
-</packages>
-<symbols>
-<symbol name="SDREADER">
-<wire x1="0" y1="0" x2="20.32" y2="0" width="0.254" layer="94"/>
-<wire x1="20.32" y1="0" x2="20.32" y2="17.78" width="0.254" layer="94"/>
-<wire x1="20.32" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
-<wire x1="15.24" y1="17.78" x2="2.54" y2="17.78" width="0.254" layer="94"/>
-<wire x1="2.54" y1="17.78" x2="0" y2="17.78" width="0.254" layer="94"/>
-<wire x1="0" y1="17.78" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="17.78" x2="2.54" y2="10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="10.16" x2="15.24" y2="10.16" width="0.254" layer="94"/>
-<wire x1="15.24" y1="10.16" x2="15.24" y2="17.78" width="0.254" layer="94"/>
-<pin name="VCC" x="2.54" y="-5.08" length="middle" rot="R90"/>
-<pin name="CS" x="5.08" y="-5.08" length="middle" rot="R90"/>
-<pin name="MOSI" x="7.62" y="-5.08" length="middle" rot="R90"/>
-<pin name="CLK" x="10.16" y="-5.08" length="middle" rot="R90"/>
-<pin name="MISO" x="12.7" y="-5.08" length="middle" rot="R90"/>
-<pin name="GND" x="15.24" y="-5.08" length="middle" rot="R90"/>
-<text x="5.08" y="12.7" size="2.54" layer="94">SD</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SDREADER">
-<gates>
-<gate name="G$1" symbol="SDREADER" x="-10.16" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="SDREADER">
-<connects>
-<connect gate="G$1" pin="CLK" pad="CLK"/>
-<connect gate="G$1" pin="CS" pad="CS"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="MISO" pad="MISO"/>
-<connect gate="G$1" pin="MOSI" pad="MOSI"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="AMS1117-3.3">
 <packages>
 <package name="SOT229P700X180-4N">
@@ -9816,7 +9746,6 @@ Source: www.kingbright.com</description>
 </classes>
 <parts>
 <part name="U$1" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
-<part name="U$3" library="SDREADER" deviceset="SDREADER" device="" override_package3d_urn="urn:adsk.eagle:package:40384096/2" override_package_urn="urn:adsk.eagle:footprint:40384097/1"/>
 <part name="BATTERY_REGULATOR3V3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K"/>
@@ -9827,7 +9756,6 @@ Source: www.kingbright.com</description>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="U6" library="W25Q32JVSSIQ" deviceset="W25Q32JVSSIQ" device="" override_package3d_urn="urn:adsk.eagle:package:40381730/2" override_package_urn="urn:adsk.eagle:footprint:40381731/1"/>
-<part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
@@ -9876,6 +9804,9 @@ Source: www.kingbright.com</description>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2"/>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
+<part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
+<part name="U2" library="W25Q32JVSSIQ" deviceset="W25Q32JVSSIQ" device="" override_package3d_urn="urn:adsk.eagle:package:40381730/2" override_package_urn="urn:adsk.eagle:footprint:40381731/1"/>
+<part name="C8" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="100 nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -9912,7 +9843,6 @@ speed sensor)</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="378.46" y="167.64" smashed="yes"/>
-<instance part="U$3" gate="G$1" x="312.42" y="60.96" smashed="yes"/>
 <instance part="BATTERY_REGULATOR3V3" gate="G$1" x="251.46" y="157.48" smashed="yes">
 <attribute name="NAME" x="220.9634" y="165.617140625" size="2.54415" layer="95"/>
 </instance>
@@ -9949,10 +9879,6 @@ speed sensor)</text>
 </instance>
 <instance part="U6" gate="G$1" x="370.84" y="68.58" smashed="yes">
 <attribute name="NAME" x="358.3677" y="79.525" size="1.27268125" layer="95"/>
-</instance>
-<instance part="R14" gate="G$1" x="149.86" y="35.56" smashed="yes">
-<attribute name="NAME" x="146.05" y="37.0586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="143.51" y="32.258" size="1.778" layer="96"/>
 </instance>
 <instance part="R15" gate="G$1" x="139.7" y="55.88" smashed="yes">
 <attribute name="NAME" x="135.89" y="57.3786" size="1.778" layer="95"/>
@@ -10147,6 +10073,16 @@ speed sensor)</text>
 <attribute name="NAME" x="278.13" y="53.975" size="1.778" layer="95"/>
 <attribute name="VALUE" x="278.13" y="40.64" size="1.778" layer="96"/>
 </instance>
+<instance part="D2" gate="1" x="251.46" y="170.18" smashed="yes">
+<attribute name="NAME" x="251.46" y="173.2026" size="1.778" layer="95"/>
+</instance>
+<instance part="U2" gate="G$1" x="370.84" y="68.58" smashed="yes">
+<attribute name="NAME" x="358.3677" y="79.525" size="1.27268125" layer="95"/>
+</instance>
+<instance part="C8" gate="G$1" x="388.62" y="68.58" smashed="yes" rot="R180">
+<attribute name="NAME" x="386.461" y="64.516" size="1.778" layer="95" font="vector" rot="R270"/>
+<attribute name="VALUE" x="386.461" y="77.216" size="1.778" layer="96" font="vector" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10156,11 +10092,6 @@ speed sensor)</text>
 <wire x1="208.28" y1="17.78" x2="215.9" y2="17.78" width="0.1524" layer="91"/>
 <label x="215.9" y="17.78" size="1.27" layer="95" xref="yes"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="GND"/>
-<wire x1="327.66" y1="55.88" x2="327.66" y2="48.26" width="0.1524" layer="91"/>
-<label x="327.66" y="48.26" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -10188,6 +10119,10 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="GND"/>
 <wire x1="388.62" y1="60.96" x2="391.16" y2="60.96" width="0.1524" layer="91"/>
 <label x="391.16" y="60.96" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="GND"/>
+<junction x="388.62" y="60.96"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="388.62" y1="63.5" x2="388.62" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="S1" gate="G$1" pin="2"/>
@@ -10203,11 +10138,6 @@ speed sensor)</text>
 <wire x1="314.96" y1="162.56" x2="309.88" y2="162.56" width="0.1524" layer="91"/>
 <label x="309.88" y="162.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U$4" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<label x="309.88" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="309.88" y1="137.16" x2="314.96" y2="137.16" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="RST"/>
 </segment>
 <segment>
 <pinref part="XBEE" gate="G$1" pin="GND"/>
@@ -10382,6 +10312,10 @@ speed sensor)</text>
 <wire x1="233.68" y1="160.02" x2="233.68" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="142.24" x2="248.92" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="160.02" x2="236.22" y2="170.18" width="0.1524" layer="91"/>
+<junction x="236.22" y="160.02"/>
+<wire x1="236.22" y1="170.18" x2="248.92" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="D2" gate="1" pin="A"/>
 </segment>
 <segment>
 <label x="266.7" y="243.84" size="1.27" layer="95" xref="yes"/>
@@ -10449,11 +10383,6 @@ speed sensor)</text>
 <pinref part="R4" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="VCC"/>
-<wire x1="314.96" y1="55.88" x2="314.96" y2="48.26" width="0.1524" layer="91"/>
-<label x="314.96" y="48.26" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="BATTERY_REGULATOR3V3" gate="G$1" pin="VOUT"/>
 <wire x1="266.7" y1="160.02" x2="269.24" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="269.24" y1="160.02" x2="269.24" y2="167.64" width="0.1524" layer="91"/>
@@ -10461,6 +10390,9 @@ speed sensor)</text>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="276.86" y1="167.64" x2="276.86" y2="165.1" width="0.1524" layer="91"/>
 <label x="271.78" y="167.64" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="254" y1="170.18" x2="269.24" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="170.18" x2="269.24" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="D2" gate="1" pin="C"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
@@ -10476,21 +10408,24 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="VCC"/>
 <wire x1="388.62" y1="76.2" x2="391.16" y2="76.2" width="0.1524" layer="91"/>
 <label x="391.16" y="76.2" size="1.27" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
+<junction x="388.62" y="76.2"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="388.62" y1="76.2" x2="388.62" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="!HOLD!/!RESET!(IO3)"/>
 <wire x1="353.06" y1="68.58" x2="350.52" y2="68.58" width="0.1524" layer="91"/>
 <label x="350.52" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="!HOLD!/!RESET!(IO3)"/>
+<junction x="353.06" y="68.58"/>
 </segment>
 <segment>
 <pinref part="U6" gate="G$1" pin="!WP!(IO2)"/>
 <wire x1="353.06" y1="60.96" x2="350.52" y2="60.96" width="0.1524" layer="91"/>
 <label x="350.52" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R14" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
-<label x="142.24" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="!WP!(IO2)"/>
+<junction x="353.06" y="60.96"/>
 </segment>
 <segment>
 <pinref part="R15" gate="G$1" pin="1"/>
@@ -10596,27 +10531,27 @@ speed sensor)</text>
 </net>
 <net name="TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP8"/>
-<wire x1="172.72" y1="53.34" x2="170.18" y2="53.34" width="0.1524" layer="91"/>
-<label x="170.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
-<label x="170.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="GPS" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 <label x="99.06" y="48.26" size="1.27" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="RX" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GP9"/>
 <wire x1="172.72" y1="50.8" x2="170.18" y2="50.8" width="0.1524" layer="91"/>
 <label x="170.18" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+</net>
+<net name="RX" class="0">
 <segment>
 <wire x1="93.98" y1="45.72" x2="99.06" y2="45.72" width="0.1524" layer="91"/>
 <label x="99.06" y="45.72" size="1.27" layer="95" xref="yes"/>
 <pinref part="GPS" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GP8"/>
+<wire x1="172.72" y1="53.34" x2="170.18" y2="53.34" width="0.1524" layer="91"/>
+<label x="170.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="170.18" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="BUZZER" class="0">
@@ -10637,23 +10572,6 @@ speed sensor)</text>
 <pinref part="D1" gate="1" pin="C"/>
 <wire x1="208.28" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VSYS"/>
-</segment>
-</net>
-<net name="CS_SD" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="CS"/>
-<wire x1="317.5" y1="55.88" x2="317.5" y2="48.26" width="0.1524" layer="91"/>
-<label x="317.5" y="48.26" size="1.4224" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GP13"/>
-<wire x1="172.72" y1="38.1" x2="167.64" y2="38.1" width="0.1524" layer="91"/>
-<label x="165.1" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="167.64" y1="38.1" x2="165.1" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="38.1" x2="167.64" y2="35.56" width="0.1524" layer="91"/>
-<junction x="167.64" y="38.1"/>
-<wire x1="167.64" y1="35.56" x2="154.94" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="R14" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -10723,11 +10641,6 @@ speed sensor)</text>
 </net>
 <net name="MISO1" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="MISO"/>
-<wire x1="325.12" y1="55.88" x2="325.12" y2="48.26" width="0.1524" layer="91"/>
-<label x="325.12" y="48.26" size="1.4224" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="U1" gate="G$1" pin="GP12"/>
 <wire x1="172.72" y1="40.64" x2="167.64" y2="40.64" width="0.1524" layer="91"/>
 <label x="165.1" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -10741,14 +10654,11 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="DO(IO1)"/>
 <wire x1="353.06" y1="63.5" x2="350.52" y2="63.5" width="0.1524" layer="91"/>
 <label x="350.52" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="DO(IO1)"/>
+<junction x="353.06" y="63.5"/>
 </segment>
 </net>
 <net name="SCK1" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="CLK"/>
-<wire x1="322.58" y1="55.88" x2="322.58" y2="48.26" width="0.1524" layer="91"/>
-<label x="322.58" y="48.26" size="1.4224" layer="95" rot="R270" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GP10"/>
 <wire x1="172.72" y1="45.72" x2="165.1" y2="45.72" width="0.1524" layer="91"/>
@@ -10758,14 +10668,11 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="CLK"/>
 <wire x1="353.06" y1="73.66" x2="350.52" y2="73.66" width="0.1524" layer="91"/>
 <label x="350.52" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="CLK"/>
+<junction x="353.06" y="73.66"/>
 </segment>
 </net>
 <net name="MOSI1" class="0">
-<segment>
-<pinref part="U$3" gate="G$1" pin="MOSI"/>
-<wire x1="320.04" y1="55.88" x2="320.04" y2="48.26" width="0.1524" layer="91"/>
-<label x="320.04" y="48.26" size="1.4224" layer="95" rot="R270" xref="yes"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GP11"/>
 <wire x1="172.72" y1="43.18" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
@@ -10775,6 +10682,8 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="DI(IO0)"/>
 <wire x1="353.06" y1="66.04" x2="350.52" y2="66.04" width="0.1524" layer="91"/>
 <label x="350.52" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="DI(IO0)"/>
+<junction x="353.06" y="66.04"/>
 </segment>
 </net>
 <net name="CS_FLASH" class="0">
@@ -10782,6 +10691,8 @@ speed sensor)</text>
 <pinref part="U6" gate="G$1" pin="!CS"/>
 <wire x1="353.06" y1="76.2" x2="350.52" y2="76.2" width="0.1524" layer="91"/>
 <label x="350.52" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="!CS"/>
+<junction x="353.06" y="76.2"/>
 </segment>
 <segment>
 <label x="154.94" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -10861,11 +10772,6 @@ speed sensor)</text>
 </net>
 <net name="SER_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GP0"/>
-<wire x1="172.72" y1="78.74" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
-<label x="165.1" y="78.74" size="1.27" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
 <pinref part="SERIAL" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="71.12" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 <label x="99.06" y="71.12" size="1.27" layer="95" xref="yes"/>
@@ -10875,14 +10781,14 @@ speed sensor)</text>
 <wire x1="40.64" y1="210.82" x2="33.02" y2="210.82" width="0.1524" layer="91"/>
 <label x="33.02" y="210.82" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="SER_RX" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GP1"/>
 <wire x1="172.72" y1="76.2" x2="170.18" y2="76.2" width="0.1524" layer="91"/>
 <label x="170.18" y="81.28" size="1.27" layer="95" rot="R90" xref="yes"/>
 <wire x1="170.18" y1="76.2" x2="170.18" y2="81.28" width="0.1524" layer="91"/>
 </segment>
+</net>
+<net name="SER_RX" class="0">
 <segment>
 <pinref part="SERIAL" gate="G$1" pin="3"/>
 <wire x1="93.98" y1="73.66" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
@@ -10892,6 +10798,11 @@ speed sensor)</text>
 <pinref part="XBEE" gate="G$1" pin="DIN/NCONFIG/DIO14"/>
 <wire x1="40.64" y1="208.28" x2="33.02" y2="208.28" width="0.1524" layer="91"/>
 <label x="33.02" y="208.28" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="GP0"/>
+<wire x1="172.72" y1="78.74" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+<label x="165.1" y="78.74" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="BNO_INT" class="0">
