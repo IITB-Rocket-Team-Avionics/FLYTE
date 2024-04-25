@@ -6279,103 +6279,6 @@ Grid 5.00 mm&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="H3LIS200DLTR">
-<packages>
-<package name="PQFN50P300X300X100-16N">
-<wire x1="-1.58" y1="-1.58" x2="-1.58" y2="1.58" width="0.127" layer="51"/>
-<wire x1="-1.58" y1="1.58" x2="1.58" y2="1.58" width="0.127" layer="51"/>
-<wire x1="1.58" y1="1.58" x2="1.58" y2="-1.58" width="0.127" layer="51"/>
-<wire x1="1.58" y1="-1.58" x2="-1.58" y2="-1.58" width="0.127" layer="51"/>
-<wire x1="-1.58" y1="1.35" x2="-1.58" y2="1.58" width="0.127" layer="21"/>
-<wire x1="-1.58" y1="1.58" x2="-0.85" y2="1.58" width="0.127" layer="21"/>
-<wire x1="0.85" y1="1.58" x2="1.58" y2="1.58" width="0.127" layer="21"/>
-<wire x1="1.58" y1="1.58" x2="1.58" y2="1.35" width="0.127" layer="21"/>
-<wire x1="-1.58" y1="-1.35" x2="-1.58" y2="-1.58" width="0.127" layer="21"/>
-<wire x1="-1.58" y1="-1.58" x2="-0.85" y2="-1.58" width="0.127" layer="21"/>
-<wire x1="0.85" y1="-1.58" x2="1.58" y2="-1.58" width="0.127" layer="21"/>
-<wire x1="1.58" y1="-1.58" x2="1.58" y2="-1.35" width="0.127" layer="21"/>
-<wire x1="-1.74" y1="-1.74" x2="-1.74" y2="1.74" width="0.05" layer="39"/>
-<wire x1="-1.74" y1="1.74" x2="1.74" y2="1.74" width="0.05" layer="39"/>
-<wire x1="1.74" y1="1.74" x2="1.74" y2="-1.74" width="0.05" layer="39"/>
-<wire x1="1.74" y1="-1.74" x2="-1.74" y2="-1.74" width="0.05" layer="39"/>
-<circle x="-2.1" y="1.1" radius="0.1" width="0.2" layer="21"/>
-<circle x="-1.084" y="1.1" radius="0.1" width="0.2" layer="51"/>
-<text x="-1.80356875" y="1.80356875" size="0.40720625" layer="25">&gt;NAME</text>
-<text x="-1.80003125" y="-2.20003125" size="0.40640625" layer="27">&gt;VALUE</text>
-<smd name="1" x="-1.22" y="1" dx="0.53" dy="0.35" layer="1" roundness="9"/>
-<smd name="2" x="-1.22" y="0.5" dx="0.53" dy="0.35" layer="1" roundness="9"/>
-<smd name="3" x="-1.22" y="0" dx="0.53" dy="0.35" layer="1" roundness="9"/>
-<smd name="4" x="-1.22" y="-0.5" dx="0.53" dy="0.35" layer="1" roundness="9"/>
-<smd name="5" x="-1.22" y="-1" dx="0.53" dy="0.35" layer="1" roundness="9"/>
-<smd name="6" x="-0.5" y="-1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R90"/>
-<smd name="7" x="0" y="-1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R90"/>
-<smd name="8" x="0.5" y="-1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R90"/>
-<smd name="9" x="1.22" y="-1" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R180"/>
-<smd name="10" x="1.22" y="-0.5" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R180"/>
-<smd name="11" x="1.22" y="0" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R180"/>
-<smd name="12" x="1.22" y="0.5" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R180"/>
-<smd name="13" x="1.22" y="1" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R180"/>
-<smd name="14" x="0.5" y="1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R270"/>
-<smd name="15" x="0" y="1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R270"/>
-<smd name="16" x="-0.5" y="1.22" dx="0.53" dy="0.35" layer="1" roundness="9" rot="R270"/>
-</package>
-</packages>
-<symbols>
-<symbol name="H3LIS200DLTR">
-<wire x1="12.7" y1="-12.7" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="12.7" x2="12.7" y2="12.7" width="0.254" layer="94"/>
-<wire x1="12.7" y1="12.7" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
-<text x="-12.7093" y="12.7093" size="1.779309375" layer="95">&gt;NAME</text>
-<text x="-12.7045" y="-15.2454" size="1.77863125" layer="96">&gt;VALUE</text>
-<pin name="VDD_IO" x="17.78" y="10.16" length="middle" direction="pwr" rot="R180"/>
-<pin name="SCL/SPC" x="-17.78" y="2.54" length="middle" direction="in" function="clk"/>
-<pin name="GND" x="17.78" y="-10.16" length="middle" direction="pwr" rot="R180"/>
-<pin name="SDA/SDI/SDO" x="-17.78" y="0" length="middle"/>
-<pin name="SDO/SA0" x="-17.78" y="-2.54" length="middle" direction="out"/>
-<pin name="CS" x="-17.78" y="5.08" length="middle" direction="in"/>
-<pin name="INT_2" x="17.78" y="-2.54" length="middle" direction="out" rot="R180"/>
-<pin name="INT_1" x="17.78" y="0" length="middle" direction="out" rot="R180"/>
-<pin name="VDD" x="17.78" y="7.62" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="H3LIS200DLTR" prefix="U">
-<description>H3LIS200DL Series 3.6 V 400 Hz Low-Power 3-Axis Digital Accelerometer -TFLGA-16L &lt;a href="https://pricing.snapeda.com/parts/H3LIS200DLTR/STMicroelectronics/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="H3LIS200DLTR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PQFN50P300X300X100-16N">
-<connects>
-<connect gate="G$1" pin="CS" pad="8"/>
-<connect gate="G$1" pin="GND" pad="5 10 12 13 16"/>
-<connect gate="G$1" pin="INT_1" pad="11"/>
-<connect gate="G$1" pin="INT_2" pad="9"/>
-<connect gate="G$1" pin="SCL/SPC" pad="4"/>
-<connect gate="G$1" pin="SDA/SDI/SDO" pad="6"/>
-<connect gate="G$1" pin="SDO/SA0" pad="7"/>
-<connect gate="G$1" pin="VDD" pad="14 15"/>
-<connect gate="G$1" pin="VDD_IO" pad="1"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="In Stock"/>
-<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/H3LIS200DLTR/STMicroelectronics/view-part/?ref=eda"/>
-<attribute name="DESCRIPTION" value=" Accelerometer X, Y, Z Axis ±100g, ±200g 25Hz ~ 500Hz 16-TFLGA (3x3) "/>
-<attribute name="MF" value="STMicroelectronics"/>
-<attribute name="MP" value="H3LIS200DLTR"/>
-<attribute name="PACKAGE" value="TFLGA-16 STMicroelectronics"/>
-<attribute name="PRICE" value="None"/>
-<attribute name="PURCHASE-URL" value="https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=523021&amp;manufacturer=STMicroelectronics&amp;part_name=H3LIS200DLTR&amp;search_term=h3lis200dltr"/>
-<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/H3LIS200DLTR/STMicroelectronics/view-part/?ref=snap"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="frames" urn="urn:adsk.eagle:library:229">
 <description>&lt;b&gt;Frames for Sheet and Layout&lt;/b&gt;</description>
 <packages>
@@ -9136,6 +9039,88 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="KX134_Breakout">
+<packages>
+<package name="KX134-BREAKOUT">
+<wire x1="0" y1="0" x2="0" y2="25.4" width="0.127" layer="21"/>
+<wire x1="0" y1="25.4" x2="25.4" y2="25.4" width="0.127" layer="21"/>
+<wire x1="25.4" y1="25.4" x2="25.4" y2="0" width="0.127" layer="21"/>
+<wire x1="25.4" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="GND" x="6.35" y="1.27" drill="0.8"/>
+<pad name="3V3" x="8.89" y="1.27" drill="0.8"/>
+<pad name="SDA" x="11.43" y="1.27" drill="0.8"/>
+<pad name="SCL" x="13.97" y="1.27" drill="0.8"/>
+<pad name="ADDR" x="16.51" y="1.27" drill="0.8"/>
+<pad name="!CS" x="19.05" y="1.27" drill="0.8"/>
+<pad name="INT2" x="10.16" y="24.13" drill="0.8"/>
+<pad name="INT1" x="12.7" y="24.13" drill="0.8"/>
+<pad name="TRIG" x="15.24" y="24.13" drill="0.8"/>
+<text x="6.35" y="2.54" size="1.27" layer="21" rot="R90">GND</text>
+<text x="8.89" y="2.54" size="1.27" layer="21" rot="R90">3V3</text>
+<text x="11.43" y="2.54" size="1.27" layer="21" rot="R90">SDA</text>
+<text x="13.97" y="2.54" size="1.27" layer="21" rot="R90">SCL</text>
+<text x="16.51" y="2.54" size="1.27" layer="21" rot="R90">ADDR</text>
+<text x="19.05" y="2.54" size="1.27" layer="21" rot="R90">!CS</text>
+<text x="10.16" y="22.86" size="1.27" layer="21" rot="R270">INT2</text>
+<text x="12.7" y="22.86" size="1.27" layer="21" rot="R270">INT1</text>
+<text x="15.24" y="22.86" size="1.27" layer="21" rot="R270">TRIG</text>
+<text x="7.62" y="11.43" size="2.54" layer="21">KX134</text>
+<wire x1="22.86" y1="19.05" x2="19.05" y2="19.05" width="0.127" layer="21"/>
+<wire x1="19.05" y1="19.05" x2="20.32" y2="20.32" width="0.127" layer="21"/>
+<wire x1="19.05" y1="19.05" x2="20.32" y2="17.78" width="0.127" layer="21"/>
+<wire x1="22.86" y1="19.05" x2="22.86" y2="15.24" width="0.127" layer="21"/>
+<wire x1="22.86" y1="15.24" x2="21.59" y2="16.51" width="0.127" layer="21"/>
+<wire x1="22.86" y1="15.24" x2="24.13" y2="16.51" width="0.127" layer="21"/>
+<text x="19.05" y="20.32" size="1.27" layer="21">x</text>
+<text x="20.32" y="15.24" size="1.27" layer="21">y</text>
+</package>
+</packages>
+<symbols>
+<symbol name="KX134-BREAKOUT">
+<wire x1="-2.54" y1="0" x2="-2.54" y2="25.4" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="25.4" x2="27.94" y2="25.4" width="0.254" layer="94"/>
+<wire x1="27.94" y1="25.4" x2="27.94" y2="0" width="0.254" layer="94"/>
+<wire x1="27.94" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<pin name="INT2" x="7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="INT1" x="12.7" y="30.48" length="middle" rot="R270"/>
+<pin name="TRIG" x="17.78" y="30.48" length="middle" rot="R270"/>
+<pin name="3V3" x="5.08" y="-5.08" length="middle" rot="R90"/>
+<pin name="SDA" x="10.16" y="-5.08" length="middle" rot="R90"/>
+<pin name="SCL" x="15.24" y="-5.08" length="middle" rot="R90"/>
+<pin name="ADDR" x="20.32" y="-5.08" length="middle" rot="R90"/>
+<pin name="!CS" x="25.4" y="-5.08" length="middle" rot="R90"/>
+<pin name="GND" x="0" y="-5.08" length="middle" rot="R90"/>
+<text x="5.08" y="10.16" size="3.81" layer="94">KX134</text>
+<text x="20.32" y="20.32" size="1.27" layer="94">x &lt;---</text>
+<text x="25.4" y="15.24" size="1.27" layer="94" rot="R90">y &lt;---</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="KX134-BREAKOUT">
+<gates>
+<gate name="A" symbol="KX134-BREAKOUT" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="KX134-BREAKOUT">
+<connects>
+<connect gate="A" pin="!CS" pad="!CS"/>
+<connect gate="A" pin="3V3" pad="3V3"/>
+<connect gate="A" pin="ADDR" pad="ADDR"/>
+<connect gate="A" pin="GND" pad="GND"/>
+<connect gate="A" pin="INT1" pad="INT1"/>
+<connect gate="A" pin="INT2" pad="INT2"/>
+<connect gate="A" pin="SCL" pad="SCL"/>
+<connect gate="A" pin="SDA" pad="SDA"/>
+<connect gate="A" pin="TRIG" pad="TRIG"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9168,9 +9153,6 @@ Source: www.kingbright.com</description>
 <part name="U3" library="ADS1115IDGSR" deviceset="ADS1115IDGSR" device="" override_package3d_urn="urn:adsk.eagle:package:43006505/2" override_package_urn="urn:adsk.eagle:footprint:43006506/1"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="100 nF"/>
 <part name="U$4" library="BNO055" deviceset="BNO055" device="" override_package3d_urn="urn:adsk.eagle:package:43006369/2" override_package_urn="urn:adsk.eagle:footprint:43006370/1"/>
-<part name="U4" library="H3LIS200DLTR" deviceset="H3LIS200DLTR" device="" override_package3d_urn="urn:adsk.eagle:package:43006487/2" override_package_urn="urn:adsk.eagle:footprint:43006488/1"/>
-<part name="C6" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF"/>
-<part name="C7" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="100 nF"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
@@ -9215,6 +9197,7 @@ Source: www.kingbright.com</description>
 <part name="RESET" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
 <part name="INTERFACE" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
+<part name="U$2" library="KX134_Breakout" deviceset="KX134-BREAKOUT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9337,18 +9320,6 @@ to select I2C</text>
 <attribute name="VALUE" x="372.999" y="207.264" size="1.778" layer="96" font="vector" rot="R90"/>
 </instance>
 <instance part="U$4" gate="G$1" x="320.04" y="157.48" smashed="yes" rot="R270"/>
-<instance part="U4" gate="G$1" x="340.36" y="106.68" smashed="yes" rot="R180">
-<attribute name="NAME" x="353.0693" y="93.9707" size="1.779309375" layer="95" rot="R180"/>
-<attribute name="VALUE" x="353.0645" y="121.9254" size="1.77863125" layer="96" rot="R180"/>
-</instance>
-<instance part="C6" gate="G$1" x="317.5" y="104.14" smashed="yes" rot="R180">
-<attribute name="NAME" x="315.341" y="100.076" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="315.341" y="112.776" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
-<instance part="C7" gate="G$1" x="312.42" y="104.14" smashed="yes" rot="R180">
-<attribute name="NAME" x="310.261" y="100.076" size="1.778" layer="95" font="vector" rot="R270"/>
-<attribute name="VALUE" x="310.261" y="112.776" size="1.778" layer="96" font="vector" rot="R270"/>
-</instance>
 <instance part="R2" gate="G$1" x="109.22" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="115.57" y="21.3614" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="110.49" y="21.082" size="1.778" layer="96" rot="R180"/>
@@ -9527,6 +9498,7 @@ to select I2C</text>
 <attribute name="NAME" x="135.89" y="39.5986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="135.89" y="34.798" size="1.778" layer="96"/>
 </instance>
+<instance part="U$2" gate="A" x="350.52" y="96.52" smashed="yes" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9618,24 +9590,6 @@ to select I2C</text>
 <pinref part="U3" gate="G$1" pin="ADDR"/>
 <wire x1="332.74" y1="220.98" x2="327.66" y2="220.98" width="0.1524" layer="91"/>
 <label x="327.66" y="220.98" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="GND"/>
-<wire x1="322.58" y1="116.84" x2="317.5" y2="116.84" width="0.1524" layer="91"/>
-<label x="309.88" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="317.5" y1="116.84" x2="312.42" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="116.84" x2="309.88" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="317.5" y1="106.68" x2="317.5" y2="116.84" width="0.1524" layer="91"/>
-<junction x="317.5" y="116.84"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="312.42" y1="106.68" x2="312.42" y2="116.84" width="0.1524" layer="91"/>
-<junction x="312.42" y="116.84"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="SDO/SA0"/>
-<wire x1="358.14" y1="109.22" x2="363.22" y2="109.22" width="0.1524" layer="91"/>
-<label x="363.22" y="109.22" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="55.88" x2="243.84" y2="55.88" width="0.1524" layer="91"/>
@@ -9752,6 +9706,16 @@ to select I2C</text>
 <wire x1="386.08" y1="66.04" x2="386.08" y2="63.5" width="0.1524" layer="91"/>
 <label x="386.08" y="63.5" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="A" pin="ADDR"/>
+<wire x1="355.6" y1="116.84" x2="360.68" y2="116.84" width="0.1524" layer="91"/>
+<label x="360.68" y="116.84" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="A" pin="GND"/>
+<wire x1="355.6" y1="96.52" x2="360.68" y2="96.52" width="0.1524" layer="91"/>
+<label x="360.68" y="96.52" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -9820,9 +9784,9 @@ to select I2C</text>
 <label x="327.66" y="208.28" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="SCL/SPC"/>
-<wire x1="358.14" y1="104.14" x2="363.22" y2="104.14" width="0.1524" layer="91"/>
-<label x="363.22" y="104.14" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$2" gate="A" pin="SCL"/>
+<wire x1="355.6" y1="111.76" x2="360.68" y2="111.76" width="0.1524" layer="91"/>
+<label x="360.68" y="111.76" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -9929,24 +9893,6 @@ to select I2C</text>
 <junction x="383.54" y="226.06"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="VDD_IO"/>
-<wire x1="322.58" y1="96.52" x2="320.04" y2="96.52" width="0.1524" layer="91"/>
-<label x="309.88" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U4" gate="G$1" pin="VDD"/>
-<wire x1="320.04" y1="96.52" x2="317.5" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="317.5" y1="96.52" x2="312.42" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="96.52" x2="309.88" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="322.58" y1="99.06" x2="320.04" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="320.04" y1="99.06" x2="320.04" y2="96.52" width="0.1524" layer="91"/>
-<junction x="320.04" y="96.52"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="317.5" y1="96.52" x2="317.5" y2="99.06" width="0.1524" layer="91"/>
-<junction x="317.5" y="96.52"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="312.42" y1="96.52" x2="312.42" y2="99.06" width="0.1524" layer="91"/>
-<junction x="312.42" y="96.52"/>
-</segment>
-<segment>
 <wire x1="114.3" y1="22.86" x2="116.84" y2="22.86" width="0.1524" layer="91"/>
 <label x="116.84" y="22.86" size="1.27" layer="95" xref="yes"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -9995,6 +9941,11 @@ to select I2C</text>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="38.1" x2="132.08" y2="38.1" width="0.1524" layer="91"/>
 <label x="132.08" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="A" pin="3V3"/>
+<wire x1="355.6" y1="101.6" x2="360.68" y2="101.6" width="0.1524" layer="91"/>
+<label x="360.68" y="101.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BUZZER" class="0">
@@ -10299,9 +10250,9 @@ to select I2C</text>
 <label x="327.66" y="203.2" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U4" gate="G$1" pin="SDA/SDI/SDO"/>
-<wire x1="358.14" y1="106.68" x2="363.22" y2="106.68" width="0.1524" layer="91"/>
-<label x="363.22" y="106.68" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$2" gate="A" pin="SDA"/>
+<wire x1="355.6" y1="106.68" x2="360.68" y2="106.68" width="0.1524" layer="91"/>
+<label x="360.68" y="106.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -10541,6 +10492,34 @@ to select I2C</text>
 <pinref part="VBUS_LED" gate="G$1" pin="C"/>
 <pinref part="R19" gate="G$1" pin="2"/>
 <wire x1="266.7" y1="248.92" x2="271.78" y2="248.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CS_KX134" class="0">
+<segment>
+<pinref part="U$2" gate="A" pin="!CS"/>
+<wire x1="355.6" y1="121.92" x2="360.68" y2="121.92" width="0.1524" layer="91"/>
+<label x="360.68" y="121.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="TRIG_KX134" class="0">
+<segment>
+<pinref part="U$2" gate="A" pin="TRIG"/>
+<wire x1="320.04" y1="114.3" x2="317.5" y2="114.3" width="0.1524" layer="91"/>
+<label x="317.5" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="INT1_KX134" class="0">
+<segment>
+<pinref part="U$2" gate="A" pin="INT1"/>
+<wire x1="320.04" y1="109.22" x2="317.5" y2="109.22" width="0.1524" layer="91"/>
+<label x="317.5" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="INT2_KX134" class="0">
+<segment>
+<pinref part="U$2" gate="A" pin="INT2"/>
+<wire x1="320.04" y1="104.14" x2="317.5" y2="104.14" width="0.1524" layer="91"/>
+<label x="317.5" y="104.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
