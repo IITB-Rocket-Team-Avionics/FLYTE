@@ -34,7 +34,7 @@ class HX710B:
 hx710b = HX710B(pd_sck=17, dout=16)  # Change GPIO pin numbers accordingly
 
 offset = 0
-n = 75
+n = 10
 
 # sd = sdcard.SDCard(SPI(1,
 #                     sck= Pin(10),
@@ -56,10 +56,13 @@ with open('/air_data_1.txt','w') as file:
     for i in range(n):
         offset += hx710b.read_raw_data()/n
 
+    print(offset)
+
+
     while True:
         reading = hx710b.read_raw_data()
         density = bmp.pressure/(287.08*(bmp.temperature+273.15))
-        print((reading-offset))
+#         print((reading))
         file.write(str(ticks_ms() - t) + ',' + str(reading) + ',' + str(density) + '\n')
         
         

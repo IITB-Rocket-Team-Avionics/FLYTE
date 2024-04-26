@@ -7,4 +7,3 @@ sd = sdcard.SDCard(SPI(1,
                     mosi=Pin(11),
                     miso=Pin(12)), Pin(13))
 uos.mount(sd, "/sd")
-print(uos.listdir("/sd"))
