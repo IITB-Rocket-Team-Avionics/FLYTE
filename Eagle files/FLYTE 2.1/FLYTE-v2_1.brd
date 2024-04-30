@@ -2309,10 +2309,10 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CAP-08402" x="224.79" y="-49.53" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="101.219" y="10.16" size="0.6096" layer="28" font="vector" ratio="20" rot="MR270" align="top-center"/>
 </element>
-<element name="C9" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF" x="97.79" y="10.16" smashed="yes" rot="MR270">
-<attribute name="NAME" x="96.901" y="10.16" size="0.6096" layer="26" font="vector" ratio="20" rot="MR270" align="bottom-center"/>
-<attribute name="PROD_ID" value="CAP-08402" x="222.25" y="-72.39" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="98.679" y="10.16" size="0.6096" layer="28" font="vector" ratio="20" rot="MR270" align="top-center"/>
+<element name="C9" library="SparkFun-Capacitors" package="0805" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF" x="104.14" y="7.62" smashed="yes" rot="MR0">
+<attribute name="NAME" x="104.14" y="8.509" size="0.6096" layer="26" font="vector" ratio="20" rot="MR0" align="bottom-center"/>
+<attribute name="PROD_ID" value="CAP-08402" x="21.59" y="-116.84" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="VALUE" x="104.14" y="6.731" size="0.6096" layer="28" font="vector" ratio="20" rot="MR0" align="top-center"/>
 </element>
 <element name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" package="DO41-10" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1" value="1N4004" x="62.23" y="41.91" smashed="yes" rot="R270">
 <attribute name="NAME" x="63.881" y="43.942" size="1.27" layer="25" ratio="10" rot="R270"/>
@@ -2763,9 +2763,9 @@ design rules under a new name.</description>
 <wire x1="94.98" y1="24.13" x2="96.84" y2="31.75" width="0" layer="19" extent="16-16"/>
 <wire x1="90.01" y1="21.59" x2="94.98" y2="24.13" width="0" layer="19" extent="16-16"/>
 <wire x1="94.98" y1="13.97" x2="90.01" y2="21.59" width="0" layer="19" extent="16-16"/>
-<wire x1="97.79" y1="11.06" x2="94.98" y2="13.97" width="0" layer="19" extent="16-16"/>
-<wire x1="100.33" y1="11.06" x2="97.79" y2="11.06" width="0" layer="19" extent="16-16"/>
-<wire x1="93.98" y1="5.08" x2="97.79" y2="11.06" width="0" layer="19" extent="16-16"/>
+<wire x1="105.04" y1="7.62" x2="94.98" y2="13.97" width="0" layer="19" extent="16-16"/>
+<wire x1="100.33" y1="11.06" x2="105.04" y2="7.62" width="0" layer="19" extent="16-16"/>
+<wire x1="93.98" y1="5.08" x2="105.04" y2="7.62" width="0" layer="19" extent="16-16"/>
 <wire x1="90.01" y1="8.89" x2="93.98" y2="5.08" width="0" layer="19" extent="16-16"/>
 <wire x1="83.82" y1="9.84" x2="90.01" y2="8.89" width="0" layer="19" extent="1-16"/>
 <wire x1="80.01" y1="9.84" x2="83.82" y2="9.84" width="0" layer="19" extent="1-1"/>
@@ -2884,8 +2884,8 @@ design rules under a new name.</description>
 <wire x1="104.775" y1="10.37" x2="106.045" y2="17.57" width="0" layer="19" extent="16-16"/>
 <wire x1="103.505" y1="10.37" x2="104.775" y2="10.37" width="0" layer="19" extent="16-16"/>
 <wire x1="100.33" y1="9.26" x2="103.505" y2="10.37" width="0" layer="19" extent="16-16"/>
-<wire x1="97.79" y1="9.26" x2="100.33" y2="9.26" width="0" layer="19" extent="16-16"/>
-<wire x1="94.93" y1="8.89" x2="97.79" y2="9.26" width="0" layer="19" extent="16-16"/>
+<wire x1="103.24" y1="7.62" x2="100.33" y2="9.26" width="0" layer="19" extent="16-16"/>
+<wire x1="94.93" y1="8.89" x2="103.24" y2="7.62" width="0" layer="19" extent="16-16"/>
 <wire x1="94.93" y1="11.43" x2="94.93" y2="8.89" width="0" layer="19" extent="16-16"/>
 <wire x1="101.6" y1="5.08" x2="100.33" y2="9.26" width="0" layer="19" extent="16-16"/>
 <wire x1="83.82" y1="2.06" x2="94.93" y2="8.89" width="0" layer="19" extent="1-16"/>
