@@ -8666,64 +8666,6 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="XT30UPB-M">
-<packages>
-<package name="XT30UPB-M">
-<wire x1="-5.1" y1="2.6" x2="-5.1" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="-5.1" y1="-2.6" x2="3.81" y2="-2.6" width="0.127" layer="21"/>
-<wire x1="3.81" y1="-2.6" x2="5.1" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="5.1" y1="-1.27" x2="5.1" y2="1.27" width="0.127" layer="21"/>
-<wire x1="5.1" y1="1.27" x2="3.81" y2="2.6" width="0.127" layer="21"/>
-<wire x1="3.81" y1="2.6" x2="-5.1" y2="2.6" width="0.127" layer="21"/>
-<wire x1="-4.445" y1="1.62" x2="-4.445" y2="0.92" width="0.127" layer="21"/>
-<wire x1="-4.8" y1="1.27" x2="-4.1" y2="1.27" width="0.127" layer="21"/>
-<wire x1="4.064" y1="1.27" x2="4.699" y2="1.27" width="0.127" layer="21"/>
-<pad name="P$1" x="-2.5" y="0" drill="2.1524"/>
-<pad name="P$2" x="2.5" y="0" drill="2.1524"/>
-</package>
-</packages>
-<symbols>
-<symbol name="CONN_02">
-<description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
-<wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.6096" layer="94"/>
-<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="3.81" y1="-2.54" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
-<text x="-2.54" y="-4.826" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.54" y="5.588" size="1.778" layer="95">&gt;NAME</text>
-<pin name="-" x="7.62" y="0" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="+" x="7.62" y="2.54" length="middle" direction="pas" swaplevel="1" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="XT30UPB-M">
-<description> &lt;a href="https://pricing.snapeda.com/parts/XT30UPB-M/amass/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="CONN_02" x="2.54" y="2.54"/>
-</gates>
-<devices>
-<device name="" package="XT30UPB-M">
-<connects>
-<connect gate="G$1" pin="+" pad="P$1"/>
-<connect gate="G$1" pin="-" pad="P$2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Not in stock"/>
-<attribute name="DESCRIPTION" value="  Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; yellow; 15A; 500V "/>
-<attribute name="MF" value="amass"/>
-<attribute name="MP" value="XT30UPB-M"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="None"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="IRF540NPBF">
 <packages>
 <package name="TO254P1054X469X1930-3">
@@ -9121,6 +9063,64 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="XT30UPB-M">
+<packages>
+<package name="XT30UPB-M">
+<wire x1="-5.1" y1="2.6" x2="-5.1" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="-5.1" y1="-2.6" x2="3.81" y2="-2.6" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-2.6" x2="5.1" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="5.1" y1="-1.27" x2="5.1" y2="1.27" width="0.127" layer="21"/>
+<wire x1="5.1" y1="1.27" x2="3.81" y2="2.6" width="0.127" layer="21"/>
+<wire x1="3.81" y1="2.6" x2="-5.1" y2="2.6" width="0.127" layer="21"/>
+<wire x1="-4.445" y1="2.255" x2="-4.445" y2="1.555" width="0.127" layer="21"/>
+<wire x1="-4.8" y1="1.905" x2="-4.1" y2="1.905" width="0.127" layer="21"/>
+<wire x1="2.159" y1="2.159" x2="2.794" y2="2.159" width="0.127" layer="21"/>
+<pad name="P$1" x="-2.5" y="0" drill="2.54"/>
+<pad name="P$2" x="2.5" y="0" drill="2.54"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CONN_02">
+<description>&lt;h3&gt;2 Pin Connection&lt;/h3&gt;</description>
+<wire x1="3.81" y1="-2.54" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.6096" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="3.81" y2="5.08" width="0.4064" layer="94"/>
+<text x="-2.54" y="-4.826" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="5.588" size="1.778" layer="95">&gt;NAME</text>
+<pin name="-" x="7.62" y="0" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="+" x="7.62" y="2.54" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="XT30UPB-M">
+<description> &lt;a href="https://pricing.snapeda.com/parts/XT30UPB-M/amass/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="CONN_02" x="2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="XT30UPB-M">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1"/>
+<connect gate="G$1" pin="-" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Not in stock"/>
+<attribute name="DESCRIPTION" value="  Socket; DC supply; XT30; male; PIN: 2; on PCBs; THT; yellow; 15A; 500V "/>
+<attribute name="MF" value="amass"/>
+<attribute name="MP" value="XT30UPB-M"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9138,7 +9138,6 @@ Source: www.kingbright.com</description>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
 <part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device="" override_package3d_urn="urn:adsk.eagle:package:40381806/2" override_package_urn="urn:adsk.eagle:footprint:40381807/1" override_locally_modified="yes"/>
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
-<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="U6" library="W25Q32JVSSIQ" deviceset="W25Q32JVSSIQ" device="" override_package3d_urn="urn:adsk.eagle:package:40381730/2" override_package_urn="urn:adsk.eagle:footprint:40381731/1"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
@@ -9157,7 +9156,6 @@ Source: www.kingbright.com</description>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="10 ohm"/>
 <part name="MAIN_ARM" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1" override_package3d_urn="urn:adsk.eagle:package:42833995/3" override_package_urn="urn:adsk.eagle:footprint:10676/1"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="TABL_L" device=""/>
 <part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43006546/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
@@ -9171,14 +9169,11 @@ Source: www.kingbright.com</description>
 <part name="R16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
 <part name="JP3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="100 nF"/>
-<part name="LIPO_POWER" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="100K ohm"/>
 <part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
-<part name="MAIN_PYRO" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
-<part name="DROGUE_PYRO" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
 <part name="C9" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF"/>
 <part name="C10" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF"/>
 <part name="Q1" library="IRF540NPBF" deviceset="IRF540NPBF" device=""/>
@@ -9198,6 +9193,9 @@ Source: www.kingbright.com</description>
 <part name="INTERFACE" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="U$2" library="KX134_Breakout" deviceset="KX134-BREAKOUT" device=""/>
+<part name="MAIN" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
+<part name="LIPO_POWER" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
+<part name="DROGUE" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9261,10 +9259,6 @@ to select I2C</text>
 <instance part="R9" gate="G$1" x="157.48" y="177.8" smashed="yes">
 <attribute name="NAME" x="151.13" y="179.2986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="158.75" y="179.578" size="1.778" layer="96"/>
-</instance>
-<instance part="R10" gate="G$1" x="157.48" y="172.72" smashed="yes">
-<attribute name="NAME" x="151.13" y="171.6786" size="1.778" layer="95" align="top-left"/>
-<attribute name="VALUE" x="158.75" y="171.958" size="1.778" layer="96" align="top-left"/>
 </instance>
 <instance part="C2" gate="G$1" x="251.46" y="142.24" smashed="yes" rot="R270">
 <attribute name="NAME" x="255.524" y="140.081" size="1.778" layer="95" font="vector"/>
@@ -9336,10 +9330,6 @@ to select I2C</text>
 <attribute name="NAME" x="151.13" y="240.2586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="158.75" y="240.538" size="1.778" layer="96"/>
 </instance>
-<instance part="R8" gate="G$1" x="157.48" y="233.68" smashed="yes">
-<attribute name="NAME" x="151.13" y="232.6386" size="1.778" layer="95" align="top-left"/>
-<attribute name="VALUE" x="158.75" y="232.918" size="1.778" layer="96" align="top-left"/>
-</instance>
 <instance part="MAIN_ARM" gate="-1" x="170.18" y="248.92" smashed="yes" rot="R180">
 <attribute name="NAME" x="170.18" y="248.031" size="1.778" layer="95"/>
 </instance>
@@ -9397,10 +9387,6 @@ to select I2C</text>
 <attribute name="NAME" x="374.904" y="71.501" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="369.824" y="68.961" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="LIPO_POWER" gate="G$1" x="200.66" y="251.46" smashed="yes">
-<attribute name="VALUE" x="198.12" y="246.634" size="1.778" layer="96"/>
-<attribute name="NAME" x="198.12" y="257.048" size="1.778" layer="95"/>
-</instance>
 <instance part="R11" gate="G$1" x="144.78" y="228.6" smashed="yes" rot="R270">
 <attribute name="NAME" x="133.35" y="227.5586" size="1.778" layer="95"/>
 <attribute name="VALUE" x="130.81" y="225.298" size="1.778" layer="96"/>
@@ -9419,14 +9405,6 @@ to select I2C</text>
 </instance>
 <instance part="D2" gate="1" x="251.46" y="167.64" smashed="yes">
 <attribute name="NAME" x="251.46" y="170.6626" size="1.778" layer="95"/>
-</instance>
-<instance part="MAIN_PYRO" gate="G$1" x="129.54" y="236.22" smashed="yes">
-<attribute name="VALUE" x="127" y="231.394" size="1.778" layer="96"/>
-<attribute name="NAME" x="127" y="241.808" size="1.778" layer="95"/>
-</instance>
-<instance part="DROGUE_PYRO" gate="G$1" x="127" y="172.72" smashed="yes">
-<attribute name="VALUE" x="124.46" y="167.894" size="1.778" layer="96"/>
-<attribute name="NAME" x="124.46" y="178.308" size="1.778" layer="95"/>
 </instance>
 <instance part="C9" gate="G$1" x="386.08" y="71.12" smashed="yes" rot="R180">
 <attribute name="NAME" x="390.144" y="71.501" size="1.778" layer="95" font="vector"/>
@@ -9499,6 +9477,18 @@ to select I2C</text>
 <attribute name="VALUE" x="135.89" y="34.798" size="1.778" layer="96"/>
 </instance>
 <instance part="U$2" gate="A" x="350.52" y="96.52" smashed="yes" rot="R90"/>
+<instance part="MAIN" gate="G$1" x="129.54" y="236.22" smashed="yes">
+<attribute name="VALUE" x="127" y="231.394" size="1.778" layer="96"/>
+<attribute name="NAME" x="127" y="241.808" size="1.778" layer="95"/>
+</instance>
+<instance part="LIPO_POWER" gate="G$1" x="200.66" y="251.46" smashed="yes">
+<attribute name="VALUE" x="198.12" y="246.634" size="1.778" layer="96"/>
+<attribute name="NAME" x="198.12" y="257.048" size="1.778" layer="95"/>
+</instance>
+<instance part="DROGUE" gate="G$1" x="127" y="172.72" smashed="yes">
+<attribute name="VALUE" x="124.46" y="167.894" size="1.778" layer="96"/>
+<attribute name="NAME" x="124.46" y="178.308" size="1.778" layer="95"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9972,30 +9962,22 @@ to select I2C</text>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="177.8" x2="152.4" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="177.8" x2="149.86" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="175.26" x2="149.86" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="172.72" x2="152.4" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="175.26" x2="147.32" y2="175.26" width="0.1524" layer="91"/>
-<junction x="149.86" y="175.26"/>
 <pinref part="R23" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="175.26" x2="149.86" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="172.72" x2="147.32" y2="175.26" width="0.1524" layer="91"/>
 <junction x="147.32" y="175.26"/>
-<pinref part="DROGUE_PYRO" gate="G$1" pin="+"/>
+<pinref part="DROGUE" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="162.56" y1="177.8" x2="165.1" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="165.1" y1="177.8" x2="165.1" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="175.26" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="172.72" x2="162.56" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="175.26" x2="172.72" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="175.26" x2="172.72" y2="175.26" width="0.1524" layer="91"/>
-<junction x="165.1" y="175.26"/>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="185.42" y1="162.56" x2="172.72" y2="162.56" width="0.1524" layer="91"/>
 </segment>
@@ -10105,7 +10087,7 @@ to select I2C</text>
 <wire x1="144.78" y1="182.88" x2="167.64" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="172.72" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="172.72" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="DROGUE_PYRO" gate="G$1" pin="-"/>
+<pinref part="DROGUE" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="SENSE_MAIN" class="0">
@@ -10260,16 +10242,12 @@ to select I2C</text>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="238.76" x2="152.4" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="238.76" x2="149.86" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="236.22" x2="149.86" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="233.68" x2="152.4" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="236.22" x2="144.78" y2="236.22" width="0.1524" layer="91"/>
-<junction x="149.86" y="236.22"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="236.22" x2="149.86" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="233.68" x2="144.78" y2="236.22" width="0.1524" layer="91"/>
 <junction x="144.78" y="236.22"/>
-<pinref part="MAIN_PYRO" gate="G$1" pin="-"/>
+<pinref part="MAIN" gate="G$1" pin="-"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -10278,7 +10256,7 @@ to select I2C</text>
 <wire x1="144.78" y1="238.76" x2="144.78" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="MAIN_ARM" gate="-2" pin="KL"/>
 <wire x1="144.78" y1="243.84" x2="165.1" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="MAIN_PYRO" gate="G$1" pin="+"/>
+<pinref part="MAIN" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="AIR_DATA" class="0">
@@ -10460,14 +10438,10 @@ to select I2C</text>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="162.56" y1="238.76" x2="165.1" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="238.76" x2="165.1" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="236.22" x2="172.72" y2="236.22" width="0.1524" layer="91"/>
-<junction x="165.1" y="236.22"/>
-<wire x1="165.1" y1="236.22" x2="165.1" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="233.68" x2="162.56" y2="233.68" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="185.42" y1="223.52" x2="172.72" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="223.52" x2="172.72" y2="236.22" width="0.1524" layer="91"/>

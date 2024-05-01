@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -65,11 +65,11 @@
 <wire x1="5.1" y1="-1.27" x2="5.1" y2="1.27" width="0.127" layer="21"/>
 <wire x1="5.1" y1="1.27" x2="3.81" y2="2.6" width="0.127" layer="21"/>
 <wire x1="3.81" y1="2.6" x2="-5.1" y2="2.6" width="0.127" layer="21"/>
-<wire x1="-4.445" y1="1.62" x2="-4.445" y2="0.92" width="0.127" layer="21"/>
-<wire x1="-4.8" y1="1.27" x2="-4.1" y2="1.27" width="0.127" layer="21"/>
-<wire x1="4.064" y1="1.27" x2="4.699" y2="1.27" width="0.127" layer="21"/>
-<pad name="P$1" x="-2.5" y="0" drill="2.1524"/>
-<pad name="P$2" x="2.5" y="0" drill="2.1524"/>
+<wire x1="-4.445" y1="2.255" x2="-4.445" y2="1.555" width="0.127" layer="21"/>
+<wire x1="-4.8" y1="1.905" x2="-4.1" y2="1.905" width="0.127" layer="21"/>
+<wire x1="2.159" y1="2.159" x2="2.794" y2="2.159" width="0.127" layer="21"/>
+<pad name="P$1" x="-2.5" y="0" drill="2.54"/>
+<pad name="P$2" x="2.5" y="0" drill="2.54"/>
 </package>
 </packages>
 <symbols>
