@@ -196,120 +196,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="LTR390symbol">
-<packages>
-<package name="LTR390FOOT">
-<wire x1="0" y1="0" x2="25.4" y2="0" width="0.1524" layer="21"/>
-<wire x1="25.4" y1="0" x2="25.4" y2="17.78" width="0.1524" layer="21"/>
-<wire x1="25.4" y1="17.78" x2="0" y2="17.78" width="0.1524" layer="21"/>
-<wire x1="0" y1="17.78" x2="0" y2="0" width="0.1524" layer="21"/>
-<pad name="1" x="6.35" y="2.54" drill="0.8"/>
-<pad name="2" x="8.89" y="2.54" drill="0.8"/>
-<pad name="3" x="11.43" y="2.54" drill="0.8"/>
-<pad name="4" x="13.97" y="2.54" drill="0.8"/>
-<pad name="5" x="16.51" y="2.54" drill="0.8"/>
-<pad name="6" x="19.05" y="2.54" drill="0.8"/>
-<text x="10.16" y="8.89" size="1.4224" layer="21">LT390</text>
-<text x="5.715" y="3.81" size="0.6096" layer="21">VIN</text>
-<text x="8.255" y="3.81" size="0.6096" layer="21">3V0</text>
-<text x="10.668" y="3.81" size="0.6096" layer="21">GND</text>
-<text x="13.208" y="3.81" size="0.6096" layer="21">SCL</text>
-<text x="15.748" y="3.81" size="0.6096" layer="21">SDA</text>
-<text x="18.415" y="3.81" size="0.6096" layer="21">INT</text>
-</package>
-</packages>
-<symbols>
-<symbol name="LTR390SYMBOL">
-<wire x1="0" y1="0" x2="35.56" y2="0" width="0.1524" layer="94"/>
-<wire x1="35.56" y1="0" x2="35.56" y2="17.78" width="0.1524" layer="94"/>
-<wire x1="35.56" y1="17.78" x2="0" y2="17.78" width="0.1524" layer="94"/>
-<wire x1="0" y1="17.78" x2="0" y2="0" width="0.1524" layer="94"/>
-<pin name="VIN" x="5.08" y="2.54" length="point" rot="R90"/>
-<pin name="3V0" x="10.16" y="2.54" length="point" rot="R90"/>
-<pin name="GND" x="15.24" y="2.54" length="point" rot="R90"/>
-<pin name="SCL" x="20.32" y="2.54" length="point" rot="R90"/>
-<pin name="SDA" x="25.4" y="2.54" length="point" rot="R90"/>
-<pin name="INT" x="30.48" y="2.54" length="point" rot="R90"/>
-<text x="15.24" y="10.16" size="1.778" layer="94">LT390</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LM398LIB">
-<gates>
-<gate name="G$1" symbol="LTR390SYMBOL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="LTR390FOOT">
-<connects>
-<connect gate="G$1" pin="3V0" pad="2"/>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="INT" pad="6"/>
-<connect gate="G$1" pin="SCL" pad="4"/>
-<connect gate="G$1" pin="SDA" pad="5"/>
-<connect gate="G$1" pin="VIN" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="VCNL4040">
-<packages>
-<package name="VCNL4040FOOT">
-<wire x1="0" y1="0" x2="25.4" y2="0" width="0.127" layer="21"/>
-<wire x1="25.4" y1="0" x2="25.4" y2="17.78" width="0.127" layer="21"/>
-<wire x1="25.4" y1="17.78" x2="0" y2="17.78" width="0.127" layer="21"/>
-<wire x1="0" y1="17.78" x2="0" y2="0" width="0.127" layer="21"/>
-<pad name="VCC" x="6.35" y="2.54" drill="0.8"/>
-<pad name="3V3" x="8.89" y="2.54" drill="0.8"/>
-<pad name="GND" x="11.43" y="2.54" drill="0.8"/>
-<pad name="SCL" x="13.97" y="2.54" drill="0.8"/>
-<pad name="SDA" x="16.51" y="2.54" drill="0.8"/>
-<pad name="INT" x="19.05" y="2.54" drill="0.8"/>
-<text x="8.89" y="8.89" size="1.27" layer="21">VCNL4040</text>
-</package>
-</packages>
-<symbols>
-<symbol name="VCNL4040SYMB">
-<wire x1="0" y1="0" x2="35.56" y2="0" width="0.254" layer="94"/>
-<wire x1="35.56" y1="0" x2="35.56" y2="20.32" width="0.254" layer="94"/>
-<wire x1="35.56" y1="20.32" x2="0" y2="20.32" width="0.254" layer="94"/>
-<wire x1="0" y1="20.32" x2="0" y2="0" width="0.254" layer="94"/>
-<pin name="VCC" x="5.08" y="5.08" length="point" rot="R90"/>
-<pin name="3V3" x="10.16" y="5.08" length="point" rot="R90"/>
-<pin name="GND" x="15.24" y="5.08" length="point" rot="R90"/>
-<pin name="SCL" x="20.32" y="5.08" length="point" rot="R90"/>
-<pin name="SDA" x="25.4" y="5.08" length="point" rot="R90"/>
-<pin name="INT" x="30.48" y="5.08" length="point" rot="R90"/>
-<text x="12.7" y="15.24" size="1.778" layer="94">VCNL4040</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="VCNL4040">
-<gates>
-<gate name="G$1" symbol="VCNL4040SYMB" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="VCNL4040FOOT">
-<connects>
-<connect gate="G$1" pin="3V3" pad="3V3"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="INT" pad="INT"/>
-<connect gate="G$1" pin="SCL" pad="SCL"/>
-<connect gate="G$1" pin="SDA" pad="SDA"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="BMP280">
 <packages>
 <package name="BMP280">
@@ -364,81 +250,6 @@
 </connects>
 <technologies>
 <technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="AMS1117-3.3">
-<packages>
-<package name="SOT229P700X180-4N">
-<wire x1="-3.36" y1="-1.86" x2="-3.36" y2="1.86" width="0.127" layer="51"/>
-<wire x1="-3.36" y1="1.86" x2="3.36" y2="1.86" width="0.127" layer="51"/>
-<wire x1="3.36" y1="1.86" x2="3.36" y2="-1.86" width="0.127" layer="51"/>
-<wire x1="3.36" y1="-1.86" x2="-3.36" y2="-1.86" width="0.127" layer="51"/>
-<wire x1="-3.36" y1="-1.86" x2="-3.36" y2="1.86" width="0.127" layer="21"/>
-<wire x1="3.36" y1="-1.86" x2="3.36" y2="1.86" width="0.127" layer="21"/>
-<wire x1="-3.36" y1="-1.86" x2="-3.1" y2="-1.86" width="0.127" layer="21"/>
-<wire x1="3.11" y1="-1.86" x2="3.36" y2="-1.86" width="0.127" layer="21"/>
-<wire x1="3.36" y1="1.86" x2="1.87" y2="1.86" width="0.127" layer="21"/>
-<wire x1="-1.76" y1="1.86" x2="-3.36" y2="1.86" width="0.127" layer="21"/>
-<circle x="-2.29" y="-4.373" radius="0.1" width="0.2" layer="21"/>
-<text x="-3.69655" y="4.507990625" size="1.27225" layer="25">&gt;NAME</text>
-<text x="-3.696559375" y="-6.17095" size="1.272259375" layer="27">&gt;VALUE</text>
-<wire x1="-3.61" y1="2.11" x2="-3.61" y2="-2.11" width="0.05" layer="39"/>
-<wire x1="-3.61" y1="-2.11" x2="-3.01" y2="-2.11" width="0.05" layer="39"/>
-<wire x1="-3.01" y1="-2.11" x2="-3.01" y2="-4.25" width="0.05" layer="39"/>
-<wire x1="-3.01" y1="-4.25" x2="3.01" y2="-4.25" width="0.05" layer="39"/>
-<wire x1="3.01" y1="-4.25" x2="3.01" y2="-2.11" width="0.05" layer="39"/>
-<wire x1="3.01" y1="-2.11" x2="3.61" y2="-2.11" width="0.05" layer="39"/>
-<wire x1="3.61" y1="-2.11" x2="3.61" y2="2.11" width="0.05" layer="39"/>
-<wire x1="3.61" y1="2.11" x2="1.87" y2="2.11" width="0.05" layer="39"/>
-<wire x1="1.87" y1="2.11" x2="1.87" y2="4.25" width="0.05" layer="39"/>
-<wire x1="1.87" y1="4.25" x2="-1.87" y2="4.25" width="0.05" layer="39"/>
-<wire x1="-1.87" y1="4.25" x2="-1.87" y2="2.11" width="0.05" layer="39"/>
-<wire x1="-1.87" y1="2.11" x2="-3.61" y2="2.11" width="0.05" layer="39"/>
-<smd name="1" x="-2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
-<smd name="2" x="0" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
-<smd name="3" x="2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
-<smd name="4" x="0" y="3.345" dx="3.24" dy="1.31" layer="1" roundness="15"/>
-</package>
-</packages>
-<symbols>
-<symbol name="AMS1117-3.3">
-<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
-<text x="-10.1766" y="5.597140625" size="2.54415" layer="95">&gt;NAME</text>
-<text x="-10.1692" y="-8.135359375" size="2.5423" layer="96">&gt;VALUE</text>
-<pin name="VIN" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="VOUT" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
-<pin name="ADJ/GND" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="AMS1117-3.3" prefix="U">
-<description>Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator &lt;a href="https://pricing.snapeda.com/parts/AMS1117-3.3/Advanced%20Monolithic%20Systems/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="AMS1117-3.3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT229P700X180-4N">
-<connects>
-<connect gate="G$1" pin="ADJ/GND" pad="1"/>
-<connect gate="G$1" pin="VIN" pad="3"/>
-<connect gate="G$1" pin="VOUT" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Not in stock"/>
-<attribute name="DESCRIPTION" value=" Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator "/>
-<attribute name="MF" value="Advanced Monolithic Systems"/>
-<attribute name="MP" value="AMS1117-3.3"/>
-<attribute name="PACKAGE" value="SOT-223 Seeed Technology"/>
-<attribute name="PRICE" value="None"/>
-</technology>
 </technologies>
 </device>
 </devices>
@@ -5945,40 +5756,6 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="supply1" urn="urn:adsk.eagle:library:371">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
- GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
- Please keep in mind, that these devices are necessary for the
- automatic wiring of the supply signals.&lt;p&gt;
- The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
- In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="VCC" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="KPEG106-HS">
 <packages>
 <package name="XDCR_KPEG106-HS">
@@ -7709,6 +7486,206 @@ Source: http://www.osram.convergy.de/</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="AMS1117-5.0">
+<packages>
+<package name="SOT229P700X180-4N">
+<wire x1="-3.2525" y1="-1.7525" x2="-3.2525" y2="1.7525" width="0.127" layer="51"/>
+<wire x1="-3.2525" y1="1.7525" x2="3.2525" y2="1.7525" width="0.127" layer="51"/>
+<wire x1="3.2525" y1="1.7525" x2="3.2525" y2="-1.7525" width="0.127" layer="51"/>
+<wire x1="3.2525" y1="-1.7525" x2="-3.2525" y2="-1.7525" width="0.127" layer="51"/>
+<wire x1="-3.2525" y1="-1.7525" x2="-3.2525" y2="1.7525" width="0.127" layer="21"/>
+<wire x1="-3.2525" y1="1.7525" x2="3.2525" y2="1.7525" width="0.127" layer="21"/>
+<wire x1="3.2525" y1="1.7525" x2="3.2525" y2="-1.7525" width="0.127" layer="21"/>
+<wire x1="3.2525" y1="-1.7525" x2="-3.2525" y2="-1.7525" width="0.127" layer="21"/>
+<wire x1="-3.5025" y1="4.25" x2="-3.5025" y2="-4.25" width="0.05" layer="39"/>
+<wire x1="-3.5025" y1="-4.25" x2="3.5025" y2="-4.25" width="0.05" layer="39"/>
+<wire x1="3.5025" y1="-4.25" x2="3.5025" y2="4.25" width="0.05" layer="39"/>
+<wire x1="3.5025" y1="4.25" x2="-3.5025" y2="4.25" width="0.05" layer="39"/>
+<circle x="-3.99" y="-3.3" radius="0.1" width="0.2" layer="21"/>
+<circle x="-3.99" y="-3.3" radius="0.1" width="0.2" layer="51"/>
+<text x="-3.5025" y="4.65" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5025" y="-4.55" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="1" x="-2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="2" x="0" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="3" x="2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="4" x="0" y="3.345" dx="3.24" dy="1.31" layer="1" roundness="15"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AMS1117-5.0">
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<text x="-10.16" y="5.5921" size="2.541859375" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-8.137890625" size="2.543090625" layer="96">&gt;VALUE</text>
+<pin name="VIN" x="-15.24" y="2.54" length="middle" direction="in"/>
+<pin name="VOUT" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="GND/ADJ" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="AMS1117-5.0" prefix="U">
+<description> &lt;a href="https://pricing.snapeda.com/parts/AMS1117-5.0/ams/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="AMS1117-5.0" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT229P700X180-4N">
+<connects>
+<connect gate="G$1" pin="GND/ADJ" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Not in stock"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/AMS1117-5.0/ams/view-part/?ref=eda"/>
+<attribute name="DESCRIPTION" value=" 1A LOW DROPOUT VOLTAGE REGULATOR "/>
+<attribute name="MF" value="ams"/>
+<attribute name="MP" value="AMS1117-5.0"/>
+<attribute name="PACKAGE" value="SOT-223 Seeed Technology"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/AMS1117-5.0/ams/view-part/?ref=snap"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="LTR390">
+<packages>
+<package name="LTR390">
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="0" y1="17.78" x2="25.4" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="17.78" x2="25.4" y2="0" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
+<text x="6.985" y="12.7" size="2.286" layer="21">LTR390</text>
+<pad name="VCC" x="6.35" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<pad name="3V3" x="8.89" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<pad name="GND" x="11.43" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<pad name="SCL" x="13.97" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<pad name="SDA" x="16.51" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<pad name="INT" x="19.05" y="2.54" drill="1" diameter="1.778" rot="R90"/>
+<rectangle x1="16.256" y1="2.286" x2="16.764" y2="2.794" layer="51"/>
+<rectangle x1="13.716" y1="2.286" x2="14.224" y2="2.794" layer="51"/>
+<rectangle x1="11.176" y1="2.286" x2="11.684" y2="2.794" layer="51"/>
+<rectangle x1="8.636" y1="2.286" x2="9.144" y2="2.794" layer="51"/>
+<rectangle x1="6.096" y1="2.286" x2="6.604" y2="2.794" layer="51"/>
+<rectangle x1="18.796" y1="2.286" x2="19.304" y2="2.794" layer="51"/>
+<text x="5.207" y="3.937" size="0.762" layer="21">VCC</text>
+<text x="8.001" y="0.762" size="0.762" layer="21">3V3</text>
+<text x="10.16" y="3.937" size="0.762" layer="21">GND</text>
+<text x="12.954" y="0.762" size="0.762" layer="21">SCL</text>
+<text x="15.494" y="3.81" size="0.762" layer="21">SDA</text>
+<text x="18.288" y="0.635" size="0.762" layer="21">INT</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LTR390">
+<wire x1="0" y1="0" x2="0" y2="27.94" width="0.1524" layer="94"/>
+<wire x1="0" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="94"/>
+<wire x1="45.72" y1="27.94" x2="45.72" y2="0" width="0.1524" layer="94"/>
+<wire x1="45.72" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<pin name="VIN" x="7.62" y="-5.08" length="middle" rot="R90"/>
+<pin name="3V3" x="12.7" y="-5.08" length="middle" rot="R90"/>
+<pin name="GND" x="17.78" y="-5.08" length="middle" rot="R90"/>
+<pin name="SCL" x="25.4" y="-5.08" length="middle" rot="R90"/>
+<pin name="INT" x="40.64" y="-5.08" length="middle" rot="R90"/>
+<pin name="SDA" x="33.02" y="-5.08" length="middle" rot="R90"/>
+<text x="17.78" y="17.78" size="2.286" layer="94">LTR390</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LTR390">
+<gates>
+<gate name="G$1" symbol="LTR390" x="-22.86" y="0"/>
+</gates>
+<devices>
+<device name="" package="LTR390">
+<connects>
+<connect gate="G$1" pin="3V3" pad="3V3"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VIN" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="VCNL4040">
+<packages>
+<package name="VCNL4040">
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="0" y1="17.78" x2="25.4" y2="17.78" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="17.78" x2="25.4" y2="0" width="0.1524" layer="21"/>
+<wire x1="25.4" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
+<pad name="VIN" x="6.35" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<pad name="3V3" x="8.89" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<pad name="GND" x="11.43" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<pad name="SCL" x="13.97" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<pad name="SDA" x="16.51" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<pad name="INT" x="19.05" y="1.905" drill="1" diameter="1.9304" rot="R90"/>
+<rectangle x1="16.256" y1="1.651" x2="16.764" y2="2.159" layer="51"/>
+<rectangle x1="13.716" y1="1.651" x2="14.224" y2="2.159" layer="51"/>
+<rectangle x1="11.176" y1="1.651" x2="11.684" y2="2.159" layer="51"/>
+<rectangle x1="8.636" y1="1.651" x2="9.144" y2="2.159" layer="51"/>
+<rectangle x1="6.096" y1="1.651" x2="6.604" y2="2.159" layer="51"/>
+<rectangle x1="18.796" y1="1.651" x2="19.304" y2="2.159" layer="51"/>
+<text x="5.08" y="3.175" size="1.016" layer="21">VIN</text>
+<text x="7.62" y="3.175" size="1.016" layer="21">3V3</text>
+<text x="10.16" y="3.175" size="1.016" layer="21">GND</text>
+<text x="12.7" y="0.635" size="1.016" layer="21">SCL</text>
+<text x="15.24" y="3.175" size="1.016" layer="21">SDA</text>
+<text x="18.415" y="3.175" size="1.016" layer="21">INT</text>
+<text x="6.985" y="9.525" size="1.778" layer="21">VNCL4040</text>
+</package>
+</packages>
+<symbols>
+<symbol name="VCNL4040">
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.1524" layer="94"/>
+<wire x1="0" y1="17.78" x2="45.72" y2="17.78" width="0.1524" layer="94"/>
+<wire x1="45.72" y1="17.78" x2="45.72" y2="0" width="0.1524" layer="94"/>
+<wire x1="45.72" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<pin name="VIN" x="7.62" y="-5.08" length="middle" rot="R90"/>
+<pin name="3VO" x="12.7" y="-5.08" length="middle" rot="R90"/>
+<pin name="GND" x="17.78" y="-5.08" length="middle" rot="R90"/>
+<pin name="SCL" x="25.4" y="-5.08" length="middle" rot="R90"/>
+<pin name="SDA" x="30.48" y="-5.08" length="middle" rot="R90"/>
+<pin name="INT" x="35.56" y="-5.08" length="middle" rot="R90"/>
+<text x="15.24" y="10.16" size="1.778" layer="94">VCNL4040</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VCNL4040">
+<gates>
+<gate name="G$1" symbol="VCNL4040" x="-22.86" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="VCNL4040">
+<connects>
+<connect gate="G$1" pin="3VO" pad="3V3"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7719,10 +7696,7 @@ Source: http://www.osram.convergy.de/</description>
 </class>
 </classes>
 <parts>
-<part name="U$1" library="LTR390symbol" deviceset="LM398LIB" device=""/>
-<part name="U$2" library="VCNL4040" deviceset="VCNL4040" device=""/>
 <part name="U$3" library="BMP280" deviceset="BMP280" device="" override_package3d_urn="urn:adsk.eagle:package:38477931/2" override_package_urn="urn:adsk.eagle:footprint:38477932/1"/>
-<part name="BATTERY_REGULATOR3V3" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:40331853/2" override_package_urn="urn:adsk.eagle:footprint:40331854/1"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
@@ -7730,7 +7704,6 @@ Source: http://www.osram.convergy.de/</description>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="U1" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device="" override_package3d_urn="urn:adsk.eagle:package:40381806/2" override_package_urn="urn:adsk.eagle:footprint:40381807/1" override_locally_modified="yes"/>
 <part name="CON1" library="amass" deviceset="XT30" device="UPB-M"/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="LS1" library="KPEG106-HS" deviceset="KPEG106-HS" device=""/>
@@ -7738,18 +7711,16 @@ Source: http://www.osram.convergy.de/</description>
 <part name="LED2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:6240560/1"/>
 <part name="U$5" library="headers(.05in)" deviceset="1X5" device=""/>
 <part name="U$6" library="headers(.05in)" deviceset="1X5" device=""/>
+<part name="U2" library="AMS1117-5.0" deviceset="AMS1117-5.0" device=""/>
+<part name="U$4" library="LTR390" deviceset="LTR390" device=""/>
+<part name="U$1" library="VCNL4040" deviceset="VCNL4040" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="17.78" y="58.42" smashed="yes" rot="R90"/>
-<instance part="U$2" gate="G$1" x="53.34" y="48.26" smashed="yes" rot="R270"/>
 <instance part="U$3" gate="G$1" x="63.5" y="106.68" smashed="yes" rot="R270"/>
-<instance part="BATTERY_REGULATOR3V3" gate="G$1" x="99.06" y="129.54" smashed="yes">
-<attribute name="NAME" x="68.5634" y="137.677140625" size="2.54415" layer="95"/>
-</instance>
 <instance part="C1" gate="G$1" x="124.46" y="134.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="122.936" y="131.699" size="1.778" layer="95" font="vector" rot="R180"/>
 <attribute name="VALUE" x="122.936" y="136.779" size="1.778" layer="96" font="vector" rot="R180"/>
@@ -7758,8 +7729,8 @@ Source: http://www.osram.convergy.de/</description>
 <attribute name="NAME" x="103.124" y="112.141" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="92.964" y="112.141" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="D1" gate="1" x="129.54" y="93.98" smashed="yes" rot="R180">
-<attribute name="NAME" x="129.54" y="90.9574" size="1.778" layer="95" rot="R180"/>
+<instance part="D1" gate="1" x="127" y="96.52" smashed="yes" rot="R180">
+<attribute name="NAME" x="127" y="93.4974" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="R3" gate="G$1" x="63.5" y="88.9" smashed="yes">
 <attribute name="NAME" x="59.69" y="90.3986" size="1.778" layer="95"/>
@@ -7773,12 +7744,9 @@ Source: http://www.osram.convergy.de/</description>
 <attribute name="NAME" x="91.4245" y="100.3746" size="2.54388125" layer="95"/>
 <attribute name="VALUE" x="91.4331" y="19.0286" size="2.54171875" layer="96"/>
 </instance>
-<instance part="CON1" gate="G$1" x="137.16" y="111.76" smashed="yes">
-<attribute name="VALUE" x="133.35" y="102.87" size="1.778" layer="96"/>
-<attribute name="NAME" x="133.35" y="118.872" size="1.778" layer="95"/>
-</instance>
-<instance part="P+1" gate="VCC" x="152.4" y="116.84" smashed="yes">
-<attribute name="VALUE" x="149.86" y="114.3" size="1.778" layer="96" rot="R90"/>
+<instance part="CON1" gate="G$1" x="137.16" y="106.68" smashed="yes">
+<attribute name="VALUE" x="133.35" y="97.79" size="1.778" layer="96"/>
+<attribute name="NAME" x="133.35" y="113.792" size="1.778" layer="95"/>
 </instance>
 <instance part="R1" gate="G$1" x="152.4" y="30.48" smashed="yes" rot="R180">
 <attribute name="NAME" x="156.21" y="28.9814" size="1.778" layer="95" rot="R180"/>
@@ -7807,6 +7775,12 @@ Source: http://www.osram.convergy.de/</description>
 <attribute name="NAME" x="146.685" y="132.08" size="1.27" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="164.465" y="132.08" size="1.27" layer="96" font="vector" rot="R90"/>
 </instance>
+<instance part="U2" gate="G$1" x="99.06" y="129.54" smashed="yes">
+<attribute name="NAME" x="88.9" y="135.1321" size="2.541859375" layer="95"/>
+<attribute name="VALUE" x="88.9" y="121.402109375" size="2.543090625" layer="96"/>
+</instance>
+<instance part="U$4" gate="G$1" x="5.08" y="50.8" smashed="yes" rot="R90"/>
+<instance part="U$1" gate="G$1" x="53.34" y="53.34" smashed="yes" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -7814,15 +7788,15 @@ Source: http://www.osram.convergy.de/</description>
 <net name="GND" class="0">
 <segment>
 <label x="119.38" y="121.92" size="1.27" layer="95" xref="yes"/>
-<wire x1="104.14" y1="114.3" x2="119.38" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="114.3" x2="119.38" y2="127" width="0.1524" layer="91"/>
-<pinref part="BATTERY_REGULATOR3V3" gate="G$1" pin="ADJ/GND"/>
 <wire x1="114.3" y1="127" x2="119.38" y2="127" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="124.46" y1="129.54" x2="124.46" y2="127" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="127" x2="119.38" y2="127" width="0.1524" layer="91"/>
 <junction x="119.38" y="127"/>
+<pinref part="U2" gate="G$1" pin="GND/ADJ"/>
 <pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="114.3" x2="119.38" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="121.92" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
@@ -7835,19 +7809,14 @@ Source: http://www.osram.convergy.de/</description>
 <label x="40.64" y="109.22" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="58.42" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
-<label x="45.72" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="15.24" y1="73.66" x2="25.4" y2="73.66" width="0.1524" layer="91"/>
-<label x="25.4" y="73.66" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="10.16" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
+<label x="22.86" y="68.58" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="G$1" pin="-"/>
-<wire x1="142.24" y1="109.22" x2="152.4" y2="109.22" width="0.1524" layer="91"/>
-<label x="149.86" y="109.22" size="1.778" layer="95"/>
+<wire x1="142.24" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
+<label x="152.4" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="LS1" gate="G$1" pin="NEG"/>
@@ -7872,21 +7841,13 @@ Source: http://www.osram.convergy.de/</description>
 <wire x1="152.4" y1="127" x2="152.4" y2="124.46" width="0.1524" layer="91"/>
 <label x="152.4" y="124.46" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="48.26" y1="35.56" x2="33.02" y2="35.56" width="0.1524" layer="91"/>
+<label x="33.02" y="35.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="BATTERY_REGULATOR3V3" gate="G$1" pin="VIN"/>
-<wire x1="83.82" y1="132.08" x2="81.28" y2="132.08" width="0.1524" layer="91"/>
-<label x="81.28" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="81.28" y1="132.08" x2="81.28" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="CON1" gate="G$1" pin="+"/>
-<wire x1="152.4" y1="114.3" x2="142.24" y2="114.3" width="0.1524" layer="91"/>
-</segment>
+<net name="5V" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="5"/>
 <wire x1="149.86" y1="127" x2="149.86" y2="124.46" width="0.1524" layer="91"/>
@@ -7897,26 +7858,26 @@ Source: http://www.osram.convergy.de/</description>
 <wire x1="149.86" y1="137.16" x2="149.86" y2="139.7" width="0.1524" layer="91"/>
 <label x="149.86" y="139.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="3V3" class="0">
 <segment>
-<pinref part="BATTERY_REGULATOR3V3" gate="G$1" pin="VOUT"/>
 <wire x1="114.3" y1="132.08" x2="116.84" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="132.08" x2="116.84" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="139.7" x2="124.46" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="139.7" x2="124.46" y2="137.16" width="0.1524" layer="91"/>
 <label x="119.38" y="139.7" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="VOUT"/>
 </segment>
+<segment>
+<pinref part="D1" gate="1" pin="A"/>
+<label x="132.08" y="96.52" size="1.27" layer="95" rot="R270" xref="yes"/>
+<wire x1="129.54" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="3V3" class="0">
 <segment>
 <wire x1="58.42" y1="88.9" x2="53.34" y2="88.9" width="0.1524" layer="91"/>
 <label x="53.34" y="88.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<pinref part="D1" gate="1" pin="A"/>
-<label x="134.62" y="93.98" size="1.27" layer="95" xref="yes"/>
-<wire x1="132.08" y1="93.98" x2="134.62" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
@@ -7929,15 +7890,14 @@ Source: http://www.osram.convergy.de/</description>
 <label x="40.64" y="111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="58.42" y1="45.72" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
-<label x="45.72" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="58.42" y1="45.72" x2="58.42" y2="43.18" width="0.1524" layer="91"/>
+<label x="33.02" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="48.26" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="VIN"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="63.5" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="63.5" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
 <label x="25.4" y="63.5" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="VIN"/>
+<pinref part="U$4" gate="G$1" pin="3V3"/>
 </segment>
 <segment>
 <wire x1="157.48" y1="30.48" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
@@ -7948,6 +7908,12 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="43.18" x2="165.1" y2="43.18" width="0.1524" layer="91"/>
 <label x="165.1" y="43.18" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="3V3(OUT)"/>
+<wire x1="121.92" y1="91.44" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
+<label x="137.16" y="88.9" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCL1" class="0">
@@ -7966,23 +7932,16 @@ Source: http://www.osram.convergy.de/</description>
 <label x="40.64" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="78.74" x2="25.4" y2="78.74" width="0.1524" layer="91"/>
-<label x="25.4" y="78.74" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="D1" gate="1" pin="C"/>
-<wire x1="121.92" y1="93.98" x2="127" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VSYS"/>
+<wire x1="10.16" y1="76.2" x2="22.86" y2="76.2" width="0.1524" layer="91"/>
+<label x="22.86" y="76.2" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="SCL"/>
 </segment>
 </net>
 <net name="SDA0" class="0">
 <segment>
-<wire x1="58.42" y1="22.86" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
-<label x="45.72" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$2" gate="G$1" pin="SDA"/>
+<label x="35.56" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="SDA"/>
+<wire x1="48.26" y1="22.86" x2="35.56" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <label x="144.78" y="35.56" size="1.27" layer="95" xref="yes"/>
@@ -7999,9 +7958,9 @@ Source: http://www.osram.convergy.de/</description>
 </net>
 <net name="SCL0" class="0">
 <segment>
-<wire x1="58.42" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
-<label x="45.72" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U$2" gate="G$1" pin="SCL"/>
+<label x="35.56" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="SCL"/>
+<wire x1="48.26" y1="27.94" x2="35.56" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <label x="142.24" y="40.64" size="1.27" layer="95" xref="yes"/>
@@ -8034,9 +7993,9 @@ Source: http://www.osram.convergy.de/</description>
 <label x="40.64" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="15.24" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
 <label x="25.4" y="83.82" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
+<pinref part="U$4" gate="G$1" pin="SDA"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -8085,6 +8044,28 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="U1" gate="G$1" pin="GP20"/>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="121.92" y1="50.8" x2="137.16" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<wire x1="83.82" y1="132.08" x2="81.28" y2="132.08" width="0.1524" layer="91"/>
+<label x="81.28" y="127" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="81.28" y1="132.08" x2="81.28" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="114.3" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
+<pinref part="U2" gate="G$1" pin="VIN"/>
+</segment>
+<segment>
+<pinref part="CON1" gate="G$1" pin="+"/>
+<wire x1="144.78" y1="109.22" x2="142.24" y2="109.22" width="0.1524" layer="91"/>
+<label x="144.78" y="109.22" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VBUS"/>
+<pinref part="D1" gate="1" pin="C"/>
+<wire x1="121.92" y1="96.52" x2="124.46" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
