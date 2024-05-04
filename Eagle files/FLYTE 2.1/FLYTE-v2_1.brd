@@ -3,10 +3,10 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
+<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -181,7 +181,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.YnVzaW5lc3M6aWl0YjUzNQ" projecturn="a.YnVzaW5lc3M6aWl0YjUzNSNEMjAyMjA3MjU1NDIwMjEzNzY" f3durn="urn:adsk.wipprod:dm.lineage:jQ7C4NV9RB6eI30_qBJzBA" pcbguid="8cd1458f-768b-48ed-a8b8-6d023e6b69b8" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="2a022255-9a1d-48d5-bbbf-c881e8a3bf04" lastsyncedrevisionid="2a022255-9a1d-48d5-bbbf-c881e8a3bf04" lastboardhashguid="c37a480a-631b-47b4-54b2-87c3bbc9a39c" lastpushedtime="2024-05-01T03:43:34Z" linktopcb3d="true"/>
+<fusionsync huburn="a.YnVzaW5lc3M6aWl0YjUzNQ" projecturn="a.YnVzaW5lc3M6aWl0YjUzNSNEMjAyMjA3MjU1NDIwMjEzNzY" f3durn="urn:adsk.wipprod:dm.lineage:jQ7C4NV9RB6eI30_qBJzBA" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="2a022255-9a1d-48d5-bbbf-c881e8a3bf04" lastsyncedrevisionid="2a022255-9a1d-48d5-bbbf-c881e8a3bf04" lastboardhashguid="c37a480a-631b-47b4-54b2-87c3bbc9a39c" lastpushedtime="2024-05-01T03:43:34Z" linktopcb3d="false"/>
 <plain>
 <wire x1="0" y1="0" x2="116" y2="0" width="0" layer="20"/>
 <wire x1="116" y1="0" x2="116" y2="55" width="0" layer="20"/>
@@ -3068,7 +3068,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="P$31"/>
 <contactref element="INTERFACE" pad="3"/>
 <contactref element="INTERFACE" pad="1"/>
-<wire x1="73.569" y1="43.71" x2="73.569" y2="52.81" width="0" layer="19" extent="1-1"/>
+<wire x1="73.569" y1="52.81" x2="73.569" y2="43.71" width="0.254" layer="1"/>
 <wire x1="70.01" y1="29.21" x2="73.569" y2="43.71" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="LED1">
