@@ -9148,7 +9148,7 @@ Source: www.kingbright.com</description>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="22uF"/>
-<part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="VBUS_CONN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="U3" library="ADS1115IDGSR" deviceset="ADS1115IDGSR" device="" override_package3d_urn="urn:adsk.eagle:package:43006505/2" override_package_urn="urn:adsk.eagle:footprint:43006506/1"/>
 <part name="C5" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="100 nF"/>
 <part name="U$4" library="BNO055" deviceset="BNO055" device="" override_package3d_urn="urn:adsk.eagle:package:43006369/2" override_package_urn="urn:adsk.eagle:footprint:43006370/1"/>
@@ -9162,7 +9162,7 @@ Source: www.kingbright.com</description>
 <part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43006555/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43006545/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="H4" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43006542/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
-<part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2" override_package3d_urn="urn:adsk.eagle:package:43006558/3" override_package_urn="urn:adsk.eagle:footprint:22258/1"/>
+<part name="RAM_AIR" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2" override_package3d_urn="urn:adsk.eagle:package:43006558/3" override_package_urn="urn:adsk.eagle:footprint:22258/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
@@ -9176,26 +9176,26 @@ Source: www.kingbright.com</description>
 <part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4004" device="" package3d_urn="urn:adsk.eagle:package:43336/1" override_package3d_urn="urn:adsk.eagle:package:40381849/2" override_package_urn="urn:adsk.eagle:footprint:43094/1"/>
 <part name="C9" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF"/>
 <part name="C10" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-6.3V-20%" override_package3d_urn="urn:adsk.eagle:package:40331879/2" override_package_urn="urn:adsk.eagle:footprint:40331880/1" value="10 uF"/>
-<part name="Q1" library="IRF540NPBF" deviceset="IRF540NPBF" device=""/>
-<part name="Q2" library="IRF540NPBF" deviceset="IRF540NPBF" device=""/>
-<part name="SERIAL_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device=""/>
-<part name="GPS_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device=""/>
-<part name="MOTOR_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device=""/>
+<part name="Q1" library="IRF540NPBF" deviceset="IRF540NPBF" device="" override_package3d_urn="urn:adsk.eagle:package:44252858/3" override_package_urn="urn:adsk.eagle:footprint:44252859/1"/>
+<part name="Q2" library="IRF540NPBF" deviceset="IRF540NPBF" device="" override_package3d_urn="urn:adsk.eagle:package:44252853/2" override_package_urn="urn:adsk.eagle:footprint:44252854/1"/>
+<part name="SERIAL_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device="" override_package3d_urn="urn:adsk.eagle:package:44252846/2" override_package_urn="urn:adsk.eagle:footprint:44252847/1"/>
+<part name="GPS_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device="" override_package3d_urn="urn:adsk.eagle:package:44252849/2" override_package_urn="urn:adsk.eagle:footprint:44252850/1"/>
+<part name="MOTOR_CONN" library="B4B-XH-AM__LF__SN_" deviceset="B4B-XH-AM_(LF)(SN)" device="" override_package3d_urn="urn:adsk.eagle:package:44252851/2" override_package_urn="urn:adsk.eagle:footprint:44252852/1"/>
 <part name="3V3_LED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="VCC_LED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="R14" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
 <part name="VBUS_LED" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
-<part name="USB_REG" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
-<part name="LIPO_REG" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
-<part name="RESET" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
-<part name="INTERFACE" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
+<part name="USB_REG" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:44252891/2" override_package_urn="urn:adsk.eagle:footprint:44252892/1"/>
+<part name="LIPO_REG" library="AMS1117-3.3" deviceset="AMS1117-3.3" device="" override_package3d_urn="urn:adsk.eagle:package:44252876/2" override_package_urn="urn:adsk.eagle:footprint:44252877/1"/>
+<part name="RESET" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device="" override_package3d_urn="urn:adsk.eagle:package:44253003/2" override_package_urn="urn:adsk.eagle:footprint:44253004/1"/>
+<part name="INTERFACE" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device="" override_package3d_urn="urn:adsk.eagle:package:44252924/2" override_package_urn="urn:adsk.eagle:footprint:44252925/1"/>
 <part name="R15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7K ohm"/>
 <part name="U$2" library="KX134_Breakout" deviceset="KX134-BREAKOUT" device=""/>
-<part name="MAIN" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
-<part name="LIPO_POWER" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
-<part name="DROGUE" library="XT30UPB-M" deviceset="XT30UPB-M" device=""/>
+<part name="MAIN" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:44252914/2" override_package_urn="urn:adsk.eagle:footprint:44252915/1"/>
+<part name="LIPO_POWER" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:44252894/2" override_package_urn="urn:adsk.eagle:footprint:44252895/1"/>
+<part name="DROGUE" library="XT30UPB-M" deviceset="XT30UPB-M" device="" override_package3d_urn="urn:adsk.eagle:package:44252903/2" override_package_urn="urn:adsk.eagle:footprint:44252904/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -9301,7 +9301,7 @@ to select I2C</text>
 <attribute name="NAME" x="255.524" y="185.801" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="245.364" y="185.801" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="JP1" gate="G$1" x="233.68" y="101.6" smashed="yes" rot="R90">
+<instance part="VBUS_CONN" gate="G$1" x="233.68" y="101.6" smashed="yes" rot="R90">
 <attribute name="NAME" x="227.965" y="95.25" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="238.76" y="95.25" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -9359,7 +9359,7 @@ to select I2C</text>
 <attribute name="NAME" x="18.034" y="84.4042" size="1.778" layer="95"/>
 <attribute name="VALUE" x="18.034" y="81.3562" size="1.778" layer="96"/>
 </instance>
-<instance part="JP2" gate="A" x="340.36" y="251.46" smashed="yes" rot="R180">
+<instance part="RAM_AIR" gate="A" x="340.36" y="251.46" smashed="yes" rot="R180">
 <attribute name="NAME" x="346.71" y="243.205" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="346.71" y="259.08" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -9642,7 +9642,7 @@ to select I2C</text>
 <label x="7.62" y="78.74" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="RAM_AIR" gate="A" pin="1"/>
 <wire x1="342.9" y1="246.38" x2="350.52" y2="246.38" width="0.1524" layer="91"/>
 <label x="350.52" y="246.38" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -9903,7 +9903,7 @@ to select I2C</text>
 <pinref part="SERIAL_CONN" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="4"/>
+<pinref part="RAM_AIR" gate="A" pin="4"/>
 <wire x1="342.9" y1="254" x2="350.52" y2="254" width="0.1524" layer="91"/>
 <label x="350.52" y="254" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -10179,12 +10179,12 @@ to select I2C</text>
 <wire x1="218.44" y1="88.9" x2="231.14" y2="88.9" width="0.1524" layer="91"/>
 <label x="223.52" y="88.9" size="1.27" layer="95" rot="R90" xref="yes"/>
 <wire x1="231.14" y1="88.9" x2="231.14" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="VBUS_CONN" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VBUS_REG" class="0">
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="VBUS_CONN" gate="G$1" pin="2"/>
 <wire x1="233.68" y1="99.06" x2="233.68" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="91.44" x2="238.76" y2="91.44" width="0.1524" layer="91"/>
 <label x="238.76" y="91.44" size="1.27" layer="95" xref="yes"/>
@@ -10261,7 +10261,7 @@ to select I2C</text>
 </net>
 <net name="AIR_DATA" class="0">
 <segment>
-<pinref part="JP2" gate="A" pin="3"/>
+<pinref part="RAM_AIR" gate="A" pin="3"/>
 <wire x1="342.9" y1="251.46" x2="350.52" y2="251.46" width="0.1524" layer="91"/>
 <label x="350.52" y="251.46" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -10273,7 +10273,7 @@ to select I2C</text>
 </net>
 <net name="AIR_SCK" class="0">
 <segment>
-<pinref part="JP2" gate="A" pin="2"/>
+<pinref part="RAM_AIR" gate="A" pin="2"/>
 <wire x1="342.9" y1="248.92" x2="350.52" y2="248.92" width="0.1524" layer="91"/>
 <label x="350.52" y="248.92" size="1.27" layer="95" xref="yes"/>
 </segment>
