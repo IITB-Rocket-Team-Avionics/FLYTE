@@ -1710,139 +1710,6 @@ Source: http://www.osram.convergy.de/</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="pinhead" urn="urn:adsk.eagle:library:325">
-<description>&lt;b&gt;Pin Header Connectors&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="1X03" urn="urn:adsk.eagle:footprint:22340/1" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
-<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
-</package>
-<package name="1X03/90" urn="urn:adsk.eagle:footprint:22341/1" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-3.81" y1="-1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-2.54" y1="6.985" x2="-2.54" y2="1.27" width="0.762" layer="21"/>
-<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-1.905" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="0" y1="6.985" x2="0" y2="1.27" width="0.762" layer="21"/>
-<wire x1="1.27" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="-1.905" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="2.54" y1="6.985" x2="2.54" y2="1.27" width="0.762" layer="21"/>
-<pad name="1" x="-2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
-<text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
-<text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-2.921" y1="0.635" x2="-2.159" y2="1.143" layer="21"/>
-<rectangle x1="-0.381" y1="0.635" x2="0.381" y2="1.143" layer="21"/>
-<rectangle x1="2.159" y1="0.635" x2="2.921" y2="1.143" layer="21"/>
-<rectangle x1="-2.921" y1="-2.921" x2="-2.159" y2="-1.905" layer="21"/>
-<rectangle x1="-0.381" y1="-2.921" x2="0.381" y2="-1.905" layer="21"/>
-<rectangle x1="2.159" y1="-2.921" x2="2.921" y2="-1.905" layer="21"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="1X03" urn="urn:adsk.eagle:package:22458/2" type="model" library_version="4">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="1X03"/>
-</packageinstances>
-</package3d>
-<package3d name="1X03/90" urn="urn:adsk.eagle:package:22459/2" type="model" library_version="4">
-<description>PIN HEADER</description>
-<packageinstances>
-<packageinstance name="1X03/90"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="PINHD3" urn="urn:adsk.eagle:symbol:22339/1" library_version="4">
-<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="PINHD-1X3" urn="urn:adsk.eagle:component:22524/4" prefix="JP" uservalue="yes" library_version="4">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<gates>
-<gate name="A" symbol="PINHD3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X03">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22458/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="92" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="/90" package="1X03/90">
-<connects>
-<connect gate="A" pin="1" pad="1"/>
-<connect gate="A" pin="2" pad="2"/>
-<connect gate="A" pin="3" pad="3"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:22459/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="17" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="holes" urn="urn:adsk.eagle:library:237">
 <description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -8529,6 +8396,73 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="S3B-XH-A_LF__SN_">
+<packages>
+<package name="JST_S3B-XH-A(LF)(SN)">
+<wire x1="-4.95" y1="5.75" x2="4.95" y2="5.75" width="0.127" layer="51"/>
+<wire x1="4.95" y1="5.75" x2="4.95" y2="-5.75" width="0.127" layer="51"/>
+<wire x1="4.95" y1="-5.75" x2="-4.95" y2="-5.75" width="0.127" layer="51"/>
+<wire x1="-4.95" y1="-5.75" x2="-4.95" y2="5.75" width="0.127" layer="51"/>
+<wire x1="-5.2" y1="6" x2="5.2" y2="6" width="0.05" layer="39"/>
+<wire x1="5.2" y1="6" x2="5.2" y2="-6" width="0.05" layer="39"/>
+<wire x1="5.2" y1="-6" x2="-5.2" y2="-6" width="0.05" layer="39"/>
+<wire x1="-5.2" y1="-6" x2="-5.2" y2="6" width="0.05" layer="39"/>
+<text x="-5" y="6.55" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5" y="-6.45" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<circle x="2.5" y="-6.45" radius="0.1" width="0.2" layer="51"/>
+<wire x1="-4.95" y1="5.75" x2="4.95" y2="5.75" width="0.127" layer="21"/>
+<wire x1="4.95" y1="5.75" x2="4.95" y2="-5.75" width="0.127" layer="21"/>
+<wire x1="4.95" y1="-5.75" x2="-4.95" y2="-5.75" width="0.127" layer="21"/>
+<wire x1="-4.95" y1="-5.75" x2="-4.95" y2="5.75" width="0.127" layer="21"/>
+<circle x="2.5" y="-6.45" radius="0.1" width="0.2" layer="21"/>
+<pad name="1" x="2.5" y="-3.45" drill="1" shape="square" rot="R180"/>
+<pad name="2" x="0" y="-3.45" drill="1" rot="R180"/>
+<pad name="3" x="-2.5" y="-3.45" drill="1" rot="R180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="S3B-XH-A(LF)(SN)">
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<text x="-5.08" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-10.16" y="2.54" length="middle" direction="pas"/>
+<pin name="2" x="-10.16" y="0" length="middle" direction="pas"/>
+<pin name="3" x="-10.16" y="-2.54" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="S3B-XH-A(LF)(SN)" prefix="J">
+<description>Connector Header Through Hole, Right Angle 3 position 0.098" (2.50mm) &lt;a href="https://pricing.snapeda.com/parts/S3B-XH-A%28LF%29%28SN%29/JST%20Sales/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="S3B-XH-A(LF)(SN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_S3B-XH-A(LF)(SN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="In Stock"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/S3B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"/>
+<attribute name="DESCRIPTION" value=" Connector Header Through Hole, Right Angle 3 position 0.098 (2.50mm) "/>
+<attribute name="MF" value="JST Sales"/>
+<attribute name="MP" value="S3B-XH-A(LF)(SN)"/>
+<attribute name="PACKAGE" value="Custom Package JST Sales"/>
+<attribute name="PRICE" value="None"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/S3B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8541,10 +8475,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="PICO" library="RpiPico" deviceset="RASPBERRY_PICO-NO_DEBUG" device="" override_package3d_urn="urn:adsk.eagle:package:43007819/2" override_package_urn="urn:adsk.eagle:footprint:43007820/1"/>
 <part name="D1" library="adafruit" deviceset="1N4004" device="" override_package3d_urn="urn:adsk.eagle:package:43007855/2" override_package_urn="urn:adsk.eagle:footprint:43007856/1"/>
-<part name="SERVO1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="SERVO2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="SERVO3" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
-<part name="SERVO4" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007850/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007851/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
 <part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="3.0" package3d_urn="urn:adsk.eagle:package:14280/1" override_package3d_urn="urn:adsk.eagle:package:43007852/2" override_package_urn="urn:adsk.eagle:footprint:14251/1"/>
@@ -8571,8 +8501,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="301k ohm"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-16V-20%" value="22uF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="22UF" device="-0805-16V-20%" value="22uF"/>
-<part name="S1" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
-<part name="S2" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
+<part name="RESET" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
+<part name="INTERFACE" library="TS04-66-95-BK-100-SMT" deviceset="TS04-66-95-BK-100-SMT" device=""/>
 <part name="U2" library="MIC29302WU" deviceset="MIC29302WU-TR" device="TO-263-5_MCH-M"/>
 <part name="C5" library="microbuilder" deviceset="CAP_TANTALUM" device="A/3216_WAVE" value="10 uF"/>
 <part name="C6" library="microbuilder" deviceset="CAP_TANTALUM" device="A/3216_WAVE" value="10 uF"/>
@@ -8581,6 +8511,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LS1" library="SparkFun-Electromechanical" deviceset="BUZZER" device="-PTH"/>
 <part name="6.8V_LED" library="adafruit" deviceset="LED" device="CHIPLED_1206"/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="330 ohm"/>
+<part name="J2" library="S3B-XH-A_LF__SN_" deviceset="S3B-XH-A(LF)(SN)" device=""/>
+<part name="J3" library="S3B-XH-A_LF__SN_" deviceset="S3B-XH-A(LF)(SN)" device=""/>
+<part name="J4" library="S3B-XH-A_LF__SN_" deviceset="S3B-XH-A(LF)(SN)" device=""/>
+<part name="J5" library="S3B-XH-A_LF__SN_" deviceset="S3B-XH-A(LF)(SN)" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8597,19 +8531,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="D1" gate="1" x="251.46" y="144.78" smashed="yes" rot="R180">
 <attribute name="NAME" x="248.92" y="144.2974" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="248.92" y="147.0914" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="SERVO1" gate="A" x="363.22" y="149.86" smashed="yes">
-<attribute name="NAME" x="356.87" y="155.575" size="1.778" layer="95"/>
-<attribute name="VALUE" x="356.87" y="142.24" size="1.778" layer="96"/>
-</instance>
-<instance part="SERVO2" gate="A" x="363.22" y="132.08" smashed="yes">
-<attribute name="VALUE" x="356.87" y="124.46" size="1.778" layer="96"/>
-</instance>
-<instance part="SERVO3" gate="A" x="363.22" y="114.3" smashed="yes">
-<attribute name="VALUE" x="356.87" y="106.68" size="1.778" layer="96"/>
-</instance>
-<instance part="SERVO4" gate="A" x="363.22" y="96.52" smashed="yes">
-<attribute name="VALUE" x="356.87" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="H1" gate="G$1" x="86.36" y="139.7" smashed="yes">
 <attribute name="NAME" x="89.154" y="140.2842" size="1.778" layer="95"/>
@@ -8702,10 +8623,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="194.564" y="71.501" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="194.564" y="66.421" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="S1" gate="G$1" x="248.92" y="134.62" smashed="yes">
+<instance part="RESET" gate="G$1" x="248.92" y="134.62" smashed="yes">
 <attribute name="NAME" x="243.84" y="130.302" size="1.778" layer="95"/>
 </instance>
-<instance part="S2" gate="G$1" x="248.92" y="116.84" smashed="yes">
+<instance part="INTERFACE" gate="G$1" x="248.92" y="116.84" smashed="yes">
 <attribute name="NAME" x="243.84" y="112.522" size="1.778" layer="95"/>
 </instance>
 <instance part="U2" gate="A" x="208.28" y="236.22" smashed="yes">
@@ -8740,6 +8661,22 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="143.51" y="219.9386" size="1.778" layer="95"/>
 <attribute name="VALUE" x="143.51" y="215.138" size="1.778" layer="96"/>
 </instance>
+<instance part="J2" gate="G$1" x="370.84" y="149.86" smashed="yes">
+<attribute name="NAME" x="365.76" y="156.21" size="1.778" layer="95"/>
+<attribute name="VALUE" x="365.76" y="142.24" size="1.778" layer="96"/>
+</instance>
+<instance part="J3" gate="G$1" x="370.84" y="132.08" smashed="yes">
+<attribute name="NAME" x="365.76" y="138.43" size="1.778" layer="95"/>
+<attribute name="VALUE" x="365.76" y="124.46" size="1.778" layer="96"/>
+</instance>
+<instance part="J4" gate="G$1" x="370.84" y="114.3" smashed="yes">
+<attribute name="NAME" x="365.76" y="120.65" size="1.778" layer="95"/>
+<attribute name="VALUE" x="365.76" y="106.68" size="1.778" layer="96"/>
+</instance>
+<instance part="J5" gate="G$1" x="370.84" y="96.52" smashed="yes">
+<attribute name="NAME" x="365.76" y="102.87" size="1.778" layer="95"/>
+<attribute name="VALUE" x="365.76" y="88.9" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -8768,34 +8705,34 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="J1" gate="G$1" pin="NEG"/>
 </segment>
 <segment>
-<pinref part="SERVO1" gate="A" pin="1"/>
 <wire x1="360.68" y1="152.4" x2="353.06" y2="152.4" width="0.1524" layer="91"/>
 <label x="353.06" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="134.62" x2="353.06" y2="134.62" width="0.1524" layer="91"/>
 <label x="353.06" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO2" gate="A" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="116.84" x2="353.06" y2="116.84" width="0.1524" layer="91"/>
 <label x="353.06" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO3" gate="A" pin="1"/>
+<pinref part="J4" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="99.06" x2="353.06" y2="99.06" width="0.1524" layer="91"/>
 <label x="353.06" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO4" gate="A" pin="1"/>
+<pinref part="J5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="256.54" y1="134.62" x2="259.08" y2="134.62" width="0.1524" layer="91"/>
 <label x="259.08" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="S1" gate="G$1" pin="4"/>
+<pinref part="RESET" gate="G$1" pin="4"/>
 </segment>
 <segment>
 <wire x1="256.54" y1="116.84" x2="261.62" y2="116.84" width="0.1524" layer="91"/>
 <label x="261.62" y="116.84" size="1.27" layer="95" xref="yes"/>
-<pinref part="S2" gate="G$1" pin="4"/>
+<pinref part="INTERFACE" gate="G$1" pin="4"/>
 </segment>
 <segment>
 <pinref part="H1" gate="G$1" pin="MOUNT"/>
@@ -8957,9 +8894,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="185.42" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SERVO1" gate="A" pin="3"/>
 <wire x1="360.68" y1="147.32" x2="353.06" y2="147.32" width="0.1524" layer="91"/>
 <label x="353.06" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J2" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SERVO2" class="0">
@@ -8971,7 +8908,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <wire x1="360.68" y1="129.54" x2="353.06" y2="129.54" width="0.1524" layer="91"/>
 <label x="353.06" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO2" gate="A" pin="3"/>
+<pinref part="J3" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SERVO3" class="0">
@@ -8983,7 +8920,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <wire x1="360.68" y1="111.76" x2="353.06" y2="111.76" width="0.1524" layer="91"/>
 <label x="353.06" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO3" gate="A" pin="3"/>
+<pinref part="J4" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SERVO4" class="0">
@@ -8995,7 +8932,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <wire x1="360.68" y1="93.98" x2="353.06" y2="93.98" width="0.1524" layer="91"/>
 <label x="353.06" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO4" gate="A" pin="3"/>
+<pinref part="J5" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="SER_TX" class="0">
@@ -9167,14 +9104,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <net name="N$2" class="0">
 <segment>
 <pinref part="PICO" gate="G$1" pin="RUN"/>
-<pinref part="S1" gate="G$1" pin="2"/>
+<pinref part="RESET" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="134.62" x2="241.3" y2="134.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="PICO" gate="G$1" pin="GP27"/>
-<pinref part="S2" gate="G$1" pin="2"/>
+<pinref part="INTERFACE" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="116.84" x2="241.3" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9200,24 +9137,24 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="271.78" y="228.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="SERVO1" gate="A" pin="2"/>
 <wire x1="360.68" y1="149.86" x2="353.06" y2="149.86" width="0.1524" layer="91"/>
 <label x="353.06" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="132.08" x2="353.06" y2="132.08" width="0.1524" layer="91"/>
 <label x="353.06" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO2" gate="A" pin="2"/>
+<pinref part="J3" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="114.3" x2="353.06" y2="114.3" width="0.1524" layer="91"/>
 <label x="353.06" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO3" gate="A" pin="2"/>
+<pinref part="J4" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="96.52" x2="353.06" y2="96.52" width="0.1524" layer="91"/>
 <label x="353.06" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="SERVO4" gate="A" pin="2"/>
+<pinref part="J5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="6.8V_LED" gate="G$1" pin="A"/>
