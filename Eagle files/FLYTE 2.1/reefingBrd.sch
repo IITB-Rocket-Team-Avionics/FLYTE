@@ -10219,11 +10219,6 @@ TS-003</description>
 <junction x="48.26" y="10.16"/>
 <label x="48.26" y="17.78" size="1.27" layer="95" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="SDA"/>
-<wire x1="-30.48" y1="-20.32" x2="-25.4" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-25.4" y="-20.32" size="1.27" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -10295,6 +10290,11 @@ TS-003</description>
 <wire x1="68.58" y1="5.08" x2="68.58" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="68.58" y="5.08"/>
 <label x="68.58" y="-10.16" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="SDA"/>
+<wire x1="-30.48" y1="-20.32" x2="-25.4" y2="-20.32" width="0.1524" layer="91"/>
+<label x="-25.4" y="-20.32" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCL0" class="0">
