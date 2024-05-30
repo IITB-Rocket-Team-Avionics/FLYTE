@@ -1,10 +1,8 @@
 import machine
 import utime
-import sdcard
 import uos
 from machine import SPI,Pin,I2C
 from time import sleep,ticks_ms
-from bmp280 import *
 from math import sqrt
 
 class HX710B:
@@ -31,43 +29,23 @@ class HX710B:
 
 
 # Connect HX710B to Raspberry Pi Pico
-hx710b = HX710B(pd_sck=17, dout=16)  # Change GPIO pin numbers accordingly
+hx710b = HX710B(pd_sck=14, dout=15)  # Change GPIO pin numbers accordingly
 
 offset = 0
 n = 10
 
-# sd = sdcard.SDCard(SPI(1,
-#                     sck= Pin(10),
-#                     mosi=Pin(11),
-#                     miso=Pin(12)), Pin(13))
-# uos.mount(sd, "/sd")
-
-runtime = 1000 * 1000
-
 t = ticks_ms()
 
-bmp = BMP280(I2C(1,sda=Pin(2),scl=Pin(3)))
+print('Calculating Offset... Please Wait')
 
-with open('/air_data_1.txt','w') as file:
+for i in range(n):
+    hx710b.read_raw_data()
 
-    for i in range(n):
-        hx710b.read_raw_data()
-
-    for i in range(n):
-        offset += hx710b.read_raw_data()/n
-
-    print(offset)
+for i in range(n):
+    offset += hx710b.read_raw_data()/n
 
 
-    while True:
-        reading = hx710b.read_raw_data()
-        density = bmp.pressure/(287.08*(bmp.temperature+273.15))
-#         print((reading))
-        file.write(str(ticks_ms() - t) + ',' + str(reading) + ',' + str(density) + '\n')
-        
-        
-#         k = 0.055
-#         if reading >= offset:
-#             print(sqrt(2*k*(reading - offset)/density))
-        
-file.close()
+while True:
+    reading = hx710b.read_raw_data()
+    print((reading-offset))
+

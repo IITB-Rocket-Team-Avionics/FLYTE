@@ -22,9 +22,12 @@ GPIO_RESPONDER_SCL = 5
 led_2 = Pin(3,Pin.OUT)
 led_1 = Pin(2,Pin.OUT)
 
-servo = PWM(Pin(6))
-
+servo = PWM(Pin(7))
 servo.freq(50)
+
+buzzer = PWM(Pin(10))
+buzzer.freq(1000)
+buzzer.duty_u16(0)
 
 servo_min = 1500
 servo_max = 8000
@@ -32,7 +35,7 @@ servo_max = 8000
 t_step = 0.05
 g = 9.80665
 
-m = 6.5
+m = 8.001
 kd_max = 0.5*pi*pow(0.05,2)*0.7207/m
 kd_min = 0.5*pi*pow(0.05,2)*0.4468/m
 
@@ -43,20 +46,17 @@ def main():
     
     print("Starting")
     
-    for i in range(3):
-        led_2.value(0)
-        led_1.value(1)
-        sleep(0.2)
-        led_2.value(1)
-        led_1.value(0)
-        sleep(0.2)
+    for i in range(4):
+        buzzer.duty_u16(60000)
+        sleep(0.05)
+        buzzer.duty_u16(0)
+        sleep(0.05)
 
     storage = uos.statvfs("/")
     free_bytes = storage[0]*storage[3]
     
     idx = open('/index.txt','r')
     index = idx.read()
-#     data_file = open('/data_' + index + '.bin','ab')
     idx.close()
     new_idx = int(index) + 1
     idx_file = open('/index.txt','w')
@@ -95,18 +95,19 @@ def main():
     size = 0
     
     t_burnout = 0
-    target = 0
+    target = 1000.01
     alpha = 1
     set_target = False
     
+    last_beep_time = 0
+    
     while True:
-        
+
         if ticks_ms() - last_rx_time > 500:
-            led_2.value(0)
-            led_1.value(1)
-        else:
-            led_2.value(1)
-            led_1.value(0)
+            buzzer.duty_u16(60000)
+            sleep(0.75)
+            buzzer.duty_u16(0)
+            sleep(0.75)
         
         
         if i2c_responder.write_data_is_available():
@@ -156,9 +157,23 @@ def main():
             elif len(data) == 5:
                 if data[0] == 70:
                     fast_4 = bytearray(data[1:])
+                elif data[0] == 77:
+                    m = ustruct.unpack('!f',bytearray(data[1:]))[0]
+                    print(m)
+                    data_file = open('/data_' + index + '.bin','ab')
+                    data_file.write(b'M' + bytearray(data[1:]))
+                    size += 5
+                    data_file.close()
+                elif data[0] == 78:
+                    target = ustruct.unpack('!f',bytearray(data[1:]))[0]
+                    print(target)
+                    data_file = open('/data_' + index + '.bin','ab')
+                    data_file.write(b'N' + bytearray(data[1:]))
+                    size += 5
+                    data_file.close()
                 elif data[0] == 76:
                     kf_3 = bytearray(data[1:])
-                    
+
                     fast = fast_1 + fast_2 + fast_3 + fast_4
                     kf = b'K' + kf_1 + kf_2 + kf_3
                     
@@ -167,11 +182,13 @@ def main():
                         data_file.write(fast)
                         data_file.write(kf)
                         try:
-                            data_file.write(b'T' + ustruct.pack('!ffff',y_low,y_high,target,alpha))
+                            data_file.write(b'T' + ustruct.pack('!fff',y_low,y_high,alpha))
+                            size += 99
                         except:
+                            size += 86
                             pass
                         data_file.close()
-                        size += 103
+                        
                                         
                     if got_slow_data and free_bytes - size > 1000 and state != 0:
                         slow = slow_1 + slow_2 + slow_3
@@ -183,19 +200,20 @@ def main():
                         
             if kf_2_updated:
                 
+                kf_1_data = ustruct.unpack('!ffff',kf_1)
                 kf_2_data = ustruct.unpack('!ffff',kf_2)
                 
                 if kf_2_data[2] > 0 and kf_2_data[3] != 0:
                     
                     y_high = kf_2_data[1]
                     vy_high = kf_2_data[2]
-                    v_high = sqrt(kf_2_data[2]*kf_2_data[2] + kf_2_data[3]*kf_2_data[3])
-                    pitch_high = acos(vy_high/v_high)
+                    v_high = kf_2_data[3]
+                    pitch_high = acos(kf_1_data[2])
                     
                     y_low = kf_2_data[1]
                     vy_low = kf_2_data[2]
-                    v_low = sqrt(kf_2_data[2]*kf_2_data[2] + kf_2_data[3]*kf_2_data[3])
-                    pitch_low = acos(vy_low/v_low)
+                    v_low = kf_2_data[3]
+                    pitch_low = acos(kf_1_data[2])
 
                     while vy_high > 0:
                         density = pow(8.9611 - (y_high + calib_alt)/4947.19,5.2479)/(78410.439 + 287.06*calib_temp - 1.86589*(y_high + calib_alt))
@@ -210,31 +228,26 @@ def main():
                         v_low += -(g1*cos(pitch_low) + k1_max*density*v_low*v_low)
                         vy_low += -(g1 + k1_max*density*v_low*v_low*cos(pitch_low))
                         y_low += vy_low*t_step
-                        
-#                         print(y_low,y_high)
-                                                
+                                                                        
                     kf_2_updated = False
                     
+                    if state == 0 and ticks_ms() - last_beep_time > 5000:
+                        buzzer.duty_u16(60000)
+                        sleep(0.1)
+                        buzzer.duty_u16(0)
+                        last_beep_time = ticks_ms()
                     if state == 1:
                         t_burnout = t_log
                         servo.duty_u16(int(servo_min))
                     elif state == 2:
-                        if t_log - t_burnout > 500 and not set_target:
-                            target = (y_high + y_low)/2
-                            set_target = True
-                        if y_high != y_low:
-                            alpha = (target - y_low)/(y_high - y_low)
-                        
-                        if alpha > 1:
-                            alpha = 1
-                        elif alpha < 0:
-                            alpha = 0
-                                               
-                        servo.duty_u16(int(alpha*servo_min + (1 - alpha)*servo_max))
+                        if t_log - t_burnout < 5000:                   
+                            servo.duty_u16(int(servo_max))
+                        else:
+                            servo.duty_u16(int((servo_min + servo_max)/2))
                         
                     else:
                         servo.duty_u16(int(servo_min))
-                               
+                          
     
     try:
         data_file.close()
