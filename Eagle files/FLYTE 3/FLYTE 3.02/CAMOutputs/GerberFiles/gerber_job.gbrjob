@@ -1,7 +1,7 @@
 {
     "Header": {
         "Comment": "All values are metric (mm)",
-        "CreationDate": "2024-10-04T15:38:06Z",
+        "CreationDate": "2025-01-24T14:49:15Z",
         "GenerationSoftware": {
             "Application": "EAGLE",
             "Vendor": "Autodesk",
@@ -10,15 +10,15 @@
         "Part": "Single"
     },
     "Overall": {
-        "BoardThickness": 1.65,
+        "BoardThickness": 1.64,
         "LayerNumber": 2,
         "Name": {
-            "ProjectId": "FLYTE 3.01"
+            "ProjectId": "FLYTE_3.02"
         },
         "Owner": "Medhavin Chabra <22b0024@iitb.ac.in>",
         "Size": {
-            "X": 99,
-            "Y": 55
+            "X": 75,
+            "Y": 50
         }
     }
 }

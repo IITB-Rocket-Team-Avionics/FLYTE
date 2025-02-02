@@ -23,17 +23,17 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -47,9 +47,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -194,7 +194,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.YnVzaW5lc3M6aWl0YjUzNQ" projecturn="a.YnVzaW5lc3M6aWl0YjUzNSNEMjAyMjA3MjU1NDIwMjEzNzY" f3durn="urn:adsk.wipprod:dm.lineage:q5nEPerKT-aGq4p6PvifWg" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="8500a8b6-cc3b-4484-b628-2e719983497f" lastsyncedrevisionid="8500a8b6-cc3b-4484-b628-2e719983497f" lastboardhashguid="efc4fea6-9053-95d8-316e-6ff285633228" lastpushedtime="2023-05-17T07:01:40Z" linktopcb3d="true"/>
+<fusionsync huburn="a.YnVzaW5lc3M6aWl0YjUzNQ" projecturn="a.YnVzaW5lc3M6aWl0YjUzNSNEMjAyMjA3MjU1NDIwMjEzNzY" f3durn="urn:adsk.wipprod:dm.lineage:q5nEPerKT-aGq4p6PvifWg" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="8500a8b6-cc3b-4484-b628-2e719983497f" lastsyncedrevisionid="8500a8b6-cc3b-4484-b628-2e719983497f" lastboardhashguid="efc4fea6-9053-95d8-316e-6ff285633228" lastpushedtime="2023-05-17T07:01:40Z" linktopcb3d="false"/>
 <plain>
 <wire x1="0" y1="0" x2="116" y2="0" width="0" layer="20"/>
 <wire x1="116" y1="0" x2="116" y2="55" width="0" layer="20"/>
@@ -2002,15 +2002,6 @@
 <text x="102.7" y="11.2" size="1.778" layer="22" rot="MR0">Core SX1262</text>
 <text x="11.6" y="29.1" size="1.778" layer="22" rot="MR0">FLASH</text>
 <text x="50.9" y="25.8" size="1.778" layer="22" rot="MR0">RPi PICO</text>
-<dimension x1="0" y1="55" x2="0" y2="0" x3="-12" y3="27.5" textsize="1.778" layer="21"/>
-<dimension x1="0" y1="-0.1" x2="116" y2="0" x3="58.0120375" y3="-14.01550625" textsize="1.778" layer="21"/>
-<dimension x1="111" y1="50" x2="111" y2="55" x3="120" y3="52.5" textsize="1.778" layer="21"/>
-<dimension x1="111" y1="50" x2="116" y2="50" x3="113.5" y3="64" textsize="1.778" layer="21"/>
-<dimension x1="5" y1="5" x2="111" y2="5" x3="58" y3="-7" textsize="1.778" layer="21"/>
-<dimension x1="5" y1="50" x2="5" y2="5" x3="-4" y3="27.5" textsize="1.778" layer="21"/>
-<dimension x1="2.4" y1="39" x2="2.4" y2="55" x3="-22" y3="47" textsize="1.778" layer="21"/>
-<dimension x1="64.4" y1="52.6" x2="0" y2="52.6" x3="32.2" y3="62.1" textsize="1.778" layer="21"/>
-<dimension x1="113.6" y1="37" x2="113.6" y2="55" x3="129.2" y3="46" textsize="1.778" layer="21"/>
 <text x="34.5" y="15" size="1.27" layer="21">RAGO</text>
 <text x="41.5" y="15" size="1.27" layer="21">SM01</text>
 <text x="42.5" y="18" size="1.27" layer="21">NM</text>
