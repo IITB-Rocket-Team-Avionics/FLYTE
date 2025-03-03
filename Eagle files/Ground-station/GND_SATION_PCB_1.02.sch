@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.7.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8981,361 +8981,361 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="4.12" y1="4.12" x2="4.12" y2="-4.12" width="0.1" layer="39"/>
 <wire x1="4.12" y1="-4.12" x2="-4.12" y2="-4.12" width="0.1" layer="39"/>
 <wire x1="-4.12" y1="-4.12" x2="-4.12" y2="4.12" width="0.1" layer="39"/>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="2.55"/>
 <vertex x="-3.05" y="2.55"/>
 <vertex x="-3.05" y="2.65"/>
 <vertex x="-3.825" y="2.65"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="2.15"/>
 <vertex x="-3.05" y="2.15"/>
 <vertex x="-3.05" y="2.25"/>
 <vertex x="-3.825" y="2.25"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="1.75"/>
 <vertex x="-3.05" y="1.75"/>
 <vertex x="-3.05" y="1.85"/>
 <vertex x="-3.825" y="1.85"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="1.35"/>
 <vertex x="-3.05" y="1.35"/>
 <vertex x="-3.05" y="1.45"/>
 <vertex x="-3.825" y="1.45"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="0.95"/>
 <vertex x="-3.05" y="0.95"/>
 <vertex x="-3.05" y="1.05"/>
 <vertex x="-3.825" y="1.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="0.55"/>
 <vertex x="-3.05" y="0.55"/>
 <vertex x="-3.05" y="0.65"/>
 <vertex x="-3.825" y="0.65"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="0.15"/>
 <vertex x="-3.05" y="0.15"/>
 <vertex x="-3.05" y="0.25"/>
 <vertex x="-3.825" y="0.25"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-0.25"/>
 <vertex x="-3.05" y="-0.25"/>
 <vertex x="-3.05" y="-0.15"/>
 <vertex x="-3.825" y="-0.15"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-0.65"/>
 <vertex x="-3.05" y="-0.65"/>
 <vertex x="-3.05" y="-0.55"/>
 <vertex x="-3.825" y="-0.55"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-1.05"/>
 <vertex x="-3.05" y="-1.05"/>
 <vertex x="-3.05" y="-0.95"/>
 <vertex x="-3.825" y="-0.95"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-1.45"/>
 <vertex x="-3.05" y="-1.45"/>
 <vertex x="-3.05" y="-1.35"/>
 <vertex x="-3.825" y="-1.35"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-1.85"/>
 <vertex x="-3.05" y="-1.85"/>
 <vertex x="-3.05" y="-1.75"/>
 <vertex x="-3.825" y="-1.75"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-2.25"/>
 <vertex x="-3.05" y="-2.25"/>
 <vertex x="-3.05" y="-2.15"/>
 <vertex x="-3.825" y="-2.15"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-3.825" y="-2.65"/>
 <vertex x="-3.05" y="-2.65"/>
 <vertex x="-3.05" y="-2.55"/>
 <vertex x="-3.825" y="-2.55"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-2.65" y="-3.825"/>
 <vertex x="-2.55" y="-3.825"/>
 <vertex x="-2.55" y="-3.05"/>
 <vertex x="-2.65" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-2.25" y="-3.825"/>
 <vertex x="-2.15" y="-3.825"/>
 <vertex x="-2.15" y="-3.05"/>
 <vertex x="-2.25" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.85" y="-3.825"/>
 <vertex x="-1.75" y="-3.825"/>
 <vertex x="-1.75" y="-3.05"/>
 <vertex x="-1.85" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.45" y="-3.825"/>
 <vertex x="-1.35" y="-3.825"/>
 <vertex x="-1.35" y="-3.05"/>
 <vertex x="-1.45" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.05" y="-3.825"/>
 <vertex x="-0.95" y="-3.825"/>
 <vertex x="-0.95" y="-3.05"/>
 <vertex x="-1.05" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-0.65" y="-3.825"/>
 <vertex x="-0.55" y="-3.825"/>
 <vertex x="-0.55" y="-3.05"/>
 <vertex x="-0.65" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-0.25" y="-3.825"/>
 <vertex x="-0.15" y="-3.825"/>
 <vertex x="-0.15" y="-3.05"/>
 <vertex x="-0.25" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.15" y="-3.825"/>
 <vertex x="0.25" y="-3.825"/>
 <vertex x="0.25" y="-3.05"/>
 <vertex x="0.15" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.55" y="-3.825"/>
 <vertex x="0.65" y="-3.825"/>
 <vertex x="0.65" y="-3.05"/>
 <vertex x="0.55" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.95" y="-3.825"/>
 <vertex x="1.05" y="-3.825"/>
 <vertex x="1.05" y="-3.05"/>
 <vertex x="0.95" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="1.35" y="-3.825"/>
 <vertex x="1.45" y="-3.825"/>
 <vertex x="1.45" y="-3.05"/>
 <vertex x="1.35" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="1.75" y="-3.825"/>
 <vertex x="1.85" y="-3.825"/>
 <vertex x="1.85" y="-3.05"/>
 <vertex x="1.75" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="2.15" y="-3.825"/>
 <vertex x="2.25" y="-3.825"/>
 <vertex x="2.25" y="-3.05"/>
 <vertex x="2.15" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="2.55" y="-3.825"/>
 <vertex x="2.65" y="-3.825"/>
 <vertex x="2.65" y="-3.05"/>
 <vertex x="2.55" y="-3.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-2.65"/>
 <vertex x="3.825" y="-2.65"/>
 <vertex x="3.825" y="-2.55"/>
 <vertex x="3.05" y="-2.55"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-2.25"/>
 <vertex x="3.825" y="-2.25"/>
 <vertex x="3.825" y="-2.15"/>
 <vertex x="3.05" y="-2.15"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-1.85"/>
 <vertex x="3.825" y="-1.85"/>
 <vertex x="3.825" y="-1.75"/>
 <vertex x="3.05" y="-1.75"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-1.45"/>
 <vertex x="3.825" y="-1.45"/>
 <vertex x="3.825" y="-1.35"/>
 <vertex x="3.05" y="-1.35"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-1.05"/>
 <vertex x="3.825" y="-1.05"/>
 <vertex x="3.825" y="-0.95"/>
 <vertex x="3.05" y="-0.95"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-0.65"/>
 <vertex x="3.825" y="-0.65"/>
 <vertex x="3.825" y="-0.55"/>
 <vertex x="3.05" y="-0.55"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="-0.25"/>
 <vertex x="3.825" y="-0.25"/>
 <vertex x="3.825" y="-0.15"/>
 <vertex x="3.05" y="-0.15"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="0.15"/>
 <vertex x="3.825" y="0.15"/>
 <vertex x="3.825" y="0.25"/>
 <vertex x="3.05" y="0.25"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="0.55"/>
 <vertex x="3.825" y="0.55"/>
 <vertex x="3.825" y="0.65"/>
 <vertex x="3.05" y="0.65"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="0.95"/>
 <vertex x="3.825" y="0.95"/>
 <vertex x="3.825" y="1.05"/>
 <vertex x="3.05" y="1.05"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="1.35"/>
 <vertex x="3.825" y="1.35"/>
 <vertex x="3.825" y="1.45"/>
 <vertex x="3.05" y="1.45"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="1.75"/>
 <vertex x="3.825" y="1.75"/>
 <vertex x="3.825" y="1.85"/>
 <vertex x="3.05" y="1.85"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="2.15"/>
 <vertex x="3.825" y="2.15"/>
 <vertex x="3.825" y="2.25"/>
 <vertex x="3.05" y="2.25"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="3.05" y="2.55"/>
 <vertex x="3.825" y="2.55"/>
 <vertex x="3.825" y="2.65"/>
 <vertex x="3.05" y="2.65"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="2.55" y="3.05"/>
 <vertex x="2.65" y="3.05"/>
 <vertex x="2.65" y="3.825"/>
 <vertex x="2.55" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="2.15" y="3.05"/>
 <vertex x="2.25" y="3.05"/>
 <vertex x="2.25" y="3.825"/>
 <vertex x="2.15" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="1.75" y="3.05"/>
 <vertex x="1.85" y="3.05"/>
 <vertex x="1.85" y="3.825"/>
 <vertex x="1.75" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="1.35" y="3.05"/>
 <vertex x="1.45" y="3.05"/>
 <vertex x="1.45" y="3.825"/>
 <vertex x="1.35" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.95" y="3.05"/>
 <vertex x="1.05" y="3.05"/>
 <vertex x="1.05" y="3.825"/>
 <vertex x="0.95" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.55" y="3.05"/>
 <vertex x="0.65" y="3.05"/>
 <vertex x="0.65" y="3.825"/>
 <vertex x="0.55" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="0.15" y="3.05"/>
 <vertex x="0.25" y="3.05"/>
 <vertex x="0.25" y="3.825"/>
 <vertex x="0.15" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-0.25" y="3.05"/>
 <vertex x="-0.15" y="3.05"/>
 <vertex x="-0.15" y="3.825"/>
 <vertex x="-0.25" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-0.65" y="3.05"/>
 <vertex x="-0.55" y="3.05"/>
 <vertex x="-0.55" y="3.825"/>
 <vertex x="-0.65" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.05" y="3.05"/>
 <vertex x="-0.95" y="3.05"/>
 <vertex x="-0.95" y="3.825"/>
 <vertex x="-1.05" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.45" y="3.05"/>
 <vertex x="-1.35" y="3.05"/>
 <vertex x="-1.35" y="3.825"/>
 <vertex x="-1.45" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-1.85" y="3.05"/>
 <vertex x="-1.75" y="3.05"/>
 <vertex x="-1.75" y="3.825"/>
 <vertex x="-1.85" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-2.25" y="3.05"/>
 <vertex x="-2.15" y="3.05"/>
 <vertex x="-2.15" y="3.825"/>
 <vertex x="-2.25" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="29" pour="solid">
+<polygon width="0.1" layer="29">
 <vertex x="-2.65" y="3.05"/>
 <vertex x="-2.55" y="3.05"/>
 <vertex x="-2.55" y="3.825"/>
 <vertex x="-2.65" y="3.825"/>
 </polygon>
-<polygon width="0.1" layer="31" pour="solid">
+<polygon width="0.1" layer="31">
 <vertex x="0.22346875" y="0.22346875"/>
 <vertex x="1.17971875" y="0.22346875"/>
 <vertex x="1.17971875" y="1.17971875"/>
 <vertex x="0.22346875" y="1.17971875"/>
 </polygon>
-<polygon width="0.1" layer="31" pour="solid">
+<polygon width="0.1" layer="31">
 <vertex x="-1.17971875" y="0.22346875"/>
 <vertex x="-0.22346875" y="0.22346875"/>
 <vertex x="-0.22346875" y="1.17971875"/>
 <vertex x="-1.17971875" y="1.17971875"/>
 </polygon>
-<polygon width="0.1" layer="31" pour="solid">
+<polygon width="0.1" layer="31">
 <vertex x="-1.17971875" y="-1.17971875"/>
 <vertex x="-0.22346875" y="-1.17971875"/>
 <vertex x="-0.22346875" y="-0.22346875"/>
 <vertex x="-1.17971875" y="-0.22346875"/>
 </polygon>
-<polygon width="0.1" layer="31" pour="solid">
+<polygon width="0.1" layer="31">
 <vertex x="0.22346875" y="-1.17971875"/>
 <vertex x="1.17971875" y="-1.17971875"/>
 <vertex x="1.17971875" y="-0.22346875"/>
@@ -9836,92 +9836,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
-<library name="con-wago-500" urn="urn:adsk.eagle:library:195">
-<description>&lt;b&gt;Wago Screw Clamps&lt;/b&gt;&lt;p&gt;
-Grid 5.00 mm&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="W237-102" urn="urn:adsk.eagle:footprint:10676/1" library_version="2">
-<description>&lt;b&gt;WAGO SCREW CLAMP&lt;/b&gt;</description>
-<wire x1="-3.491" y1="-2.286" x2="-1.484" y2="-0.279" width="0.254" layer="51"/>
-<wire x1="1.488" y1="-2.261" x2="3.469" y2="-0.254" width="0.254" layer="51"/>
-<wire x1="-4.989" y1="-5.461" x2="4.993" y2="-5.461" width="0.1524" layer="21"/>
-<wire x1="4.993" y1="3.734" x2="4.993" y2="3.531" width="0.1524" layer="21"/>
-<wire x1="4.993" y1="3.734" x2="-4.989" y2="3.734" width="0.1524" layer="21"/>
-<wire x1="-4.989" y1="-5.461" x2="-4.989" y2="-3.073" width="0.1524" layer="21"/>
-<wire x1="-4.989" y1="-3.073" x2="-3.389" y2="-3.073" width="0.1524" layer="21"/>
-<wire x1="-3.389" y1="-3.073" x2="-1.611" y2="-3.073" width="0.1524" layer="51"/>
-<wire x1="-1.611" y1="-3.073" x2="1.615" y2="-3.073" width="0.1524" layer="21"/>
-<wire x1="3.393" y1="-3.073" x2="4.993" y2="-3.073" width="0.1524" layer="21"/>
-<wire x1="-4.989" y1="-3.073" x2="-4.989" y2="3.531" width="0.1524" layer="21"/>
-<wire x1="4.993" y1="-3.073" x2="4.993" y2="-5.461" width="0.1524" layer="21"/>
-<wire x1="-4.989" y1="3.531" x2="4.993" y2="3.531" width="0.1524" layer="21"/>
-<wire x1="-4.989" y1="3.531" x2="-4.989" y2="3.734" width="0.1524" layer="21"/>
-<wire x1="4.993" y1="3.531" x2="4.993" y2="-3.073" width="0.1524" layer="21"/>
-<wire x1="1.615" y1="-3.073" x2="3.393" y2="-3.073" width="0.1524" layer="51"/>
-<circle x="-2.5" y="-1.27" radius="1.4986" width="0.1524" layer="51"/>
-<circle x="-2.5" y="2.2098" radius="0.508" width="0.1524" layer="21"/>
-<circle x="2.5038" y="-1.27" radius="1.4986" width="0.1524" layer="51"/>
-<circle x="2.5038" y="2.2098" radius="0.508" width="0.1524" layer="21"/>
-<pad name="1" x="-2.5" y="-1.27" drill="1.1938" shape="long" rot="R90"/>
-<pad name="2" x="2.5" y="-1.27" drill="1.1938" shape="long" rot="R90"/>
-<text x="-5.04" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-3.8462" y="-5.0038" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-4.532" y="0.635" size="1.27" layer="21" ratio="10">1</text>
-<text x="0.421" y="0.635" size="1.27" layer="21" ratio="10">2</text>
-</package>
-</packages>
-<packages3d>
-<package3d name="W237-102" urn="urn:adsk.eagle:package:10688/1" type="box" library_version="2">
-<description>WAGO SCREW CLAMP</description>
-<packageinstances>
-<packageinstance name="W237-102"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="KL" urn="urn:adsk.eagle:symbol:10675/1" library_version="2">
-<circle x="1.27" y="0" radius="1.27" width="0.254" layer="94"/>
-<text x="0" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
-<pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-<symbol name="KL+V" urn="urn:adsk.eagle:symbol:10673/1" library_version="2">
-<circle x="1.27" y="0" radius="1.27" width="0.254" layer="94"/>
-<text x="-2.54" y="-3.683" size="1.778" layer="96">&gt;VALUE</text>
-<text x="0" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
-<pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="W237-102" urn="urn:adsk.eagle:component:10702/2" prefix="X" uservalue="yes" library_version="2">
-<description>&lt;b&gt;WAGO SCREW CLAMP&lt;/b&gt;</description>
-<gates>
-<gate name="-1" symbol="KL" x="0" y="5.08" addlevel="always"/>
-<gate name="-2" symbol="KL+V" x="0" y="0" addlevel="always"/>
-</gates>
-<devices>
-<device name="" package="W237-102">
-<connects>
-<connect gate="-1" pin="KL" pad="1"/>
-<connect gate="-2" pin="KL" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:10688/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="237-102" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="70K9898" constant="no"/>
-<attribute name="POPULARITY" value="32" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="microbuilder">
 <description>&lt;h2&gt;&lt;b&gt;microBuilder.eu&lt;/b&gt; Eagle Footprint Library&lt;/h2&gt;
 
@@ -10167,6 +10081,85 @@ Grid 5.00 mm&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="XT60-M">
+<packages>
+<package name="AMASS_XT60-M">
+<wire x1="-7.75" y1="4.05" x2="4.95" y2="4.05" width="0.127" layer="51"/>
+<wire x1="7.75" y1="1.6" x2="7.75" y2="-1.6" width="0.127" layer="51"/>
+<wire x1="4.95" y1="-4.05" x2="-7.75" y2="-4.05" width="0.127" layer="51"/>
+<wire x1="-7.75" y1="-4.05" x2="-7.75" y2="4.05" width="0.127" layer="51"/>
+<wire x1="7.75" y1="-1.6" x2="4.95" y2="-4.05" width="0.127" layer="51"/>
+<wire x1="4.95" y1="4.05" x2="7.75" y2="1.6" width="0.127" layer="51"/>
+<wire x1="-7.75" y1="4.05" x2="4.95" y2="4.05" width="0.127" layer="21"/>
+<wire x1="7.75" y1="1.6" x2="7.75" y2="-1.6" width="0.127" layer="21"/>
+<wire x1="4.95" y1="-4.05" x2="-7.75" y2="-4.05" width="0.127" layer="21"/>
+<wire x1="-7.75" y1="-4.05" x2="-7.75" y2="4.05" width="0.127" layer="21"/>
+<wire x1="-8" y1="4.3" x2="-8" y2="-4.3" width="0.05" layer="39"/>
+<wire x1="-8" y1="-4.3" x2="8" y2="-4.3" width="0.05" layer="39"/>
+<wire x1="8" y1="-4.3" x2="8" y2="4.3" width="0.05" layer="39"/>
+<wire x1="8" y1="4.3" x2="-8" y2="4.3" width="0.05" layer="39"/>
+<text x="-8" y="5.3" size="1.27" layer="25">&gt;NAME</text>
+<text x="-8" y="-5.3" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<wire x1="-9.5" y1="0" x2="-8.5" y2="0" width="0.127" layer="21"/>
+<wire x1="-9" y1="0.5" x2="-9" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="8.5" y1="0" x2="9.5" y2="0" width="0.127" layer="51"/>
+<wire x1="4.95" y1="4.05" x2="7.75" y2="1.6" width="0.127" layer="21"/>
+<wire x1="7.75" y1="-1.6" x2="4.95" y2="-4.05" width="0.127" layer="21"/>
+<wire x1="-9.5" y1="0" x2="-8.5" y2="0" width="0.127" layer="51"/>
+<wire x1="-9" y1="0.5" x2="-9" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="8.5" y1="0" x2="9.5" y2="0" width="0.127" layer="21"/>
+<pad name="P" x="-3.6" y="0" drill="4.55" diameter="6" shape="square"/>
+<pad name="N" x="3.6" y="0" drill="4.55" diameter="6"/>
+</package>
+</packages>
+<symbols>
+<symbol name="XT60-M">
+<wire x1="0" y1="3.81" x2="1.27" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="1.27" y2="5.08" width="0.254" layer="94"/>
+<text x="0" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<wire x1="0" y1="2.54" x2="1.905" y2="2.54" width="0.254" layer="94"/>
+<rectangle x1="0.635" y1="2.2225" x2="2.2225" y2="2.8575" layer="94"/>
+<wire x1="0" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<rectangle x1="0.635" y1="-0.3175" x2="2.2225" y2="0.3175" layer="94"/>
+<pin name="POS" x="-5.08" y="2.54" length="middle" direction="pas"/>
+<pin name="NEG" x="-5.08" y="0" length="middle" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="XT60-M" prefix="J">
+<description> &lt;a href="https://pricing.snapeda.com/parts/XT60-M/AMASS/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="XT60-M" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="AMASS_XT60-M">
+<connects>
+<connect gate="G$1" pin="NEG" pad="N"/>
+<connect gate="G$1" pin="POS" pad="P"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Not in stock"/>
+<attribute name="CHECK_PRICES" value="https://www.snapeda.com/parts/XT60-M/AMASS/view-part/?ref=eda"/>
+<attribute name="DESCRIPTION" value="                                                      Plug; DC supply; XT60; male; PIN: 2; for cable; soldered; 30A; 500V                                              "/>
+<attribute name="MF" value="AMASS"/>
+<attribute name="MP" value="XT60-M"/>
+<attribute name="PACKAGE" value="Package "/>
+<attribute name="PRICE" value="None"/>
+<attribute name="SNAPEDA_LINK" value="https://www.snapeda.com/parts/XT60-M/AMASS/view-part/?ref=snap"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10222,8 +10215,6 @@ Grid 5.00 mm&lt;p&gt;
 <part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="C19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="D2" library="SS14" deviceset="SS14" device=""/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="X1" library="con-wago-500" library_urn="urn:adsk.eagle:library:195" deviceset="W237-102" device="" package3d_urn="urn:adsk.eagle:package:10688/1"/>
 <part name="LCD" library="microbuilder" deviceset="HEADER-1X9" device=""/>
 <part name="R1" library="standardparts" deviceset="RESISTOR" device=".0603" value="10k ohm"/>
 <part name="R11" library="standardparts" deviceset="RESISTOR" device=".0603" value="10k ohm"/>
@@ -10242,6 +10233,8 @@ Grid 5.00 mm&lt;p&gt;
 <part name="R9" library="standardparts" deviceset="RESISTOR" device=".0603" value="10k ohm"/>
 <part name="R10" library="standardparts" deviceset="RESISTOR" device=".0603" value="5.1 K"/>
 <part name="R15" library="standardparts" deviceset="RESISTOR" device=".0603" value="5.1 K"/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="J2" library="XT60-M" deviceset="XT60-M" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10418,16 +10411,6 @@ Grid 5.00 mm&lt;p&gt;
 <attribute name="NAME" x="5.08" y="-78.74" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="-1.27" y="-78.74" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="P+1" gate="1" x="17.78" y="-83.82" smashed="yes">
-<attribute name="VALUE" x="15.24" y="-88.9" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="X1" gate="-1" x="-86.36" y="-55.88" smashed="yes">
-<attribute name="NAME" x="-86.36" y="-54.991" size="1.778" layer="95" rot="R180"/>
-</instance>
-<instance part="X1" gate="-2" x="-86.36" y="-60.96" smashed="yes">
-<attribute name="VALUE" x="-88.9" y="-64.643" size="1.778" layer="96"/>
-<attribute name="NAME" x="-86.36" y="-60.071" size="1.778" layer="95" rot="R180"/>
-</instance>
 <instance part="LCD" gate="A" x="-330.2" y="134.62" smashed="yes">
 <attribute name="NAME" x="-336.55" y="147.955" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-336.55" y="119.38" size="1.778" layer="96"/>
@@ -10499,6 +10482,13 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="R15" gate="G$1" x="-12.7" y="-106.68" smashed="yes" rot="R90">
 <attribute name="NAME" x="-13.97" y="-107.95" size="1.016" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="-13.97" y="-105.41" size="1.016" layer="96" rot="R180"/>
+</instance>
+<instance part="P+1" gate="1" x="12.7" y="-55.88" smashed="yes" rot="R270">
+<attribute name="VALUE" x="7.62" y="-53.34" size="1.778" layer="96"/>
+</instance>
+<instance part="J2" gate="G$1" x="-93.98" y="-55.88" smashed="yes" rot="R180">
+<attribute name="NAME" x="-93.98" y="-62.23" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-88.9" y="-50.8" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -10660,12 +10650,6 @@ Grid 5.00 mm&lt;p&gt;
 <label x="109.22" y="210.82" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-2" pin="KL"/>
-<wire x1="-81.28" y1="-60.96" x2="-78.74" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="-60.96" x2="-78.74" y2="-73.66" width="0.1524" layer="91"/>
-<label x="-78.74" y="-73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <wire x1="-86.36" y1="-99.06" x2="-88.9" y2="-99.06" width="0.1524" layer="91"/>
 <wire x1="-88.9" y1="-99.06" x2="-88.9" y2="-104.14" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
@@ -10696,6 +10680,12 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="25.4" y1="-114.3" x2="25.4" y2="-109.22" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-114.3" x2="63.5" y2="-116.84" width="0.1524" layer="91"/>
 <label x="63.5" y="-119.38" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="POS"/>
+<wire x1="-88.9" y1="-58.42" x2="-83.82" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="-83.82" y1="-58.42" x2="-83.82" y2="-68.58" width="0.1524" layer="91"/>
+<label x="-83.82" y="-68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -11206,25 +11196,6 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="-144.78" y1="78.74" x2="-137.16" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+5V" class="0">
-<segment>
-<pinref part="D1" gate="G$1" pin="K"/>
-<pinref part="U3" gate="G$1" pin="VIN"/>
-<wire x1="33.02" y1="-93.98" x2="25.4" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="-93.98" x2="17.78" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="-93.98" x2="2.54" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="-93.98" x2="-2.54" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="-93.98" x2="25.4" y2="-101.6" width="0.1524" layer="91"/>
-<junction x="25.4" y="-93.98"/>
-<pinref part="C22" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="-93.98" x2="2.54" y2="-88.9" width="0.1524" layer="91"/>
-<junction x="2.54" y="-93.98"/>
-<pinref part="D2" gate="G$1" pin="K"/>
-<wire x1="17.78" y1="-93.98" x2="17.78" y2="-86.36" width="0.1524" layer="91"/>
-<junction x="17.78" y="-93.98"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-</segment>
-</net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="RP2040" gate="IC$1" pin="RUN"/>
@@ -11381,7 +11352,7 @@ Grid 5.00 mm&lt;p&gt;
 <junction x="-27.94" y="-71.12"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="+5V" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="VOUT"/>
 <pinref part="C18" gate="G$1" pin="1"/>
@@ -11395,6 +11366,9 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="-15.24" y1="-55.88" x2="2.54" y2="-55.88" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="-55.88" x2="2.54" y2="-78.74" width="0.1524" layer="91"/>
 <junction x="-15.24" y="-55.88"/>
+<wire x1="2.54" y1="-55.88" x2="10.16" y2="-55.88" width="0.1524" layer="91"/>
+<junction x="2.54" y="-55.88"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -11403,9 +11377,9 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="-60.96" y1="-55.88" x2="-68.58" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="C17" gate="G$1" pin="1"/>
 <wire x1="-68.58" y1="-55.88" x2="-68.58" y2="-58.42" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-55.88" x2="-81.28" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="-68.58" y1="-55.88" x2="-88.9" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="-68.58" y="-55.88"/>
-<pinref part="X1" gate="-1" pin="KL"/>
+<pinref part="J2" gate="G$1" pin="NEG"/>
 </segment>
 </net>
 <net name="SDO" class="0">
@@ -11456,6 +11430,21 @@ Grid 5.00 mm&lt;p&gt;
 <net name="N$13" class="0">
 <segment>
 <wire x1="-142.24" y1="78.74" x2="-139.7" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="D1" gate="G$1" pin="K"/>
+<pinref part="U3" gate="G$1" pin="VIN"/>
+<wire x1="33.02" y1="-93.98" x2="25.4" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-93.98" x2="2.54" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="-93.98" x2="-2.54" y2="-93.98" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="-93.98" x2="25.4" y2="-101.6" width="0.1524" layer="91"/>
+<junction x="25.4" y="-93.98"/>
+<pinref part="C22" gate="G$1" pin="1"/>
+<wire x1="2.54" y1="-93.98" x2="2.54" y2="-88.9" width="0.1524" layer="91"/>
+<junction x="2.54" y="-93.98"/>
+<pinref part="D2" gate="G$1" pin="K"/>
 </segment>
 </net>
 </nets>
