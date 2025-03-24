@@ -57,46 +57,46 @@
 <library>
 <packages>
 <package name="SOT229P700X180-4N">
-<wire x1="-1.7525" y1="3.2525" x2="1.7525" y2="3.2525" width="0.127" layer="51"/>
-<wire x1="1.7525" y1="3.2525" x2="1.7525" y2="-3.2525" width="0.127" layer="51"/>
-<wire x1="1.7525" y1="-3.2525" x2="-1.7525" y2="-3.2525" width="0.127" layer="51"/>
-<wire x1="-1.7525" y1="-3.2525" x2="-1.7525" y2="3.2525" width="0.127" layer="51"/>
-<wire x1="-1.7525" y1="3.2525" x2="1.7525" y2="3.2525" width="0.127" layer="21"/>
-<wire x1="1.7525" y1="3.2525" x2="1.7525" y2="-3.2525" width="0.127" layer="21"/>
-<wire x1="1.7525" y1="-3.2525" x2="-1.7525" y2="-3.2525" width="0.127" layer="21"/>
-<wire x1="-1.7525" y1="-3.2525" x2="-1.7525" y2="3.2525" width="0.127" layer="21"/>
-<wire x1="4.25" y1="3.5025" x2="-4.25" y2="3.5025" width="0.05" layer="39"/>
-<wire x1="-4.25" y1="3.5025" x2="-4.25" y2="-3.5025" width="0.05" layer="39"/>
-<wire x1="-4.25" y1="-3.5025" x2="4.25" y2="-3.5025" width="0.05" layer="39"/>
-<wire x1="4.25" y1="-3.5025" x2="4.25" y2="3.5025" width="0.05" layer="39"/>
-<circle x="-5" y="2.29" radius="0.1" width="0.2" layer="21"/>
-<circle x="-5" y="2.29" radius="0.1" width="0.2" layer="51"/>
-<text x="-3.5025" y="5.25" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.5025" y="-5.45" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
-<smd name="1" x="-3.345" y="2.29" dx="1.31" dy="0.93" layer="1" roundness="15"/>
-<smd name="2" x="-3.345" y="0" dx="1.31" dy="0.93" layer="1" roundness="15"/>
-<smd name="3" x="-3.345" y="-2.29" dx="1.31" dy="0.93" layer="1" roundness="15"/>
-<smd name="4" x="3.345" y="0" dx="1.31" dy="3.24" layer="1" roundness="15"/>
+<wire x1="-3.2525" y1="-1.7525" x2="-3.2525" y2="1.7525" width="0.127" layer="51"/>
+<wire x1="-3.2525" y1="1.7525" x2="3.2525" y2="1.7525" width="0.127" layer="51"/>
+<wire x1="3.2525" y1="1.7525" x2="3.2525" y2="-1.7525" width="0.127" layer="51"/>
+<wire x1="3.2525" y1="-1.7525" x2="-3.2525" y2="-1.7525" width="0.127" layer="51"/>
+<wire x1="-3.2525" y1="-1.7525" x2="-3.2525" y2="1.7525" width="0.127" layer="21"/>
+<wire x1="-3.2525" y1="1.7525" x2="3.2525" y2="1.7525" width="0.127" layer="21"/>
+<wire x1="3.2525" y1="1.7525" x2="3.2525" y2="-1.7525" width="0.127" layer="21"/>
+<wire x1="3.2525" y1="-1.7525" x2="-3.2525" y2="-1.7525" width="0.127" layer="21"/>
+<wire x1="-3.5025" y1="4.25" x2="-3.5025" y2="-4.25" width="0.05" layer="39"/>
+<wire x1="-3.5025" y1="-4.25" x2="3.5025" y2="-4.25" width="0.05" layer="39"/>
+<wire x1="3.5025" y1="-4.25" x2="3.5025" y2="4.25" width="0.05" layer="39"/>
+<wire x1="3.5025" y1="4.25" x2="-3.5025" y2="4.25" width="0.05" layer="39"/>
+<circle x="-3.99" y="-3.3" radius="0.1" width="0.2" layer="21"/>
+<circle x="-3.99" y="-3.3" radius="0.1" width="0.2" layer="51"/>
+<text x="-3.5025" y="4.65" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5025" y="-4.55" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="1" x="-2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="2" x="0" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="3" x="2.29" y="-3.345" dx="0.93" dy="1.31" layer="1" roundness="15"/>
+<smd name="4" x="0" y="3.345" dx="3.24" dy="1.31" layer="1" roundness="15"/>
 </package>
 </packages>
 <symbols>
-<symbol name="AMS1117-3.3">
+<symbol name="AMS1117-5.0">
 <wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
-<text x="-10.16" y="5.588" size="2.54" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-8.128" size="2.54" layer="96">&gt;VALUE</text>
+<text x="-10.16" y="5.5921" size="2.54186" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-8.13789" size="2.54309" layer="96">&gt;VALUE</text>
 <pin name="VIN" x="-15.24" y="2.54" length="middle" direction="in"/>
 <pin name="VOUT" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
 <pin name="GND/ADJ" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="AMS1117-3.3" prefix="U">
-<description> &lt;a href="https://pricing.snapeda.com/parts/AMS1117-3.3/Advanced%20Monolithic%20Systems/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
+<deviceset name="AMS1117-5.0" prefix="U">
+<description> &lt;a href="https://pricing.snapeda.com/parts/AMS1117-5.0/Advanced%20Monolithic%20Systems/view-part?ref=eda"&gt;Check availability&lt;/a&gt;</description>
 <gates>
-<gate name="G$1" symbol="AMS1117-3.3" x="0" y="0"/>
+<gate name="G$1" symbol="AMS1117-5.0" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT229P700X180-4N">
@@ -110,15 +110,15 @@
 <attribute name="MF" value="Advanced Monolithic Systems"/>
 <attribute name="Description" value="
                         
-                            Sot223/Pkg 1-Amp 3.3-Volt Low Drop Out Voltage Regulatator
+                            Sot223/Pkg 1-Amp 5-Volt Low Drop Out Voltage Regulatator
                         
                     "/>
 <attribute name="Package" value="SOT-223 Seeed Technology"/>
 <attribute name="Price" value="None"/>
-<attribute name="SnapEDA_Link" value="https://www.snapeda.com/parts/AMS1117-3.3/Advanced+Monolithic+Systems/view-part/?ref=snap"/>
-<attribute name="MP" value="AMS1117-3.3"/>
+<attribute name="SnapEDA_Link" value="https://www.snapeda.com/parts/AMS1117-5.0/Advanced+Monolithic+Systems/view-part/?ref=snap"/>
+<attribute name="MP" value="AMS1117-5.0"/>
 <attribute name="Availability" value="Not in stock"/>
-<attribute name="Check_prices" value="https://www.snapeda.com/parts/AMS1117-3.3/Advanced+Monolithic+Systems/view-part/?ref=eda"/>
+<attribute name="Check_prices" value="https://www.snapeda.com/parts/AMS1117-5.0/Advanced+Monolithic+Systems/view-part/?ref=eda"/>
 </technology>
 </technologies>
 </device>
