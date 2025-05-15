@@ -8576,40 +8576,6 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="supply1" urn="urn:adsk.eagle:library:371">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
- GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
- Please keep in mind, that these devices are necessary for the
- automatic wiring of the supply signals.&lt;p&gt;
- The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
- In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="+3V3" urn="urn:adsk.eagle:symbol:26950/1" library_version="1">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+3V3" urn="urn:adsk.eagle:component:26981/1" prefix="+3V3" library_version="1">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="G$1" symbol="+3V3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="RpiPico" urn="urn:adsk.eagle:library:45219394">
 <packages>
 <package name="RP2040-QFN-56" urn="urn:adsk.eagle:footprint:45219396/1" locally_modified="yes" library_version="1" library_locally_modified="yes">
@@ -9194,40 +9160,6 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:45219405/1"/>
 </package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="supply2" urn="urn:adsk.eagle:library:372">
-<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
-GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
-Please keep in mind, that these devices are necessary for the
-automatic wiring of the supply signals.&lt;p&gt;
-The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
-In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="V+" urn="urn:adsk.eagle:symbol:27026/1" library_version="2">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-1.27" y="1.27" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="V+" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="V+" urn="urn:adsk.eagle:component:27074/1" prefix="SUPPLY" library_version="2">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="V+" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -10401,32 +10333,21 @@ Source: &lt;a href="https://www.vishay.com/docs/65737/si7625dn.pdf"&gt; Datashee
 <parts>
 <part name="U$2" library="Texas-HDC1080" deviceset="HDC1080" device=""/>
 <part name="RP2040" library="RpiPico" library_urn="urn:adsk.eagle:library:45219394" deviceset="RP2040-QFN56" device="" package3d_urn="urn:adsk.eagle:package:45219405/1"/>
-<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
-<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device="" value="+1V1"/>
-<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
-<part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="100nF"/>
-<part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
+<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="U1" library="AMS1117-5.0" deviceset="AMS1117-5.0" device=""/>
 <part name="J2" library="XT60-M" deviceset="XT60-M" device=""/>
 <part name="U4" library="SOIC127P790X216-8N" deviceset="SOIC127P790X216-8N" device="W25Q128JVJSQ"/>
 <part name="S3" library="DTS-3" deviceset="DTS-3" device=""/>
-<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22uF"/>
-<part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="22uF"/>
+<part name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
 <part name="U$3" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="ASE" device="" package3d_urn="urn:adsk.eagle:package:12120/1"/>
 <part name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="18pF"/>
 <part name="C24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="18pF"/>
-<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
-<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
-<part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
+<part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R22" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
 <part name="IC1" library="BMP280-standalone" deviceset="BMP280" device=""/>
 <part name="R2" library="standardparts" deviceset="RESISTOR" device=".0603" value="10k ohm"/>
@@ -10442,8 +10363,12 @@ Source: &lt;a href="https://www.vishay.com/docs/65737/si7625dn.pdf"&gt; Datashee
 <part name="D3" library="Diode" library_urn="urn:adsk.eagle:library:16378169" deviceset="SCHOTTKY_" device="DO-219" package3d_urn="urn:adsk.eagle:package:9427153/2" technology="MBR0520LT1G"/>
 <part name="D4" library="Diode" library_urn="urn:adsk.eagle:library:16378169" deviceset="SCHOTTKY_" device="DO-219" package3d_urn="urn:adsk.eagle:package:9427153/2" technology="MBR0520LT1G"/>
 <part name="U2" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="10uF"/>
-<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="22uF"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="10uF"/>
+<part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="22uF"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="27.4"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="27.4"/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -10468,55 +10393,13 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <attribute name="NAME" x="-179.07" y="-76.2" size="2.1844" layer="95"/>
 <attribute name="VALUE" x="-140.97" y="-76.2" size="2.1844" layer="96"/>
 </instance>
-<instance part="C4" gate="G$1" x="-193.04" y="53.34" smashed="yes">
-<attribute name="NAME" x="-191.516" y="53.721" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-191.516" y="48.641" size="1.778" layer="96"/>
-</instance>
-<instance part="C5" gate="G$1" x="-182.88" y="53.34" smashed="yes">
-<attribute name="NAME" x="-181.356" y="53.721" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-181.356" y="48.641" size="1.778" layer="96"/>
-</instance>
-<instance part="C6" gate="G$1" x="-177.8" y="35.56" smashed="yes">
-<attribute name="NAME" x="-176.276" y="35.941" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-176.276" y="30.861" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY1" gate="1" x="-167.64" y="66.04" smashed="yes">
-<attribute name="VALUE" x="-168.91" y="67.31" size="1.778" layer="96"/>
+<instance part="C6" gate="G$1" x="-177.8" y="45.72" smashed="yes">
+<attribute name="NAME" x="-176.276" y="46.101" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-176.276" y="41.021" size="1.778" layer="96"/>
 </instance>
 <instance part="C7" gate="G$1" x="-152.4" y="45.72" smashed="yes">
 <attribute name="NAME" x="-150.876" y="46.101" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-150.876" y="41.021" size="1.778" layer="96"/>
-</instance>
-<instance part="C8" gate="G$1" x="-154.94" y="68.58" smashed="yes">
-<attribute name="NAME" x="-153.416" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-153.416" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C9" gate="G$1" x="-147.32" y="68.58" smashed="yes">
-<attribute name="NAME" x="-145.796" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-145.796" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C10" gate="G$1" x="-139.7" y="68.58" smashed="yes">
-<attribute name="NAME" x="-138.176" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-138.176" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C11" gate="G$1" x="-132.08" y="68.58" smashed="yes">
-<attribute name="NAME" x="-130.556" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-130.556" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C12" gate="G$1" x="-124.46" y="68.58" smashed="yes">
-<attribute name="NAME" x="-122.936" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-122.936" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C15" gate="G$1" x="-116.84" y="68.58" smashed="yes">
-<attribute name="NAME" x="-115.316" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-115.316" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="C16" gate="G$1" x="-109.22" y="68.58" smashed="yes">
-<attribute name="NAME" x="-107.696" y="68.961" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-107.696" y="63.881" size="1.778" layer="96"/>
-</instance>
-<instance part="+3V2" gate="G$1" x="-162.56" y="81.28" smashed="yes">
-<attribute name="VALUE" x="-165.1" y="76.2" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="U1" gate="G$1" x="-515.62" y="139.7" smashed="yes">
 <attribute name="NAME" x="-525.78" y="145.2921" size="2.541859375" layer="95"/>
@@ -10531,8 +10414,8 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <attribute name="NAME" x="77.467340625" y="66.6742" size="1.77875" layer="95" rot="R90"/>
 <attribute name="VALUE" x="80.008990625" y="71.755840625" size="1.77846875" layer="96" rot="R90"/>
 </instance>
-<instance part="C3" gate="G$1" x="-485.14" y="137.16" smashed="yes">
-<attribute name="VALUE" x="-483.616" y="132.461" size="1.778" layer="96"/>
+<instance part="C3" gate="G$1" x="-485.14" y="139.7" smashed="yes">
+<attribute name="VALUE" x="-483.616" y="135.001" size="1.778" layer="96"/>
 </instance>
 <instance part="C18" gate="G$1" x="-538.48" y="137.16" smashed="yes">
 <attribute name="NAME" x="-536.956" y="137.541" size="1.778" layer="95"/>
@@ -10633,6 +10516,22 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <attribute name="NAME" x="-356.616" y="140.081" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-356.616" y="135.001" size="1.778" layer="96"/>
 </instance>
+<instance part="R3" gate="G$1" x="-109.22" y="17.78" smashed="yes">
+<attribute name="NAME" x="-113.03" y="19.2786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-113.03" y="14.478" size="1.778" layer="96"/>
+</instance>
+<instance part="R6" gate="G$1" x="-109.22" y="15.24" smashed="yes">
+<attribute name="NAME" x="-113.03" y="16.7386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-113.03" y="11.938" size="1.778" layer="96"/>
+</instance>
+<instance part="R8" gate="G$1" x="-93.98" y="-45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="-95.4786" y="-49.53" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-90.678" y="-49.53" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R10" gate="G$1" x="-93.98" y="-63.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="-95.4786" y="-67.31" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-90.678" y="-67.31" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10653,54 +10552,14 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <label x="-154.94" y="-83.82" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="-154.94" y1="63.5" x2="-154.94" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-154.94" y1="60.96" x2="-147.32" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="C9" gate="G$1" pin="2"/>
-<wire x1="-147.32" y1="60.96" x2="-147.32" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="60.96" x2="-139.7" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-147.32" y="60.96"/>
-<pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="-139.7" y1="60.96" x2="-139.7" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="60.96" x2="-132.08" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-139.7" y="60.96"/>
-<pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="-132.08" y1="60.96" x2="-132.08" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="60.96" x2="-124.46" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-132.08" y="60.96"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="-124.46" y1="60.96" x2="-124.46" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="60.96" x2="-116.84" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-124.46" y="60.96"/>
-<pinref part="C15" gate="G$1" pin="2"/>
-<wire x1="-116.84" y1="60.96" x2="-116.84" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="60.96" x2="-109.22" y2="60.96" width="0.1524" layer="91"/>
-<junction x="-116.84" y="60.96"/>
-<pinref part="C16" gate="G$1" pin="2"/>
-<wire x1="-109.22" y1="60.96" x2="-109.22" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="60.96" x2="-109.22" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-109.22" y="60.96"/>
-<label x="-109.22" y="58.42" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="-152.4" y1="40.64" x2="-144.78" y2="40.64" width="0.1524" layer="91"/>
 <label x="-144.78" y="40.64" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="-177.8" y1="30.48" x2="-185.42" y2="30.48" width="0.1524" layer="91"/>
-<label x="-185.42" y="30.48" size="1.27" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="-182.88" y1="48.26" x2="-182.88" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="-182.88" y1="45.72" x2="-193.04" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="-193.04" y1="45.72" x2="-193.04" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-193.04" y1="43.18" x2="-193.04" y2="45.72" width="0.1524" layer="91"/>
-<junction x="-193.04" y="45.72"/>
-<label x="-193.04" y="43.18" size="1.27" layer="95" rot="R270" xref="yes"/>
+<wire x1="-177.8" y1="40.64" x2="-177.8" y2="38.1" width="0.1524" layer="91"/>
+<label x="-177.8" y="38.1" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U4" gate="G$1" pin="GND"/>
@@ -10758,7 +10617,7 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <label x="-497.84" y="127" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<wire x1="-485.14" y1="127" x2="-485.14" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="-485.14" y1="127" x2="-485.14" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <label x="-485.14" y="127" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -10811,93 +10670,6 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <label x="-358.14" y="129.54" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
-<net name="3V3_OP" class="0">
-<segment>
-<pinref part="RP2040" gate="IC$1" pin="VREG_IN"/>
-<wire x1="-138.43" y1="33.02" x2="-140.97" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-140.97" y1="33.02" x2="-146.05" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-146.05" y1="33.02" x2="-148.59" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-148.59" y1="33.02" x2="-151.13" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-151.13" y1="33.02" x2="-153.67" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-153.67" y1="33.02" x2="-156.21" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-156.21" y1="33.02" x2="-158.75" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-158.75" y1="33.02" x2="-162.56" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-162.56" y1="33.02" x2="-163.83" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-163.83" y1="33.02" x2="-163.83" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD0"/>
-<wire x1="-158.75" y1="27.94" x2="-158.75" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-158.75" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD1"/>
-<wire x1="-156.21" y1="27.94" x2="-156.21" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-156.21" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD2"/>
-<wire x1="-153.67" y1="27.94" x2="-153.67" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-153.67" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD3"/>
-<wire x1="-151.13" y1="27.94" x2="-151.13" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-151.13" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD4"/>
-<wire x1="-148.59" y1="27.94" x2="-148.59" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-148.59" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="IOVDD5"/>
-<wire x1="-146.05" y1="27.94" x2="-146.05" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-146.05" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="USB_VDD"/>
-<wire x1="-140.97" y1="27.94" x2="-140.97" y2="33.02" width="0.1524" layer="91"/>
-<junction x="-140.97" y="33.02"/>
-<pinref part="RP2040" gate="IC$1" pin="ADC_AVDD"/>
-<wire x1="-138.43" y1="33.02" x2="-138.43" y2="27.94" width="0.1524" layer="91"/>
-<junction x="-162.56" y="33.02"/>
-<wire x1="-162.56" y1="33.02" x2="-162.56" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="-162.56" y1="50.8" x2="-162.56" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-162.56" y1="73.66" x2="-162.56" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-162.56" y1="50.8" x2="-152.4" y2="50.8" width="0.1524" layer="91"/>
-<junction x="-162.56" y="50.8"/>
-<wire x1="-152.4" y1="50.8" x2="-152.4" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="-162.56" y1="73.66" x2="-154.94" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-162.56" y="73.66"/>
-<wire x1="-154.94" y1="71.12" x2="-154.94" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-154.94" y1="73.66" x2="-147.32" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-154.94" y="73.66"/>
-<wire x1="-147.32" y1="71.12" x2="-147.32" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="73.66" x2="-139.7" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-147.32" y="73.66"/>
-<wire x1="-139.7" y1="71.12" x2="-139.7" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-139.7" y1="73.66" x2="-132.08" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-139.7" y="73.66"/>
-<wire x1="-132.08" y1="71.12" x2="-132.08" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-132.08" y1="73.66" x2="-124.46" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-132.08" y="73.66"/>
-<wire x1="-124.46" y1="71.12" x2="-124.46" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-124.46" y1="73.66" x2="-116.84" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-124.46" y="73.66"/>
-<wire x1="-116.84" y1="71.12" x2="-116.84" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="73.66" x2="-109.22" y2="73.66" width="0.1524" layer="91"/>
-<junction x="-116.84" y="73.66"/>
-<wire x1="-109.22" y1="73.66" x2="-109.22" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<pinref part="C10" gate="G$1" pin="1"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<pinref part="C15" gate="G$1" pin="1"/>
-<pinref part="C16" gate="G$1" pin="1"/>
-<pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="-138.43" y1="33.02" x2="-132.08" y2="33.02" width="0.1524" layer="91"/>
-<label x="-132.08" y="33.02" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="RP2040" gate="IC$1" pin="RUN"/>
-<wire x1="-184.15" y1="-50.8" x2="-190.5" y2="-50.8" width="0.1524" layer="91"/>
-<label x="-190.5" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U4" gate="G$1" pin="VCC"/>
-<wire x1="156.21" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
-<label x="167.64" y="68.58" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="XIN" class="0">
 <segment>
 <pinref part="RP2040" gate="IC$1" pin="XIN"/>
@@ -10921,17 +10693,6 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <pinref part="RP2040" gate="IC$1" pin="XOUT"/>
 <wire x1="-184.15" y1="-38.1" x2="-190.5" y2="-38.1" width="0.1524" layer="91"/>
 <label x="-190.5" y="-38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="TRI"/>
-<wire x1="134.62" y1="-20.32" x2="137.16" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="-20.32" x2="137.16" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="-30.48" x2="144.78" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="C24" gate="G$1" pin="2"/>
-<wire x1="144.78" y1="-27.94" x2="144.78" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="144.78" y="-30.48"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="-30.48" x2="149.86" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -10964,22 +10725,13 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <junction x="-171.45" y="33.02"/>
 <junction x="-167.64" y="33.02"/>
 <wire x1="-167.64" y1="33.02" x2="-171.45" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="33.02" x2="-167.64" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="40.64" x2="-167.64" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="58.42" x2="-167.64" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="40.64" x2="-177.8" y2="40.64" width="0.1524" layer="91"/>
-<junction x="-167.64" y="40.64"/>
-<wire x1="-177.8" y1="40.64" x2="-177.8" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="33.02" x2="-167.64" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="50.8" x2="-167.64" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-167.64" y1="50.8" x2="-177.8" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-167.64" y="50.8"/>
+<wire x1="-177.8" y1="50.8" x2="-177.8" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<pinref part="SUPPLY1" gate="1" pin="V+"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-193.04" y1="55.88" x2="-193.04" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-193.04" y1="58.42" x2="-182.88" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-182.88" y1="58.42" x2="-182.88" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="-182.88" y1="58.42" x2="-167.64" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-182.88" y="58.42"/>
-<junction x="-167.64" y="58.42"/>
+<label x="-167.64" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="3V3" class="0">
@@ -11047,6 +10799,72 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <wire x1="-370.84" y1="142.24" x2="-358.14" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="-358.14" y1="142.24" x2="-337.82" y2="142.24" width="0.1524" layer="91"/>
 <junction x="-358.14" y="142.24"/>
+</segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="VREG_IN"/>
+<wire x1="-138.43" y1="33.02" x2="-140.97" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-140.97" y1="33.02" x2="-146.05" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-146.05" y1="33.02" x2="-148.59" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-148.59" y1="33.02" x2="-151.13" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-151.13" y1="33.02" x2="-153.67" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-153.67" y1="33.02" x2="-156.21" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-156.21" y1="33.02" x2="-158.75" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-158.75" y1="33.02" x2="-162.56" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-162.56" y1="33.02" x2="-163.83" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-163.83" y1="33.02" x2="-163.83" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD0"/>
+<wire x1="-158.75" y1="27.94" x2="-158.75" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-158.75" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD1"/>
+<wire x1="-156.21" y1="27.94" x2="-156.21" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-156.21" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD2"/>
+<wire x1="-153.67" y1="27.94" x2="-153.67" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-153.67" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD3"/>
+<wire x1="-151.13" y1="27.94" x2="-151.13" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-151.13" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD4"/>
+<wire x1="-148.59" y1="27.94" x2="-148.59" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-148.59" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="IOVDD5"/>
+<wire x1="-146.05" y1="27.94" x2="-146.05" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-146.05" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="USB_VDD"/>
+<wire x1="-140.97" y1="27.94" x2="-140.97" y2="33.02" width="0.1524" layer="91"/>
+<junction x="-140.97" y="33.02"/>
+<pinref part="RP2040" gate="IC$1" pin="ADC_AVDD"/>
+<wire x1="-138.43" y1="33.02" x2="-138.43" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-162.56" y="33.02"/>
+<wire x1="-162.56" y1="33.02" x2="-162.56" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="-162.56" y1="50.8" x2="-162.56" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-162.56" y1="50.8" x2="-152.4" y2="50.8" width="0.1524" layer="91"/>
+<junction x="-162.56" y="50.8"/>
+<wire x1="-152.4" y1="50.8" x2="-152.4" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="-138.43" y1="33.02" x2="-132.08" y2="33.02" width="0.1524" layer="91"/>
+<label x="-132.08" y="33.02" size="1.778" layer="95" xref="yes"/>
+<label x="-162.56" y="63.5" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="VCC"/>
+<wire x1="156.21" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
+<label x="167.64" y="68.58" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="RUN"/>
+<wire x1="-184.15" y1="-50.8" x2="-190.5" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-190.5" y="-50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="-40.64" x2="-93.98" y2="-35.56" width="0.1524" layer="91"/>
+<label x="-93.98" y="-35.56" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="-68.58" x2="-93.98" y2="-73.66" width="0.1524" layer="91"/>
+<label x="-93.98" y="-73.66" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -11169,8 +10987,12 @@ I2C register is 0x76 as SD0 is pulled low</text>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VIN"/>
-<wire x1="-401.32" y1="142.24" x2="-408.94" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-401.32" y1="142.24" x2="-403.86" y2="142.24" width="0.1524" layer="91"/>
 <label x="-408.94" y="142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-403.86" y1="142.24" x2="-408.94" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-403.86" y1="139.7" x2="-403.86" y2="142.24" width="0.1524" layer="91"/>
+<junction x="-403.86" y="142.24"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -11245,12 +11067,30 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <wire x1="-212.09" y1="139.7" x2="-214.63" y2="139.7" width="0.1524" layer="91"/>
 <label x="-214.63" y="139.7" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="GPIO25"/>
+<wire x1="-118.11" y1="-55.88" x2="-93.98" y2="-55.88" width="0.1524" layer="91"/>
+<label x="-91.44" y="-55.88" size="1.778" layer="95" xref="yes"/>
+<wire x1="-93.98" y1="-55.88" x2="-91.44" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="-55.88" x2="-93.98" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="-93.98" y="-55.88"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="TEL_RX" class="0">
 <segment>
 <pinref part="XBEE" gate="G$1" pin="DIN/NCONFIG/DIO14"/>
 <wire x1="-212.09" y1="137.16" x2="-214.63" y2="137.16" width="0.1524" layer="91"/>
 <label x="-214.63" y="137.16" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="GPIO24"/>
+<wire x1="-118.11" y1="-53.34" x2="-93.98" y2="-53.34" width="0.1524" layer="91"/>
+<label x="-91.44" y="-53.34" size="1.778" layer="95" xref="yes"/>
+<wire x1="-93.98" y1="-53.34" x2="-91.44" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="-53.34" x2="-93.98" y2="-50.8" width="0.1524" layer="91"/>
+<junction x="-93.98" y="-53.34"/>
+<pinref part="R8" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="CTS" class="0">
@@ -11280,12 +11120,22 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <wire x1="-212.09" y1="147.32" x2="-214.63" y2="147.32" width="0.1524" layer="91"/>
 <label x="-214.63" y="147.32" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="GPIO22"/>
+<wire x1="-118.11" y1="-48.26" x2="-111.76" y2="-48.26" width="0.1524" layer="91"/>
+<label x="-111.76" y="-48.26" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="RSSI" class="0">
 <segment>
 <pinref part="XBEE" gate="G$1" pin="DIO10/PWM0"/>
 <wire x1="-212.09" y1="132.08" x2="-214.63" y2="132.08" width="0.1524" layer="91"/>
 <label x="-214.63" y="132.08" size="1.016" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="GPIO23"/>
+<wire x1="-118.11" y1="-50.8" x2="-111.76" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-111.76" y="-50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FLASH_WP" class="0">
@@ -11306,12 +11156,24 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <wire x1="-496.57" y1="33.02" x2="-490.22" y2="33.02" width="0.1524" layer="91"/>
 <label x="-490.22" y="33.02" size="1.016" layer="95" xref="yes"/>
 </segment>
+<segment>
+<wire x1="-104.14" y1="17.78" x2="-101.6" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="20.32" x2="-101.6" y2="17.78" width="0.1524" layer="91"/>
+<label x="-101.6" y="20.32" size="1.778" layer="95"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="D-" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="D-"/>
 <wire x1="-496.57" y1="30.48" x2="-490.22" y2="30.48" width="0.1524" layer="91"/>
 <label x="-490.22" y="30.48" size="1.016" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="-104.14" y1="15.24" x2="-101.6" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="15.24" x2="-101.6" y2="12.7" width="0.1524" layer="91"/>
+<label x="-101.6" y="12.7" size="1.778" layer="95"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="CC3" class="0">
@@ -11332,22 +11194,15 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="VOUT"/>
 <wire x1="-500.38" y1="142.24" x2="-485.14" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="-485.14" y1="142.24" x2="-485.14" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="-485.14" y1="142.24" x2="-472.44" y2="142.24" width="0.1524" layer="91"/>
 <junction x="-485.14" y="142.24"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <label x="-472.44" y="142.24" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="Q3" gate="G$1" pin="S_1"/>
-<pinref part="Q3" gate="G$1" pin="S_2"/>
-<wire x1="-513.08" y1="88.9" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="S_3"/>
-<wire x1="-513.08" y1="83.82" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
-<junction x="-513.08" y="86.36"/>
-<label x="-541.02" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="D4" gate="G$1" pin="C"/>
-<wire x1="-520.7" y1="86.36" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="D4" gate="G$1" pin="A"/>
+<wire x1="-525.78" y1="86.36" x2="-538.48" y2="86.36" width="0.1524" layer="91"/>
+<label x="-538.48" y="86.36" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="5V_USB" class="0">
@@ -11369,24 +11224,7 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <label x="-523.24" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="D4" gate="G$1" pin="A"/>
-<wire x1="-541.02" y1="86.36" x2="-525.78" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="-403.86" y1="142.24" x2="-403.86" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="SCK" class="0">
-<segment>
-<pinref part="RP2040" gate="IC$1" pin="GPIO10"/>
-<wire x1="-118.11" y1="-17.78" x2="-109.22" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-109.22" y="-17.78" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="SV1" gate="G$1" pin="3"/>
 <wire x1="-73.66" y1="142.24" x2="-78.74" y2="142.24" width="0.1524" layer="91"/>
@@ -11444,6 +11282,45 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <pinref part="SV1" gate="G$1" pin="10"/>
 <wire x1="-73.66" y1="124.46" x2="-78.74" y2="124.46" width="0.1524" layer="91"/>
 <label x="-78.74" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="D4" gate="G$1" pin="C"/>
+<pinref part="Q3" gate="G$1" pin="S_2"/>
+<wire x1="-520.7" y1="86.36" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="Q3" gate="G$1" pin="S_1"/>
+<wire x1="-513.08" y1="88.9" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
+<junction x="-513.08" y="86.36"/>
+<pinref part="Q3" gate="G$1" pin="S_3"/>
+<wire x1="-513.08" y1="83.82" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="USB_DP"/>
+<wire x1="-118.11" y1="17.78" x2="-114.3" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="RP2040" gate="IC$1" pin="USB_DM"/>
+<wire x1="-118.11" y1="15.24" x2="-114.3" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="C24" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="-27.94" x2="144.78" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-30.48" x2="149.86" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="TRI"/>
+<wire x1="134.62" y1="-20.32" x2="137.16" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-20.32" x2="137.16" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-30.48" x2="144.78" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="144.78" y="-30.48"/>
 </segment>
 </net>
 </nets>
