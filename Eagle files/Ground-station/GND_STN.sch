@@ -10167,92 +10167,6 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="SI7625DN-T1-GE3">
-<description>&lt;VISHAY - SI7625DN-T1-GE3 - MOSFET, P CHANNEL, -30V, -35A, POWERPAK 1212-8&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="SIS862DNT1GE3">
-<description>&lt;b&gt;PowerPAK 1212-8 Single_2&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-1.555" y="0.992" dx="0.99" dy="0.405" layer="1"/>
-<smd name="2" x="-1.555" y="0.332" dx="0.99" dy="0.405" layer="1"/>
-<smd name="3" x="-1.555" y="-0.328" dx="0.99" dy="0.405" layer="1"/>
-<smd name="4" x="-1.555" y="-0.988" dx="0.99" dy="0.405" layer="1"/>
-<smd name="5" x="1.555" y="-0.988" dx="0.51" dy="0.405" layer="1"/>
-<smd name="6" x="1.555" y="-0.328" dx="0.51" dy="0.405" layer="1"/>
-<smd name="7" x="1.555" y="0.332" dx="0.51" dy="0.405" layer="1"/>
-<smd name="8" x="1.555" y="0.992" dx="0.51" dy="0.405" layer="1"/>
-<smd name="9" x="0.438" y="0.002" dx="2.235" dy="1.725" layer="1" rot="R90"/>
-<smd name="10" x="1.175" y="-1.096" dx="0.25" dy="0.2" layer="1"/>
-<smd name="11" x="1.175" y="1.096" dx="0.25" dy="0.2" layer="1"/>
-<text x="-0.12" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-0.12" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-1.525" y1="1.525" x2="1.525" y2="1.525" width="0.2" layer="51"/>
-<wire x1="1.525" y1="1.525" x2="1.525" y2="-1.525" width="0.2" layer="51"/>
-<wire x1="1.525" y1="-1.525" x2="-1.525" y2="-1.525" width="0.2" layer="51"/>
-<wire x1="-1.525" y1="-1.525" x2="-1.525" y2="1.525" width="0.2" layer="51"/>
-<wire x1="-1.525" y1="1.525" x2="1.555" y2="1.525" width="0.1" layer="21"/>
-<wire x1="-1.5" y1="-1.525" x2="1.525" y2="-1.525" width="0.1" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SI7625DN-T1-GE3">
-<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-15.24" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-15.24" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
-<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="S_1" x="0" y="0" length="middle"/>
-<pin name="S_2" x="0" y="-2.54" length="middle"/>
-<pin name="S_3" x="0" y="-5.08" length="middle"/>
-<pin name="G" x="0" y="-7.62" length="middle"/>
-<pin name="D_1" x="0" y="-10.16" length="middle"/>
-<pin name="D_2" x="0" y="-12.7" length="middle"/>
-<pin name="D_3" x="25.4" y="0" length="middle" rot="R180"/>
-<pin name="D_4" x="25.4" y="-2.54" length="middle" rot="R180"/>
-<pin name="D_5" x="25.4" y="-5.08" length="middle" rot="R180"/>
-<pin name="D_6" x="25.4" y="-7.62" length="middle" rot="R180"/>
-<pin name="D_7" x="25.4" y="-10.16" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SI7625DN-T1-GE3" prefix="Q">
-<description>&lt;b&gt;VISHAY - SI7625DN-T1-GE3 - MOSFET, P CHANNEL, -30V, -35A, POWERPAK 1212-8&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://www.vishay.com/docs/65737/si7625dn.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="SI7625DN-T1-GE3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SIS862DNT1GE3">
-<connects>
-<connect gate="G$1" pin="D_1" pad="5"/>
-<connect gate="G$1" pin="D_2" pad="6"/>
-<connect gate="G$1" pin="D_3" pad="7"/>
-<connect gate="G$1" pin="D_4" pad="8"/>
-<connect gate="G$1" pin="D_5" pad="9"/>
-<connect gate="G$1" pin="D_6" pad="10"/>
-<connect gate="G$1" pin="D_7" pad="11"/>
-<connect gate="G$1" pin="G" pad="4"/>
-<connect gate="G$1" pin="S_1" pad="1"/>
-<connect gate="G$1" pin="S_2" pad="2"/>
-<connect gate="G$1" pin="S_3" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="VISHAY - SI7625DN-T1-GE3 - MOSFET, P CHANNEL, -30V, -35A, POWERPAK 1212-8" constant="no"/>
-<attribute name="ELEMENT14_PART_NUMBER" value="" constant="no"/>
-<attribute name="ELEMENT14_PRICE-STOCK" value="" constant="no"/>
-<attribute name="HEIGHT" value="1.12mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Vishay" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="SI7625DN-T1-GE3" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="AMS1117-3.3">
 <packages>
 <package name="SOT229P700X180-4N">
@@ -10359,7 +10273,6 @@ Source: &lt;a href="https://www.vishay.com/docs/65737/si7625dn.pdf"&gt; Datashee
 <part name="R7" library="standardparts" deviceset="RESISTOR" device=".0603" value="5.1k ohm"/>
 <part name="X1" library="microbuilder" deviceset="USB_C" device="" value="USB Type C"/>
 <part name="SV1" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE10-1" device="" package3d_urn="urn:adsk.eagle:package:8192/1"/>
-<part name="Q3" library="SI7625DN-T1-GE3" deviceset="SI7625DN-T1-GE3" device=""/>
 <part name="D3" library="Diode" library_urn="urn:adsk.eagle:library:16378169" deviceset="SCHOTTKY_" device="DO-219" package3d_urn="urn:adsk.eagle:package:9427153/2" technology="MBR0520LT1G"/>
 <part name="D4" library="Diode" library_urn="urn:adsk.eagle:library:16378169" deviceset="SCHOTTKY_" device="DO-219" package3d_urn="urn:adsk.eagle:package:9427153/2" technology="MBR0520LT1G"/>
 <part name="U2" library="AMS1117-3.3" deviceset="AMS1117-3.3" device=""/>
@@ -10492,17 +10405,13 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <attribute name="VALUE" x="-64.77" y="152.4" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="-64.77" y="121.158" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="Q3" gate="G$1" x="-513.08" y="88.9" smashed="yes">
-<attribute name="NAME" x="-506.73" y="96.52" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="-506.73" y="93.98" size="1.778" layer="96" align="center-left"/>
-</instance>
 <instance part="D3" gate="G$1" x="-444.5" y="88.9" smashed="yes">
 <attribute name="NAME" x="-444.5" y="92.075" size="1.778" layer="95" align="center"/>
 <attribute name="VALUE" x="-444.5" y="85.471" size="1.778" layer="95" align="center"/>
 </instance>
-<instance part="D4" gate="G$1" x="-523.24" y="86.36" smashed="yes">
-<attribute name="NAME" x="-523.24" y="89.535" size="1.778" layer="95" align="center"/>
-<attribute name="VALUE" x="-523.24" y="82.931" size="1.778" layer="95" align="center"/>
+<instance part="D4" gate="G$1" x="-444.5" y="98.806" smashed="yes">
+<attribute name="NAME" x="-444.5" y="101.981" size="1.778" layer="95" align="center"/>
+<attribute name="VALUE" x="-444.5" y="95.377" size="1.778" layer="95" align="center"/>
 </instance>
 <instance part="U2" gate="G$1" x="-386.08" y="139.7" smashed="yes">
 <attribute name="NAME" x="-396.24" y="145.288" size="2.54" layer="95"/>
@@ -10958,32 +10867,12 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <net name="5V" class="0">
 <segment>
 <pinref part="D3" gate="G$1" pin="C"/>
-<wire x1="-441.96" y1="88.9" x2="-429.26" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-441.96" y1="88.9" x2="-436.88" y2="88.9" width="0.1524" layer="91"/>
 <label x="-429.26" y="88.9" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="Q3" gate="G$1" pin="D_3"/>
-<pinref part="Q3" gate="G$1" pin="D_4"/>
-<wire x1="-487.68" y1="88.9" x2="-487.68" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="D_5"/>
-<wire x1="-487.68" y1="83.82" x2="-487.68" y2="86.36" width="0.1524" layer="91"/>
-<junction x="-487.68" y="86.36"/>
-<pinref part="Q3" gate="G$1" pin="D_6"/>
-<wire x1="-487.68" y1="83.82" x2="-487.68" y2="81.28" width="0.1524" layer="91"/>
-<junction x="-487.68" y="83.82"/>
-<pinref part="Q3" gate="G$1" pin="D_7"/>
-<wire x1="-487.68" y1="81.28" x2="-487.68" y2="78.74" width="0.1524" layer="91"/>
-<junction x="-487.68" y="81.28"/>
-<wire x1="-487.68" y1="78.74" x2="-487.68" y2="68.58" width="0.1524" layer="91"/>
-<junction x="-487.68" y="78.74"/>
-<pinref part="Q3" gate="G$1" pin="D_1"/>
-<pinref part="Q3" gate="G$1" pin="D_2"/>
-<wire x1="-487.68" y1="68.58" x2="-513.08" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-513.08" y1="78.74" x2="-513.08" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-513.08" y1="68.58" x2="-513.08" y2="76.2" width="0.1524" layer="91"/>
-<junction x="-513.08" y="76.2"/>
-<wire x1="-513.08" y1="76.2" x2="-523.24" y2="76.2" width="0.1524" layer="91"/>
-<label x="-523.24" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-436.88" y1="88.9" x2="-429.26" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-436.88" y1="88.9" x2="-436.88" y2="98.806" width="0.1524" layer="91"/>
+<pinref part="D4" gate="G$1" pin="C"/>
+<wire x1="-436.88" y1="98.806" x2="-441.96" y2="98.806" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VIN"/>
@@ -11201,8 +11090,8 @@ I2C register is 0x76 as SD0 is pulled low</text>
 </segment>
 <segment>
 <pinref part="D4" gate="G$1" pin="A"/>
-<wire x1="-525.78" y1="86.36" x2="-538.48" y2="86.36" width="0.1524" layer="91"/>
-<label x="-538.48" y="86.36" size="1.778" layer="95" rot="R180"/>
+<wire x1="-447.04" y1="98.806" x2="-457.708" y2="98.806" width="0.1524" layer="91"/>
+<label x="-457.708" y="98.806" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="5V_USB" class="0">
@@ -11215,13 +11104,6 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
 <wire x1="-496.57" y1="35.56" x2="-477.52" y2="35.56" width="0.1524" layer="91"/>
 <label x="-477.52" y="35.56" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="Q1-G" class="0">
-<segment>
-<pinref part="Q3" gate="G$1" pin="G"/>
-<wire x1="-513.08" y1="81.28" x2="-523.24" y2="81.28" width="0.1524" layer="91"/>
-<label x="-523.24" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -11282,18 +11164,6 @@ I2C register is 0x76 as SD0 is pulled low</text>
 <pinref part="SV1" gate="G$1" pin="10"/>
 <wire x1="-73.66" y1="124.46" x2="-78.74" y2="124.46" width="0.1524" layer="91"/>
 <label x="-78.74" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="D4" gate="G$1" pin="C"/>
-<pinref part="Q3" gate="G$1" pin="S_2"/>
-<wire x1="-520.7" y1="86.36" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="S_1"/>
-<wire x1="-513.08" y1="88.9" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
-<junction x="-513.08" y="86.36"/>
-<pinref part="Q3" gate="G$1" pin="S_3"/>
-<wire x1="-513.08" y1="83.82" x2="-513.08" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
